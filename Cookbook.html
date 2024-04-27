@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshBites</title>
+    <link rel="stylesheet" href="/styles/cookbook.css" />
+    <link rel="stylesheet" href="/styles/body.css" />
+    <link rel="stylesheet" href="/styles/general.css" />
+    <link rel="stylesheet" href="/styles/slider.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/scripts/slider.js" defer></script>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="nav-bar">
+        <div class="left-section">
+          <img src="images/logo1.png" alt="Your Logo" class="logo" />
+          <span class="name">Fresh Bites</span>
+        </div>
+        <ul>
+          <li class="dropdown">
+            <a href="#"> About Us </a>
+            <ul class="dropdown-content">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">How it Works</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Our Plans</a></li>
+
+          <li class="dropdown">
+            <a href="#"> Our Menu </a>
+            <ul class="dropdown-content">
+              <li><a href="#">Our Menu</a></li>
+              <li><a href="#">Cook Book</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="search-div">
+      <form action="./search" method="GET">
+        <input type="text" name="search" id="search-bar" />
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+    </div>
+    <h2 class="title">Global Cuisines</h2>
+    <div class="cuisines">
+      <div class="icon"><i id="left-cuisines" class="fa-solid fa-angle-left"></i></div>
+      <ul class="tabs-bar">
+        <li class="tab">American Recipes</li>
+        <li class="tab">Italian Recipes</li>
+        <li class="tab">Asian Recipes</li>
+        <li class="tab">Mediterranean Recipes</li>
+        <li class="tab">Mexican Recipes</li>
+        <li class="tab">Korean Recipes</li>
+        <li class="tab">Indian Recipes</li>
+        <li class="tab">Middle Eastern Recipes</li>
+        <li class="tab">Chinese Recipes</li>
+        <li class="tab">Spanish Recipes</li>
+        <li class="tab">French Recipes</li>
+        <li class="tab">Japanese Recipes</li>
+        <li class="tab">Cuban Recipes</li>
+      </ul>
+      <div class="icon"><i id="right-cuisines" class="fa-solid fa-angle-right"></i></div>
+    </div>
+    <h2 class="title">Dishes</h2>
+    <div class="dishes">
+      <div class="icon"><i id="left-dishes" class="fa-solid fa-angle-left"></i></div>
+      <ul class="tabs-bar">
+        <li class="tab">Taco Recipes</li>
+        <li class="tab">Burger Recipes</li>
+        <li class="tab">Pasta Recipes</li>
+        <li class="tab">Bowl Recipes</li>
+        <li class="tab">Noodle Recipes</li>
+        <li class="tab">Soup Recipes</li>
+        <li class="tab">Burrito Recipes</li>
+        <li class="tab">Sandwich Recipes</li>
+        <li class="tab">Casserole Recipes</li>
+        <li class="tab">Stir-Fry Recipes</li>
+      </ul>
+      <div class="icon"><i id="right-dishes" class="fa-solid fa-angle-right"></i></div>
+    </div>
+  </body>
+</html>

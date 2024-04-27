@@ -1,0 +1,146 @@
+#search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color:#f5f0d6;
+  
+  }
+  
+  #search-bar {
+    padding: 10px;
+    border: 1px solid #556d3b;
+    border-radius: 5px;
+    outline: none;
+    width: 600px;
+    height: 50px;
+  }
+  
+  #search-btn {
+    padding: 10px 20px;
+    background-color:#556d3b;
+    color: white;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    outline: none;
+    height: 50px;
+  }
+  
+  .nav-bar {
+    width: 85%;
+    margin: auto;
+    color:#f5f0d6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 55px;
+  }
+  
+  .name {
+    margin-left: 15px;
+    font-size: 27px;
+    font-family: Pacifico;
+  }
+  
+  a {
+    text-decoration: none;
+    color:#556d3b;
+    font-family: Roboto;
+  }
+  
+  .banner ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .banner ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .banner ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #f5f0d6;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .banner ul li:hover::after {
+    width: 100%;
+    
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dropdown-content li {
+    padding: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .content h1 {
+    font-size: 35px;
+    margin-top: 80px;
+  }
+  
+  .content p {
+    margin: 20px auto;
+    font-weight: 300;
+    line-height: 25px;
+  }
+  
+  button:hover .cover {
+    width: 100%;
+  }
+  
+  button:hover {
+    border: none;
+  }
+  .banner {
+    background-color:#556d3b;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
