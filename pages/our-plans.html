@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Plans | Fresh Bites</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Our Plans | Fresh Bites</title>
+        <link rel="stylesheet" href="../styles/our-plans.css" />
+    </head>
+    <body>
+        <div class="form">
+            <div class="form-header">
+                <h2>Personalize your plan</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="form-body">
+                <div class="pagination">
+                    <div class="number active">1</div>
+                    <div class="bar"></div>
+                    <div class="number">2</div>
+                    <div class="bar"></div>
+                    <div class="number">3</div>
+                    <div class="bar"></div>
+                    <div class="number">4</div>
+                </div>
+
+                <div class="steps">
+                    <div class="step">
+                        <h4>Select Your Plan</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="grid">
+                            <div class="col">
+                                <label for="name">Name</label>
+                                <input type="text" id="name">
+                            </div>
+
+                            <div class="col">
+                                <label for="email">Email</label>
+                                <input type="email" id="email">
+                            </div>
+                            
+                            <div class="col">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone">
+                            </div>
+
+                            <div class="col">
+                                <label for="company">Company</label>
+                                <input type="text" id="company">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Areas of Interest</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+                        <div class="grid">
+                            <div class="col">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="interest-finance">
+                                    <label for="interest-finance">Finance</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="maths-finance">
+                                    <label for="maths-finance">Maths</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="interest-programming">
+                                    <label for="interest-programming">Programming</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="interest-music">
+                                    <label for="interest-music">Music</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h4>Secure Your Account</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+                        <div class="grid">
+                            <div class="col">
+                                <label for="password">Password</label>
+                                <input type="password" id="password">
+                            </div>
+
+                            <div class="col">
+                                <label for="retype-password">Retype Password</label>
+                                <input type="password" id="retype-password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="confirmation">
+                            <h2>Create my Account</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
     
-</body>
+                            <button>Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button class="prev" disabled>Previous</button>
+                <button class="next">Next</button>
+            </div>
+        </div>
+
+        <script src="../scripts/our-plans.js"></script>
+    </body>
 </html>
