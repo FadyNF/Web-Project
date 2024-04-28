@@ -12,7 +12,10 @@ body {
 
 .form {
     width: 98%;
-    max-width: 400px;
+    height: 98%;
+    max-height: 550px;
+    max-width: 750px;
+    border: 5px black solid;
 }
 
 .form .form-header {
@@ -29,7 +32,7 @@ body {
 .form .form-body {
     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    height: 320px;
+    height: auto;
     overflow: hidden;
 }
 
@@ -50,6 +53,7 @@ body {
     background-color: #00aaee;
     color: white;
     font-size: 15px;
+    position: relative;
 }
 
 .form .form-body .pagination .bar {
@@ -72,9 +76,10 @@ body {
 
 .form .steps .step {
     width: 98vw;
-    max-width: 400px;
+    max-width: auto;
     padding: 5px 15px 15px;
     overflow: hidden;
+    border: 5px red solid;
 }
 
 .form .steps .step h4{
@@ -88,10 +93,149 @@ body {
 }
 
 .form .steps .step .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 15px;
     margin-top: 20px;
+}
+
+.select-preference, .checkout-preview {
+    border: 2px black solid;
+    width: calc(50% - 7.5px); /* Adjust width to accommodate gap */
+    margin: 0px;
+    overflow-y: auto; /* Add vertical scrollbar if necessary */
+}
+
+.select-preference {
+    width: 50%; /* Adjust width */
+    margin: 0; /* Remove margin */
+    display: flex;
+    flex-direction: column; /* Display items in a column layout */
+    align-items: center; /* Center items horizontally */
+}
+
+.select-preference-description {
+    text-align: center; /* Center the description text */
+    margin-bottom: 10px; /* Add some space below the description */
+}
+
+
+.checkboxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-auto-rows: auto; /* Auto height for rows */
+    gap: 2px; /* Minimal gap between checkboxes */
+    justify-content: center; /* Center checkboxes horizontally */ 
+}
+
+.checkbox-wrapper-16 {
+    margin: 4px; /* Add minimal margin between checkboxes */
+}
+
+.checkbox-wrapper-16 *,
+  .checkbox-wrapper-16 *:after,
+  .checkbox-wrapper-16 *:before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-16 .checkbox-input {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #2260ff;
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #2260ff;
+  border-color: #2260ff;
+  color: #fff;
+  content: "✓";
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
+  .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
+  color: #2260ff;
+}
+
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+}
+
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  min-height: 5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:before {
+  content: "";
+  font-size: 12px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #b5bfd9;
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.25s ease;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover {
+  border-color: #2260ff;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-icon {
+  transition: 0.375s ease;
+  color: #494949;
+}
+
+.checkbox-wrapper-16 .checkbox-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.checkbox-wrapper-16 .checkbox-label {
+  color: #707070;
+  transition: 0.375s ease;
+  text-align: center;
 }
 
 .form .steps .step .grid .col label {
