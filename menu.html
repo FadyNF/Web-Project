@@ -1,162 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="menu.css">
   <script src="menu.js"></script>
-    <title>MENU</title>
+  <title>MENU</title>
 </head>
-<body>
-    <header>
 
-        <a href="" class="logo">Fresh Bites</a>
-        <div class="nav">
-          <a href="">OUR PLANS</a>
-          <a href="">ABOUT US</a>
-          <a href="">OUR MENU</a>
-          <a href="">SUSTAINABILTIY</a>
-        </div>
-      </header>
-    
-    
-    
-      <section class="menu">
-        <div class="menu-title">
-          <h2 id="titleM">MENU FOR 06-13 MAY</h2>
-         <div class="buttons">
-          <button id="B1" onclick="changeDate(' 06-13 May')">06-13 May</button>
-          <button id="B2" onclick="changeDate(' 14-21 May')">14-21 May</button>
-          <button id="B3" onclick="changeDate(' 22-28 May')">22-28 May</button>
-          <button id="B4" onclick="changeDate(' 28-04 Jun')">28-04 Jun</button>
-         </div>
-        </div>
-        
-    
-        <div class="items">
-          <div id="item1" onclick="Details('detailsModal','detailsModal','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
-          
-          <img src="summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg" alt="Tomato and Tuna pasta salad">
-          <h3>Tomato and Tuna pasta salad</h3>
-          <p>With Pangrattato</p>
-    
-          <p id="duration">Duration: 20 min</p>
-          </div>
-          
-        </div>
-    
-    <div class="items">
-      <div id="item 2"onclick="Details('detailsModal2','Potluck Macaroni and Cheese',
-      'Potluck Macaroni and Cheese is a classic dish often prepared for gatherings and shared meals. It typically consists of cooked macaroni pasta mixed with a creamy cheese sauce, which can be made using a combination of cheese, milk or cream, and various seasonings. Additional ingredients such as diced vegetables, bacon, or breadcrumbs may also be added to enhance flavor and texture.')">
-      <img src="potluck.jpg" alt="Potluck Macaroni and Cheese">
-      <h3>Potluck Macaroni and cheese</h3>
-        <p id="duration">Duration: 30-45 min</p>
+<body>
+
+  <header>
+    <div class="LogoH">
+      <img class="logoI" src="/Web-Project/imagesA/logo1.png">
+      <a href="" class="logoText">Fresh Bites</a>
     </div>
-        
-      </section>
-    
-    
-      <!-- ITEM 1 MODAL -->
-    
-      <div id="detailsModal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('detailsModal')">&times;</span>
-          <img src="summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg">
-          <h3 id="itemName"></h3>
-          <p id="itemDescription"> </p>
-          <hr>
-          <h3>Ingredients:</h3>
-          <div class="ingredients">
-    
-            <span class="ing1">
-              <img id="Ingredientimg" src="download.jpeg">
-              <p>Tomato</p>
-            </span>
-    
-            <span class="ing2">
-              <img id="Ingredientimg" src="tuna.jpeg">
-              <p>Tuna</p>
-            </span>
-    
-            <span class="ing3">
-              <img id="Ingredientimg" src="pasta.jpeg">
-              <p>Pasta</p>
-            </span>
-    
-            <span class="ing4">
-              <img id="Ingredientimg" src="parsely.jpeg">
-              <p>Parsely</p>
-            </span>
-    
-            <span class="ing5">
-              <img id="Ingredientimg" src="olive oil.jpeg">
-              <p>Olive Oil</p>
-            </span>
-    
-            <span class="ing6">
-              <img id="Ingredientimg" src="olives.jpeg">
-              <p>Olives</p>
-            </span>
-          </div>
-    
-          <div class="ingredients">
-    
-            <span class="ing7">
-              <img id="Ingredientimg" src="garlic.jpeg">
-              <p>Garlic</p>
-            </span>
-    
-            <span class="ing8">
-              <img id="Ingredientimg" src="chili flakes.jpeg">
-              <p>Chili Flakes</p>
-            </span>
-    
-           
-            <span class="ing9">
-              <img id="Ingredientimg" src="lemon zest.jpeg">
-              <p>Lemon Zest</p>
-            </span>
-    
-            <span class="ing10">
-              <img id="Ingredientimg" src="salt.jpeg">
-              <p>Salt</p>
-            </span>
-    
-            <span class="ing11">
-              <img id="Ingredientimg" src="pepper.jpeg">
-              <p>Pepper</p>
-            </span>
-           
-    
-          </div>
-          <hr>
-    
-          <div class="allergies">
-            <h3>Allergens:</h3>
-            <p>
-              <ul>
-                <li>Tuna</li>
-                <li>Wheat (in pasta)</li>
-              </ul>
-            </p>
+    <div class="nav">
+      <a href="">OUR PLANS</a>
+      <a href="">ABOUT US</a>
+      <a href="">OUR MENU</a>
+      <a href="">SUSTAINABILTIY</a>
+    </div>
+  </header>
+
+
+  <section class="menu">
+    <div class="menu-title">
+      <h2 id="titleM">MENU </h2>
+      <div class="buttons">
+        <button id="B1" onclick="gettingDates(0),viewItems('week1'),SelectB('B1')">WEEK 1</button>
+        <button id="B2" onclick="gettingDates(7),viewItems('week2'),SelectB('B2')">WEEK 2</button>
+        <button id="B3" onclick="gettingDates(14),viewItems('week3'),SelectB('B3')">WEEK 3</button>
+        <button id="B4" onclick="gettingDates(21),viewItems('weeek4'),SelectB('B4')">WEEK 4</button>
+      </div>
+    </div>
+
+    <div class="items-container">
+
+      <!-- ITEMS OF WEEK 1 -->
+      <div class="items week1">
+        <div id="item1">
+
+          <img src="/Web-Project/imagesA/summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg"
+            alt="Tomato and Tuna pasta salad">
+          <h3
+            onclick="Details('detailsModal','detailsModal','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
+            Tomato and Tuna pasta salad</h3>
+          <p>With Pangrattato</p>
+
+          <p id="duration">Duration: 20 min</p>
+          <div class="rating">
+            <div class="rating">
+              <span class="star selected">&#9733;</span>
+              <span class="star selected">&#9733;</span>
+              <span class="star selected">&#9733;</span>
+              <span class="star selected">&#9733;</span>
+              <span class="star selected">&#9733;</span>
+            </div>
           </div>
         </div>
       </div>
-    
-    
-      <!-- ITEM 2 MODAL -->
-    
-      <div id="detailsModal2" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('detailsModal2')">&times;</span>
-          <img src="potluck.jpg">
-          <h3 id="itemName"></h3>
-          <p id="itemDescription"> </p>
-          <hr>
-    <div class="ingrediants">
-    <div></div>
+
+
+      <div class="items week1">
+
+        <img src="/Web-Project/imagesA/potluck.jpg" alt="Potluck Macaroni and Cheese">
+        <h3
+          onclick="Details('detailsModal2','Potluck Macaroni and Cheese',
+      'Potluck Macaroni and Cheese is a classic dish,  consists of cooked macaroni pasta mixed with a creamy cheese sauce, which can be made using a combination of cheese, milk or cream, and various seasonings. Additional ingredients such as diced vegetables, bacon, or breadcrumbs may also be added to enhance flavor and texture.')">
+          Potluck Macaroni and cheese</h3>
+        <p id="duration">Duration: 30-45 min</p>
+
+        <div class="rating">
+          <div class="rating">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star ">&#9733;</span>
           </div>
+
+
         </div>
+      </div>
+
+
+      <!-- ITEMS OF WEEK 2 -->
+      <div class="items week2">
+
+        <img src="">
+
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+
+  <!-- ITEM 1 MODAL -->
+
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal')">&times;</span>
+      <img src="/Web-Project/imagesA/summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg">
+      <h3 id="itemName"></h3>
+      <p id="itemDescription"> </p>
+      <hr>
+      <h3>Ingredients:</h3>
+      <div class="ingredients">
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/download.jpeg">
+          <p>Tomato</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/tuna.jpeg">
+          <p>Tuna</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/pasta.jpeg">
+          <p>Pasta</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/parsely.jpeg">
+          <p>Parsely</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/olive oil.jpeg">
+          <p>Olive Oil</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/olives.jpeg">
+          <p>Olives</p>
+        </span>
+
+
+
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/garlic.jpeg">
+          <p>Garlic</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/chili flakes.jpeg">
+          <p>Chili Flakes</p>
+        </span>
+
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/lemon zest.jpeg">
+          <p>Lemon Zest</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/salt.jpeg">
+          <p>Salt</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/imagesA/pepper.jpeg">
+          <p>Pepper</p>
+        </span>
+
+      </div>
+
+      <hr>
+
+      <div class="allergies">
+        <h3>Allergens:</h3>
+        <p>
+        <ul>
+          <li>Tuna</li>
+          <li>Wheat (in pasta)</li>
+        </ul>
+        </p>
+      </div>
+<hr>
+      <div class="nutrition" style="overflow-x:auto;">
+        <h3>Nutrition Values:</h3>
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
+        
+          <tr>
+            <td>Calories</td>
+            <td>250-300kcal</td>
+          </tr>
+
+          <tr>
+            <td>Protien</td>
+            <td>15-20gm</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>10-15 gm</td>
+          </tr>
+
+          <tr>
+            <td>Carbohydrates</td>
+          <td>25-35 gm</td>
+          </tr>
+
+          <tr>
+            <td>Fiber</td>
+            <td>3-5 gm</td>
+          </tr>
+
+          <tr>
+            <td> Sodium</td>
+            <td>300-500 mg</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ITEM 2 MODAL -->
+
+  <div id="detailsModal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal2')">&times;</span>
+      <img src="/Web-Project/imagesA/potluck.jpg">
+      <h3 id="itemName"></h3>
+      <p id="itemDescription"> </p>
+      <hr>
+
+      <h3>Ingredients:</h3>
+      <div class="ingredients">
+
+        <div class="ingredients">
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/imagesA/macaroni.jpeg">
+            <p>Macaroni</p>
+          </span>
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/imagesA/milk.jpeg">
+            <p>Milk</p>
+          </span>
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/imagesA/velveeta.jpeg">
+            <p>Velveeta</p>
+          </span>
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/imagesA/eggs.jpeg">
+            <p>Eggs</p>
+          </span>
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/imagesA/shreded mexican ch.jpeg">
+            <p>Shredded Mexican Cheese</p>
+          </span>
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/imagesA/butter.jpeg">
+            <p>Butter</p>
+          </span>
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/imagesA/white cheddar.jpeg">
+            <p>Shredded White Cheddar</p>
+          </span>
+        </div>
+        <hr>
+
+        <div class="allergies">
+          <h3>Allergens:</h3>
+          <p class="list">
+          <ul>
+            <li>Cheese</li>
+            <li>Milk</li>
+            <li>Eggs</li>
+          </ul>
+          </p>
+
+        </div>
+      </div>
+      </div>
 </body>
+
 </html>
