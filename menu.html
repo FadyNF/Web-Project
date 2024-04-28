@@ -35,7 +35,7 @@
         
     
         <div class="items">
-          <div id="item1" onclick="Details('Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
+          <div id="item1" onclick="Details('detailsModal','detailsModal','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
           
           <img src="summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg" alt="Tomato and Tuna pasta salad">
           <h3>Tomato and Tuna pasta salad</h3>
@@ -46,7 +46,13 @@
           
         </div>
     
-    
+    <div class="items">
+      <div id="item 2"onclick="Details('detailsModal2','Potluck Macaroni and Cheese',
+      'Potluck Macaroni and Cheese is a classic dish often prepared for gatherings and shared meals. It typically consists of cooked macaroni pasta mixed with a creamy cheese sauce, which can be made using a combination of cheese, milk or cream, and various seasonings. Additional ingredients such as diced vegetables, bacon, or breadcrumbs may also be added to enhance flavor and texture.')">
+      <img src="potluck.jpg" alt="Potluck Macaroni and Cheese">
+      <h3>Potluck Macaroni and cheese</h3>
+        <p id="duration">Duration: 30-45 min</p>
+    </div>
         
       </section>
     
@@ -55,7 +61,7 @@
     
       <div id="detailsModal" class="modal">
         <div class="modal-content">
-          <span class="close" onclick="closeM()">&times;</span>
+          <span class="close" onclick="closeModal('detailsModal')">&times;</span>
           <img src="summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg">
           <h3 id="itemName"></h3>
           <p id="itemDescription"> </p>
@@ -141,10 +147,10 @@
     
       <!-- ITEM 2 MODAL -->
     
-      <div id="detailsModal" class="modal">
+      <div id="detailsModal2" class="modal">
         <div class="modal-content">
-          <span class="close" onclick="closeM()">&times;</span>
-          <img src="">
+          <span class="close" onclick="closeModal('detailsModal2')">&times;</span>
+          <img src="potluck.jpg">
           <h3 id="itemName"></h3>
           <p id="itemDescription"> </p>
           <hr>

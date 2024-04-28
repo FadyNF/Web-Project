@@ -1,17 +1,17 @@
 
+function Details(modalID, itemName, itemDescription) {
 
-function Details(itemName, itemDescription) {
-    var modal = document.getElementById("detailsModal");
-    var itemNameElement = document.getElementById("itemName");
-    var itemDescriptionElement = document.getElementById("itemDescription");
+    var itemModal = document.getElementById(modalID);
+    var name = itemModal.querySelector("#itemName");
+    var description = itemModal.querySelector("#itemDescription");
 
-    itemNameElement.textContent = itemName;
-    itemDescriptionElement.textContent = itemDescription;
-    modal.style.display = "block";
+    name.textContent = itemName;
+    description.textContent = itemDescription;
+    itemModal.style.display = "block";
 }
 
-function closeM() {
-    var modal = document.getElementById("detailsModal");
+function closeModal(modalID) {
+    var modal = document.getElementById(modalID);
     modal.style.display = "none";
 }
 
