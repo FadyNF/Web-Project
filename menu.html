@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="menu.css">
+  <script src="menu.js"></script>
+    <title>MENU</title>
+</head>
+<body>
+    <header>
+
+        <a href="" class="logo">Fresh Bites</a>
+        <div class="nav">
+          <a href="">OUR PLANS</a>
+          <a href="">ABOUT US</a>
+          <a href="">OUR MENU</a>
+          <a href="">SUSTAINABILTIY</a>
+        </div>
+      </header>
+    
+    
+    
+      <section class="menu">
+        <div class="menu-title">
+          <h2 id="titleM">MENU FOR 06-13 MAY</h2>
+         <div class="buttons">
+          <button id="B1" onclick="changeDate(' 06-13 May')">06-13 May</button>
+          <button id="B2" onclick="changeDate(' 14-21 May')">14-21 May</button>
+          <button id="B3" onclick="changeDate(' 22-28 May')">22-28 May</button>
+          <button id="B4" onclick="changeDate(' 28-04 Jun')">28-04 Jun</button>
+         </div>
+        </div>
+        
+    
+        <div class="items">
+          <div id="item1" onclick="Details('Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
+          
+          <img src="summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg" alt="Tomato and Tuna pasta salad">
+          <h3>Tomato and Tuna pasta salad</h3>
+          <p>With Pangrattato</p>
+    
+          <p id="duration">Duration: 20 min</p>
+          </div>
+          
+        </div>
+    
+    
+        
+      </section>
+    
+    
+      <!-- ITEM 1 MODAL -->
+    
+      <div id="detailsModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeM()">&times;</span>
+          <img src="summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg">
+          <h3 id="itemName"></h3>
+          <p id="itemDescription"> </p>
+          <hr>
+          <h3>Ingredients:</h3>
+          <div class="ingredients">
+    
+            <span class="ing1">
+              <img id="Ingredientimg" src="download.jpeg">
+              <p>Tomato</p>
+            </span>
+    
+            <span class="ing2">
+              <img id="Ingredientimg" src="tuna.jpeg">
+              <p>Tuna</p>
+            </span>
+    
+            <span class="ing3">
+              <img id="Ingredientimg" src="pasta.jpeg">
+              <p>Pasta</p>
+            </span>
+    
+            <span class="ing4">
+              <img id="Ingredientimg" src="parsely.jpeg">
+              <p>Parsely</p>
+            </span>
+    
+            <span class="ing5">
+              <img id="Ingredientimg" src="olive oil.jpeg">
+              <p>Olive Oil</p>
+            </span>
+    
+            <span class="ing6">
+              <img id="Ingredientimg" src="olives.jpeg">
+              <p>Olives</p>
+            </span>
+          </div>
+    
+          <div class="ingredients">
+    
+            <span class="ing7">
+              <img id="Ingredientimg" src="garlic.jpeg">
+              <p>Garlic</p>
+            </span>
+    
+            <span class="ing8">
+              <img id="Ingredientimg" src="chili flakes.jpeg">
+              <p>Chili Flakes</p>
+            </span>
+    
+           
+            <span class="ing9">
+              <img id="Ingredientimg" src="lemon zest.jpeg">
+              <p>Lemon Zest</p>
+            </span>
+    
+            <span class="ing10">
+              <img id="Ingredientimg" src="salt.jpeg">
+              <p>Salt</p>
+            </span>
+    
+            <span class="ing11">
+              <img id="Ingredientimg" src="pepper.jpeg">
+              <p>Pepper</p>
+            </span>
+           
+    
+          </div>
+          <hr>
+    
+          <div class="allergies">
+            <h3>Allergens:</h3>
+            <p>
+              <ul>
+                <li>Tuna</li>
+                <li>Wheat (in pasta)</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+    
+      <!-- ITEM 2 MODAL -->
+    
+      <div id="detailsModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeM()">&times;</span>
+          <img src="">
+          <h3 id="itemName"></h3>
+          <p id="itemDescription"> </p>
+          <hr>
+    <div class="ingrediants">
+    <div></div>
+          </div>
+        </div>
+</body>
+</html>

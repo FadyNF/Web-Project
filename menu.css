@@ -1,0 +1,225 @@
+header {
+    background-color: #020000;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 3px;
+}
+
+body {
+    margin: 0;
+
+}
+
+.background {
+    position: relative;
+    display: inline-block;
+    height: 5px;
+    background-attachment: fixed;
+
+}
+
+.background,
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+
+.logo {
+    color: #daa76f;
+    font-weight: 700;
+    font-size: 1.3em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav,
+a {
+    color: #daa76f;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+.nav {
+    padding-right: 50px;
+}
+
+.nav,
+a:hover {
+    color: #8a6033;
+}
+
+
+
+/* menu */
+
+.menu {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f0d6;
+    background-position: right right;
+    background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+#titleM {
+    color: #020000;
+    font-size: 2em;
+    font-weight: 500;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    justify-content: center;
+
+}
+
+.buttons {
+
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    left: 38%;
+    top: 20%;
+}
+
+button {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid #556d3b;
+    font-style: oblique;
+    height: 40px;
+    width: 90px;
+    margin: 0 2px;
+    transition: ease-out 0.3s;
+    box-shadow: inset 0 0 0 0 #cec69f;
+    outline: none;
+
+}
+
+button:hover {
+    box-shadow: inset 90px 0 0 0 #cec69f;
+
+}
+
+.items {
+    background-color: transparent;
+    border: 5px solid transparent;
+    width: 15em;
+    box-shadow: 0 5px 25px black;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 50px;
+    min-height: 10em;
+    animation: backInLeft;
+    animation-duration: 2s;
+}
+
+.items:hover {
+    transform: scale(1.1);
+}
+
+.item,
+img {
+    width: 100%;
+    height: auto;
+
+
+}
+
+.items,
+h3 {
+    color: #556d3b;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #f5f0d6;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #aaa;
+}
+
+
+
+#Ingredientimg {
+    width: 45px;
+    height: 45px;
+}
+
+
+.ingredients {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ingredients,
+p {
+    color: #637c49;
+}
+
+ul{
+    list-style:circle;
+}
+
+#duration{
+    color:#637c49;
+    left:0;
+    justify-content: left;
+    display: flex;
+}    
