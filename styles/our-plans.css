@@ -246,6 +246,14 @@ body {
     font-weight: bold;
 }
 
+.note {
+    display: none;
+}
+
+.note p{
+    color: red !important;
+}
+
 .checkout-preview {
     padding-left: 20px;
     margin-left: -10px;
