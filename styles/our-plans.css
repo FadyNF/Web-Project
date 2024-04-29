@@ -12,10 +12,9 @@ body {
 
 .form {
     width: 98%;
-    height: 100%;
-    max-height: 600px;
-    max-width: 750px;
-    /* border: 5px black solid; */
+    height: auto;
+    max-height: 700px;
+    max-width: 850px;
 }
 
 .form .form-header {
@@ -32,7 +31,7 @@ body {
 .form .form-body {
     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    height: auto;
+    height: 550px;
     overflow: hidden;
 }
 
@@ -79,7 +78,6 @@ body {
     max-width: auto;
     padding: 5px 15px 15px;
     overflow: hidden;
-    /* border: 5px red solid; */
 }
 
 .form .steps .step h4 {
@@ -101,7 +99,6 @@ body {
 
 .select-preference,
 .checkout-preview {
-    /* border: 2px black solid; */
     width: calc(50% - 7.5px); /* Adjust width to accommodate gap */
     margin: 0px;
     position: relative;
@@ -188,8 +185,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 6.5rem;
-    min-height: 5rem;
+    width: 10rem;
+    min-height: 6rem;
     border-radius: 0.5rem;
     border: 2px solid #b5bfd9;
     background-color: #fff;
@@ -229,22 +226,32 @@ body {
 .checkbox-wrapper-16 .checkbox-icon {
     transition: 0.375s ease;
     color: #494949;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.checkbox-wrapper-16 .checkbox-icon svg {
+.checkbox-wrapper-16 .checkbox-icon img {
     width: 2rem;
     height: 2rem;
+    margin-bottom: 4px;
 }
 
 .checkbox-wrapper-16 .checkbox-label {
     color: #707070;
     transition: 0.375s ease;
     text-align: center;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .checkout-preview {
     padding-left: 20px;
     margin-left: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .checkout-input {
@@ -390,7 +397,8 @@ body {
 .meal-checkout-types {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
 
 .meal-checkout-types .meal-type {
