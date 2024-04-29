@@ -1,6 +1,8 @@
 body {
-    background-color: rgb(244, 240, 217);
+    background-color:#556d3b;
     font-family: Roboto;
     height: 3000px;
+    padding:0;
+    margin: 0;
 }
 

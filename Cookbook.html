@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FreshBites</title>
     <link rel="stylesheet" href="/styles/cookbook.css" />
-    <link rel="stylesheet" href="/styles/body.css" />
-    <link rel="stylesheet" href="/styles/general.css" />
-    <link rel="stylesheet" href="/styles/slider.css" />
+     <link rel="stylesheet" href="/styles/body.css" />
+    <!-- <link rel="stylesheet" href="/styles/general.css" /> -->
+    <link rel="stylesheet" href="/styles/slider.css" /> 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -27,8 +27,10 @@
       rel="stylesheet"
     />
     <script src="/scripts/slider.js" defer></script>
+    <script src="/scripts/cookbook.js" defer></script>
   </head>
   <body>
+
     <div class="banner">
       <div class="nav-bar">
         <div class="left-section">
@@ -58,13 +60,14 @@
         </ul>
       </div>
     </div>
+    <div id="background">
     <div id="search-div">
       <form action="./search" method="GET">
         <input type="text" name="search" id="search-bar" />
         <button type="submit" id="search-btn">Search</button>
       </form>
     </div>
-    <h2 class="title">Global Cuisines</h2>
+    <h1 class="title">Global Cuisines</h1>
     <div class="cuisines">
       <div class="icon"><i id="left-cuisine" class="fa-solid fa-angle-left"></i></div>
       <ul class="tabs-bar">
@@ -84,7 +87,7 @@
       </ul>
       <div class="icon"><i id="right-cuisine" class="fa-solid fa-angle-right"></i></div>
     </div>
-    <h2 class="title">Dishes</h2>
+    <h1 class="title">Dishes</h1>
     <div class="dishes">
       <div class="icon"><i id="left-dishes" class="fa-solid fa-angle-left"></i></div>
       <ul class="tabs-bar">
@@ -101,5 +104,68 @@
       </ul>
       <div class="icon"><i id="right-dishes" class="fa-solid fa-angle-right"></i></div>
     </div>
+    <div id="overlay"></div>
+    <div id="feedbackIcon" onclick="showBox()">
+      <img src="/images/Feedback.jpg" width="35" height="100" />
+    </div>
+    
+    <div id="feedbackContent">
+      <button class="exit" onclick="exitFeedback()">x</button>
+      <h2>Rate our Website</h2>
+     
+      <button class="choice" onclick="showTextArea()">Hate</button>
+      <button class="choice" onclick="showTextArea()">Dislike</button>
+      <button class="choice" onclick="showTextArea()">Neutral</button>
+      <button class="choice" onclick="showTextArea()">Like</button>
+      <button class="choice" onclick="showTextArea()">Love</button>
+      <form name="feedbackForm">
+        <div id="feedback">
+          <h4>Please share any suggestions for enhancements</h4>
+          <textarea id="textArea" placeholder="Enter your message here..."></textarea>
+          <button id="submit-btn" type="submit">Submit</button>
+        </div>
+      </form>
+      </div>
+    
+  <h1 class="heading">A Global Selection of Savory Dinner Recipes</h1>
+  <h2 class="sub-heading">
+    Discover the ideal effortless meal that will leave you feeling satisfied,<br/>
+    Explore our extensive recipe collection filled with delicious dinner options.
+  </h2>
+  <h2 class="sentence"> Top-rated Dishes and Recipes</h2>
+<h3 class="sub-sentence">
+  Check out our highly favored recipes!
+</h3>
+<div class="meals">
+  <div class="icon"><i id="left-meals" class="fa-solid fa-angle-left"></i></div>
+  <ul class="meals-bar">
+    <li class="menu-item"><img src="/images/dish1.jpg" />Spicy Chili<br/> Garlic Noodles</li>
+    <li class="menu-item"><img src="/images/dish2.jpg" />Chicken Orzo <br/>Dinner</li>
+    <li class="menu-item"><img src="/images/dish3.jpg" />Mozzarella-Crusted <br/>Chicken</li>
+    <li class="menu-item"><img src="/images/dish4.jpg" />Korean Beef<br/> Bibimbap</li>
+    <li class="menu-item"><img src="/images/dish5.jpg" />Rapid Stir-<br/>Fried Beef</li>
+    <li class="menu-item"><img src="/images/dish6.jpg" />Steak and <br/>Potatoes</li>
+    <li class="menu-item"><img src="/images/dish7.jpg" />Ginger beef <br/>Stri-Fry</li>
+    <li class="menu-item"><img src="/images/dish8.jpg" />Butter-Basted <br/>Sirloin Steack</li>
+  </ul>
+  <div class="icon"><i id="right-meals" class="fa-solid fa-angle-right"></i></div>
+</div>
+<h2 class="sentence">Swift meals for busy days</h2>
+<h3 class="sub-sentence">Done in a short period of time!</h3>
+<div class="meals">
+  <div class="icon"><i id="left-meals" class="fa-solid fa-angle-left"></i></div>
+  <ul class="meals-bar">
+    <li class="menu-item"><img src="/images/dish9.jpg" />Spicy Chili Garlic Noodles</li>
+    <li class="menu-item"><img src="/images/dish10.jpg" />Chicken Orzo<br/>Dinner</li>
+    <li class="menu-item"><img src="/images/dish11.jpg" />Mozzarella-Crusted Chicken</li>
+    <li class="menu-item"><img src="/images/dish12.jpg" />Korean Beef Bibimbap</li>
+    <li class="menu-item"><img src="/images/dish513.jpg" />Rapid Stir-Fried Beef</li>
+    <li class="menu-item"><img src="/images/dish14.jpg" />Steak and Potatoes</li>
+    <li class="menu-item"><img src="/images/dish14.jpg" />Ginger beef Stri-Fry</li>
+    <li class="menu-item"><img src="/images/dish16.jpg" />Butter-Basted Sirloin Steack</li>
+  </ul>
+  <div class="icon"><i id="right-meals" class="fa-solid fa-angle-right"></i></div>
+</div>
+</div>
   </body>
 </html>

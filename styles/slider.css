@@ -1,26 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 .cuisines {
-  padding: 35px;
   margin-left: 240px;
   max-width: 1000px;
-  background: #f5f0d6;
+  background: #556d3b;
   border-radius: 13px;
   overflow-x: hidden;
   position: relative;
 }
 .dishes {
-  padding: 35px;
   margin-left: 240px;
   max-width: 1000px;
-  background: #f5f0d6;
+  background: #556d3b;
   border-radius: 13px;
   overflow-x: hidden;
   position: relative;
@@ -38,15 +29,15 @@
 .icon:first-child {
   left: 0;
   height: 100%;
-  /* display: none; */
-  background: linear-gradient(90deg, #f5f0d6 80%, transparent);
+  display: none;
+  background: linear-gradient(90deg, #556d3b 80%, transparent);
 }
 
 .icon:last-child {
   right: 0;
   justify-content: flex-end;
   height: 100%;
-  background: linear-gradient(-90deg, #f5f0d6 80%, transparent);
+  background: linear-gradient(-90deg, #556d3b 80%, transparent);
 }
 
 .icon i {
@@ -59,11 +50,6 @@
   cursor: pointer;
   font-size: 1.2rem;
 }
-
-.icon i:hover {
-  background: #6f8b52;
-}
-
 .icon:first-child i {
   margin-left: 15px;
 }
@@ -73,6 +59,9 @@
 }
 
 .tabs-bar {
+  font-family:'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -85,12 +74,16 @@
 }
 .tabs-bar .tab {
   cursor: pointer;
+  color: #020000;
   font-size: 1.18rem;
   white-space: nowrap;
   background: #f5f0d6;
   padding: 13px 20px;
   border-radius: 30px;
-  border: 1px solid #556d3b;
+  border: none;
+}
+.tabs-bar .tab:hover{
+  background-color: #cbc5a8;
 }
 .tabs-bar .tab.active{
   color: #f5f0d6;
@@ -98,8 +91,59 @@
   border-color: transparent;
 }
 .title {
-  color: #020000;
-  font-family: "Poppins", sans-serif;
+  color: #f5f0d6;
+  font-family:'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-weight: bold;
   padding: 20px 20px;
   margin: 5px 230px;
+}
+
+/*Meals styling part*/
+.meals {
+  padding:10px ;
+  margin-left: 240px;
+  max-width: 1000px;
+  background: #556d3b;
+  border-radius: 13px;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  height:8cm;
+  position: relative;
+}
+.menu-item {
+  background-color: #556d3b;
+  padding: 20px 20px 10px 20px;
+  border-radius: 100px 100px 10px 10px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0);
+  text-align: center;
+}
+.menu-item:hover{
+  background-color: #6c8b4a;
+}
+.menu-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+
+}
+.meals-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style:none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #556d3b;
+  height: 7cm;
+}
+.meals-bar .menu-item.active{
+  color: #f5f0d6;
+  background: #6c8b4a;
+  border-color: transparent;
+
 }
