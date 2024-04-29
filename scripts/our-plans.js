@@ -9,7 +9,7 @@
 
         if (currentPage === 1) {
             prevBtn.disabled = true;
-        } else if (currentPage === 5) {
+        } else if (currentPage === 4) {
             nextBtn.disabled = true;
         }
 
