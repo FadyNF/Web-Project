@@ -58,6 +58,7 @@ a:hover {
 
 
 
+
 #titleM {
     color: rgb(41, 91, 67);
     font-size: 2em;
@@ -70,6 +71,22 @@ a:hover {
 
 }
 
+#qoute{
+    color: rgb(90, 152, 122);
+    font-size: 1.7em;
+    font-weight: 500;
+    font-style: oblique;
+    top: 10%;
+    left: 75%;
+    text-align:right ;
+    position: absolute;
+   
+    
+}
+
+.icon{
+    padding-right: 10px;
+}
 .buttons {
 
     margin-top: 20px;
@@ -126,31 +143,9 @@ button:hover {
     animation-duration: 2s;
 }
 
-.itemsweek1 {
-    background-color: transparent;
-    border: 5px solid transparent;
-    width: 15em;
-    box-shadow: 0 5px 25px black;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 50px;
-    min-height: 10em;
-    animation: backInLeft;
-    animation-duration: 2s;
-}
 
-.itemsweek2 {
-    background-color: transparent;
-    border: 5px solid transparent;
-    width: 15em;
-    box-shadow: 0 5px 25px black;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 50px;
-    min-height: 10em;
-    animation: backInLeft;
-    animation-duration: 2s;
-}
+
+
 
 .items:hover {
     transform: scale(1.1);
@@ -186,11 +181,12 @@ h3 {
     background-color: #f5f0d6;
     margin: 15% auto;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 50px;
     width: 80%;
     max-width: 600px;
     position: relative;
 }
+
 
 .close {
     position: absolute;
@@ -266,21 +262,8 @@ li ,th{
 
 }
 
-.star.half-selected{
-    color: gold;
-    border: none;
 
-position: relative;
-overflow: hidden;
-}
 
-.star.half-selected::before{
-    content:'\2605';
-    position: absolute;
-    width: 50%;
-    left:0;
-    overflow: hidden;
-}
 
 .logoH {
     display: flex;

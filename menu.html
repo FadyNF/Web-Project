@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
   <link rel="stylesheet" href="menu.css">
   <script src="menu.js"></script>
   <title>MENU</title>
@@ -35,6 +36,8 @@
         <button id="B3" onclick="gettingDates(14),viewItems('week3'),SelectB('B3')">WEEK 3</button>
         <button id="B4" onclick="gettingDates(21),viewItems('weeek4'),SelectB('B4')">WEEK 4</button>
       </div>
+
+      <p id="qoute"><i class="fa-solid fa-utensils icon" style="color: #276351;"></i><i></i>Good food is the foundation <br> of genuine happiness.</p>
     </div>
 
     <div class="items-container">
@@ -43,12 +46,12 @@
       <div class="items week1">
 
         <!-- ITEM 1 -->
-        <img src="/Web-Project/images/summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg"
+        <img src="/Web-Project/images/Tuna-Tomato-Salad.jpg"
           alt="Tomato and Tuna pasta salad">
         <h3
           onclick="Details('detailsModalweek1','detailsModal','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
           Tomato and Tuna pasta salad</h3>
-        <p>With Pangrattato</p>
+     
 
         <p id="duration">Duration: 20 min</p>
         <div class="rate">
@@ -115,12 +118,38 @@
       </div>
 
 
+      
+<!-- ITEM 4 -->
+      <div  class="items week1">
+
+        <img src="/Web-Project/images/Mom-s-Swedish-Meatballs.jpg" alt="Swedish Meatballs">
+        <h3 onclick="Details('detailsModal4week1','Swedish Meatball',
+        'Swedish Meatballs originates from swden, known for their tender texture. they are typically made with a mix of beef ')">Swedish Meatball</h3>
+
+<p>Duration: 30 min</p>
+
+<div class="rate">
+  <div class="rate">
+    <span class="star selected">&#9733;</span>
+    <span class="star selected">&#9733;</span>
+    <span class="star selected">&#9733;</span>
+    <span class="star selected">&#9733;</span>
+    <span class="star selected ">&#9733;</span>
+  </div>
+</div>
+      </div>
+
+
+
       <!-- ITEMS OF WEEK 2 -->
+      <!-- ITEM 1 -->
       <div class="items week2">
 
         <img src="/Web-Project/images/Hungarian-Chicken-Paprikash.jpg" alt="Hungarian Chicken Paprikash">
         <h3
-          onclick="Details('detailsModal1week2','Hungarian Chicken Paprikash','Hungarian Chicken Paprikash is a classic hungarian plate knwon for its creamy sauce and ttender chicken. it has chicken peices covered with creamy sauce and the paprika flavors. The dish can have additional ingredients peppers,tomatos,... ')">
+          onclick="Details('detailsModal1week2',
+          'Hungarian Chicken Paprikash',
+          'Hungarian Chicken Paprikash is a classic hungarian plate knwon for its creamy sauce and ttender chicken. it has chicken peices covered with creamy sauce and the paprika flavors. The dish can have additional ingredients peppers,tomatos,... ')">
           Hungarian Chicken Paprikash</h3>
 
         <p id="duration">Duration: 45 min</p>
@@ -135,17 +164,48 @@
           </div>
         </div>
       </div>
+
+      <!-- ITEM 2  -->
+      <div class="items week2">
+        <img src="/Web-Project/images/Country-Chicken-with-Gravy.jpg" alt="Chicken and Gravy">
+<h3 onclick="Details('detailsModal2week2','Chicken and Gravy',
+'Tender pieces of chicken served with gravy, it  typically has a blend of herbs and spices on the top of it, the gravy is made of meat drippings combined with a thickening agent. ')">Chicken and Gravy</h3>
+
+<p id="duration">Duration: 30 min</p>
+
+<div class="rate">
+  <div class="rate">
+    <span class="star selected">&#9733;</span>
+    <span class="star selected">&#9733;</span>
+    <span class="star selected">&#9733;</span>
+    <span class="star selected">&#9733;</span>
+    <span class="star half">&#9733;</span>
+  </div>
+</div>
+      </div>
     </div>
 
+
+     <!-- ITEMS OF WEEK 3 -->
+  <div class="items week3">
+    <img src="/Web-Project/images/Spaghetti-Chicken-Parmesan.jpg" alt="Spaghetti Chicken Parmesan">
+    <h3  >Spaghetti Chicken Parmesan</h3>
+    <p id="duration">Duration: </p>
+    
+      </div>
+    
   </section>
 
 
+
+ 
+  <!-- MODALSS -->
   <!-- ITEM 1 W1 MODAL -->
 
   <div id="detailsModalweek1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModalweek1')">&times;</span>
-      <img src="/Web-Project/images/summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg">
+      <img src="/Web-Project/images/Tuna-Tomato-Salad.jpg">
       <h3 id="itemName"></h3>
       <p id="itemDescription"> </p>
       <hr>
@@ -535,8 +595,65 @@
   </div>
 
 
+  
+  <!-- ITEM 4 W1 MODAL -->
+<div id="detailsModal4week1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('detailsModal4week1')">&times;</span>
+      <img src="/Web-Project/images/Mom-s-Swedish-Meatballs.jpg">
+      <h3 id="itemName"></h3>
+      <p id="itemDescription"> </p>
+      <hr>
+
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/ground beef.jpeg">
+          <p> Ground Beef</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/eggs.jpeg">
+          <p>Eggs</p>
+        </span>
+
+        <span class="ing"> 
+<img id="Ingredientimg" src="/Web-Project/images/braed crumb.jpeg">
+<p>Bread Crumbs</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/flour.jpeg">
+          <p>Flour</p>
+        </span>
+
+        <span class="ing">
+<img id="Ingredientimg" src="/Web-Project/images/onion.jpeg">
+<p>Onion</p>
+        </span>
+
+        <span class="ing">
+<img id="Ingredientimg" src="/Web-Project/images/milk.jpeg">
+<p>Milk</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/consomme.jpeg">
+          <p>Consomme</p>
+        </span>
+        <span class="ing">
+<img id="Ingredientimg" src="/Web-Project/images/worcestershire.jpeg">
+<p>Worcestershire</p>
+        </span>
+      </div>
+      <hr>
+
+
+  </div>
+</div>
+
   <!-- WEEK 2 -->
-  <!-- ITEM W2 MODAL -->
+  <!-- ITEM 1 W2 MODAL -->
   <div id="detailsModal1week2" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal1week2')">&times;</span>
@@ -673,6 +790,30 @@
           </tr>
         </table>
       </div>
+    </div>
+  </div>
+
+  <!-- ITEM 2 W2 MODAL -->
+  <div id="detailsModal2week2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal2week2')">&times;</span>
+      <img src="/Web-Project/images/Country-Chicken-with-Gravy.jpg" >
+      <h3 id="itemName"></h3>
+      <p id="itemDescription"> </p>
+      <hr>
+
+    </div>
+  </div>
+
+
+  <!-- WEEK 3 -->
+  <!-- ITEM 1 W3 MODAL -->
+  <div id="detailsModal1week3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal1week3')">&times;</span>
+      <h3 id="itemName"></h3>
+      <p id="itemDescription"> </p>
+      <hr>
     </div>
   </div>
 </body>
