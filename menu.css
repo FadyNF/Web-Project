@@ -41,7 +41,7 @@ a:hover {
 
 
 
-/* menu */
+/* mes */
 
 .menu {
     align-items: center;
@@ -238,7 +238,7 @@ ul {
     list-style: circle;
 }
 
-li {
+li ,th{
     color: #637c49;
 }
 
@@ -250,13 +250,12 @@ li {
 }
 
 
-.rating {
+.rate {
     margin-top: 10px;
 }
 
 .star {
     font-size: 24px;
-    cursor: pointer;
     color: gray;
     display: inline-flex;
 }
@@ -265,6 +264,22 @@ li {
     color: gold;
     border: none;
 
+}
+
+.star.half-selected{
+    color: gold;
+    border: none;
+
+position: relative;
+overflow: hidden;
+}
+
+.star.half-selected::before{
+    content:'\2605';
+    position: absolute;
+    width: 50%;
+    left:0;
+    overflow: hidden;
 }
 
 .logoH {
@@ -292,7 +307,7 @@ li {
     margin-top: 8px;
 }
 
-.utensList {
+.List {
     display: flex;
 
     flex-wrap: wrap;
@@ -315,4 +330,8 @@ width: 80%;
 
 tr:nth-child(even) {background-color: #dad4ba;
 
+}
+
+td{
+    color: #778c61;
 }

@@ -14,7 +14,7 @@
 
   <header>
     <div class="LogoH">
-      <img class="logoI" src="/Web-Project/imagesA/logo1.png">
+      <img class="logoI" src="/Web-Project/images/logo1.png">
       <a href="" class="logoText">Fresh Bites</a>
     </div>
     <div class="nav">
@@ -41,48 +41,76 @@
 
       <!-- ITEMS OF WEEK 1 -->
       <div class="items week1">
-        <div id="item1">
 
-          <img src="/Web-Project/imagesA/summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg"
-            alt="Tomato and Tuna pasta salad">
-          <h3
-            onclick="Details('detailsModal','detailsModal','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
-            Tomato and Tuna pasta salad</h3>
-          <p>With Pangrattato</p>
+        <!-- ITEM 1 -->
+        <img src="/Web-Project/images/summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg"
+          alt="Tomato and Tuna pasta salad">
+        <h3
+          onclick="Details('detailsModalweek1','detailsModal','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
+          Tomato and Tuna pasta salad</h3>
+        <p>With Pangrattato</p>
 
-          <p id="duration">Duration: 20 min</p>
-          <div class="rating">
-            <div class="rating">
-              <span class="star selected">&#9733;</span>
-              <span class="star selected">&#9733;</span>
-              <span class="star selected">&#9733;</span>
-              <span class="star selected">&#9733;</span>
-              <span class="star selected">&#9733;</span>
-            </div>
+        <p id="duration">Duration: 20 min</p>
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
           </div>
         </div>
+
       </div>
 
-
+      <!-- ITEM 2 -->
       <div class="items week1">
 
-        <img src="/Web-Project/imagesA/potluck.jpg" alt="Potluck Macaroni and Cheese">
+        <img src="/Web-Project/images/potluck.jpg" alt="Potluck Macaroni and Cheese">
         <h3
-          onclick="Details('detailsModal2','Potluck Macaroni and Cheese',
+          onclick="Details('detailsModal2week1','Potluck Macaroni and Cheese',
       'Potluck Macaroni and Cheese is a classic dish,  consists of cooked macaroni pasta mixed with a creamy cheese sauce, which can be made using a combination of cheese, milk or cream, and various seasonings. Additional ingredients such as diced vegetables, bacon, or breadcrumbs may also be added to enhance flavor and texture.')">
           Potluck Macaroni and cheese</h3>
         <p id="duration">Duration: 30-45 min</p>
 
-        <div class="rating">
-          <div class="rating">
+        <div class="rate">
+          <div class="rate">
             <span class="star selected">&#9733;</span>
             <span class="star selected">&#9733;</span>
             <span class="star selected">&#9733;</span>
             <span class="star selected">&#9733;</span>
             <span class="star ">&#9733;</span>
           </div>
+        </div>
+      </div>
 
 
+
+
+
+
+
+      <!-- ITEM 3 -->
+      <div class="items week1">
+
+        <img src="/Web-Project/images/Beef-and-Mushrooms-with-Smashed-Potatoes.jpg"
+          alt=" Beef-and-Mushrooms-with-Smashed-Potatoes">
+        <h3
+          onclick="Details('detailsModal3week1','Beef-and-Mushrooms-with-Smashed-Potatoes','Partake in a comforting yet hearty dish with our beef and mushroom served with creamy smashed potatoes. ')">
+          Beef and Mushrooms with Smashed Potatoes
+        </h3>
+
+
+        <p id="duration">Duration: 30 min</p>
+
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star ">&#9733;</span>
+          </div>
         </div>
       </div>
 
@@ -90,21 +118,34 @@
       <!-- ITEMS OF WEEK 2 -->
       <div class="items week2">
 
-        <img src="">
+        <img src="/Web-Project/images/Hungarian-Chicken-Paprikash.jpg" alt="Hungarian Chicken Paprikash">
+        <h3
+          onclick="Details('detailsModal1week2','Hungarian Chicken Paprikash','Hungarian Chicken Paprikash is a classic hungarian plate knwon for its creamy sauce and ttender chicken. it has chicken peices covered with creamy sauce and the paprika flavors. The dish can have additional ingredients peppers,tomatos,... ')">
+          Hungarian Chicken Paprikash</h3>
 
+        <p id="duration">Duration: 45 min</p>
+
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star ">&#9733;</span>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
 
   </section>
 
 
-  <!-- ITEM 1 MODAL -->
+  <!-- ITEM 1 W1 MODAL -->
 
-  <div id="detailsModal" class="modal">
+  <div id="detailsModalweek1" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('detailsModal')">&times;</span>
-      <img src="/Web-Project/imagesA/summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg">
+      <span class="close" onclick="closeModal('detailsModalweek1')">&times;</span>
+      <img src="/Web-Project/images/summer-tomato-and-tuna-pasta-with-pangrattato-140533-2.jpg">
       <h3 id="itemName"></h3>
       <p id="itemDescription"> </p>
       <hr>
@@ -112,61 +153,58 @@
       <div class="ingredients">
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/download.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/download.jpeg">
           <p>Tomato</p>
         </span>
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/tuna.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/tuna.jpeg">
           <p>Tuna</p>
         </span>
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/pasta.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/pasta.jpeg">
           <p>Pasta</p>
         </span>
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/parsely.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/parsely.jpeg">
           <p>Parsely</p>
         </span>
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/olive oil.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/olive oil.jpeg">
           <p>Olive Oil</p>
         </span>
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/olives.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/olives.jpeg">
           <p>Olives</p>
         </span>
 
-
-
-
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/garlic.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/garlic.jpeg">
           <p>Garlic</p>
         </span>
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/chili flakes.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/chili flakes.jpeg">
           <p>Chili Flakes</p>
         </span>
 
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/lemon zest.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/lemon zest.jpeg">
           <p>Lemon Zest</p>
         </span>
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/salt.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/salt.jpeg">
           <p>Salt</p>
         </span>
 
         <span class="ing">
-          <img id="Ingredientimg" src="/Web-Project/imagesA/pepper.jpeg">
+          <img id="Ingredientimg" src="/Web-Project/images/pepper.jpeg">
           <p>Pepper</p>
         </span>
 
@@ -174,24 +212,39 @@
 
       <hr>
 
-      <div class="allergies">
+      <div>
         <h3>Allergens:</h3>
         <p>
-        <ul>
+        <ul class="List">
           <li>Tuna</li>
           <li>Wheat (in pasta)</li>
         </ul>
         </p>
       </div>
-<hr>
-      <div class="nutrition" style="overflow-x:auto;">
+      <hr>
+
+      <div class="utensils">
+        <h3>Tools Needed:</h3>
+
+        <ul class="List">
+          <li>Large pot</li>
+          <li>Mixing Bowl</li>
+          <li>Can Opener</li>
+          <li>Zester</li>
+          <li>Cutting Board</li>
+          <li>Measuring Spoons and Cups</li>
+
+        </ul>
+      </div>
+      <hr>
+      <div>
         <h3>Nutrition Values:</h3>
         <table>
           <tr>
             <th>Nutrient</th>
             <th>Value</th>
           </tr>
-        
+
           <tr>
             <td>Calories</td>
             <td>250-300kcal</td>
@@ -199,22 +252,22 @@
 
           <tr>
             <td>Protien</td>
-            <td>15-20gm</td>
+            <td>15-20 g</td>
           </tr>
 
           <tr>
             <td>Fat</td>
-            <td>10-15 gm</td>
+            <td>10-15 g</td>
           </tr>
 
           <tr>
             <td>Carbohydrates</td>
-          <td>25-35 gm</td>
+            <td>25-35 g</td>
           </tr>
 
           <tr>
             <td>Fiber</td>
-            <td>3-5 gm</td>
+            <td>3-5 g</td>
           </tr>
 
           <tr>
@@ -227,12 +280,12 @@
   </div>
 
 
-  <!-- ITEM 2 MODAL -->
+  <!-- ITEM 2 W1 MODAL -->
 
-  <div id="detailsModal2" class="modal">
+  <div id="detailsModal2week1" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('detailsModal2')">&times;</span>
-      <img src="/Web-Project/imagesA/potluck.jpg">
+      <span class="close" onclick="closeModal('detailsModal2week1')">&times;</span>
+      <img src="/Web-Project/images/potluck.jpg">
       <h3 id="itemName"></h3>
       <p id="itemDescription"> </p>
       <hr>
@@ -243,55 +296,385 @@
         <div class="ingredients">
 
           <span class="ing">
-            <img id="Ingredientimg" src="/Web-Project/imagesA/macaroni.jpeg">
+            <img id="Ingredientimg" src="/Web-Project/images/white cheddar.jpeg">
+            <p>Shredded White Cheddar</p>
+          </span>
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/images/macaroni.jpeg">
             <p>Macaroni</p>
           </span>
 
           <span class="ing">
-            <img id="Ingredientimg" src="/Web-Project/imagesA/milk.jpeg">
+            <img id="Ingredientimg" src="/Web-Project/images/milk.jpeg">
             <p>Milk</p>
           </span>
 
           <span class="ing">
-            <img id="Ingredientimg" src="/Web-Project/imagesA/velveeta.jpeg">
+            <img id="Ingredientimg" src="/Web-Project/images/velveeta.jpeg">
             <p>Velveeta</p>
           </span>
 
           <span class="ing">
-            <img id="Ingredientimg" src="/Web-Project/imagesA/eggs.jpeg">
+            <img id="Ingredientimg" src="/Web-Project/images/eggs.jpeg">
             <p>Eggs</p>
           </span>
 
-          <span class="ing">
-            <img id="Ingredientimg" src="/Web-Project/imagesA/shreded mexican ch.jpeg">
-            <p>Shredded Mexican Cheese</p>
-          </span>
+
 
           <span class="ing">
-            <img id="Ingredientimg" src="/Web-Project/imagesA/butter.jpeg">
+            <img id="Ingredientimg" src="/Web-Project/images/butter.jpeg">
             <p>Butter</p>
           </span>
 
           <span class="ing">
-            <img id="Ingredientimg" src="/Web-Project/imagesA/white cheddar.jpeg">
-            <p>Shredded White Cheddar</p>
+            <img id="Ingredientimg" src="/Web-Project/images/evapourated milk.jpeg">
+            <p>Evapourated Milk</p>
+          </span>
+
+
+
+          <span class="ing">
+            <img id="Ingredientimg" src="/Web-Project/images/shreded mexican ch.jpeg">
+            <p>Shredded Mexican Cheese</p>
           </span>
         </div>
         <hr>
 
-        <div class="allergies">
+        <div>
           <h3>Allergens:</h3>
-          <p class="list">
-          <ul>
+
+          <ul class="List">
             <li>Cheese</li>
             <li>Milk</li>
             <li>Eggs</li>
           </ul>
-          </p>
+
 
         </div>
+        <hr>
+
+        <div class="utensils">
+          <h3>Tools Needed:</h3>
+          <ul class="List">
+            <li>Large Pot</li>
+            <li>Whisk</li>
+            <li>Spatula</li>
+            <li>Stainer</li>
+          </ul>
+        </div>
+        <hr>
+        <div>
+          <h3>Nutrition Values:</h3>
+          <table>
+            <tr>
+              <th>Nutrient</th>
+              <th>Value</th>
+            </tr>
+
+            <tr>
+              <td>Calories</td>
+              <td>300-500 cal</td>
+            </tr>
+
+            <tr>
+              <td>protien</td>
+              <td>10-15 g</td>
+            </tr>
+
+            <tr>
+              <td>Fat</td>
+              <td>15-30 g</td>
+            </tr>
+
+            <tr>
+              <td>Crbohydrates</td>
+              <td>30-40 g</td>
+            </tr>
+
+            <tr>
+              <td>Fiber</td>
+              <td>8 g</td>
+            </tr>
+          </table>
+        </div>
       </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- ITEM 3 W1 MODAL -->
+  <div id="detailsModal3week1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal3week1')">&times;</span>
+      <img src="/Web-Project/images/Beef-and-Mushrooms-with-Smashed-Potatoes.jpg">
+      <h3 id="itemName"></h3>
+      <p id="itemDescription"> </p>
+      <hr>
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/butter.jpeg">
+          <p>Butter</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/red potatoes.jpeg">
+          <p>Red Potatoes</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/ground beef.jpeg">
+          <p>Ground Beef</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/onion.jpeg">
+          <p>Sliced Onions</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/beef broth.jpeg">
+          <p>Beef Broth</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/mushroom.jpeg">
+          <p>Fresh Mushrooms</p>
+        </span>
+
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/flour.jpeg">
+          <p>Flour</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/fried onions.jpeg">
+          <p>French Fried Onions</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/pepper.jpeg">
+          <p>Pepper</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/salt.jpeg">
+          <p>Salt</p>
+        </span>
       </div>
+
+      <hr>
+      <div>
+        <h3>Allergens:</h3>
+        <ul class="List">
+          <li>Mushrooms</li>
+          <li>Eggs</li>
+          <li>Diary products(butter)</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="utensils">
+        <h3>Tools Needed:</h3>
+        <ul class="List">
+          <li>Mixing Bowl</li>
+          <li>Spatula</li>
+          <li>Spoons</li>
+          <li>Frying Pan</li>
+          <li>Potatoe Masher</li>
+          <li>Measuring Cups</li>
+        </ul>
+        </ul>
+      </div>
+      <hr>
+
+      <div>
+        <h3>Nutrition Value:</h3>
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
+
+          <tr>
+            <td>Calories</td>
+            <td>500-600 cal</td>
+          </tr>
+
+          <tr>
+            <td>Protien</td>
+            <td>28 g</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>26 g</td>
+          </tr>
+
+          <tr>
+            <td>Carbohydrates</td>
+            <td>40 g</td>
+          </tr>
+
+          <tr>
+            <td>Fiber</td>
+            <td>2-4 g</td>
+          </tr>
+
+          <tr>
+            <td>Sodium</td>
+            <td>896 mg</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- WEEK 2 -->
+  <!-- ITEM W2 MODAL -->
+  <div id="detailsModal1week2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal1week2')">&times;</span>
+      <img src="/Web-Project/images/Hungarian-Chicken-Paprikash.jpg">
+      <h3 id="itemName"></h3>
+      <p id="itemDescription"> </p>
+      <hr>
+
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/worcestershire.jpeg">
+          <p>Worcestershire Sauce</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/celery.jpeg">
+          <p>Celery</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/soy sauce.jpeg">
+          <p>Soy Sauce</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/cold water.jpeg">
+          <p>Cold Water</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/ketchup.jpeg">
+          <p>Ketchup</p>
+        </span>
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/onion.jpeg">
+          <p>Onions</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/garlic.jpeg">
+          <p>Garlic</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/pepper.jpeg">
+          <p>Pepper</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/chuck rost.jpeg">
+          <p>Beef Chuck Roast</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/cornstarch.jpeg">
+          <p>cornstarch</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/crushed red pepper.jpeg">
+          <p>Red Ppper Flakes</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/stewed tomato.jpeg">
+          <p>Stewed Tomato</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/green pepper.jpeg">
+          <p>Green Pepper</p>
+        </span>
+
+      </div>
+      <hr>
+
+      <div>
+        <h3>Allergens:</h3>
+        <ul class="List">
+          <li>Paprika</li>
+          <li>Soy Sauce</li>
+
+        </ul>
+      </div>
+
+
+      <hr>
+      <div class="utensils">
+        <h3>Tools Needed:</h3>
+        <ul class="List">
+          <li>Cutting Board</li>
+          <li>Spatula</li>
+          <li>Bowl</li>
+          <li>Fork</li>
+          <li>Measuring Cups</li>
+        </ul>
+      </div>
+      <hr>
+
+
+      <div>
+        <h3>Nutrition Values:</h3>
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
+
+          <tr>
+            <td>Calories</td>
+            <td>365-400 cal</td>
+          </tr>
+
+          <tr>
+            <td>Protien</td>
+            <td>31 g</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>15 g</td>
+          </tr>
+
+          <tr>
+            <td>Carbohydrates</td>
+            <td>25 g</td>
+          </tr>
+
+          <tr>
+            <td>Sodium</td>
+            <td>787 mg</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
