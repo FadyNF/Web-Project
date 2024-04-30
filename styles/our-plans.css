@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 
 body {
@@ -63,7 +64,7 @@ body {
 }
 
 .form .form-body .pagination .active ~ div {
-    background-color: #ddd; 
+    background-color: #ddd;
     color: #111;
 }
 
@@ -90,7 +91,7 @@ body {
     font-size: 15px;
 }
 
-.form .steps .step .grid {
+.form .steps .step .choose-plans-container {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -99,7 +100,7 @@ body {
 
 .select-preference,
 .checkout-preview {
-    width: calc(50% - 7.5px); /* Adjust width to accommodate gap */
+    width: calc(50% - 7.5px);
     margin: 0px;
     position: relative;
     display: flex;
@@ -112,7 +113,7 @@ body {
     width: 50%;
     margin-right: -5px;
     padding: 0 10px;
-    border-right: 1px dotted black; /* Add a dotted border to the right */
+    border-right: 1px dotted black;
 }
 
 .description {
@@ -250,7 +251,7 @@ body {
     display: none;
 }
 
-.note p{
+.note p {
     color: red !important;
 }
 
@@ -272,7 +273,7 @@ body {
     align-content: center;
 }
 
-.number-of-people-input, 
+.number-of-people-input,
 .number-of-meals-input {
     margin-top: 10px;
     display: flex;
@@ -429,14 +430,151 @@ body {
     margin-top: 15px;
 }
 
-.form .steps .step .grid .col label {
+.credentials-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: black;
+    padding: 13px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.message-input {
+    color: #355891;
+    font-size: 14px;
+}
+
+.name-form-inputs {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.credentials-form label {
+    position: relative;
+}
+
+.credentials-form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #355891;
+    border-radius: 5px;
+}
+
+.credentials-form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: #355891;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.credentials-form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+.credentials-form label .input:focus + span,
+.credentials-form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.credentials-form label .input:valid + span {
+    color: green;
+}
+
+.input01 {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #355891;
+    border-radius: 5px;
+}
+
+.credentials-form label .input01 + span {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    color: #355891;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.credentials-form label .input01:placeholder-shown + span {
+    top: 40px;
+    font-size: 0.9em;
+}
+
+.credentials-form label .input01:focus + span,
+.credentials-form label .input01:valid + span {
+    top: 50px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.credentials-form label .input01:valid + span {
+    color: green;
+}
+
+.credentials-button {
+    background-color: white;
+    border: 2px solid #355891;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #355891;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 390;
+    letter-spacing: 2px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 8px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+}
+
+.credentials-button .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #355891;
+    transform: translateX(30%);
+}
+
+.credentials-button:hover {
+    color: #355891;
+    background: #5f82a9;
+}
+.credentials-button:hover .text {
+    color: white;
+}
+
+.form .steps .step .choose-plans-container .col label {
     display: block;
     margin-bottom: 5px;
     font-weight: 500;
     font-size: 15px;
 }
 
-.form .steps .step .grid .col input {
+.form .steps .step .choose-plans-container .col input {
     width: 100%;
     padding: 8px;
     border: 1px solid #bbb;
@@ -444,11 +582,11 @@ body {
     border-radius: 8px;
 }
 
-.form .steps .step .grid .col .checkbox input {
+.form .steps .step .choose-plans-container .col .checkbox input {
     display: none;
 }
 
-.form .steps .step .grid .col .checkbox label {
+.form .steps .step .choose-plans-container .col .checkbox label {
     width: 100%;
     padding: 15px;
     border: 1px solid #bbb;
@@ -457,7 +595,14 @@ body {
     cursor: pointer;
 }
 
-.form .steps .step .grid .col .checkbox input:checked + label {
+.form
+    .steps
+    .step
+    .choose-plans-container
+    .col
+    .checkbox
+    input:checked
+    + label {
     background: #00aaee;
     color: white;
 }
@@ -478,6 +623,119 @@ body {
     font-size: 15px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.credentials-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.payment-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.payment-form {
+    background: #0c0f14;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01),
+        0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09),
+        0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    position: relative;
+    border-radius: 25px;
+}
+.payment-form .label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+.payment-form .label:has(input:focus) .title {
+    top: 0;
+    left: 0;
+    color: #d17842;
+}
+.payment-form .label .title {
+    padding: 0 10px;
+    transition: all 300ms;
+    font-size: 12px;
+    color: #8b8e98;
+    font-weight: 600;
+    width: -moz-fit-content;
+    width: fit-content;
+    top: 14px;
+    position: relative;
+    left: 15px;
+    background: #0c0f14;
+}
+.payment-form .input-field {
+    width: auto;
+    height: 50px;
+    text-indent: 15px;
+    border-radius: 15px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #21262e;
+    transition: all 0.3s;
+    caret-color: #d17842;
+    color: #aeaeae;
+}
+
+.payment-form .input-field:hover {
+    border-color: rgba(209, 121, 66, 0.5);
+}
+
+.payment-form .input-field:focus {
+    border-color: #d17842;
+}
+.payment-form .split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+.payment-form .split label {
+    width: 130px;
+}
+.payment-form .checkout-btn {
+    margin-top: 20px;
+    padding: 20px 0;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    border: none;
+    justify-content: center;
+    fill: #fff;
+    color: #fff;
+    border: 2px solid transparent;
+    background: #d17842;
+    transition: all 200ms;
+}
+.payment-form .checkout-btn:active {
+    scale: 0.95;
+}
+
+.payment-form .checkout-btn:hover {
+    color: #d17842;
+    border: 2px solid #d17842;
+    background: transparent;
 }
 
 .form .form-footer {

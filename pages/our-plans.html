@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Our Plans | Fresh Bites</title>
         <link rel="stylesheet" href="../styles/our-plans.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="form">
@@ -30,7 +33,7 @@
                 <div class="steps">
                     <!-- Choose Type of plan -->
                     <div class="step">
-                        <div class="grid">
+                        <div class="choose-plans-container">
                             <div class="select-preference">
                                 <div class="description">
                                     <h4>1. Choose your preference</h4>
@@ -211,56 +214,101 @@
                         
                     <!-- Add User's Address -->
                     <div class="step">
-                        <h4>Areas of Interest</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-
-                        <div class="grid">
-                            <div class="col">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="interest-finance">
-                                    <label for="interest-finance">Finance</label>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="maths-finance">
-                                    <label for="maths-finance">Maths</label>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="interest-programming">
-                                    <label for="interest-programming">Programming</label>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="interest-music">
-                                    <label for="interest-music">Music</label>
-                                </div>
-                            </div>
+                      
+                      <div class="credentials-form-container">
+                          <h4>Enter Credentials</h4>
+                          <form class="credentials-form">
+    
+                            <div class="name-form-inputs">
+                                <label>
+                                    <input class="input" type="text" placeholder="" required="">
+                                    <span>First name</span>
+                                </label>
+                        
+                                <label>
+                                    <input class="input" type="text" placeholder="" required="">
+                                    <span>Last name</span>
+                                </label>
+                            </div>  
+                                    
+                            <label>
+                                <input class="input" type="email" placeholder="" required="">
+                                <span>Email</span>
+                            </label> 
+                                
+                            <label>
+                                <input class="input" placeholder="" type="tel" required="">
+                                <span>Contact Number</span>
+                            </label>
+                            <label>
+                                <input class="input" placeholder="" rows="1" required=""></input>
+                                <span>Address</span>
+                            </label>  
+                            
+                            <button href="#" class="credentials-button">
+                              <span class="text">submit</span>
+                            </button>
+                        </form>
                         </div>
                     </div>
 
                     <!-- Checkout -->
                     <div class="step">
-                        <h4>Secure Your Account</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-
-                        <div class="grid">
-                            <div class="col">
-                                <label for="password">Password</label>
-                                <input type="password" id="password">
-                            </div>
-
-                            <div class="col">
-                                <label for="retype-password">Retype Password</label>
-                                <input type="password" id="retype-password">
-                            </div>
-                        </div>
+                     <div class="payment-form-container">
+                       <h4>Payment Info</h4>
+                       <div >
+                         <form class="payment-form">
+                           <label for="name" class="label">
+                             <span class="title">Card holder full name</span>
+                             <input
+                               class="input-field"
+                               type="text"
+                               name="input-name"
+                               title="Input title"
+                               placeholder="Enter your full name"
+                             />
+                           </label>
+                           <label for="serialCardNumber" class="label">
+                             <span class="title">Card Number</span>
+                             <input
+                               id="serialCardNumber"
+                               class="input-field"
+                               type="number"
+                               name="input-name"
+                               title="Input title"
+                               placeholder="0000 0000 0000 0000"
+                             />
+                           </label>
+                           <div class="split">
+                             <label for="ExDate" class="label">
+                               <span class="title">Expiry Date</span>
+                               <input
+                                 id="ExDate"
+                                 class="input-field"
+                                 type="text"
+                                 name="input-name"
+                                 title="Expiry Date"
+                                 placeholder="01/23"
+                               />
+                             </label>
+                             <label for="cvv" class="label">
+                               <span class="title"> CVV</span>
+                               <input
+                                 id="cvv"
+                                 class="input-field"
+                                 type="number"
+                                 name="cvv"
+                                 title="CVV"
+                                 placeholder="CVV"
+                               />
+                             </label>
+                           </div>
+                           <input class="checkout-btn" type="button" value="Checkout" />
+                         </form>
+                       </div>
+                     </div>
+                      
+                        
                     </div>
 
                     <!-- Select Meals -->
