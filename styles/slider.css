@@ -100,7 +100,40 @@
 }
 
 /*Meals styling part*/
-.meals {
+.meals1{
+  padding:10px ;
+  margin-left: 240px;
+  max-width: 1000px;
+  background: #556d3b;
+  border-radius: 13px;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  height:8cm;
+  position: relative;
+}
+.meals2{
+  padding:10px ;
+  margin-left: 240px;
+  max-width: 1000px;
+  background: #556d3b;
+  border-radius: 13px;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  height:8cm;
+  position: relative;
+}
+.meals3{
+  padding:10px ;
+  margin-left: 240px;
+  max-width: 1000px;
+  background: #556d3b;
+  border-radius: 13px;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  height:8cm;
+  position: relative;
+}
+.meals4{
   padding:10px ;
   margin-left: 240px;
   max-width: 1000px;
@@ -120,6 +153,7 @@
 }
 .menu-item:hover{
   background-color: #6c8b4a;
+
 }
 .menu-item img {
   width: 150px;
@@ -139,7 +173,7 @@
   padding-left: 100px;
   padding-right: 100px;
   background-color: #556d3b;
-  height: 7cm;
+  height: 8cm;
 }
 .meals-bar .menu-item.active{
   color: #f5f0d6;

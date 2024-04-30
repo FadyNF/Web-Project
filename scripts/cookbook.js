@@ -4,7 +4,6 @@ function showBox() {
 
   const feedbackContent = document.getElementById("feedbackContent");
   feedbackContent.style.display = "block";
-  // Set z-index of feedback content higher than overlay
   feedbackContent.style.zIndex = "1000";
 }
 
@@ -26,3 +25,49 @@ function exitFeedback() {
   const overlay = document.getElementById("overlay");
   overlay.style.display = "none";
 }
+
+// Opening an overlay window
+function displayDescritpion(overlayID,mealName,mealExtension){
+  var id=document.getElementById(overlayID);
+  var name=id.querySelector("#dishName");
+  var extension=id.querySelector("#extension")
+  name.textContent=mealName;
+  extension.textContent=mealExtension;
+
+  id.style.display="block";
+}
+function closeWindow(overlayID){
+  var openedWindow= document.getElementById(overlayID);
+  openedWindow.style.display="none";
+}
+
+function showComponents1() {
+
+  var components1 = document.getElementsByClassName("components1");
+  for (var i = 0; i < components1.length; i++) {
+    components1[i].style.display = "block";
+  }
+
+  var components2 = document.getElementsByClassName("components2");
+  for (var i = 0; i < components2.length; i++) {
+    components2[i].style.display = "none";
+  }
+}
+
+function showComponents2() {
+
+  var components1 = document.getElementsByClassName("components1");
+  for (var i = 0; i < components1.length; i++) {
+    components1[i].style.display = "none";
+  }
+  var components2 = document.getElementsByClassName("components2");
+  for (var i = 0; i < components2.length; i++) {
+    components2[i].style.display = "block";
+  }
+}
+function closeWindow() {
+  document.getElementsByClassName(".Description").style.display = "none";
+}
+
+
+showComponents1('components1');

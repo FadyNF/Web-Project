@@ -30,7 +30,6 @@
     <script src="/scripts/cookbook.js" defer></script>
   </head>
   <body>
-
     <div class="banner">
       <div class="nav-bar">
         <div class="left-section">
@@ -108,7 +107,6 @@
     <div id="feedbackIcon" onclick="showBox()">
       <img src="/images/Feedback.jpg" width="35" height="100" />
     </div>
-    
     <div id="feedbackContent">
       <button class="exit" onclick="exitFeedback()">x</button>
       <h2>Rate our Website</h2>
@@ -125,8 +123,7 @@
           <button id="submit-btn" type="submit">Submit</button>
         </div>
       </form>
-      </div>
-    
+      </div>  
   <h1 class="heading">A Global Selection of Savory Dinner Recipes</h1>
   <h2 class="sub-heading">
     Discover the ideal effortless meal that will leave you feeling satisfied,<br/>
@@ -136,36 +133,1153 @@
 <h3 class="sub-sentence">
   Check out our highly favored recipes!
 </h3>
-<div class="meals">
+<div class="meals1">
   <div class="icon"><i id="left-meals" class="fa-solid fa-angle-left"></i></div>
   <ul class="meals-bar">
-    <li class="menu-item"><img src="/images/dish1.jpg" />Spicy Chili<br/> Garlic Noodles</li>
-    <li class="menu-item"><img src="/images/dish2.jpg" />Chicken Orzo <br/>Dinner</li>
-    <li class="menu-item"><img src="/images/dish3.jpg" />Mozzarella-Crusted <br/>Chicken</li>
-    <li class="menu-item"><img src="/images/dish4.jpg" />Korean Beef<br/> Bibimbap</li>
-    <li class="menu-item"><img src="/images/dish5.jpg" />Rapid Stir-<br/>Fried Beef</li>
-    <li class="menu-item"><img src="/images/dish6.jpg" />Steak and <br/>Potatoes</li>
-    <li class="menu-item"><img src="/images/dish7.jpg" />Ginger beef <br/>Stri-Fry</li>
-    <li class="menu-item"><img src="/images/dish8.jpg" />Butter-Basted <br/>Sirloin Steack</li>
+    <li class="menu-item"><img src="/images/dish1.jpg" /><h4 onclick="displayDescritpion('overlayMeal1','Delicious Steak and Potatoes','and Creamed Kale with Peppercorn Sauce')">Delicious Steak<br> and Potatoes</h4></li>
+    <li class="menu-item"><img src="/images/dish2.jpg" /><h4 onclick="displayDescritpion('overlayMeal2','Heart Steak and Potatoes','with Balsamic-Cranberry Pan Sauce')">Hearty Steak <br>and Potatoes</h4></li>
+    <li class="menu-item"><img src="/images/dish3.jpg" /><h4 onclick="displayDescritpion('overlayMeal3','Mozzarella-Crusted Chicken','with Blistered Tomatoes and Potato Wedges')">Mozzarella-Crusted <br>Chicken</h4></li>
+    <li class="menu-item"><img src="/images/dish4.jpg" /><h4 onclick="displayDescritpion('overlayMeal4','Chicken Orzo Dinner','with Cheesy Roasted Zucchini and Tomato')">Chicken Orzo<br>Dinner</h4></li>
+    <li class="menu-item"><img src="/images/dish5.jpg" /><h4 onclick="displayDescritpion('overlayMeal5','Rapid Stir-Fried Beef','and Broccoli')">Rapid Stir-<br>fry Beef</h4></li>
+    <li class="menu-item"><img src="/images/dish6.jpg" /><h4 onclick="displayDescritpion('overlayMeal6','Ginger Beef Stir-Fry','with Snappy Asparagus')">Ginger Beef <br>Stir-fry</h4></li>
+    <li class="menu-item"><img src="/images/dish7.jpg" /><h4 onclick="displayDescritpion('overlayMeal7','Butter-Basted Sirloin Steak','with Parsnip Wedges and Creamed Spinach')">Butter-Basted<br>Sirloin Steak</h4></li>
+    <li class="menu-item"><img src="/images/dish8.jpg" /><h4 onclick="displayDescritpion('overlayMeal8','New York Strip Steak','with Truffled Mashed Potatoes and Green Beans Almandine')">New york<br>Strip steak</h4></li>
   </ul>
   <div class="icon"><i id="right-meals" class="fa-solid fa-angle-right"></i></div>
 </div>
+<div id="overlayMeal1" class="Descprition">
+  <div class="overlay-container">
+    <span class="close" onclick="closeWindow()">&times;</span>
+    <img src="/images/dish1.jpg">
+    <h3 id="dishName"></h3>
+    <p id="extension"></p>
+    <p><b>Total Time: 30 minutes</b></p>
+    <p><b>Difficulty: Easy</b></p>
+    <hr>
+    <h3>Ingredients:</h3>
+    <div class="amount">
+    <button class="servings" onclick="showComponents1()">2</button>
+    <button class="servings"onclick="showComponents2()">4</button>
+  </div>
+    <div class="components1">
+      <span class="elements">
+        <p>340 grams of Sirloin Steak</p>
+      </span>
+      <span class="elements">
+        <p>340 grams Yukon Gold Potatoes</p>
+      </span>
+      <span class="elements">
+        <p>4 tablespoons Sour Cream</p>
+      </span>
+      <span class="elements">
+        <p>1 unit of Beef Stock Conentrate</p>
+      </span>
+      <span class="elements">
+        <p>115 grams of Kale</p>
+      </span>
+      <span class="elements">
+        <p>1 unit of Shallot</p>
+      </span>
+      <span class="elements">
+        <p>14 grams of Black Peppercorns</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Vegetable oil</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Butter</p>
+      </span>
+    </div>
+    <div class="components2">
+      <span class="elements">
+        <p>680 grams of Sirloin Steak</p>
+      </span>
+      <span class="elements">
+        <p>680 grams Yukon Gold Potatoes</p>
+      </span>
+      <span class="elements">
+        <p>8 tablespoons Sour Cream</p>
+      </span>
+      <span class="elements">
+        <p>2 units of Beef Stock Conentrate</p>
+      </span>
+      <span class="elements">
+        <p>230 grams of Kale</p>
+      </span>
+      <span class="elements">
+        <p>2 units of Shallot</p>
+      </span>
+      <span class="elements">
+        <p>28 grams of Black Peppercorns</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Vegetable oil</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Butter</p>
+      </span>
+    </div>
+    <hr>
+    <h3>Instruction:</h3>
+    <div class="instruction">
+      <span class="steps">
+        <p>Wash and dry all produce. Preheat oven to 400 degrees. Cut potatoes into ¾-inch-thick wedges. Remove and discard stems and ribs from kale. Chop or tear leaves into 1-inch pieces. Halve, peel, and mince shallot. Use a mallet or heavy pan to pound and crush peppercorns in their bag until coarsely ground</p>
+      </span>
+      <span class="steps">
+        <p>Toss potatoes with a drizzle of oil and a pinch of salt and pepper on a baking sheet or baking dish. Roast in oven until tender and lightly browned, 30-35 minutes, tossing halfway through.</p>
+      </span>
+      <span class="steps">
+        <p>Melt 1 TBSP butter in a large pan over medium heat. Add kale and a splash of water. Cook until leaves are completely wilted and very tender, 4-5 minutes. Season with salt and pepper. Remove from heat, keeping kale in pan</p>
+      </span>
+      <span class="steps">
+        <p>Heat a drizzle of oil in a medium pan over medium-high heat. Season steak all over with salt and pepper. Add to pan and cook to desired doneness, 4-7 minutes per side. Remove from pan and set aside to rest, 5 minutes.</p>
+      </span>
+      <span class="steps">
+        <p>Heat another drizzle of oil in same pan. Add shallot and ¼ tsp crushed peppercorns (more or less to taste). Cook until shallots are soft, 2-3 minutes. Add stock concentrate and ½ cup water. Scrape up any browned bits from pan. Bring to a simmer and let bubble until reduced by half, 2-3 minutes. Remove pan from heat, then stir in half the sour cream.</p>
+      </span>
+      <span class="steps">
+        <p>Return pan with kale to medium heat. When just warmed, remove from heat and stir in remaining sour cream. Season with salt and pepper. Slice steak against the grain. Divide between plates and serve next to potatoes and kale. Drizzle with sauce</p>
+      </span>
+    </div>
+    <hr>
+  </div>
+</div>
+<div id="overlayMeal2" class="Descprition">
+  <div class="overlay-container">
+    <span class="close" onclick="closeWindow('overlayMeals2')">&times;</span>
+    <img src="/images/dish2.jpg">
+    <h3 id="dishName"></h3>
+    <p id="extension"></p>
+    <p><b>Total Time: 40 minutes</b></p>
+    <p><b>Difficulty: Easy</b></p>
+    <hr>
+    <h3>Ingredients:</h3>
+    <div class="amount">
+      <button class="servings" onclick="showComponents1()">2</button>
+      <button class="servings" onclick="showComponents2()">4</button>
+    </div>
+    <div class="components1">
+      <span class="elements">
+        <p>340 grams of Sirloin Steak</p>
+      </span>
+      <span class="elements">
+        <p>28 grams of Soy Sauce</p>
+      </span>
+      <span class="elements">
+        <p>7 grmas of Rosemary</p>
+      </span>
+      <span class="elements">
+        <p>110 grams of Shredded Red Cabbage</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of White wine vinger</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoon Balsamic Vinegar</p>
+      </span>
+      <span class="elements">
+        <p>500 grams of Yukon Gold Potatoes</p>
+      </span>
+      <span class="elements">
+        <p>1 unit of Yellow Onion</p>
+      </span>
+      <span class="elements">
+        <p>1 teaspoon Mustard Seeds</p>
+      </span>
+      <span class="elements">
+        <p>28 grams of Cranberry Jam</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>2 teaspoons of Olive Oil</p>
+      </span>
+      <span class="elements">
+        <p>1 teaspoon of Sugar</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Vegetable Oil</p>
+      </span>
+
+    </div>
+    <div class="components2">      
+      <span class="elements">
+      <p>680 grams of Sirloin Steak</p>
+    </span>
+    <span class="elements">
+      <p>56 grams of Soy Sauce</p>
+    </span>
+    <span class="elements">
+      <p>14 grams of Rosemary</p>
+    </span>
+    <span class="elements">
+      <p>220 grams of Shredded Red Cabbage</p>
+    </span>
+    <span class="elements">
+      <p>4 tablespoons of White wine vinger</p>
+    </span>
+    <span class="elements">
+      <p>4 tablespoon Balsamic Vinegar</p>
+    </span>
+    <span class="elements">
+      <p>1000 grams of Yukon Gold Potatoes</p>
+    </span>
+    <span class="elements">
+      <p>2 units of Yellow Onion</p>
+    </span>
+    <span class="elements">
+      <p>2 teaspoons Mustard Seeds</p>
+    </span>
+    <span class="elements">
+      <p>56 grams of Cranberry Jam</p>
+    </span>
+    <span class="elements">
+      <p>Salt (as preferred)</p>
+    </span>
+    <span class="elements">
+      <p>Pepper (as preferred)</p>
+    </span>
+    <span class="elements">
+      <p>4 teaspoons of Olive Oil</p>
+    </span>
+    <span class="elements">
+      <p>2 teaspoons of Sugar</p>
+    </span>
+    <span class="elements">
+      <p>2 tablespoons of Vegetable Oil</p>
+    </span>
+    </div>
+<hr>
+<h3>Instruction:</h3>
+<div class="instruction">
+  <span>
+    <p>Wash and dry all produce. Preheat oven to 425 degrees. Halve, peel, and thinly slice onion. Strip rosemary leaves from stems and finely chop until you have 1 TBSP. Discard stems. Halve potatoes lengthwise, then cut into 1-inch-thick wedges (like steak fries).</p>
+  </span>
+  <span>
+    <p>Toss potatoes on a baking sheet with a large drizzle of olive oil and chopped rosemary. Season with salt and pepper. Roast until lightly browned and crisp, about 30-35 minutes.</p>
+  </span>
+  <span>
+    <p>Heat a large drizzle of oil in a medium pan on medium-high heat. Add onion and cabbage and cook until softened, about 5 minutes, tossing. Add mustard seeds and cook until they start to pop. Stir in white wine vinegar, sugar, and a pinch of salt. Reduce heat to low, cover, and cook until cabbage is tender, about 10 minutes.</p>
+  </span>
+  <span>
+    <p>
+      While cabbage cooks, heat a drizzle of oil in another medium pan over medium-high heat. Pat steak dry with a paper towel, then season all over with salt and pepper. Add to pan and sear until browned and cooked to desired doneness, 4-7 minutes per side. Remove and set aside to rest.</p>
+  </span>
+  <span>
+    <p>Add ½ TBSP balsamic vinegar, 1½ TBSP soy sauce, cranberry jam, and 3 TBSP water to same pan over medium heat. Stir to combine. Let simmer until reduced to a syrupy consistency, about 2-3 minutes. Remove from heat.</p>
+  </span>
+  <span>
+    <p>Thinly slice steak against the grain. Divide steak, potatoes, and cabbage between plates. Drizzle glaze over steak and serve.</p>
+  </span>
+</div>
+    </div>
+  </div>
+<div id="overlayMeal3" class="Descprition">
+  <div class="overlay-container">
+    <span class="close" onclick="closeWindow('overlayMeals3')">&times;</span>
+    <img src="/images/dish3.jpg">
+    <h3 id="dishName"></h3>
+    <p id="extension"></p>
+    <p><b>Total Time: 30 minutes</b></p>
+    <p><b>Difficulty: Medium</b></p>
+    <hr>
+    <h3>Ingredients:</h3>
+    <div class="amount">
+      <button class="servings" onclick="showComponents1()">2</button>
+      <button class="servings" onclick="showComponents2()">4</button>
+    </div>
+    <div class="components1">
+      <span class="elements">
+        <p>340 grams of Chicken Breasts</p>
+      </span>
+      <span class="elements">
+        <p>2 units of Roma Tomatoes</p>
+      </span>
+      <span class="elements">
+        <p>1/2 a cup of Mozzarella Cheese</p>
+      </span>
+      <span class="elements">
+        <p>1/2 a cup of Panko Breadcrumbs</p>
+      </span>
+      <span class="elements">
+        <p>340 grams of Yukon Gold Potatoes</p>
+      </span>
+      <span class="elements">
+        <p>1 teaspoon of Dried Oregano</p>
+      </span>
+      <span class="elements">
+        <p>4 teaspoons of Olive Oil</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+
+
+    </div>
+    <div class="components2">      
+      <span class="elements">
+        <p>680 grams of Chicken Breasts</p>
+      </span>
+      <span class="elements">
+        <p>4 units of Roma Tomatoes</p>
+      </span>
+      <span class="elements">
+        <p>A cup of Mozzarella Cheese</p>
+      </span>
+      <span class="elements">
+        <p>A cup of Panko Breadcrumbs</p>
+      </span>
+      <span class="elements">
+        <p>680 grams of Yukon Gold Potatoes</p>
+      </span>
+      <span class="elements">
+        <p>2 teaspoons of Dried Oregano</p>
+      </span>
+      <span class="elements">
+        <p>8 teaspoons of Olive Oil</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+    </div>
+<hr>
+<h3>Instruction:</h3>
+<div class="instruction">
+  <span>
+    <p>Wash and dry all produce. Preheat oven to 425 degrees. Cut potatoes into ½-inch-thick wedges, like steak fries. Core and quarter tomatoes.</p>
+  </span>
+  <span>
+    <p>Toss potatoes on one side of a foil-lined baking sheet with a drizzle of olive oil and a pinch of salt and pepper. On other side of baking sheet, toss tomatoes with a drizzle of olive oil and a pinch of salt and pepper. Roast until potatoes are crispy and tomatoes are very soft, 25-30 minutes, tossing halfway through.</p>
+  </span>
+  <span>
+    <p>Mix panko, oregano, paprika, mozzarella, a drizzle of olive oil, and a pinch of salt and pepper in a small bowl.</p>
+  </span>
+  <span>
+    <p>Season chicken breasts all over with salt and pepper. Rub with a drizzle of olive oil. Place on a second baking sheet.</p>
+  </span>
+  <span>
+    <p>Add a layer of panko crust to top of each chicken breast, gently pressing to adhere. Pile topping as high as possible (you may have some left over).</p>
+  </span>
+  <span>
+    <p>Bake chicken until meat is cooked through and topping is golden brown, about 20 minutes. Serve with potato wedges and roasted tomatoes.</p>
+  </span>
+</div>
+    </div>
+  </div>
+<div id="overlayMeal4" class="Descprition">
+  <div class="overlay-container">
+    <span class="close" onclick="closeWindow('overlayMeals4')">&times;</span>
+    <img src="/images/dish4.jpg">
+    <h3 id="dishName"></h3>
+    <p id="extension"></p>
+    <p><b>Total Time: 30 minutes</b></p>
+    <p><b>Difficulty: Easy</b></p>
+    <hr>
+    <h3>Ingredients:</h3>
+    <div class="amount">
+      <button class="servings" onclick="showComponents1()">2</button>
+      <button class="servings" onclick="showComponents2()">4</button>
+    </div>
+    <div class="components1">
+      <span class="elements">
+        <p>1 unit of Zucchini</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Italian Seasoning</p>
+      </span>
+      <span class="elements">
+        <p>340 grams of Chicken Breasts</p>
+      </span>
+      <span class="elements">
+        <p>1 unit of Lemon</p>
+      </span>
+      <span class="elements">
+        <p>1/4 a cup of Panko Breadcrumbs</p>
+      </span>
+      <span class="elements">
+        <p>1 unit of Roma Tomatoes</p>
+      </span>
+      <span class="elements">
+        <p>85 grams of Orzo Pasta</p>
+      </span>
+      <span class="elements">
+        <p>114 grams of Fresh Mozzarella</p>
+      </span>
+      <span class="elements">
+        <p>7 grams of Parsley</p>
+      </span>
+      <span class="elements">
+        <p>1/4 a cup of Parmesan Cheese</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>4 teaspoons of Olive Oil</p>
+      </span>
+
+    </div>
+    <div class="components2">      
+      <span class="elements">
+        <p>2 units of Zucchini</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Italian Seasoning</p>
+      </span>
+      <span class="elements">
+        <p>680 grams of Chicken Breasts</p>
+      </span>
+      <span class="elements">
+        <p>2 units of Lemon</p>
+      </span>
+      <span class="elements">
+        <p>1/2 a cup of Panko Breadcrumbs</p>
+      </span>
+      <span class="elements">
+        <p>2 units of Roma Tomatoes</p>
+      </span>
+      <span class="elements">
+        <p>170 grams of Orzo Pasta</p>
+      </span>
+      <span class="elements">
+        <p>228 grams of Fresh Mozzarella</p>
+      </span>
+      <span class="elements">
+        <p>14 grams of Parsley</p>
+      </span>
+      <span class="elements">
+        <p>1/2 a cup of Parmesan Cheese</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>8 teaspoons of Olive Oil</p>
+      </span>
+    </div>
+
+<hr>
+<h3>Instruction:</h3>
+<div class="instruction">
+  <span>
+    <p>Wash and dry all produce. Adjust rack to upper position and preheat oven to 425 degrees. Bring a large pot of salted water to a boil. Slice zucchini into ¼-inch-thick rounds. Cut tomato into ½-inch-thick wedges. Toss zucchini and tomato with 1 TBSP olive oil and half the Italian seasoning on a baking sheet. Season with salt and pepper.</p>
+  </span>
+  <span>
+    <p>Roast zucchini and tomato in oven until just shy of tender, about 10 minutes. Once water is boiling, add half the orzo from package to pot (use the rest as you like). Cook, stirring occasionally, until al dente, 9-11 minutes. Drain, then return to pot.</p>
+  </span>
+  <span>
+    <p>With your hand on top of one chicken breast, cut ¾ of the way through middle, parallel to cutting board, stopping before you slice through completely. Repeat with other chicken breast. Open each up and season all over with salt, pepper, and remaining Italian seasoning.</p>
+  </span>
+  <span>
+    <p>Heat a drizzle of olive oil in a large pan over medium-high heat. Add chicken and cook until no longer pink in center, 3-4 minutes per side. Remove from pan and set aside on a plate. Meanwhile, cut mozzarella into ½-inch cubes. Halve lemon. Roughly chop parsley.</p>
+  </span>
+  <span>
+    <p>Once veggies have roasted 10 minutes, remove baking sheet from oven. Heat broiler to high or increase oven temperature to 500 degrees. Sprinkle veggies with panko, mozzarella, and Parmesan. Broil (or bake) until panko is golden brown, cheese is melted, and veggies are tender, 3-5 minutes.</p>
+  </span>
+  <span>
+    <p>Add juice from one lemon half and half the parsley to pot with orzo and toss to combine. Season to taste with salt and pepper. Divide orzo between plates. Top with veggies and chicken. Drizzle with any chicken juices from plate and a squeeze of lemon. Garnish with remaining parsley and serve.</p>
+  </span>
+</div>
+    </div>
+  </div>
+<div id="overlayMeal5" class="Descprition">
+  <div class="overlay-container">
+    <span class="close" onclick="closeWindow('overlayMeals5')">&times;</span>
+    <img src="/images/dish5.jpg">
+    <h3 id="dishName"></h3>
+    <p id="extension"></p>
+    <p><b>Total Time: 20 minutes</b></p>
+    <p><b>Difficulty: Easy</b></p>
+    <hr>
+    <h3>Ingredients:</h3>
+    <div class="amount">
+      <button class="servings" onclick="showComponents1()">2</button>
+      <button class="servings" onclick="showComponents2()">4</button>
+    </div>
+    <div class="components1">
+      <span class="elements">
+        <p>340 grams of Beef Sirloin Tips</p>
+      </span>
+      <span class="elements">
+        <p>2 cloves of Garlic</p>
+      </span>
+      <span class="elements">
+        <p>1 thumb of Ginger</p>
+      </span>
+      <span class="elements">
+        <p>1 unit of Ketchup</p>
+      </span>
+      <span class="elements">
+        <p>1 jar of Hoisin Sauce jar</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Sesame Oil</p>
+      </span>
+      <span class="elements">
+        <p>2 units of Scallions</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Cornstarch</p>
+      </span>
+      <span class="elements">
+        <p>500 grams of Yakisoba Noodles</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>4 units of Soy Sauce</p>
+      </span>
+      <span class="elements">
+        <p>228 grams of Broccoli Florets</p>
+      </span>
+      <span class="elements">
+        <p>1 teaspoon of Sriracha</p>
+      </span>
+      <span class="elements">
+        <p>4 teaspoons of Vegetable Oil</p>
+      </span>
+
+    </div>
+    <div class="components2">      
+      <span class="elements">
+        <p>680 grams of Beef Sirloin Tips</p>
+      </span>
+      <span class="elements">
+        <p>4 cloves of Garlic</p>
+      </span>
+      <span class="elements">
+        <p>2 thumbs of Ginger</p>
+      </span>
+      <span class="elements">
+        <p>2 units of Ketchup</p>
+      </span>
+      <span class="elements">
+        <p>2 jars of Hoisin Sauce jar</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Sesame Oil</p>
+      </span>
+      <span class="elements">
+        <p>4 units of Scallions</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Cornstarch</p>
+      </span>
+      <span class="elements">
+        <p>1000 grams of Yakisoba Noodles</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>8 units of Soy Sauce</p>
+      </span>
+      <span class="elements">
+        <p>500 grams of Broccoli Florets</p>
+      </span>
+      <span class="elements">
+        <p>2 teaspoons of Sriracha</p>
+      </span>
+      <span class="elements">
+        <p>8 teaspoons of Vegetable Oil</p>
+      </span>
+    </div>
+
+<hr>
+<h3>Instruction:</h3>
+<div class="instruction">
+  <span>
+    <p>Wash and dry all produce. Bring a large pot of salted water to a boil. Trim and thinly slice scallions. Mince or grate garlic. Peel and mince ginger. Whisk together sesame oil, 1 TBSP ketchup, soy sauce, 1½ TBSP hoisin sauce, and 1 TBSP water in a small bowl.</p>
+  </span>
+  <span>
+    <p>Add broccoli to boiling water and cook until tender but still crisp, 3-4 minutes. Drain and rinse under cold water. Set aside.</p>
+  </span>
+  <span>
+    <p>Toss steak tips with cornstarch in a large bowl. Season generously with salt and pepper. Heat a large drizzle of oil in a large pan over high heat. (TIP: If you have a nonstick pan, break it out.) Toss in steak tips and cook to desired doneness, 3-4 minutes. Remove and set aside.</p>
+  </span>
+  <span>
+    <p>Heat a drizzle of oil in same pan over medium heat. Add garlic, ginger, and scallions and cook until fragrant, 1 minute, tossing. Toss in half the noodles from the package (we sent more) and a drizzle of oil. Break up noodles until they no longer stick together, using tongs or two wooden spoons.</p>
+  </span>
+  <span>
+    <p>Pour in 1 cup water, cover, and steam until noodles are tender, 3 minutes. (TIP: If your pan doesn’t have a lid, carefully cover it with aluminum foil.) Uncover, increase heat to medium-high, and toss until noodles are tender, 3-4 minutes. Add sauce and toss to coat. Cook until sauce is thickened, 1 minute.</p>
+  </span>
+  <span>
+    <p>Toss broccoli and steak into noodles to warm through. Season with as much sriracha as you like (careful, it’s spicy). Season with salt and pepper. Divide between plates and serve.</p>
+  </span>
+</div>
+
+
+    </div>
+  </div>
+<div id="overlayMeal6" class="Descprition">
+  <div class="overlay-container">
+    <span class="close" onclick="closeWindow('overlayMeals6')">&times;</span>
+    <img src="/images/dish6.jpg">
+    <h3 id="dishName"></h3>
+    <p id="extension"></p>
+    <p><b>Total Time: 30 minutes</b></p>
+    <p><b>Difficulty: Easy</b></p>
+    <hr>
+    <h3>Ingredients:</h3>
+    <div class="amount">
+      <button class="servings" onclick="showComponents1()">2</button>
+      <button class="servings" onclick="showComponents2()">4</button>
+    </div>
+    <div class="components1">
+      <span class="elements">
+        <p>340 grams of Beef Sirloin Tips</p>
+      </span>
+      <span class="elements">
+        <p>170 grams of Asparagus</p>
+      </span>
+      <span class="elements">
+        <p>1 thumb of Ginger</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Sesame Seeds</p>
+      </span>
+      <span class="elements">
+        <p>14 grams of Soy Sauce</p>
+      </span>
+      <span class="elements">
+        <p>3/4 cup of Basmati Rice</p>
+      </span>
+      <span class="elements">
+        <p>2 cloves of Garlic</p>
+      </span>
+      <span class="elements">
+        <p>1 jar of Hoisin Sauce jar</p>
+      </span>
+      <span class="elements">
+        <p>1 teaspoon of Vegetable Oil</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+    </div>
+    <div class="components2">      
+      <span class="elements">
+        <p>680 grams of Beef Sirloin Tips</p>
+      </span>
+      <span class="elements">
+        <p>340 grams of Asparagus</p>
+      </span>
+      <span class="elements">
+        <p>2 thumbs of Ginger</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Sesame Seeds</p>
+      </span>
+      <span class="elements">
+        <p>28 grams of Soy Sauce</p>
+      </span>
+      <span class="elements">
+        <p>1.5 cup of Basmati Rice</p>
+      </span>
+      <span class="elements">
+        <p>8 cloves of Garlic</p>
+      </span>
+      <span class="elements">
+        <p>1 jar of Hoisin Sauce jar</p>
+      </span>
+      <span class="elements">
+        <p>2 teaspoons of Vegetable Oil</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+    </div>
+<hr>
+<h3>Instruction:</h3>
+<div class="instruction">
+  <span>
+    <p>Wash and dry all produce. Bring 1½ cups water and a pinch of salt to a boil in a small pot. Trim and discard bottom inch from asparagus, then cut stalks into 2-inch pieces. Mince or grate garlic. Trim and thinly slice scallions. Peel and mince ginger.</p>
+  </span>
+  <span>
+    <p>Once water is boiling, add rice to pot, cover, and reduce to a simmer. Cook until tender, 15-20 minutes. Remove from heat and keep covered.</p>
+  </span>
+  <span>
+    <p>Meanwhile, whisk together garlic, ginger, soy sauce, 1 TBSP water, and 2 TBSP hoisin sauce (we sent more) in a small bowl.</p>
+  </span>
+  <span>
+    <p>Heat a drizzle of oil in a large pan over medium-high heat. Pat steak tips dry with a paper towel, then season with salt and pepper. Add to pan and toss until nearly cooked to desired doneness, 2-3 minutes. Remove from pan and set aside. .</p>
+  </span>
+  <span>
+    <p>Add asparagus and scallions to same pan over medium heat. (TIP: If veggies seem dry, add a drizzle of oil.) Cook until tender but still crunchy, 3-4 minutes, tossing occasionally. Add steak tips and sauce to pan and cook until sauce is thickened and meat reaches desired doneness, 2-3 minutes. Season with salt and pepper.</p>
+  </span>
+  <span>
+    <p>Fluff rice with a fork. Divide between plates, then top with stir-fry and garnish with sesame seeds.</p>
+  </span>
+</div>
+
+
+    </div>
+  </div>
+<div id="overlayMeal7" class="Descprition">
+  <div class="overlay-container">
+    <span class="close" onclick="closeWindow('overlayMeals7')">&times;</span>
+    <img src="/images/dish7.jpg">
+    <h3 id="dishName"></h3>
+    <p id="extension"></p>
+    <p><b>Total Time: 30 minutes</b></p>
+    <p><b>Difficulty: Easy</b></p>
+    <hr>
+    <h3>Ingredients:</h3>
+    <div class="amount">
+      <button class="servings" onclick="showComponents1()">2</button>
+      <button class="servings" onclick="showComponents2()">4</button>
+    </div>
+    <div class="components1">
+      <span class="elements">
+        <p>340 grams of Sirloin Steak</p>
+      </span>
+      <span class="elements">
+        <p>340 grams of Parsnip</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Sour Cream</p>
+      </span>
+      <span class="elements">
+        <p>7 grams of Rosemary</p>
+      </span>
+      <span class="elements">
+        <p>140 grams of Spinach</p>
+      </span>
+      <span class="elements">
+        <p>2 cloves of Garlic</p>
+      </span>
+      <span class="elements">
+        <p>2 teaspoons of Vegetable Oil</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Butter</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+
+    </div>
+    <div class="components2">
+      <span class="elements">
+        <p>340 grams of Sirloin Steak</p>
+      </span>
+      <span class="elements">
+        <p>340 grams of Parsnip</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Sour Cream</p>
+      </span>
+      <span class="elements">
+        <p>7 grams of Rosemary</p>
+      </span>
+      <span class="elements">
+        <p>140 grams of Spinach</p>
+      </span>
+      <span class="elements">
+        <p>2 cloves of Garlic</p>
+      </span>
+      <span class="elements">
+        <p>2 teaspoons of Vegetable Oil</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of Butter</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+    </div>
+<hr>
+<h3>Instruction:</h3>
+<div class="instruction">
+  <span>
+    <p>Wash and dry all produce. Preheat oven to 425 degrees. Peel parsnips, then cut into 3-inch-long pieces. Halve each piece lengthwise, then cut into thin wedges. Strip rosemary leaves from stems. Discard stems and chop leaves. Thinly slice garlic crosswise.</p>
+  </span>
+  <span>
+    <p>On a baking sheet, toss parsnips, a drizzle of oil, half the rosemary, and a pinch of salt and pepper. Roast in oven until lightly browned, 20-25 minutes, tossing halfway through.</p>
+  </span>
+  <span>
+    <p>Heat a drizzle of oil in a large pan over medium-high heat. Season steak all over with salt and pepper. Add to pan and cook until it almost reaches desired doneness, 3-6 minutes per side.</p>
+  </span>
+  <span>
+    <p>Reduce heat to low and add 2 TBSP butter, remaining rosemary, and half the garlic to pan. Tilt pan toward you to collect melted butter. Using a spoon, continuously spoon butter, garlic, and rosemary over steak until it reaches desired doneness, 1-2 minutes. Remove steak from pan and let rest 5 minutes. TIP: Loosely cover steak with aluminum foil to keep warm.</p>
+  </span>
+  <span>
+    <p>Increase heat under same pan to medium. Add remaining garlic and cook until fragrant, 30 seconds. Add spinach and toss until wilted, 3-4 minutes. (TIP: Add a splash of water if you’re having trouble getting spinach to wilt.) Remove pan from heat and let cool 1 minute. Stir in sour cream. Season with salt and pepper.</p>
+  </span>
+  <span>
+    <p>Slice steak against the grain. Divide parsnips, steak, and spinach between plates and serve.</p>
+  </span>
+</div>
+
+
+    </div>
+  </div>
+  <div id="overlayMeal8" class="Descprition">
+    <div class="overlay-container">
+      <span class="close" onclick="closeWindow('overlayMeals8')">&times;</span>
+      <img src="/images/dish8.jpg">
+      <h3 id="dishName"></h3>
+      <p id="extension"></p>
+      <p><b>Total Time: 35 minutes</b></p>
+      <p><b>Difficulty: Easy</b></p>
+      <hr>
+      <h3>Ingredients:</h3>
+      <div class="amount">
+        <button class="servings" onclick="showComponents1()">2</button>
+        <button class="servings" onclick="showComponents2()">4</button>
+      </div>
+      <div class="components1">
+        <span class="elements">
+          <p>500 grams of Yukon Gold Potatoes</p>
+        </span>
+        <span class="elements">
+          <p>28 grams of Almonds</p>
+        </span>
+        <span class="elements">
+          <p>4 tablespoons of Sour Cream</p>
+        </span>
+        <span class="elements">
+          <p>1 tablespoon of Tricolor Peppercorns</p>
+        </span>
+        <span class="elements">
+          <p>1 unit of Truffle Zest</p>
+        </span>
+        <span class="elements">
+          <p>170 grams of Green Beans</p>
+        </span>
+        <span class="elements">
+          <p>1 unit of Shallot</p>
+        </span>
+        <span class="elements">
+          <p>1 unit of Beef Demi-Glace</p>
+        </span>
+        <span class="elements">
+          <p>7 grams of Parsley</p>
+        </span>
+        <span class="elements">
+          <p>285 grams of New york Strip Steak</p>
+        </span>
+        <span class="elements">
+          <p>Salt (as preferred)</p>
+        </span>
+        <span class="elements">
+          <p>Pepper (as preferred)</p>
+        </span>
+        <span class="elements">
+          <p>1 teaspoon of Olive Oil</p>
+        </span>
+        <span class="elements">
+          <p>1 tablespoon of Butter</p>
+        </span>
+        <span class="elements">
+          <p>2 teaspoons of Vegetable Oil</p>
+        </span>
+      </div>
+      <div class="components2">      
+        <span class="elements">
+          <p>1000 grams of Yukon Gold Potatoes</p>
+        </span>
+        <span class="elements">
+          <p>56 grams of Almonds</p>
+        </span>
+        <span class="elements">
+          <p>8 tablespoons of Sour Cream</p>
+        </span>
+        <span class="elements">
+          <p>2 tablespoons of Tricolor Peppercorns</p>
+        </span>
+        <span class="elements">
+          <p>2 units of Truffle Zest</p>
+        </span>
+        <span class="elements">
+          <p>340 grams of Green Beans</p>
+        </span>
+        <span class="elements">
+          <p>2 units of Shallot</p>
+        </span>
+        <span class="elements">
+          <p>2 units of Beef Demi-Glace</p>
+        </span>
+        <span class="elements">
+          <p>14 grams of Parsley</p>
+        </span>
+        <span class="elements">
+          <p>285 grams of New york Strip Steak</p>
+        </span>
+        <span class="elements">
+          <p>Salt (as preferred)</p>
+        </span>
+        <span class="elements">
+          <p>Pepper (as preferred)</p>
+        </span>
+        <span class="elements">
+          <p>2 teaspoons of Olive Oil</p>
+        </span>
+        <span class="elements">
+          <p>2 tablespoons of Butter</p>
+        </span>
+        <span class="elements">
+          <p>4 teaspoons of Vegetable Oil</p>
+        </span>
+  </div>
+  <hr>
+  <h3>Instruction:</h3>
+  <div class="instruction">
+    <span>
+      <p>Wash and dry all produce. Preheat oven to 425 degrees. Peel potatoes, then cut into ½-inch cubes. Place in a medium pot with a pinch of salt and enough water to cover by 1 inch. Bring to a boil and cook until fork tender, about 15 minutes. Drain and return potatoes to empty pot.</p>
+    </span>
+    <span>
+      <p>Meanwhile, trim any tough ends from green beans. Use a mallet or heavy pan to crush peppercorns in their bag until coarsely ground. Pick parsley leaves from stems and discard stems. Finely chop leaves. Peel and chop shallot. Toss green beans, almonds, a drizzle of olive oil, and a pinch of salt and pepper on a baking sheet. Roast in oven until tender, 12-15 minutes.</p>
+    </span>
+    <span>
+      <p>Heat a drizzle of oil in a large pan over medium-high heat. Pat steak dry with a paper towel and season all over with salt and pepper. Add to pan and cook to desired doneness, 3-6 minutes per side. Remove from pan and set aside to rest. TIP: Loosely cover steak with aluminum foil to keep it warm.</p>
+    </span>
+    <span>
+      <p>Reduce heat to medium-low and add a drizzle of oil to pan. Add shallots, tossing. Stir in ¼ tsp crushed peppercorns (more or less to taste), demi-glace, and ½ cup water. Bring to a boil, then lower heat and simmer until reduced, 2-3 minutes. Remove from heat. Stir in 1 TBSP butter and half the sour cream until butter is melted. Season with salt and pepper.</p>
+    </span>
+    <span>
+      <p>When potatoes are done, add remaining sour cream, and ½ tsp Sabatino Tartufi® Truffle Zest (more or less to taste) to pot. Mash with a fork or potato masher until smooth. Season to taste with salt and pepper. TIP: Add a splash of milk to make potatoes extra creamy.</p>
+    </span>
+    <span>
+      <p>Thinly slice steak against the grain. Divide mashed potatoes, green beans, and steak between plates. Drizzle sauce over steak and potatoes. Garnish with parsley.</p>
+    </span>
+  </div>
+      </div>
+    </div>
 <h2 class="sentence">Swift meals for busy days</h2>
 <h3 class="sub-sentence">Done in a short period of time!</h3>
-<div class="meals">
+<div class="meals2">
   <div class="icon"><i id="left-meals" class="fa-solid fa-angle-left"></i></div>
   <ul class="meals-bar">
-    <li class="menu-item"><img src="/images/dish9.jpg" />Spicy Chili Garlic Noodles</li>
-    <li class="menu-item"><img src="/images/dish10.jpg" />Chicken Orzo<br/>Dinner</li>
-    <li class="menu-item"><img src="/images/dish11.jpg" />Mozzarella-Crusted Chicken</li>
-    <li class="menu-item"><img src="/images/dish12.jpg" />Korean Beef Bibimbap</li>
-    <li class="menu-item"><img src="/images/dish513.jpg" />Rapid Stir-Fried Beef</li>
-    <li class="menu-item"><img src="/images/dish14.jpg" />Steak and Potatoes</li>
-    <li class="menu-item"><img src="/images/dish14.jpg" />Ginger beef Stri-Fry</li>
-    <li class="menu-item"><img src="/images/dish16.jpg" />Butter-Basted Sirloin Steack</li>
+    <li class="menu-item"><img src="/images/dish9.jpg" /><h4 onclick="displayDescritpion('overlayMeal9','Teriyaki Chicken Tenders','with Jasmine Rice and Green Beans')">Teriyaki Chicken<br>Tenders</h4></li>
+    <li class="menu-item"><img src="/images/dish10.jpg" /><h4 onclick="displayDescritpion('overlayMeal10','Crispy Cheddar Frico Cheeseburgers','with Caramelized Onion Jam and Roasted Broccoli')">Crispy Cheddar<br>Frico Cheeseburgers</h4></li>
+    <li class="menu-item"><img src="/images/dish11.jpg" /><h4 onclick="displayDescritpion('overlayMeal11','Pork Carnitas Tacos','with Pickled Onion and Monterey Jack Cheese')">Pork Carnitas<br>Tacos</h4></li>
+    <li class="menu-item"><img src="/images/dish12.jpg" /><h4 onclick="displayDescritpion('overlayMeal12','Baked Chicken Parmesan','with DIY Marinara, Fresh Mozzarella, and Rigatoni')">Baked Chicken<br>Parmesan</h4></li>
+    <li class="menu-item"><img src="/images/dish13.jpg" /><h4 onclick="displayDescritpion('overlayMeal13','One-Pan Orzo Italiano','with Chicken Sausage, Tomatoes, and Spinach')">One-pan<br>Orzo Italiano</h4></li>
+    <li class="menu-item"><img src="/images/dish14.jpg" /><h4 onclick="displayDescritpion('overlayMeal14','Quick Beef Ragù Spaghetti','with Zucchini and Italian Seasonings')">Quick Beef<br>Ragù Spaghetti</h4></li>
+    <li class="menu-item"><img src="/images/dish15.jpg" /><h4 onclick="displayDescritpion('overlayMeal15','rushed Peppercorn Steak','with Creamed Kale and Potato Wedges')">Crushed Peppercorn<br>Steak</h4></li>
+    <li class="menu-item"><img src="/images/dish16.jpg" /><h4 onclick="displayDescritpion('overlayMeal16','Meatloaf Balsamico','with Sweet Potato Mash and Green Beans')">Meatloaf<br>Baslamico</h4></li>
   </ul>
   <div class="icon"><i id="right-meals" class="fa-solid fa-angle-right"></i></div>
 </div>
+<div id="overlayMeal9" class="Descprition">
+  <div class="overlay-container">
+    <span class="close" onclick="closeWindow('overlayMeals9')">&times;</span>
+    <img src="/images/dish9.jpg">
+    <h3 id="dishName"></h3>
+    <p id="extension"></p>
+    <p><b>Total Time: 35 minutes</b></p>
+    <p><b>Difficulty: Easy</b></p>
+    <hr>
+    <h3>Ingredients:</h3>
+    <div class="amount">
+      <button class="servings" onclick="showComponents1()">2</button>
+      <button class="servings" onclick="showComponents2()">4</button>
+    </div>
+    <div class="components1">
+      <span class="elements">
+        <p>1 thumb of Ginger</p>
+      </span>
+      <span class="elements">
+        <p>1 unit Scallions</p>
+      </span>
+      <span class="elements">
+        <p>3/4 cup of Jasmine Rice</p>
+      </span>
+      <span class="elements">
+        <p>1 teaspoon fo Seasame Oil</p>
+      </span>
+      <span class="elements">
+        <p>340 grams of Chicken Tenders</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of White wine vinegar</p>
+      </span>
+      <span class="elements">
+        <p>2 cloves of Garlic</p>
+      </span>
+      <span class="elements">
+        <p>1 unit of Lime</p>
+      </span>
+      <span class="elements">
+        <p>160 grams of Green Beans</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Seasame Seeds</p>
+      </span>
+      <span class="elements">
+        <p>3 tabelspoons of Soy Sauce</p>
+      </span>
+      <span class="elements">
+        <p>1 teaspoon of Cornstarch</p>
+      </span>
+      <span class="elements">
+        <p>3 teaspoons of Vegetable oil</p>
+      </span>
+      <span class="elements">
+        <p>1/8 cup of Sugar</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+    </div>
+    <div class="components2">      
+      <span class="elements">
+        <p>1 thumb of Ginger</p>
+      </span>
+      <span class="elements">
+        <p>2 units Scallions</p>
+      </span>
+      <span class="elements">
+        <p>1.5 cup of Jasmine Rice</p>
+      </span>
+      <span class="elements">
+        <p>2 teaspoons fo Seasame Oil</p>
+      </span>
+      <span class="elements">
+        <p>640 grams of Chicken Tenders</p>
+      </span>
+      <span class="elements">
+        <p>2 tablespoons of White wine vinegar</p>
+      </span>
+      <span class="elements">
+        <p>4 cloves of Garlic</p>
+      </span>
+      <span class="elements">
+        <p>1 unit of Lime</p>
+      </span>
+      <span class="elements">
+        <p>340 grams of Green Beans</p>
+      </span>
+      <span class="elements">
+        <p>1 tablespoon of Seasame Seeds</p>
+      </span>
+      <span class="elements">
+        <p>6 tabelspoons of Soy Sauce</p>
+      </span>
+      <span class="elements">
+        <p>1 teaspoon of Cornstarch</p>
+      </span>
+      <span class="elements">
+        <p>6 teaspoons of Vegetable oil</p>
+      </span>
+      <span class="elements">
+        <p>1/4 cup of Sugar</p>
+      </span>
+      <span class="elements">
+        <p>Salt (as preferred)</p>
+      </span>
+      <span class="elements">
+        <p>Pepper (as preferred)</p>
+      </span>
+    </div>
+<hr>
+<h3>Instruction:</h3>
+<div class="instruction">
+  <span>
+    <p>Wash and dry all produce. Adjust rack to middle position and preheat oven to 425 degrees. Bring 2½ cups water and a large pinch of salt to a boil in a medium pot. Peel ginger and mince until you have 2 TBSP. Mince garlic. Trim, then thinly slice scallions, keeping greens and whites separate. Halve lime; cut one half into wedges.</p>
+  </span>
+  <span>
+    <p>Once water is boiling, add rice to pot. Cover, lower heat, and reduce to a gentle simmer. Cook until tender, 15-20 minutes. Remove from heat and keep covered.</p>
+  </span>
+  <span>
+    <p>Toss green beans with a large drizzle of oil on a baking sheet. Season with salt and pepper. Roast in oven until crisp, 10-12 minutes. After they’ve finished roasting, toss green beans with 2 tsp sesame oil, half the sesame seeds, and a squeeze of lime (we sent more oil than needed).</p>
+  </span>
+  <span>
+    <p>Heat a large drizzle of oil in a large pan over medium-high heat. Pat chicken dry with a paper towel. Add to pan and cook until browned but not cooked through, 2-4 minutes per side. Remove from pan and set aside. TIP: Don’t overcrowd the pan with chicken—you may want to work in batches.</p>
+  </span>
+  <span>
+    <p>Heat a large drizzle of oil in same pan over medium-high heat. Whisk together soy sauce, ¼ cup sugar, 2 TBSP vinegar (we sent more), and cornstarch in a small bowl. Put scallion whites, garlic, and ginger in pan and cook, tossing, until softened, 1-2 minutes. Stir in soy sauce mixture and bring to a simmer. Let thicken slightly, about 2 minutes.</p>
+  </span>
+  <span>
+    <p>Add chicken to pan and toss to coat. Cook until no longer pink in center, 2-3 minutes. Add a squeeze of lime to rice, then fluff with a fork. Divide rice, green beans, and chicken between plates. Drizzle with any sauce in pan. Sprinkle with scallion greens and remaining sesame seeds. Serve with lime wedges.</p>
+  </span>
+</div>
+  </div>
+</div>
+
+
+<h2 class="sentence">Fine dining recipes</h2>
+<h3 class="sub-sentence">Excellent for a special night in!</h3>
+<div class="meals3">
+  <div class="icon"><i id="left-meals" class="fa-solid fa-angle-left"></i></div>
+  <ul class="meals-bar">
+    <li class="menu-item"><img src="/images/dish17.jpg" />Sirloin & Sherry<br>Shallot Sauce</li>
+    <li class="menu-item"><img src="/images/dish18.jpg" />Butter-basted<br>Chicken Breasts</li>
+    <li class="menu-item"><img src="/images/dish19.jpg" />Bavette Steak &<br>Sherry Shallot sauce</li>
+    <li class="menu-item"><img src="/images/dish20.jpg" />Cherry Balsamic <br>Sirloin</li>
+    <li class="menu-item"><img src="/images/dish21.jpg" />Pecan-Crusted<br>trout</li>
+    <li class="menu-item"><img src="/images/dish22.jpg" />Crispy Cheddar<br>Chicken</li>
+    <li class="menu-item"><img src="/images/dish23.jpg" />Creamy Shrimp &<br>Bacon Spaghetti</li>
+    <li class="menu-item"><img src="/images/dish24.jpg" />Crispy Chicken & <br>Bacon Alfredo</li>
+  </ul>
+  <div class="icon"><i id="right-meals" class="fa-solid fa-angle-right"></i></div>
+</div>
+<h2 class="sentence">Seafood recipes</h2>
+<h3 class="sub-sentence">Suited for pescatarian preferences!</h3>
+<div class="meals4">
+  <div class="icon"><i id="left-meals" class="fa-solid fa-angle-left"></i></div>
+  <ul class="meals-bar">
+    <li class="menu-item"><img src="/images/dish25.jpg" />Baja Fish<br>Taco</li>
+    <li class="menu-item"><img src="/images/dish26.jpg" />lemon-Herb<br>Salmon</li>
+    <li class="menu-item"><img src="/images/dish27.jpg" />Blackened Tilapia<br>Tacos</li>
+    <li class="menu-item"><img src="/images/dish28.jpg" />Tialpia with Scallion<br>Sriracha Pesto</li>
+    <li class="menu-item"><img src="/images/dish29.jpg" />Barramundi with<br>Pineapple Salsa</li>
+    <li class="menu-item"><img src="/images/dish30.jpg" />Tex-mex<br>Tilapia</li>
+    <li class="menu-item"><img src="/images/dish31.jpg" />Blackened Barramundi<br>& Pineapple Salsa</li>
+    <li class="menu-item"><img src="/images/dish32.jpg" />Fried Tilapia<br> Sandwiches</li>
+  </ul>
+  <div class="icon"><i id="right-meals" class="fa-solid fa-angle-right"></i></div>
 </div>
   </body>
 </html>
