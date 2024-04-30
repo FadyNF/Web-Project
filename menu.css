@@ -337,7 +337,7 @@ td{
     border-color: transparent;
     display: flex;
     justify-content: right;
-    margin-top: 24px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
@@ -355,7 +355,7 @@ justify-content: space-evenly;
 
 .FavouriteB{
     left:50%;
-    margin-left:200px;
+    margin-left:100px;
     border-radius: 50%;
     width:40px;
 height:40px;
@@ -448,3 +448,8 @@ height:40px;
   .closeB:hover{
     box-shadow: none;
   }
+
+
+
+  
+  

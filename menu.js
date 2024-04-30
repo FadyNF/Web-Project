@@ -68,9 +68,9 @@ function dateFormat(date)
 }
 
 
-function addToFav(itemID)
+function addToFav(itemID,week)
 {
-var item=document.getElementById('item'+itemID);
+var item=document.getElementById('item'+itemID+week);
 var copy=item.cloneNode(true);
 copy.classList.add('noAnimation');
 var favouritesList=document.getElementById('favList');
@@ -78,18 +78,18 @@ favouritesList.appendChild(copy);
 }
 
 function removeFav(itemID,week){
-var removed=document.getElementById('item'+itemID);
+var removed=document.getElementById('item'+itemID+week);
 var favouritesList=document.getElementById('favList');
 favouritesList.removeChild(removed);
 
-var heart=document.getElementById('item'+itemID+week);
+var heart=document.getElementById('icon'+itemID+week);
 if(heart.style.color=="red")
 {heart.style.color="grey";}
 }
 
 function changeFavouriteC(itemID,week)
 {
-    var heart=document.getElementById('item'+itemID+week);
+    var heart=document.getElementById('icon'+itemID+week);
     if(heart.style.color=="red")
     {
          heart.style.color="grey";
@@ -103,10 +103,23 @@ function changeFavouriteC(itemID,week)
     }
 }
 
+function viewFavs()
+{
+    var allItems=document.querySelectorAll('.items');
+    allItems.forEach(meals=>{
+        meals.style.display="none";
+    });
+
+    var selectedItem=document.querySelectorAll('.noAnimation');
+    selectedItem.forEach(items=> {
+items.style.display="block";
+    });
+}
+
 function addToCart(itemID,week)
 {
      var item=document.getElementById('item'+itemID+week);
-     var itemName=document.getElementById('title0')
+     var itemName=document.getElementById('title')
 
     console.log("Item Name:", itemName);
     
@@ -115,7 +128,8 @@ function addToCart(itemID,week)
 
 function openWindow(iconToOpen)
 {
-  document.getElementById(iconToOpen).style.display="flex";  
+  document.getElementById(iconToOpen).style.display="flex"; 
+  viewFavs(); 
 }
 
 function closeWindow(iconToClose)
