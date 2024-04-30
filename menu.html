@@ -23,7 +23,7 @@
       <a href="">ABOUT US</a>
       <a href="">OUR MENU</a>
       <a href="">SUSTAINABILTIY</a>
-      <button id="cart"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #52ad79;"></i></button>
+      <button id="cart" onclick="openWindow('overlayCart')"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #52ad79;"></i></button>
     </div>
   </header>
 
@@ -36,7 +36,34 @@
         <button id="B2" onclick="gettingDates(7),viewItems('week2'),SelectB('B2')">WEEK 2</button>
         <button id="B3" onclick="gettingDates(14),viewItems('week3'),SelectB('B3')">WEEK 3</button>
         <button id="B4" onclick="gettingDates(21),viewItems('week4'),SelectB('B4')">WEEK 4</button>
+        <button id="overlayButton" class="FavouriteB" onclick="openWindow('overlayFav')"><i class="fa-regular fa-heart fa-xl" style="color: #4d8978;"></i></button>
+
       </div>
+
+<div class="overlayFav" id="overlayFav">
+  <div class="popWindow-fav">
+    <h1>Your Favourites </h1>
+    <div id="favList">
+    </div>
+    <button class="closeB" onclick="closeWindow('overlayFav')"><i class="fa-solid fa-xmark fa-xl" style="color: #2d523a;"></i></button>
+  </div>
+</div>
+
+
+<div class="overlayCart" id="overlayCart">
+  <div class="popWindow-cart">
+<h1>Your Cart</h1>
+<br>
+<hr>
+<h3>Order Summary</h3>
+<br>
+<div id="orderSumm">
+
+
+</div>
+<button class="closeB" onclick="closeWindow('overlayCart')"><i class="fa-solid fa-xmark fa-xl" style="color: #2d523a;"></i></button>
+  </div>
+</div>
 
       <p id="qoute"><i class="fa-solid fa-utensils icon" style="color: #276351;"></i>Good food is the foundation of genuine happiness.</p>
     </div>
@@ -45,14 +72,20 @@
 
       <!-- ITEMS OF WEEK 1 -->
       <!-- ITEM 1 -->
-      <div class="items week1">
+      <div class="items week1" id="item1">
         <img src="/Web-Project/images/Tuna-Tomato-Salad.jpg" alt="Tomato and Tuna pasta salad">
-        <h3
-          onclick="Details('detailsModalweek1','detailsModal','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
+        <h3 class="title"
+          onclick="Details('detailsModal1week1','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
           Tomato and Tuna pasta salad</h3>
 
 
-        <p id="duration">Duration: 20 min</p>
+          <span class="Features">
+            <p id="duration">Duration: 20 min</p>
+            <button class="Fbtn" onclick="changeFavouriteC(1,'W1')"><i id="item1W1" class="fa-solid fa-heart fa-lg"
+                style="color: #c0c3c9;"></i></button>
+
+                <button class="addBtn" onclick="addToCart(1,'W1')"><i id="plus1W1" class="fa-solid fa-plus fa-lg" style="color: #858c99;"></i></button>
+          </span>
 
         <div class="rate">
           <div class="rate">
@@ -67,7 +100,7 @@
       </div>
 
       <!-- ITEM 2 -->
-      <div class="items week1">
+      <div class="items week1" id="item2">
 
         <img src="/Web-Project/images/potluck.jpg" alt="Potluck Macaroni and Cheese">
         <h3
@@ -75,13 +108,14 @@
       'Potluck Macaroni and Cheese is a classic dish,  consists of cooked macaroni pasta mixed with a creamy cheese sauce, which can be made using a combination of cheese, milk or cream, and various seasonings. Additional ingredients such as diced vegetables, bacon, or breadcrumbs may also be added to enhance flavor and texture.')">
           Potluck Macaroni and cheese</h3>
 
-        <span class="h">
-          <p id="duration">Duration: 30-45 min</p>
-          <button id="Fbtn" onclick="changeFavouriteC()"><i id="icon" class="fa-solid fa-heart fa-lg"
-              style="color: #c0c3c9;"></i></button>
-              
+          <span class="Features">
+            <p id="duration">Duration:30-45 min</p>
+            <button class="Fbtn" onclick="changeFavouriteC(2,'W1')"><i id="item2W1" class="fa-solid fa-heart fa-lg"
+                style="color: #c0c3c9;"></i></button>
 
-        </span>
+                <button class="addBtn"><i id="plus2W1" class="fa-solid fa-plus fa-lg" style="color: #858c99;"></i></button>
+          </span>
+
         <div class="rate">
           <div class="rate">
             <span class="star selected">&#9733;</span>
@@ -96,7 +130,7 @@
 
 
       <!-- ITEM 3 -->
-      <div class="items week1">
+      <div class="items week1" id="item3">
 
         <img src="/Web-Project/images/Beef-and-Mushrooms-with-Smashed-Potatoes.jpg"
           alt=" Beef-and-Mushrooms-with-Smashed-Potatoes">
@@ -105,8 +139,13 @@
           Beef and Mushrooms with Smashed Potatoes
         </h3>
 
+        <span class="Features">
+          <p id="duration">Duration: 30 min</p>
+          <button class="Fbtn" onclick="changeFavouriteC(3,'W1')"><i id="item3W1" class="fa-solid fa-heart fa-lg"
+              style="color: #c0c3c9;"></i></button>
 
-        <p id="duration">Duration: 30 min</p>
+              <button class="addBtn"><i id="plus3W1" class="fa-solid fa-plus fa-lg" style="color: #858c99;"></i></button>
+        </span>
 
         <div class="rate">
           <div class="rate">
@@ -122,7 +161,7 @@
 
 
       <!-- ITEM 4 -->
-      <div class="items week1">
+      <div class="items week1" id="item4">
 
         <img src="/Web-Project/images/Mom-s-Swedish-Meatballs.jpg" alt="Swedish Meatballs">
         <h3
@@ -130,8 +169,13 @@
         'Swedish Meatballs originates from swden, known for their tender texture. they are typically made with a mix of beef ')">
           Swedish Meatball</h3>
 
-        <p id="duration">Duration: 40 min</p>
+          <span class="Features">
+            <p id="duration">Duration: 40 min</p>
+            <button class="Fbtn" onclick="changeFavouriteC(4,'W1')"><i id="item4W1" class="fa-solid fa-heart fa-lg"
+                style="color: #c0c3c9;"></i></button>
 
+                <button class="addBtn"><i id="plus4W1" class="fa-solid fa-plus fa-lg" style="color: #858c99;"></i></button>
+          </span>
         <div class="rate">
           <div class="rate">
             <span class="star selected">&#9733;</span>
@@ -147,7 +191,7 @@
 
       <!-- ITEMS OF WEEK 2 -->
       <!-- ITEM 1 -->
-      <div class="items week2">
+      <div class="items week2" id="item">
 
         <img src="/Web-Project/images/Hungarian-Chicken-Paprikash.jpg" alt="Hungarian Chicken Paprikash">
         <h3
@@ -156,8 +200,13 @@
           'Hungarian Chicken Paprikash is a classic hungarian plate knwon for its creamy sauce and ttender chicken. it has chicken peices covered with creamy sauce and the paprika flavors. The dish can have additional ingredients peppers,tomatos,... ')">
           Hungarian Chicken Paprikash</h3>
 
-        <p id="duration">Duration: 45 min</p>
+          <span class="Features">
+            <p id="duration">Duration: 45 min</p>
+            <button class="Fbtn" onclick="changeFavouriteC(1,'W2')"><i id="item1W2" class="fa-solid fa-heart fa-lg"
+                style="color: #c0c3c9;"></i></button>
 
+                <button class="addBtn"><i id="plus1W2" class="fa-solid fa-plus fa-lg" style="color: #858c99;"></i></button>
+          </span>
         <div class="rate">
           <div class="rate">
             <span class="star selected">&#9733;</span>
@@ -177,8 +226,11 @@
 'Tender pieces of chicken served with gravy, it  typically has a blend of herbs and spices on the top of it, the gravy is made of meat drippings combined with a thickening agent. ')">
           Chicken and Gravy</h3>
 
-        <p id="duration">Duration: 30 min</p>
-
+          <span class="Features">
+            <p id="duration">Duration: 30 min</p>
+            <button class="Fbtn" onclick="changeFavouriteC(2,'W2')"><i id="icon2W2" class="fa-solid fa-heart fa-lg"
+                style="color: #c0c3c9;"></i></button>
+          </span>
         <div class="rate">
           <div class="rate">
             <span class="star selected">&#9733;</span>
@@ -198,7 +250,11 @@
         <h3
           onclick="Details('detailsModal1week3','Spaghetti Chicken Parmesan','Classic Italian-American dish, where breaded chicken is covered with marinara sauche with melted cheese. Served with spaghetti that is  covered with marinara sauce too.')">
           Spaghetti Chicken Parmesan</h3>
-        <p id="duration">Duration: 20 min </p>
+          <span class="Features">
+            <p id="duration">Duration: 20 min</p>
+            <button class="Fbtn" onclick="changeFavouriteC(1,'W3')"><i id="icon1W3" class="fa-solid fa-heart fa-lg"
+                style="color: #c0c3c9;"></i></button>
+          </span>
         <div class="rate">
           <div class="rate">
             <span class="star selected">&#9733;</span>
@@ -218,7 +274,11 @@
         <h3
           onclick="Details('detailsModal1week4','Broccoli Stuffed Chicken','Chicken breasts filled with min of broccoli and cheese with the seasoning of herbs. ')">
           Broccoli Stuffed Chicken</h3>
-        <p id="duration">Duration: 40 min</p>
+          <span class="Features">
+            <p id="duration">Duration: 40 min</p>
+            <button class="Fbtn" onclick="changeFavouriteC(1,'W4')"><i id="icon1W4" class="fa-solid fa-heart fa-lg"
+                style="color: #c0c3c9;"></i></button>
+          </span>
         <div class="rate">
           <div class="rate">
             <span class="star selected">&#9733;</span>
@@ -240,9 +300,9 @@
   <!-- MODALSS -->
   <!-- ITEM 1 W1 MODAL -->
 
-  <div id="detailsModalweek1" class="modal">
+  <div id="detailsModal1week1" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('detailsModalweek1')">&times;</span>
+      <span class="close" onclick="closeModal('detailsModal1week1')">&times;</span>
       <img src="/Web-Project/images/Tuna-Tomato-Salad.jpg">
       <h3 id="itemName"></h3>
       <p id="itemDescription"> </p>

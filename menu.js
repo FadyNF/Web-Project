@@ -68,14 +68,57 @@ function dateFormat(date)
 }
 
 
-function changeFavouriteC()
+function addToFav(itemID)
 {
-    var heart=document.getElementById('icon');
+var item=document.getElementById('item'+itemID);
+var copy=item.cloneNode(true);
+copy.classList.add('noAnimation');
+var favouritesList=document.getElementById('favList');
+favouritesList.appendChild(copy);
+}
+
+function removeFav(itemID,week){
+var removed=document.getElementById('item'+itemID);
+var favouritesList=document.getElementById('favList');
+favouritesList.removeChild(removed);
+
+var heart=document.getElementById('item'+itemID+week);
+if(heart.style.color=="red")
+{heart.style.color="grey";}
+}
+
+function changeFavouriteC(itemID,week)
+{
+    var heart=document.getElementById('item'+itemID+week);
     if(heart.style.color=="red")
     {
          heart.style.color="grey";
+         removeFav(itemID,week);
+
     }
     else{
         heart.style.color="red";
+        addToFav(itemID,week);
+
     }
+}
+
+function addToCart(itemID,week)
+{
+     var item=document.getElementById('item'+itemID+week);
+     var itemName=document.getElementById('title0')
+
+    console.log("Item Name:", itemName);
+    
+}
+
+
+function openWindow(iconToOpen)
+{
+  document.getElementById(iconToOpen).style.display="flex";  
+}
+
+function closeWindow(iconToClose)
+{
+    document.getElementById(iconToClose).style.display="none";
 }

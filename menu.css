@@ -142,6 +142,9 @@ button:hover {
     padding: 5px;
     margin: 50px;
     min-height: 10em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     animation: backInLeft;
     animation-duration: 2s;
 }
@@ -190,6 +193,7 @@ h3 {
     width: 80%;
     max-width: 600px;
     position: relative;
+   
 }
 
 
@@ -251,6 +255,8 @@ li ,th{
     left: 0;
     justify-content: left;
     display: flex;
+
+    
 }
 
 
@@ -327,7 +333,7 @@ td{
     color: #778c61;
 }
 
-#Fbtn{
+.Fbtn{
     border-color: transparent;
     display: flex;
     justify-content: right;
@@ -335,12 +341,110 @@ td{
     cursor: pointer;
 }
 
-#Fbtn:hover{
-border-color: transparent;
-background-color: transparent;
+.Fbtn:hover{
+
+box-shadow: none;
 }
-.h{
+
+.Features{
     display: flex;
 justify-content: space-evenly;
 
 }
+
+
+.FavouriteB{
+    left:50%;
+    margin-left:200px;
+    border-radius: 50%;
+    width:40px;
+height:40px;
+}
+.addBtn{
+    border-color: transparent;
+    display: flex;
+    justify-content: right;
+    margin-top: 23px;
+    cursor: pointer;
+    justify-content: space-evenly;
+
+}
+
+.addBtn:hover{
+    box-shadow: none;
+}
+
+
+
+
+.overlayFav
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlayCart
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.6);
+    display: none;
+    justify-content:right;
+    align-items: center;
+}
+
+.popWindow-fav{
+    background-color:#cec69f;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+  overflow: auto;
+}
+
+.popWindow-cart{
+    background-color:white;
+    border-radius: 10px;
+    width:30%;
+    height: 100%;
+    justify-content: right;
+    position: relative;
+  overflow: auto;
+}
+
+.popWindow ,h1 {
+    margin-top: 60px;
+    color: #445b2c;
+  }
+
+  .noAnimation
+  {
+    animation:none;
+  }
+  #favList
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .closeB{
+        position: absolute;
+        justify-content: center;
+         top:6%;
+         left:85%;
+         border:transparent;
+         box-shadow: none;
+  }
+
+  .closeB:hover{
+    box-shadow: none;
+  }
