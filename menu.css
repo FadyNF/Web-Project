@@ -70,16 +70,19 @@ a:hover {
     position: absolute;
 
 }
+#cart{
+    border: transparent;
+}
 
 #qoute{
     color: rgb(90, 152, 122);
-    font-size: 1.7em;
-    font-weight: 500;
+    font-size: 1.4em;
+    font-weight: 300;
     font-style: oblique;
-    top: 10%;
-    left: 75%;
+    top: 92%;
+    left: 68%;
     text-align:right ;
-    position: absolute;
+    position: fixed;
    
     
 }
@@ -135,7 +138,7 @@ button:hover {
     border: 5px solid transparent;
     width: 15em;
     box-shadow: 0 5px 25px black;
-    border-radius: 15px;
+    border-radius: 70px;
     padding: 5px;
     margin: 50px;
     min-height: 10em;
@@ -145,7 +148,9 @@ button:hover {
 
 
 
-
+.tems,img{
+    border-radius:  70px;
+}
 
 .items:hover {
     transform: scale(1.1);
@@ -194,6 +199,8 @@ h3 {
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+    padding-right: 13px;
+    padding-top: 10px;
 }
 
 .close:hover {
@@ -206,6 +213,7 @@ h3 {
     width: 45px;
     height: 45px;
     justify-content: space-evenly;
+    
 }
 
 
@@ -317,4 +325,22 @@ tr:nth-child(even) {background-color: #dad4ba;
 
 td{
     color: #778c61;
+}
+
+#Fbtn{
+    border-color: transparent;
+    display: flex;
+    justify-content: right;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+#Fbtn:hover{
+border-color: transparent;
+background-color: transparent;
+}
+.h{
+    display: flex;
+justify-content: space-evenly;
+
 }

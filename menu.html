@@ -23,6 +23,7 @@
       <a href="">ABOUT US</a>
       <a href="">OUR MENU</a>
       <a href="">SUSTAINABILTIY</a>
+      <button id="cart"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #52ad79;"></i></button>
     </div>
   </header>
 
@@ -34,26 +35,25 @@
         <button id="B1" onclick="gettingDates(0),viewItems('week1'),SelectB('B1')">WEEK 1</button>
         <button id="B2" onclick="gettingDates(7),viewItems('week2'),SelectB('B2')">WEEK 2</button>
         <button id="B3" onclick="gettingDates(14),viewItems('week3'),SelectB('B3')">WEEK 3</button>
-        <button id="B4" onclick="gettingDates(21),viewItems('weeek4'),SelectB('B4')">WEEK 4</button>
+        <button id="B4" onclick="gettingDates(21),viewItems('week4'),SelectB('B4')">WEEK 4</button>
       </div>
 
-      <p id="qoute"><i class="fa-solid fa-utensils icon" style="color: #276351;"></i><i></i>Good food is the foundation <br> of genuine happiness.</p>
+      <p id="qoute"><i class="fa-solid fa-utensils icon" style="color: #276351;"></i>Good food is the foundation of genuine happiness.</p>
     </div>
 
     <div class="items-container">
 
       <!-- ITEMS OF WEEK 1 -->
+      <!-- ITEM 1 -->
       <div class="items week1">
-
-        <!-- ITEM 1 -->
-        <img src="/Web-Project/images/Tuna-Tomato-Salad.jpg"
-          alt="Tomato and Tuna pasta salad">
+        <img src="/Web-Project/images/Tuna-Tomato-Salad.jpg" alt="Tomato and Tuna pasta salad">
         <h3
           onclick="Details('detailsModalweek1','detailsModal','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
           Tomato and Tuna pasta salad</h3>
-     
+
 
         <p id="duration">Duration: 20 min</p>
+
         <div class="rate">
           <div class="rate">
             <span class="star selected">&#9733;</span>
@@ -74,8 +74,14 @@
           onclick="Details('detailsModal2week1','Potluck Macaroni and Cheese',
       'Potluck Macaroni and Cheese is a classic dish,  consists of cooked macaroni pasta mixed with a creamy cheese sauce, which can be made using a combination of cheese, milk or cream, and various seasonings. Additional ingredients such as diced vegetables, bacon, or breadcrumbs may also be added to enhance flavor and texture.')">
           Potluck Macaroni and cheese</h3>
-        <p id="duration">Duration: 30-45 min</p>
 
+        <span class="h">
+          <p id="duration">Duration: 30-45 min</p>
+          <button id="Fbtn" onclick="changeFavouriteC()"><i id="icon" class="fa-solid fa-heart fa-lg"
+              style="color: #c0c3c9;"></i></button>
+              
+
+        </span>
         <div class="rate">
           <div class="rate">
             <span class="star selected">&#9733;</span>
@@ -86,10 +92,6 @@
           </div>
         </div>
       </div>
-
-
-
-
 
 
 
@@ -118,25 +120,27 @@
       </div>
 
 
-      
-<!-- ITEM 4 -->
-      <div  class="items week1">
+
+      <!-- ITEM 4 -->
+      <div class="items week1">
 
         <img src="/Web-Project/images/Mom-s-Swedish-Meatballs.jpg" alt="Swedish Meatballs">
-        <h3 onclick="Details('detailsModal4week1','Swedish Meatball',
-        'Swedish Meatballs originates from swden, known for their tender texture. they are typically made with a mix of beef ')">Swedish Meatball</h3>
+        <h3
+          onclick="Details('detailsModal4week1','Swedish Meatball',
+        'Swedish Meatballs originates from swden, known for their tender texture. they are typically made with a mix of beef ')">
+          Swedish Meatball</h3>
 
-<p>Duration: 30 min</p>
+        <p id="duration">Duration: 40 min</p>
 
-<div class="rate">
-  <div class="rate">
-    <span class="star selected">&#9733;</span>
-    <span class="star selected">&#9733;</span>
-    <span class="star selected">&#9733;</span>
-    <span class="star selected">&#9733;</span>
-    <span class="star selected ">&#9733;</span>
-  </div>
-</div>
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected ">&#9733;</span>
+          </div>
+        </div>
       </div>
 
 
@@ -168,37 +172,71 @@
       <!-- ITEM 2  -->
       <div class="items week2">
         <img src="/Web-Project/images/Country-Chicken-with-Gravy.jpg" alt="Chicken and Gravy">
-<h3 onclick="Details('detailsModal2week2','Chicken and Gravy',
-'Tender pieces of chicken served with gravy, it  typically has a blend of herbs and spices on the top of it, the gravy is made of meat drippings combined with a thickening agent. ')">Chicken and Gravy</h3>
+        <h3
+          onclick="Details('detailsModal2week2','Chicken and Gravy',
+'Tender pieces of chicken served with gravy, it  typically has a blend of herbs and spices on the top of it, the gravy is made of meat drippings combined with a thickening agent. ')">
+          Chicken and Gravy</h3>
 
-<p id="duration">Duration: 30 min</p>
+        <p id="duration">Duration: 30 min</p>
 
-<div class="rate">
-  <div class="rate">
-    <span class="star selected">&#9733;</span>
-    <span class="star selected">&#9733;</span>
-    <span class="star selected">&#9733;</span>
-    <span class="star selected">&#9733;</span>
-    <span class="star half">&#9733;</span>
-  </div>
-</div>
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star ">&#9733;</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ITEMS OF WEEK 3 -->
+      <!-- ITEM 1 -->
+      <div class="items week3">
+        <img src="/Web-Project/images/Spaghetti-Chicken-Parmesan.jpg" alt="Spaghetti Chicken Parmesan">
+        <h3
+          onclick="Details('detailsModal1week3','Spaghetti Chicken Parmesan','Classic Italian-American dish, where breaded chicken is covered with marinara sauche with melted cheese. Served with spaghetti that is  covered with marinara sauce too.')">
+          Spaghetti Chicken Parmesan</h3>
+        <p id="duration">Duration: 20 min </p>
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star ">&#9733;</span>
+            <span class="star ">&#9733;</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ITEMS OF WEEK 4 -->
+      <!-- ITEM 1 -->
+      <div class="items week4 ">
+        <img src="/Web-Project/images/Broccoli-Stuffed-Chicken.jpg" alt="Broccoli Stuffed Chicken">
+        <h3
+          onclick="Details('detailsModal1week4','Broccoli Stuffed Chicken','Chicken breasts filled with min of broccoli and cheese with the seasoning of herbs. ')">
+          Broccoli Stuffed Chicken</h3>
+        <p id="duration">Duration: 40 min</p>
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star ">&#9733;</span>
+          </div>
+        </div>
       </div>
     </div>
 
 
-     <!-- ITEMS OF WEEK 3 -->
-  <div class="items week3">
-    <img src="/Web-Project/images/Spaghetti-Chicken-Parmesan.jpg" alt="Spaghetti Chicken Parmesan">
-    <h3  >Spaghetti Chicken Parmesan</h3>
-    <p id="duration">Duration: </p>
-    
-      </div>
-    
   </section>
 
 
 
- 
+
   <!-- MODALSS -->
   <!-- ITEM 1 W1 MODAL -->
 
@@ -283,7 +321,7 @@
       </div>
       <hr>
 
-      <div class="utensils">
+      <div>
         <h3>Tools Needed:</h3>
 
         <ul class="List">
@@ -326,8 +364,8 @@
           </tr>
 
           <tr>
-            <td>Fiber</td>
-            <td>3-5 g</td>
+            <td>Cholesterol</td>
+            <td>120 mg</td>
           </tr>
 
           <tr>
@@ -414,7 +452,7 @@
         </div>
         <hr>
 
-        <div class="utensils">
+        <div>
           <h3>Tools Needed:</h3>
           <ul class="List">
             <li>Large Pot</li>
@@ -453,8 +491,8 @@
             </tr>
 
             <tr>
-              <td>Fiber</td>
-              <td>8 g</td>
+              <td>Cholesterol</td>
+              <td>200 mg</td>
             </tr>
           </table>
         </div>
@@ -538,7 +576,7 @@
         </ul>
       </div>
       <hr>
-      <div class="utensils">
+      <div>
         <h3>Tools Needed:</h3>
         <ul class="List">
           <li>Mixing Bowl</li>
@@ -581,8 +619,8 @@
           </tr>
 
           <tr>
-            <td>Fiber</td>
-            <td>2-4 g</td>
+            <td>Cholesterol</td>
+            <td>100 mg</td>
           </tr>
 
           <tr>
@@ -595,11 +633,11 @@
   </div>
 
 
-  
+
   <!-- ITEM 4 W1 MODAL -->
-<div id="detailsModal4week1" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('detailsModal4week1')">&times;</span>
+  <div id="detailsModal4week1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal4week1')">&times;</span>
       <img src="/Web-Project/images/Mom-s-Swedish-Meatballs.jpg">
       <h3 id="itemName"></h3>
       <p id="itemDescription"> </p>
@@ -617,9 +655,9 @@
           <p>Eggs</p>
         </span>
 
-        <span class="ing"> 
-<img id="Ingredientimg" src="/Web-Project/images/braed crumb.jpeg">
-<p>Bread Crumbs</p>
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/braed crumb.jpeg">
+          <p>Bread Crumbs</p>
         </span>
 
         <span class="ing">
@@ -628,13 +666,13 @@
         </span>
 
         <span class="ing">
-<img id="Ingredientimg" src="/Web-Project/images/onion.jpeg">
-<p>Onion</p>
+          <img id="Ingredientimg" src="/Web-Project/images/onion.jpeg">
+          <p>Onion</p>
         </span>
 
         <span class="ing">
-<img id="Ingredientimg" src="/Web-Project/images/milk.jpeg">
-<p>Milk</p>
+          <img id="Ingredientimg" src="/Web-Project/images/milk.jpeg">
+          <p>Milk</p>
         </span>
 
         <span class="ing">
@@ -642,15 +680,66 @@
           <p>Consomme</p>
         </span>
         <span class="ing">
-<img id="Ingredientimg" src="/Web-Project/images/worcestershire.jpeg">
-<p>Worcestershire</p>
+          <img id="Ingredientimg" src="/Web-Project/images/worcestershire.jpeg">
+          <p>Worcestershire</p>
         </span>
       </div>
+
       <hr>
+      <div>
+        <h3>Allergens:</h3>
+        <ul class="List">
+          <li>Eggs</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="utensils">
+        <h3>Tools Needed:</h3>
+        <ul class="List">
+          <li>Mixing Bowl</li>
+          <li>Spatula</li>
+          <li>Cooking Oil</li>
+          <li>Whisk</li>
+          <li>Measuring Cups</li>
+        </ul>
+      </div>
+      <hr>
+      <div>
+        <h3>Nutrition Values:</h3>
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
 
+          <tr>
+            <td>Calories</td>
+            <td>834-899- cal</td>
+          </tr>
 
+          <tr>
+            <td>Protien</td>
+            <td>50 g</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>33 g</td>
+          </tr>
+          <tr>
+            <td>Cholesterol</td>
+            <td>248 mg</td>
+          </tr>
+
+          <tr>
+            <td>Sodium</td>
+            <td>1711 mg</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
   </div>
-</div>
 
   <!-- WEEK 2 -->
   <!-- ITEM 1 W2 MODAL -->
@@ -743,7 +832,7 @@
 
 
       <hr>
-      <div class="utensils">
+      <div>
         <h3>Tools Needed:</h3>
         <ul class="List">
           <li>Cutting Board</li>
@@ -797,11 +886,134 @@
   <div id="detailsModal2week2" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal2week2')">&times;</span>
-      <img src="/Web-Project/images/Country-Chicken-with-Gravy.jpg" >
+      <img src="/Web-Project/images/Country-Chicken-with-Gravy.jpg">
       <h3 id="itemName"></h3>
       <p id="itemDescription"> </p>
       <hr>
 
+      <div class="ingredients">
+        <h3>Ingredients: </h3>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/crushed cornflakes.jpeg">
+          <p>Crushed Cornflakes</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/seasoning.jpeg">
+          <p>Poultry seasoning</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/paprika.jpeg">
+          <p>Paprika</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/salt.jpeg">
+          <p>Salt</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/thyme.jpeg">
+          <p>Dried Thyme</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/pepper.jpeg">
+          <p>Pepper</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/evapourated milk.jpeg">
+          <p>Evapourated Milk</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/chicken breast.jpeg">
+          <p>Chicken Breast</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/canola oil.jpeg">
+          <p>Canola Oil</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/butter.jpeg">
+          <p>Butter</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/flour.jpeg">
+          <p>Flour</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/minced chives.jpeg">
+          <p>Minced Chives</p>
+        </span>
+      </div>
+      <hr>
+      <div>
+        <h3>Allergens:</h3>
+        <ul class="List">
+          <li>Milk</li>
+          <li>Poultry</li>
+          <li>Seasonings</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Tools Needed:</h3>
+        <ul class="List">
+          <li>Large skillet</li>
+          <li>Spatula</li>
+          <li>Measuring Cups</li>
+          <li>Whisk</li>
+
+        </ul>
+      </div>
+
+      <div>
+        <h3>Nutrition Values:</h3>
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
+
+          <tr>
+            <td>Calories</td>
+            <td>274-300 cal</td>
+          </tr>
+
+          <tr>
+            <td>Protien</td>
+            <td>28 g</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>8 g</td>
+          </tr>
+
+          <tr>
+            <td>Carbohydrates</td>
+            <td>20 g</td>
+          </tr>
+
+          <tr>
+            <td>Cholesterol</td>
+            <td>72 mg</td>
+          </tr>
+
+          <tr>
+            <td>Sodium</td>
+            <td>569 mg</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 
@@ -811,9 +1023,244 @@
   <div id="detailsModal1week3" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal1week3')">&times;</span>
+      <img src="/Web-Project/images/Spaghetti-Chicken-Parmesan.jpg">
       <h3 id="itemName"></h3>
       <p id="itemDescription"> </p>
       <hr>
+
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/braed crumb.jpeg">
+          <p>Bread Crumbs</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/parmesan cheese.jpeg">
+          <p>Parmesan Cheese/</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/origano.jpeg">
+          <p>Oregano</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/basil.jpeg">
+          <p>Dried Basil</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/salt.jpeg">
+          <p>Salt</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/pepper.jpeg">
+          <p>Pepper</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/eggs.jpeg">
+          <p>Egg</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/cold water.jpeg">
+          <p>Water</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/chicken breast.jpeg">
+          <p>Chicken Breast</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/butter.jpeg">
+          <p>Butter</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/spaghetti.jpeg">
+          <p>Spaghetti</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/tomato sauce.jpeg">
+          <p>Spaghetti Saucce</p>
+        </span>
+
+      </div>
+      <hr>
+      <div>
+        <h3>Allergens:</h3>
+        <ul class="List">
+          <li>Herbs</li>
+          <li>Egg</li>
+          <li>Cheese</li>
+        </ul>
+      </div>
+
+      <hr>
+      <div>
+        <h3>Tools Needed:</h3>
+        <ul class="List">
+          <li>Whisk</li>
+          <li>Baking Dish</li>
+          <li>Large Skillet</li>
+          <li>Bowls</li>
+          <li>Colander</li>
+          <li>Pot</li>
+        </ul>
+      </div>
+
+      <hr>
+      <div class="nutrition">
+        <h3>Nutrition Values:</h3>
+
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
+
+          <tr>
+            <td>Calories</td>
+            <td>479-500 cal</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>20 g</td>
+          </tr>
+
+          <tr>
+            <td>Carbohydrates</td>
+            <td>24 g</td>
+          </tr>
+
+          <tr>
+            <td>Cholesterol</td>
+            <td>182 mg</td>
+          </tr>
+
+          <tr>
+            <td>Sodium</td>
+            <td>1818 mg</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="detailsModal1week4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal1week4')">&times;</span>
+      <img src="/Web-Project/images/Broccoli-Stuffed-Chicken.jpg">
+      <h3 id="itemName"></h3>
+      <p id="itemDescription"> </p>
+      <hr>
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/chicken breast.jpeg">
+          <p>Chicken Breast</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/seasoning.jpeg">
+          <p>Poultry seasoning</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/pepper.jpeg">
+          <p>Pepper</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/curry.jpeg">
+          <p>Curry Powder</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/garlic powder.jpeg">
+          <p>Garlic Powder</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/broccoli.jpeg">
+          <p>Broccoli</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/white cheddar.jpeg">
+          <p>Cheddar Cheese</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/chicken broth.jpeg">
+          <p>Chicken Broth</p>
+        </span>
+      </div>
+
+      <hr>
+      <div>
+        <h3>Allergens:</h3>
+        <ul class="List">
+          <li>Cheese</li>
+        </ul>
+      </div>
+      <hr>
+      <div class=>
+        <h3>Tools Needed:</h3>
+        <ul class="List">
+          <li>Bowl</li>
+          <li>Spatula</li>
+          <li>Baking Dish</li>
+          <li>Rolling Pin</li>
+        </ul>
+      </div>
+      <hr>
+      <div>
+        <h3>Nutrition Values:</h3>
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
+
+          <tr>
+            <td>Calories</td>
+            <td>324-400 cal</td>
+          </tr>
+
+          <tr>
+            <td>Protien</td>
+            <td>43 g</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>14 g</td>
+          </tr>
+
+          <tr>
+            <td>Carbohydrates</td>
+            <td>6 g</td>
+          </tr>
+
+          <tr>
+            <td>Cholesterol</td>
+            <td>123 mg</td>
+          </tr>
+
+          <tr>
+            <td>Sodium</td>
+            <td>822 mg</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </body>
