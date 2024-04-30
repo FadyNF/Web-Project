@@ -7,6 +7,8 @@
 body {
     background-color: rgb(244, 240, 217);
     font-family: Roboto;
+    display: flex;
+    justify-content: center;
     height: 3000px;
 }
 .banner {
@@ -16,54 +18,8 @@ body {
     background-size: cover;
     background-position: center;
   }
-.firstcard{
-    margin-top: -600px;
-    box-shadow: 6px 1px 10px rgb(90, 108, 65) ;
-   margin-left: 750px;
-    width: 430px; /* Adjust width as needed */
-    border-top-left-radius: 15%;
-    border-bottom-right-radius: 15%;
-    justify-content: center;
-   
-  background-size: cover;
-    background-image: url(recipepic.jpg) ;
-    height: 600px; /* Adjust height as needed */
-    background-color: #ffcb94; /* Adjust background color as needed */
-    
-}
-.secondcard{
-    justify-content: center;
-    margin-left: 280px;
-   
-}
-.thirdcard{
-    justify-content: center;
-    margin-left:-190px;
-}
 
-.clippart {
-    position: relative;
-    opacity: 5%; 
- justify-content: center;
- align-items: center;
- margin-top: -550px;
-}
- .first-page h1 {
-   
-    position: absolute;
-    top:55%;
- margin-left: 50px;
-   justify-content: center;
-   font-size: 2.2em;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-  
-    z-index: 1; /* Ensure the <h1> is above the image */
-}
-.first{
-    font-size: 1.2em;
-    color: #022515;
-    justify-content: space-around;
-}
+
 .nav-bar {
     position: fixed;
     width: 85%;
@@ -73,7 +29,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 0;
+    z-index: 9999;
+    padding: 40px 0;
 }
 
 .left-section {
@@ -168,32 +125,142 @@ a {
     font-weight: 300;
     line-height: 25px;
 }
-.buttons{
-    margin-left: 40px;
-    margin-top:-150px;
+/* Add this CSS to Recipe.css */
+.dish{
+   margin-top: 6em;
+}
+#ket{
+    position: absolute;
+   right:21em;
+   top: 20em;
+   
+}
+.spoonandtomato {
+    position: absolute;
+}
+
+#spoon {
+    top: 5em;
+    left: 0;
+}
+
+#tomato {
+    top: 5em;
+    right: -2em;
+}
+
+.shrimpandpepper {
+    position: absolute;
+}
+
+#pepper {
+    top: 48em;
+    left: 0;
+}
+
+#shrimp {
+    top: 48em;
+    right: 0;
+}
+#green{
+    position: absolute;
+    left: 0;
+    top:75em;
+}
+.row {
+    top:62em;
+    position: absolute;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the items horizontally */
+  }
+  
+
+  
+.dish-container h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.dish-container p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+    
+}
+
+  .dishes {
+    width: 200px; /* Set the desired width */
+    margin: 0 50px; /* Add some margin between the images */
+  }
+  .dish-container {
+    text-align: center;
+}
+.header {
+    position: absolute;
+    text-align: center;
+    top: 54em;
+    justify-content: center;
+  /* Adjust margin as needed */
+}
+
+.header h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.3em; /* Adjust font size as needed */
+}
+.header p{
+    color: #808080;
+}
+.left-content {
+    position: absolute;
+    float: left;
+    left: 4em;
+    top: 14em;
+    width: calc(50% - 10px); /* Adjust width as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.header-left {
+    /* Background color for the header */
+    padding: 20px; /* Add padding to the header */
+}
+
+.header-left h2 {
+    color: rgb(50, 94, 37);
+
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px; /* Add margin bottom to the header */
+}
+
+.header-left p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height as needed */
+}
+.header-left h3{
+    
+    font-size: 30px;
+
 }
 .login-btn,
 .signup-btn {
-    z-index: 999;
+    z-index: 9999;
     width: 200px;
     padding: 15px 0;
-    
     text-align: center;
-    
-    margin:0 auto; /* Center the buttons horizontally */
+    margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
     border: 2px solid #fbb262;
     background: transparent;
     color: #fbb262;
-    cursor: pointer;
     position: relative;
-    display: inline; /* Make the buttons block-level elements */
+    cursor: pointer;
 }
 
-/* CSS for the cover span */
 .cover {
-    background: #fbb262;
+    background: #fbb262    ;
     height: 100%;
     width: 0%;
     border-radius: 25px;
@@ -203,196 +270,123 @@ a {
     z-index: -1;
     transition: 0.5s;
 }
-
-/* CSS for the hover effect */
-button:hover .cover {
-  
+.signup-btn:hover .cover,
+.login-btn:hover .cover {
     width: 100%;
+    color: white;
 }
-
+  
 button:hover {
     color: white;
     border: none;
 }
-body {
-    background-color: #f5f0d6;
-}
-
-.half-circle {
-    justify-content: center;
-    align-items: center;
+.background-section {
+   
     
-    width: 1100px; /* Adjust the width of the half circle */
-    height: 800px; /* Adjust the height of the half circle */
-    border-bottom-left-radius: 800px; /* Adjust the border radius to create the half-circle */
-    border-bottom-right-radius: 800px; /* Adjust the border radius to create the half-circle */
-    border: 135px solid transparent; /* Set initial border color to transparent */
-    border-top: none; /* Remove the top border */
-    background-color: transparent; /* Sets the background color to transparent */
-    transform: rotate(365deg) translate(-50%, -50%); /* Adjust the position */
-    position: absolute;
-    top: 100%; /* Position below the content */
-    left: 25%;
-    margin-top: 100px; /* Adjust the margin to control the distance from the content */
-    z-index: 1; /* Ensure the half-circle is behind the content */
-    animation: colorChange 10s infinite; /* Apply the animation */
-}
-.first-page {
+    position: absolute; /* Change to absolute */
+    top: 85em;
+    left: 0;
+    background-color: rgba(255, 192, 96, 0.5);
     width: 100%;
-    position: relative;
-    z-index: 2; /* Ensure the first-page components are above the half circle */
-}
-@keyframes colorChange {
-    0%, 100% {
-        border-color: #ffbf7b; /* Set the initial color */
-    }
-    50% {
-        border-color: #ffca91; /* Set the alternate color */
-    }
-}
-
-@keyframes moveImage1 {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg) translateY(-50%) translateX(-600px);
-    }
-    50% {
-        transform: translate(-50%, -50%) rotate(180deg) translateY(-50%) translateX(-300px);
-    }
-    100% {
-        transform: translate(-60%, -50%) rotate(360deg) translateY(-50%) translateX(-300px);
-    }
-}
-
-@keyframes moveImage2 {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg) translateY(-50%) translateX(-600px);
-    }
-    50% {
-        transform: translate(-50%, -50%) rotate(180deg) translateY(-65%) translateX(-300px);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg) translateY(-65%) translateX(-300px);
-    }
-}
-
-
-.moving-image {
+    height: 70%;
+   
     
+ /* Ensure it's positioned beneath other elements */
+}
+
+
+.theheader {
+    margin-top: 2.5em;
+    text-align: center;
+    margin-bottom: 100px; /* Add margin below header */
+}
+
+.theheader h1 {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: 100%;
+    font-size: 35px; /* Adjust font size */
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.Outline {
+    text-align: center;
+    margin: 0 100px; /* Add margin between images */
+}
+
+.Outline img {
+    width: 130px; /* Set image width */
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.Outline h2 {
+    font-weight: 1000;
+    margin-top: 10px; /* Add space between image and title */
+    font-size: 15px; /* Adjust font size */
+}
+
+.Outline p {
+    font-size: 14px; /* Adjust font size */
+    line-height: 1.4; /* Add line height for readability */
+}
+
+
+.oval-background {
+    transition: all 0.5s;
     position: absolute;
-    width: 690px;
-height: 450px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    animation-duration: 20s; /* Double the duration to match both animations */
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    opacity: 1; /* Make the image visible */
+    top: 140em; /* Adjust positioning */
+    left: 79%; /* Adjust positioning */
+    transform: translate(-50%, -50%);
+    width: 400px; /* Adjust width as needed */
+    height: 600px; /* Adjust height as needed */
+    background-color: #f5f5f541; /* Background color of the oval */
+    border-radius: 50%; /* To create an oval shape */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    z-index: 1; /* Ensure it's above other content */
 }
 
-.moving-image:nth-child(odd) {
-    animation-name: moveImage1;
-}
-
-.moving-image:nth-child(even) {
-    animation-name: moveImage2;
-    animation-delay: -10s; /* Start the second animation immediately after the first one */
-}
-.parag {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-.parag h1 {
-    margin-top: 500px;
-    margin-left: 800px; /* Adjust as needed */
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.5em;
-}
-
-.icon-container {
-    margin-left: 30px; /* Adjust as needed */
-    font-size: 5em;
-    margin-top: 490px;
-    color: rgb(90, 108, 65);
-    text-shadow: 2px 6px 6px rgb(172, 172, 172);
-}
-
-.subtext {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin-top: 0px; /* Adjust as needed */
-    margin-left:860px; /*Adjust as needed */
-}
-.secondpage {
-    background-color: #f5f0d6; /* Set the background color for the second page */
-    height: 100vh; /* Adjust the height as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
- 
-}
-
-.dish4 {
+.center-image {
     z-index: 999;
-    height: 400px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    animation: rotateDish3 10s linear infinite;
-    /* Adjust margins as needed to position the image */
-  left: 700px;
-    margin-top: 350px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%; /* To make the image circular */
+    overflow: hidden; /* Hide any part of the image that exceeds the oval */
 }
 
-.cards {
-    display: flex;
-   margin-left: 110px;
-   margin-top: 0px;
-    justify-content: center;
-}
-
-.card {
-    box-shadow: 6px 1px 10px rgb(90, 108, 65) ;
-    position: relative;
-    width: 160px; /* Adjust width as needed */
-    border-top-left-radius: 15%;
-    border-bottom-right-radius: 15%;
-    height: 240px; /* Adjust height as needed */
-    background-color: #ffcb94; /* Adjust background color as needed */
-    right: 30px; /* Adjust spacing between cards */
-    margin-top: 200px;
-    margin-right: 30px;
-     transition: transform 0.5s;
-    transform-style: preserve-3d;
-}
-.card:hover{
-    transform: rotateY(180deg);
-}
-.small-dish {
-    object-fit: contain; /* Maintain aspect ratio */
+.content-left {
     position: absolute;
-    height: auto;
-    top: -50px; /* Adjust to center the small dish vertically */
-    left: 50%; /* Align the small dish to the horizontal center of the card */
-    transform: translateX(-50%); /* Center the small dish horizontally */
-    width: 120px; /* Adjust width as needed */
-   /* Adjust height as needed */
-    /* No hover effect here */
+    left: 3em;
+    top: 137em;
+    transform: translateY(-50%);
+    padding: 20px;
+   /* Adjust background color and opacity as needed */
+    border-radius: 10px;
 }
 
-
-@keyframes rotateDish3 {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.content-left h1 {
+    color: rgb(50, 94, 37);
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    margin-bottom: 30px;
 }
 
+.content-left p {
+    color: rgb(94, 136, 81);
+    margin-bottom: 20px;
+}
 
+.content-left ul {
+   
+    padding: 0;
+}
 
+.content-left ul li {
+    margin-bottom: 5px;
+    color: rgb(94, 136, 81);
+}
