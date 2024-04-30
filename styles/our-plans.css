@@ -738,6 +738,62 @@ body {
     background: transparent;
 }
 
+.select-meals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 60px;
+    gap: 30px;
+}
+
+.select-meals-container p {
+    font-size: 24px !important;
+    color: #00aaee !important;
+    font-weight: 900;
+}
+
+.get-started-button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #3d405b;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.get-started-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.get-started-button span:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.get-started-button:hover span {
+    padding-right: 15px;
+}
+
+.get-started-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 .form .form-footer {
     padding: 10px 0px;
     display: flex;
