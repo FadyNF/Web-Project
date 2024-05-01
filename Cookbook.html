@@ -6,7 +6,6 @@
     <title>FreshBites</title>
     <link rel="stylesheet" href="/styles/cookbook.css" />
      <link rel="stylesheet" href="/styles/body.css" />
-    <!-- <link rel="stylesheet" href="/styles/general.css" /> -->
     <link rel="stylesheet" href="/styles/slider.css" /> 
     <link
       rel="stylesheet"
@@ -26,6 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="/scripts/slider.js" defer></script>
     <script src="/scripts/cookbook.js" defer></script>
   </head>
@@ -110,12 +110,15 @@
     <div id="feedbackContent">
       <button class="exit" onclick="exitFeedback()">x</button>
       <h2>Rate our Website</h2>
-     
-      <button class="choice" onclick="showTextArea()">Hate</button>
-      <button class="choice" onclick="showTextArea()">Dislike</button>
-      <button class="choice" onclick="showTextArea()">Neutral</button>
-      <button class="choice" onclick="showTextArea()">Like</button>
-      <button class="choice" onclick="showTextArea()">Love</button>
+      <div class="button-row">
+        <button class="choice" onclick="showTextArea()"><span></span>Hate</button>
+        <button class="choice" onclick="showTextArea()"><span></span>Dislike</button>
+        <button class="choice" onclick="showTextArea()"><span></span>Neutral</button>
+      </div>
+      <div class="button-row">
+        <button class="choice" onclick="showTextArea()"><span></span>Like</button>
+        <button class="choice" onclick="showTextArea()"><span></span>Love</button>
+      </div>
       <form name="feedbackForm">
         <div id="feedback">
           <h4>Please share any suggestions for enhancements</h4>
@@ -149,7 +152,7 @@
 </div>
 <div id="overlayMeal1" class="Descprition">
   <div class="overlay-container">
-    <span class="close" onclick="closeWindow()">&times;</span>
+    <span class="close" onclick="closeWindow('overlayMeal1')">&times;</span>
     <img src="/images/dish1.jpg">
     <h3 id="dishName"></h3>
     <p id="extension"></p>
@@ -158,6 +161,7 @@
     <hr>
     <h3>Ingredients:</h3>
     <div class="amount">
+      <p>number of servings: </p>
     <button class="servings" onclick="showComponents1()">2</button>
     <button class="servings"onclick="showComponents2()">4</button>
   </div>
@@ -258,7 +262,7 @@
 </div>
 <div id="overlayMeal2" class="Descprition">
   <div class="overlay-container">
-    <span class="close" onclick="closeWindow('overlayMeals2')">&times;</span>
+    <span class="close" onclick="closeWindow('overlayMeal2')">&times;</span>
     <img src="/images/dish2.jpg">
     <h3 id="dishName"></h3>
     <p id="extension"></p>
@@ -392,7 +396,7 @@
   </div>
 <div id="overlayMeal3" class="Descprition">
   <div class="overlay-container">
-    <span class="close" onclick="closeWindow('overlayMeals3')">&times;</span>
+    <span class="close" onclick="closeWindow('overlayMeal3')">&times;</span>
     <img src="/images/dish3.jpg">
     <h3 id="dishName"></h3>
     <p id="extension"></p>
@@ -490,7 +494,7 @@
   </div>
 <div id="overlayMeal4" class="Descprition">
   <div class="overlay-container">
-    <span class="close" onclick="closeWindow('overlayMeals4')">&times;</span>
+    <span class="close" onclick="closeWindow('overlayMeal4')">&times;</span>
     <img src="/images/dish4.jpg">
     <h3 id="dishName"></h3>
     <p id="extension"></p>
@@ -612,7 +616,7 @@
   </div>
 <div id="overlayMeal5" class="Descprition">
   <div class="overlay-container">
-    <span class="close" onclick="closeWindow('overlayMeals5')">&times;</span>
+    <span class="close" onclick="closeWindow('overlayMeal5')">&times;</span>
     <img src="/images/dish5.jpg">
     <h3 id="dishName"></h3>
     <p id="extension"></p>
@@ -748,7 +752,7 @@
   </div>
 <div id="overlayMeal6" class="Descprition">
   <div class="overlay-container">
-    <span class="close" onclick="closeWindow('overlayMeals6')">&times;</span>
+    <span class="close" onclick="closeWindow('overlayMeal6')">&times;</span>
     <img src="/images/dish6.jpg">
     <h3 id="dishName"></h3>
     <p id="extension"></p>
@@ -858,7 +862,7 @@
   </div>
 <div id="overlayMeal7" class="Descprition">
   <div class="overlay-container">
-    <span class="close" onclick="closeWindow('overlayMeals7')">&times;</span>
+    <span class="close" onclick="closeWindow('overlayMeal7')">&times;</span>
     <img src="/images/dish7.jpg">
     <h3 id="dishName"></h3>
     <p id="extension"></p>
@@ -963,7 +967,7 @@
   </div>
   <div id="overlayMeal8" class="Descprition">
     <div class="overlay-container">
-      <span class="close" onclick="closeWindow('overlayMeals8')">&times;</span>
+      <span class="close" onclick="closeWindow('overlayMeal8')">&times;</span>
       <img src="/images/dish8.jpg">
       <h3 id="dishName"></h3>
       <p id="extension"></p>
@@ -1111,7 +1115,7 @@
 </div>
 <div id="overlayMeal9" class="Descprition">
   <div class="overlay-container">
-    <span class="close" onclick="closeWindow('overlayMeals9')">&times;</span>
+    <span class="close" onclick="closeWindow('overlayMeal9')">&times;</span>
     <img src="/images/dish9.jpg">
     <h3 id="dishName"></h3>
     <p id="extension"></p>

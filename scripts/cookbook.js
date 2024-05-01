@@ -27,22 +27,19 @@ function exitFeedback() {
 }
 
 // Opening an overlay window
-function displayDescritpion(overlayID,mealName,mealExtension){
-  var id=document.getElementById(overlayID);
-  var name=id.querySelector("#dishName");
-  var extension=id.querySelector("#extension")
-  name.textContent=mealName;
-  extension.textContent=mealExtension;
+function displayDescritpion(overlayID, mealName, mealExtension) {
+  var id = document.getElementById(overlayID);
+  var name = id.querySelector("#dishName");
+  var extension = id.querySelector("#extension");
+  name.textContent = mealName;
+  extension.textContent = mealExtension;
 
-  id.style.display="block";
-}
-function closeWindow(overlayID){
-  var openedWindow= document.getElementById(overlayID);
-  openedWindow.style.display="none";
+  id.style.display = "block";
+  showComponents1();
 }
 
+// Show components for 2 servings by default
 function showComponents1() {
-
   var components1 = document.getElementsByClassName("components1");
   for (var i = 0; i < components1.length; i++) {
     components1[i].style.display = "block";
@@ -54,20 +51,22 @@ function showComponents1() {
   }
 }
 
+// Show components for 4 servings
 function showComponents2() {
-
   var components1 = document.getElementsByClassName("components1");
   for (var i = 0; i < components1.length; i++) {
+    console.log(components1.length);
     components1[i].style.display = "none";
   }
+
   var components2 = document.getElementsByClassName("components2");
   for (var i = 0; i < components2.length; i++) {
     components2[i].style.display = "block";
   }
 }
-function closeWindow() {
-  document.getElementsByClassName(".Description").style.display = "none";
+
+// Closing an overlay window
+function closeWindow(ID) {
+  var window = document.getElementById(ID);
+  window.style.display = "none";
 }
-
-
-showComponents1('components1');
