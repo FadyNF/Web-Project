@@ -1,6 +1,5 @@
 
-window.onload = function()
-{
+window.onload = function () {
     gettingDates(0);
     viewItems('week1');
     SelectB('B1');
@@ -46,128 +45,166 @@ function viewItems(weekNumber) {
 }
 
 
-function gettingDates(sDay){
-    var currDate=new Date();
-    var dateOfStarting=new Date(currDate);
-    dateOfStarting.setDate(dateOfStarting.getDate()+sDay);
+function gettingDates(sDay) {
+    var currDate = new Date();
+    var dateOfStarting = new Date(currDate);
+    dateOfStarting.setDate(dateOfStarting.getDate() + sDay);
 
 
-    var dateOfEnding=new Date(dateOfStarting);
-    dateOfEnding.setDate(dateOfEnding.getDate()+6);
+    var dateOfEnding = new Date(dateOfStarting);
+    dateOfEnding.setDate(dateOfEnding.getDate() + 6);
 
-    var start=dateFormat(dateOfStarting);
-    var end=dateFormat(dateOfEnding);
+    var start = dateFormat(dateOfStarting);
+    var end = dateFormat(dateOfEnding);
 
-    document.getElementById('titleM').textContent="MENU FOR "+ start+" - "+end;
-}
-function dateFormat(date)
-{
-    var day=date.getDate();
-    var month=date.toLocaleString('default',{month:'short'});
-    return(day<10?'0':'')+day+''+month;
+    document.getElementById('titleM').textContent = "MENU FOR " + start + " - " + end;
 }
 
 
-function addToFav(itemID,week)
-{
-var item=document.getElementById('item'+itemID+week);
-var copy=item.cloneNode(true);
-copy.classList.add('noAnimation');
-var favouritesList=document.getElementById('favList');
-favouritesList.appendChild(copy);
+function dateFormat(date) {
+    var day = date.getDate();
+    var month = date.toLocaleString('default', { month: 'short' });
+    return (day < 10 ? '0' : '') + day + '' + month;
 }
 
-function removeFav(itemID,week){
-var removed=document.getElementById('item'+itemID+week);
-var favouritesList=document.getElementById('favList');
-favouritesList.removeChild(removed);
 
-var heart=document.getElementById('icon'+itemID+week);
-if(heart.style.color=="red")
-{heart.style.color="grey";}
+function addToFav(itemID, week) {
+    var item = document.getElementById('item' + itemID + week);
+    var copy = item.cloneNode(true);
+    copy.classList.add('noAnimation');
+    var favouritesList = document.getElementById('favList');
+    favouritesList.appendChild(copy);
 }
 
-function changeFavouriteC(itemID,week)
-{
-    var heart=document.getElementById('icon'+itemID+week);
-    if(heart.style.color=="red")
-    {
-         heart.style.color="grey";
-         removeFav(itemID,week);
+
+function removeFav(itemID, week) {
+    var removed = document.getElementById('item' + itemID + week);
+    var favouritesList = document.getElementById('favList');
+    favouritesList.removeChild(removed);
+
+    var heart = document.getElementById('icon' + itemID + week);
+    if (heart.style.color == "red") { heart.style.color = "grey"; }
+}
+
+function changeFavouriteC(itemID, week) {
+    var heart = document.getElementById('icon' + itemID + week);
+    if (heart.style.color == "red") {
+        heart.style.color = "grey";
+        removeFav(itemID, week);
 
     }
-    else{
-        heart.style.color="red";
-        addToFav(itemID,week);
+    else {
+        heart.style.color = "red";
+        addToFav(itemID, week);
 
     }
 }
 
-function viewFavs()
-{
-    var allItems=document.querySelectorAll('.items');
-    allItems.forEach(meals=>{
-        meals.style.display="none";
-    });
+function viewFavs() {
+   
 
-    var selectedItem=document.querySelectorAll('.noAnimation');
-    selectedItem.forEach(items=> {
-items.style.display="block";
+    var selectedItem = document.querySelectorAll('.noAnimation');
+    selectedItem.forEach(items => {
+        items.style.display = "block";
     });
 }
 
 
 function search() {
-    
+
 }
 
 
 function addToCart(itemID, week) {
-    // Get the item details modal
     var itemModal = document.getElementById('detailsModal' + itemID + week);
-    
-    // Get all modal content elements
     var allItems = document.querySelectorAll('.modal');
+    var cart = document.getElementById('cartContent');
+    var cList = document.getElementById('orderSumm');
 
-    // Loop through all modal content elements
-    allItems.forEach(function(item) {
-        // Check if the current item matches the one selected
+    if (cList.children.length === 0) {
+        cart.textContent = "";
+    }
+
+    allItems.forEach(item => {
         if (item === itemModal) {
-            // Extract item details from the current modal content
             var itemName = item.querySelector('#itemName').textContent;
-            var itemImage = item.querySelector('img').getAttribute('src');
-            
-            // Get the cart list element
-            var cartList = document.getElementById('orderSumm');
-            
-            // Create a new list item element
-            var listItem = document.createElement('li');
-            
-            // Set the text content of the list item to the item name
-            listItem.textContent = itemName;
-
-            // Append the list item to the cart list
-            cartList.appendChild(listItem);
-
-            // Log item details
-            console.log("Item Name:", itemName);
-            console.log("Item Image URL:", itemImage);
+            var itemImgSrc = item.querySelector('img').getAttribute('src');
            
-            // Add item to cart or perform other actions
-            // (You can add your logic here)
+            var header=document.getElementById('headerC');
+            header.style.display="flex";
+
+          
+
+            var listItem = document.createElement('li');
+             listItem.style.display="flex";
+            var itemImg = document.createElement('img');
+            itemImg.src = itemImgSrc;
+          
+            itemImg.style.width = "50px";
+            itemImg.style.height = "50px";
+            itemImg.style.marginRight="40px";
+            itemImg.style.marginLeft="40px";
+            listItem.appendChild(itemImg);
+       
+        
+         
+         
+            // Append the item name text content, not the element itself
+            listItem.appendChild(document.createTextNode(itemName));
+
+            cList.appendChild(listItem);
         }
     });
+    showMessage();
+}
+
+
+function viewCart() {
+
+    var selectedItem = document.querySelectorAll('#itemName');
+    selectedItem.forEach(item => {
+        item.style.display = "block";
+    });
+
 }
 
 
 
-function openWindow(iconToOpen)
-{
-  document.getElementById(iconToOpen).style.display="flex"; 
-  viewFavs(); 
+function showMessage() {
+    var msg = document.querySelectorAll('.message');
+    msg.forEach(messg => {
+        messg.style.display = "block";
+    });
+    setTimeout(closeMessage, 5000);
+
 }
 
-function closeWindow(iconToClose)
+function closeMessage() {
+    var message = document.querySelector('.message');
+    message.style.display = "none";
+    setTimeout(closeMessage, 3000);
+}
+
+
+function printError(elementID,hintMSG)
 {
-    document.getElementById(iconToClose).style.display="none";
+  document.getElementById(elementID).innerHTML=hintMSG;
+}
+
+
+
+function openWindow(iconToOpen) {
+    document.getElementById(iconToOpen).style.display = "flex";
+    if (iconToOpen === 'overlayFav') {
+        viewFavs();
+
+    }
+    else {
+        viewCart();
+    }
+}
+
+
+function closeWindow(iconToClose) {
+    document.getElementById(iconToClose).style.display = "none";
 }
