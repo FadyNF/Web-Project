@@ -39,7 +39,19 @@ a:hover {
 
 }
 
+.nav,input[type=text]
+{
+    text-align: left;
+    padding-right: 50px;
+    border: none;
+    border-radius: 50px;
+    
+}
 
+.searchB{
+height: 20px;
+
+}
 
 /* mes */
 
@@ -84,7 +96,6 @@ a:hover {
     text-align:right ;
     position: fixed;
    
-    
 }
 
 .icon{
@@ -337,7 +348,7 @@ td{
     border-color: transparent;
     display: flex;
     justify-content: right;
-    margin-top: 20px;
+    margin-top: 29px;
     cursor: pointer;
 }
 
@@ -364,7 +375,7 @@ height:40px;
     border-color: transparent;
     display: flex;
     justify-content: right;
-    margin-top: 23px;
+    margin-top: 29px;
     cursor: pointer;
     justify-content: space-evenly;
 
@@ -401,6 +412,7 @@ height:40px;
     display: none;
     justify-content:right;
     align-items: center;
+    z-index: 2;
 }
 
 .popWindow-fav{
@@ -410,6 +422,7 @@ height:40px;
     height: 80%;
     position: relative;
   overflow: auto;
+  border-radius: 50px;
 }
 
 .popWindow-cart{
@@ -420,6 +433,8 @@ height:40px;
     justify-content: right;
     position: relative;
   overflow: auto;
+  animation:backInRight;
+  animation-duration: 2s;
 }
 
 .popWindow ,h1 {

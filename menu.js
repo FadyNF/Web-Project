@@ -116,14 +116,49 @@ items.style.display="block";
     });
 }
 
-function addToCart(itemID,week)
-{
-     var item=document.getElementById('item'+itemID+week);
-     var itemName=document.getElementById('title')
 
-    console.log("Item Name:", itemName);
+function search() {
     
 }
+
+
+function addToCart(itemID, week) {
+    // Get the item details modal
+    var itemModal = document.getElementById('detailsModal' + itemID + week);
+    
+    // Get all modal content elements
+    var allItems = document.querySelectorAll('.modal');
+
+    // Loop through all modal content elements
+    allItems.forEach(function(item) {
+        // Check if the current item matches the one selected
+        if (item === itemModal) {
+            // Extract item details from the current modal content
+            var itemName = item.querySelector('#itemName').textContent;
+            var itemImage = item.querySelector('img').getAttribute('src');
+            
+            // Get the cart list element
+            var cartList = document.getElementById('orderSumm');
+            
+            // Create a new list item element
+            var listItem = document.createElement('li');
+            
+            // Set the text content of the list item to the item name
+            listItem.textContent = itemName;
+
+            // Append the list item to the cart list
+            cartList.appendChild(listItem);
+
+            // Log item details
+            console.log("Item Name:", itemName);
+            console.log("Item Image URL:", itemImage);
+           
+            // Add item to cart or perform other actions
+            // (You can add your logic here)
+        }
+    });
+}
+
 
 
 function openWindow(iconToOpen)
