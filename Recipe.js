@@ -141,3 +141,19 @@ window.addEventListener('scroll', function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    var fruits = document.querySelector(".fruits");
+    var sectionOffset = document.querySelector(".backgroundsection2").offsetTop;
+
+    window.addEventListener("scroll", function() {
+        var scrollPosition = window.scrollY;
+        var windowHeight = window.innerHeight;
+
+        if (scrollPosition + windowHeight > sectionOffset) {
+            fruits.classList.add("animate-in");
+        } else {
+            fruits.classList.remove("animate-in");
+        }
+    });
+});
+

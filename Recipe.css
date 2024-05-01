@@ -9,7 +9,7 @@ body {
     font-family: Roboto;
     display: flex;
     justify-content: center;
-    height: 3000px;
+    
 }
 .banner {
     width: 100%;
@@ -206,7 +206,7 @@ a {
 
 .header h1 {
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.3em; /* Adjust font size as needed */
+    font-size: 2.4em; /* Adjust font size as needed */
 }
 .header p{
     color: #808080;
@@ -296,16 +296,16 @@ button:hover {
 
 
 .theheader {
-    margin-top: 2.5em;
+    margin-top: 2.3em;
     text-align: center;
-    margin-bottom: 100px; /* Add margin below header */
+    margin-bottom: 60px; /* Add margin below header */
 }
 
 .theheader h1 {
 
     font-family: Georgia, 'Times New Roman', Times, serif;
     opacity: 100%;
-    font-size: 35px; /* Adjust font size */
+    font-size: 36px; /* Adjust font size */
 }
 
 .images {
@@ -319,26 +319,28 @@ button:hover {
 }
 
 .Outline img {
-    width: 130px; /* Set image width */
+    width: 140px; /* Set image width */
     border-radius: 10px; /* Add border radius for rounded corners */
 }
 
 .Outline h2 {
-    font-weight: 1000;
+    color: rgb(50, 94, 37);
+    font-weight: 500;
     margin-top: 10px; /* Add space between image and title */
-    font-size: 15px; /* Adjust font size */
+    font-size: 19px; /* Adjust font size */
 }
 
 .Outline p {
-    font-size: 14px; /* Adjust font size */
-    line-height: 1.4; /* Add line height for readability */
+    font-size: 15px; /* Adjust font size */
+    line-height: 1.4;
+    color: rgb(71, 117, 57); /* Add line height for readability */
 }
 
 
 .oval-background {
     transition: all 0.5s;
     position: absolute;
-    top: 140em; /* Adjust positioning */
+    top: 135em; /* Adjust positioning */
     left: 79%; /* Adjust positioning */
     transform: translate(-50%, -50%);
     width: 400px; /* Adjust width as needed */
@@ -389,4 +391,137 @@ button:hover {
 .content-left ul li {
     margin-bottom: 5px;
     color: rgb(94, 136, 81);
+}
+.backgroundsection2{
+    overflow: hidden;
+     position: absolute; /* Change to absolute */
+    top: 155em;
+    left: 0;
+    background-color: rgba(255, 192, 96, 0.5);
+    width: 100%;
+    height: 60%;
+}
+.Menu{
+    left: -2em;
+    z-index: 9999;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 30px 8px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fbb262;
+    background: transparent;
+    color: #fbb262;
+    position: relative;
+    cursor: pointer;
+}
+.cover1{
+    background: #fbb262    ;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.Menu:hover .cover1{
+    width: 100%;
+    color: white;
+}
+.fruits {
+    opacity: 0; /* Initially hide the image */
+    position: relative; /* Set image position to relative */
+    /* Initial position outside the section */
+    transition: opacity 0.9s ease, left 0.9s ease; /* Add transition effect */
+}
+
+.animate-in {
+    animation: slideIn 2s forwards; /* Apply animation when class is added */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.right-side{
+    z-index: 999;
+    position: absolute;
+    right:2em;
+}
+
+
+.hed h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    top: 2em;
+left:10em; /* Adjust the distance from the right side */
+    transform: translateY(-50%);
+    text-align: right;
+    color: rgb(50, 94, 37);
+}
+
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    
+    position: absolute;
+    top: 60%;
+    left:45%;
+    transform: translate(-50%, -50%);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.icon i {
+    color:rgb(50, 94, 37) ;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.icon p {
+    font-size: 16px;
+    color: rgb(116, 167, 101);
+    margin: 0;
+}
+
+.icons1{
+    display: flex;
+    flex-direction: column;
+    
+    position: absolute;
+    top: 60%;
+    left:75%;
+    transform: translate(-50%, -50%);
+}
+
+.icon1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.icon1 i {
+    color: rgb(50, 94, 37);
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.icon1 p {
+    color: rgb(116, 167, 101);
+    font-size: 16px;
+    margin: 0;
 }
