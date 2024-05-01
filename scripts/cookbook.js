@@ -1,3 +1,24 @@
+function printWarning(elementID, message) {
+  document.getElementById(elementID).innerHTML = message;
+}
+
+function checkInput(form) {
+  var searchQuery = form.search.value;
+  if (searchQuery.trim() === "") {
+    printWarning("searchErr", "Please enter a search query");
+    return false;
+  } else {
+    var RegEx = /^[a-zA-Z\s]+$/;
+    if (!RegEx.test(searchQuery)) {
+      printWarning("searchErr", "Please enter a valid query (letters only)");
+      return false;
+    } else {
+      printWarning("searchErr", "");
+      return true;
+    }
+  }
+}
+
 function showBox() {
   const overlay = document.getElementById("overlay");
   overlay.style.display = "block";
@@ -12,10 +33,10 @@ function showTextArea() {
   feedbackForm.style.display = "block";
 }
 
-
 function showFeedbackForm() {
   const feedbackForm = document.getElementById("feedback");
-  feedbackForm.style.display = (feedbackForm.style.display === "none") ? "block" : "none";
+  feedbackForm.style.display =
+    feedbackForm.style.display === "none" ? "block" : "none";
 }
 
 function exitFeedback() {
@@ -24,6 +45,25 @@ function exitFeedback() {
 
   const overlay = document.getElementById("overlay");
   overlay.style.display = "none";
+}
+
+function feedbackInput(form) {
+  var review = form.review.value.trim();
+  var reviewErr = document.getElementById("reviewErr");
+
+  if (review === "") {
+    printWarning("reviewErr", "Please enter your opinion before submitting");
+    return false;
+  } else {
+    var regEx = /^[a-zA-Z0-9\s]+$/;
+    if (!regEx.test(review)) {
+      printWarning("reviewErr", "Please enter a valid review (letters, numbers, and spaces only)");
+      return false;
+    } else {
+      printWarning("reviewErr", ""); 
+      return true;
+    }
+  }
 }
 
 // Opening an overlay window
@@ -70,3 +110,14 @@ function closeWindow(ID) {
   var window = document.getElementById(ID);
   window.style.display = "none";
 }
+//Serving buttons
+const servingBtn=document.querySelectorAll(".servings-div .servings");
+servingBtn.forEach((btn)=>{
+  btn.addEventListener("click",()=>{
+    servingBtn.forEach((otherBtn)=>{
+      otherBtn.classList.remove("active");
+    });
+    btn.classList.add("active");
+  });
+});
+
