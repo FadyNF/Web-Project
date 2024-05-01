@@ -855,6 +855,25 @@ a {
     right: 0;
 }
 
+.submit-button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 13px 30px;
+    background-color: rgb(251, 154, 50);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
 .form .form-footer {
     padding: 10px 0px;
     display: flex;

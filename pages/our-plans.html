@@ -70,7 +70,7 @@
                 <div class="steps">
                     <!-- Choose Type of plan -->
                     <div class="step">
-                        <div class="choose-plans-container">
+                        <form class="choose-plans-container">
                             <div class="select-preference">
                                 <div class="description">
                                     <h4>1. Choose your preference</h4>
@@ -334,14 +334,18 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
+                        <button 
+                          class="submit-button" 
+                          id = 'first-submit'
+                          disabled>Submit</button>
                     </div>
 
-                    <!-- Add User's Address -->
+                    <!-- Add User's Credentials -->
                     <div class="step">
-                        <div class="credentials-form-container">
+                        <form class="credentials-form-container">
                             <h4>Enter Credentials</h4>
-                            <form class="credentials-form">
+                            <div class="credentials-form">
                                 <div class="name-form-inputs">
                                     <label>
                                         <input
@@ -396,16 +400,21 @@
                                 <button href="#" class="credentials-button">
                                     <span class="text">submit</span>
                                 </button>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
+
+                        <button 
+                          class="submit-button" 
+                          id = 'second-submit'
+                          disabled>Submit</button>
                     </div>
 
                     <!-- Checkout -->
                     <div class="step">
-                        <div class="payment-form-container">
+                        <form class="payment-form-container">
                             <h4>Payment Info</h4>
                             <div>
-                                <form class="payment-form">
+                                <div class="payment-form">
                                     <label for="name" class="label">
                                         <span class="title"
                                             >Card holder full name</span
@@ -460,9 +469,13 @@
                                         type="button"
                                         value="Checkout"
                                     />
-                                </form>
+                                </div>
                             </div>
-                        </div>
+                        </form>
+                        <button 
+                          class="submit-button" 
+                          id = 'third-submit'
+                          disabled>Submit</button>
                     </div>
 
                     <!-- Select Meals -->
