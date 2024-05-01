@@ -3,12 +3,98 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto;
+    
 }
 
 body {
     height: 100vh;
     display: grid;
     place-items: center;
+    background-color: #f5f0d6;
+}
+
+.nav-bar {
+    width: 85%;
+    margin: auto;
+    color: rgb(90, 108, 65);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 55px;
+}
+
+.name {
+    margin-left: 15px;
+    font-size: 27px;
+    font-family: Pacifico;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(90, 108, 65);
+    font-family: Roboto;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(6, 82, 48);
+    text-transform: uppercase;
+}
+
+.nav-bar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: rgb(90, 108, 65);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    color: white;
+}
+  
+.nav-bar ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .form {
@@ -23,10 +109,7 @@ body {
     padding: 20px;
     display: grid;
     gap: 5px;
-}
-
-.form .form-header p {
-    color: #555;
+    color: #065230;
 }
 
 .form .form-body {
@@ -34,6 +117,7 @@ body {
     border-radius: 20px;
     height: 550px;
     overflow: hidden;
+    background-image: linear-gradient(rgba(244, 240, 217, 0.2), rgba(244, 240, 217, 0.5));
 }
 
 .form .form-body .pagination {
@@ -50,7 +134,7 @@ body {
     text-align: center;
     line-height: 28px;
     border-radius: 50%;
-    background-color: #00aaee;
+    background-color: #fb9931;
     color: white;
     font-size: 15px;
     position: relative;
@@ -59,13 +143,13 @@ body {
 .form .form-body .pagination .bar {
     width: 50px;
     height: 4px;
-    background-color: #00acee;
+    background-color: #fb9931;
     border-radius: 5px;
 }
 
 .form .form-body .pagination .active ~ div {
     background-color: #ddd;
-    color: #111;
+    color: #065230;
 }
 
 .form .steps {
@@ -86,7 +170,7 @@ body {
 }
 
 .form .steps .step p {
-    color: #555;
+    color: #065230;
     max-width: 90%;
     font-size: 15px;
 }
@@ -119,7 +203,12 @@ body {
 .description {
     text-align: center;
     margin-bottom: 10px;
-    color: black;
+    color: #065230;
+    font-size: 20px;
+}
+
+.description p {
+    font-weight: 500;
 }
 
 .checkboxes {
@@ -134,12 +223,6 @@ body {
     margin: 4px;
 }
 
-.checkbox-wrapper-16 *,
-.checkbox-wrapper-16 *:after,
-.checkbox-wrapper-16 *:before {
-    box-sizing: border-box;
-}
-
 .checkbox-wrapper-16 .checkbox-input {
     clip: rect(0 0 0 0);
     -webkit-clip-path: inset(100%);
@@ -149,31 +232,32 @@ body {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+    
 }
 
 .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
-    border-color: #2260ff;
+    border-color: #065230;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    color: #2260ff;
+    color: #065230;
 }
 
 .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
     transform: scale(1);
     opacity: 1;
-    background-color: #2260ff;
-    border-color: #2260ff;
+    background-color: #065230;
+    border-color: #065230;
     color: #fff;
     content: "✓";
 }
 
 .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
 .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
-    color: #2260ff;
+    color: #065230;
 }
 
 .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
-    border-color: #2260ff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+    border-color: #065230;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #6d9e88;
 }
 
 .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
@@ -190,7 +274,6 @@ body {
     min-height: 6rem;
     border-radius: 0.5rem;
     border: 2px solid #b5bfd9;
-    background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transition: 0.15s ease;
     cursor: pointer;
@@ -216,7 +299,7 @@ body {
 }
 
 .checkbox-wrapper-16 .checkbox-tile:hover {
-    border-color: #2260ff;
+    border-color: #065230;
 }
 
 .checkbox-wrapper-16 .checkbox-tile:hover:before {
@@ -261,6 +344,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #065230;
+    font-weight: 600;
 }
 
 .checkout-input {
@@ -285,32 +370,11 @@ body {
     height: var(--height);
     display: grid;
     grid-auto-flow: column;
-    background: hsl(0 0% 0%);
+    background: rgb(251, 154, 50);
     border-radius: var(--radius);
     grid-auto-columns: 1fr;
     position: relative;
-    border: var(--border) solid hsl(0 0% 0%);
-}
-
-.tabs {
-    --ease: linear(
-        0,
-        0.1641 3.52%,
-        0.311 7.18%,
-        0.4413 10.99%,
-        0.5553 14.96%,
-        0.6539 19.12%,
-        0.738 23.5%,
-        0.8086 28.15%,
-        0.8662 33.12%,
-        0.9078 37.92%,
-        0.9405 43.12%,
-        0.965 48.84%,
-        0.9821 55.28%,
-        0.992 61.97%,
-        0.9976 70.09%,
-        1
-    );
+    border: var(--border) solid rgb(251, 154, 50);
 }
 
 .tabs > .input,
@@ -363,15 +427,14 @@ body {
     display: grid;
     border-radius: calc(var(--radius) - var(--border));
     place-items: center;
-    color: hsl(0 0% 100% / calc(0.5 + var(--highlight, 0)));
     transition: background-color, color;
     transition-duration: 0.25s;
-    transition-timing-function: var(--ease, ease);
+    z-index: 100;
 }
 
 .input:not(:checked) + .label:hover {
     --highlight: 0.35;
-    background: hsl(0 0% 20%);
+    background: rgb(217, 212, 188);
 }
 
 .tabs::after {
@@ -379,19 +442,14 @@ body {
     content: "";
     width: calc(100% / var(--count));
     height: 100%;
-    background: hsl(0 0% 100%);
+    background: rgb(245, 240, 214);
     position: absolute;
     border-radius: calc(var(--radius) - var(--border));
-    mix-blend-mode: difference;
     translate: calc(var(--active, 0) * 100%) 0;
     transition: translate, outline-color;
     transition-duration: var(--speed);
     transition-timing-function: var(--ease, ease);
     outline: 2px solid transparent;
-}
-
-.tabs:has(:focus-visible)::after {
-    outline-color: red;
 }
 
 .checkout-details {
@@ -401,6 +459,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: #065230;
+    font-size: large;
+    font-weight: 500;
 }
 
 .meal-checkout-types {
