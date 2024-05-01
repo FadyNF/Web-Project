@@ -70,7 +70,10 @@
                 <div class="steps">
                     <!-- Choose Type of plan -->
                     <div class="step">
-                        <form class="choose-plans-container">
+                        <form
+                            class="choose-plans-container"
+                            onsubmit="handlePlansFormSubmit(event)"
+                        >
                             <div class="select-preference">
                                 <div class="description">
                                     <h4>1. Choose your preference</h4>
@@ -334,16 +337,22 @@
                                     </div>
                                 </div>
                             </div>
+                            <button
+                                type="submit"
+                                class="submit-button"
+                                id="first-submit"
+                            >
+                                Submit
+                            </button>
                         </form>
-                        <button 
-                          class="submit-button" 
-                          id = 'first-submit'
-                          disabled>Submit</button>
                     </div>
 
                     <!-- Add User's Credentials -->
                     <div class="step">
-                        <form class="credentials-form-container">
+                        <form
+                            class="credentials-form-container"
+                            onsubmit="handleCredentialsFormSubmit(event)"
+                        >
                             <h4>Enter Credentials</h4>
                             <div class="credentials-form">
                                 <div class="name-form-inputs">
@@ -396,22 +405,24 @@
                                     />
                                     <span>Address</span>
                                 </label>
-
-                                <button href="#" class="credentials-button">
-                                    <span class="text">submit</span>
-                                </button>
                             </div>
+                            <button
+                                type="submit"
+                                class="submit-button"
+                                id="second-submit"
+                            >
+                                Submit
+                            </button>
                         </form>
 
-                        <button 
-                          class="submit-button" 
-                          id = 'second-submit'
-                          disabled>Submit</button>
                     </div>
 
                     <!-- Checkout -->
                     <div class="step">
-                        <form class="payment-form-container">
+                        <form
+                            class="payment-form-container"
+                            onsubmit="handlePaymentFormSubmit(event)"
+                        >
                             <h4>Payment Info</h4>
                             <div>
                                 <div class="payment-form">
@@ -471,11 +482,14 @@
                                     />
                                 </div>
                             </div>
+                            <button
+                                type="submit"
+                                class="submit-button"
+                                id="third-submit"
+                            >
+                                Submit
+                            </button>
                         </form>
-                        <button 
-                          class="submit-button" 
-                          id = 'third-submit'
-                          disabled>Submit</button>
                     </div>
 
                     <!-- Select Meals -->
@@ -492,11 +506,11 @@
                     </div>
                 </div>
             </div>
-
+            <!-- 
             <div class="form-footer">
                 <button class="prev" disabled>Previous</button>
                 <button class="next">Next</button>
-            </div>
+            </div> -->
         </div>
 
         <script src="../scripts/our-plans.js"></script>

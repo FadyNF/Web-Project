@@ -14,18 +14,24 @@ body {
 }
 
 .nav-bar {
-    width: 85%;
-    margin: auto;
+    width: 100%;
     color: rgb(90, 108, 65);
     display: flex;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     padding: 35px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),
+     rgba(0, 0, 0, 0.75)),
+      url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .left-section {
     display: flex;
     align-items: center;
+    margin-left: 30px;
 }
 
 .logo {
@@ -35,12 +41,13 @@ body {
 .name {
     margin-left: 15px;
     font-size: 27px;
+    color:rgb(32, 188, 193);
     font-family: Pacifico;
 }
 
 a {
     text-decoration: none;
-    color:rgb(90, 108, 65);
+    color:rgb(32, 188, 193);
     font-family: Roboto;
 }
 
@@ -53,7 +60,7 @@ a {
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: rgb(6, 82, 48);
+    color:rgb(32, 188, 193);
     text-transform: uppercase;
 }
 
@@ -61,10 +68,10 @@ a {
     content: "";
     height: 3px;
     width: 0;
-    background: rgb(90, 108, 65);
+    background:rgb(32, 188, 193);
     position: absolute;
     left: 0;
-    bottom: -10px;
+    bottom: -1px;
     transition: 0.5s;
     color: white;
 }
@@ -100,7 +107,7 @@ a {
 .form {
     width: 98%;
     height: auto;
-    max-height: 700px;
+    max-height: 750px;
     max-width: 850px;
 }
 
@@ -115,7 +122,7 @@ a {
 .form .form-body {
     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    height: 550px;
+    height: 570px;
     overflow: hidden;
     background-image: linear-gradient(rgba(244, 240, 217, 0.2), rgba(244, 240, 217, 0.5));
 }
@@ -165,6 +172,10 @@ a {
     overflow: hidden;
 }
 
+.form .steps .step:nth-child(1) .choose-plans-container {
+    justify-content: center; 
+}
+
 .form .steps .step h4 {
     margin-bottom: 5px;
 }
@@ -180,6 +191,7 @@ a {
     flex-direction: row;
     gap: 15px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .select-preference,
@@ -856,23 +868,14 @@ a {
 }
 
 .submit-button {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 13px 30px;
     background-color: rgb(251, 154, 50);
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: auto; /* Push the button to the bottom */
 }
-
-.submit-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
 
 .form .form-footer {
     padding: 10px 0px;

@@ -1,34 +1,63 @@
-(function() {
-    let currentPage = 1;
-    const prevBtn = document.querySelector(".form .form-footer .prev");
-    const nextBtn = document.querySelector(".form .form-footer .next");
-    
-    function movePage() {
-        prevBtn.disabled = false;
-        nextBtn.disabled = false;
+let currentPage = 1;
 
-        if (currentPage === 1) {
-            prevBtn.disabled = true;
-        } else if (currentPage === 4) {
-            nextBtn.disabled = true;
-        }
+function handlePlansFormSubmit(event) {
+    event.preventDefault(); 
 
-        document.querySelector(".form .pagination .active").classList.remove("active");
-        document.querySelectorAll(".form .pagination .number")[currentPage - 1].classList.add("active");
-    
-        const stepNode = document.querySelector(".form .steps .step");
-        const width = ((currentPage - 1) * stepNode.offsetWidth * -1) + "px";
-    
-        stepNode.parentNode.style.marginLeft = width;
+    const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+    if (checkboxes.length === 0) {
+        alert("Please choose at least one meal type.");
+        return;
     }
-    
-    prevBtn.addEventListener("click", function(){
-        currentPage -= 1;
-        movePage();
-    });
 
-    nextBtn.addEventListener("click", function(){
-        currentPage += 1;
-        movePage();
+    movePage(1);
+}
+
+function handleCredentialsFormSubmit(event) {
+    event.preventDefault();
+
+    const inputs = document.querySelectorAll(".credentials-form-container input");
+    let isFormComplete = true;
+    inputs.forEach(input => {
+        if (input.value.trim() === "") {
+            isFormComplete = false;
+            return;
+        }
     });
-})();
+    if (!isFormComplete) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    movePage(2);
+}
+
+function handlePaymentFormSubmit(event) {
+    event.preventDefault();
+
+    const inputs = document.querySelectorAll(".payment-form-container input");
+    let isFormComplete = true;
+    inputs.forEach(input => {
+        if (input.value.trim() === "") {
+            isFormComplete = false;
+            return;
+        }
+    });
+    if (!isFormComplete) {
+        alert("Please fill in all fields.");
+        return;
+    }
+    movePage(3);
+}
+
+function movePage(currentStep) {
+    currentPage = currentStep;
+
+    const stepNode = document.querySelector(".form .steps .step");
+    const width = currentPage * stepNode.offsetWidth * -1 + "px";
+    stepNode.parentNode.style.marginLeft = width;
+
+    document.querySelector(".form .pagination .active").classList.remove("active");
+    document.querySelectorAll(".form .pagination .number")[currentPage - 1].classList.add("active"); // Subtracting 1 from currentPage
+}
+
+
