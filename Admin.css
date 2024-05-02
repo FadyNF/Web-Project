@@ -229,3 +229,80 @@ aside .sidebar a span.msg_count{
     justify-content: center;
     margin-top: 20px;
 }
+.add-button {
+    position: fixed;
+    top: 10rem; /* Position at the top */
+    right: 5rem; /* Position at the right */
+    background-color: green;
+    color: white;
+    font-size: 1.2rem; /* Increase font size */
+    padding: 1rem 2rem; /* Increase padding */
+    border: none;
+    border-radius: 10px; /* Increase border radius */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.add-button:hover {
+    background-color: white;
+    color: green;
+}
+.select-button {
+    position: fixed;
+    top: 5rem; /* Position at the top */
+    right: 5rem; /* Position at the right */
+    background-color: rgb(236, 206, 100);
+    color: white;
+    font-size: 1.2rem; /* Increase font size */
+    padding: 1rem 2rem; /* Increase padding */
+    border: none;
+    border-radius: 10px; /* Increase border radius */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.select-button:hover {
+    background-color: white;
+    color: rgb(236, 206, 100);
+}
+
+.remove-button {
+    position: fixed;
+    top: 15rem; /* Position at the top */
+    right: 5rem; /* Position at the right */
+    background-color: red;
+    color: white;
+    font-size: 1.2rem; /* Increase font size */
+    padding: 1rem 2rem; /* Increase padding */
+    border: none;
+    border-radius: 10px; /* Increase border radius */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: white;
+    color: red;
+}
+.edit-button {
+    position: fixed;
+    top: 20rem; /* Position at the top */
+    right: 5rem; /* Position at the right */
+    background-color: rgb(26, 0, 128);
+    color: white;
+    font-size: 1.2rem; /* Increase font size */
+    padding: 1rem 2rem; /* Increase padding */
+    border: none;
+    border-radius: 10px; /* Increase border radius */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: white;
+    color:rgb(26, 0, 128);
+}
