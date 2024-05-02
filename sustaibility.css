@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    font-size: 50px; 
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-family: "Brush Script MT", cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b4513; 
+  }
+  
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+  
+  
+  .hero-content {
+    color: #000000;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: 24px;
+  }
+  
+  .mission,
+  .sourcing,
+  .food-waste {
+    padding: 100px 0;
+    text-align: center;
+  }
+  .sourcing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  #video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  .sourcing .container {
+    padding: 0; 
+  }
+  .mission{
+  background-color: beige;
+  }
+  .food-waste {
+    background: linear-gradient(to bottom, #4CAF50, #C8E6C9);
+    padding: 50px 0 100px; 
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #e2ebe2, 0 0 20px #e2ebe2, 0 0 30px #e2ebe2, 0 0 40px #e2ebe2, 0 0 50px #e2ebe2, 0 0 60px #e2ebe2, 0 0 70px #e2ebe2, 0 0 80px #e2ebe2;
+  }
+  .statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .statistic {
+    width: 300px;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .percentage {
+    font-size: 72px;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .green-gradient {
+    background: linear-gradient(to bottom, #4CAF50, #81C784);
+  }
+  
+  .red-gradient {
+    background: linear-gradient(to bottom, #FF5252, #FF8A80);
+  }
+  
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .section-desc {
+    font-size: 18px;
+  }
+  section {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .hero-content,
+  .container {
+    animation: slideInUp 1s ease-in-out;
+  }
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #e2ebe2, 0 0 20px #e2ebe2, 0 0 30px #e2ebe2, 0 0 40px #e2ebe2, 0 0 50px #e2ebe2, 0 0 60px #e2ebe2, 0 0 70px #e2ebe2, 0 0 80px #e2ebe2;
+  }
+  
+  .hero-subtitle {
+    font-size: 24px;
+    text-shadow: 0 0 10px #e2ebe2, 0 0 20px #e2ebe2, 0 0 30px #e2ebe2, 0 0 40px #e2ebe2, 0 0 50px #e2ebe2, 0 0 60px #e2ebe2, 0 0 70px #e2ebe2, 0 0 80px #e2ebe2;
+  }
+  .food-waste .section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 0; 
+    text-shadow: 0 0 10px #e2ebe2, 0 0 20px #e2ebe2, 0 0 30px #e2ebe2, 0 0 40px #e2ebe2, 0 0 50px #e2ebe2, 0 0 60px #e2ebe2, 0 0 70px #e2ebe2, 0 0 80px #e2ebe2;
+  }
+  
+  .section-desc {
+    font-size: 18px;
+    text-shadow: 0 0 10px #e2ebe2, 0 0 20px #e2ebe2, 0 0 30px #e2ebe2, 0 0 40px #e2ebe2, 0 0 50px #e2ebe2, 0 0 60px #e2ebe2, 0 0 70px #e2ebe2, 0 0 80px #e2ebe2;
+  }
+  .new-section {
+    background-color: #ffffff; 
+    padding: 300px 0; 
+    text-align: center;
+  }
+  
+  .new-section .container {
+    position: relative;
+  }
+  
+  .new-section .image {
+    width: 200px; 
+    height: auto;
+    max-width: 100%; 
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .new-section .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .new-section .left-arrow {
+    left: 0;
+  }
+  
+  .new-section .right-arrow {
+    right: 0;
+  }
+  
+  
+  .new-section .bouncing-image {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .mission-section {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .mission-title {
+  
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .mission-desc {
+    font-size: 30px;
+  }
+  .image {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .recycling-info {
+    text-align: center;
+    padding-top: 100px;
+  
+  }
+  
+  .recycling-title {
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+    margin-top: 0; 
+    margin-bottom: 200px; 
+  }
+  
+  .recycling-desc {
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    margin-top: 100px; 
+  }
+  
+  .navigation-arrows {
+    position: relative;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: #008000; 
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background-color: rgb(157, 146, 146); 
+    text-align: center;
+    line-height: 40px; 
+  }
+  
+  .left-arrow {
+    left: 20px; 
+  }
+  
+  .right-arrow {
+    right: 20px;
+  }
+  
