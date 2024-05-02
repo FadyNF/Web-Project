@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto;
-    
 }
 
 body {
@@ -21,9 +20,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 35px 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),
-     rgba(0, 0, 0, 0.75)),
-      url(../images/background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../images/background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -41,13 +39,13 @@ body {
 .name {
     margin-left: 15px;
     font-size: 27px;
-    color:rgb(32, 188, 193);
+    color: rgb(32, 188, 193);
     font-family: Pacifico;
 }
 
 a {
     text-decoration: none;
-    color:rgb(32, 188, 193);
+    color: rgb(32, 188, 193);
     font-family: Roboto;
 }
 
@@ -60,7 +58,7 @@ a {
 
 .nav-bar ul li a {
     text-decoration: none;
-    color:rgb(32, 188, 193);
+    color: rgb(32, 188, 193);
     text-transform: uppercase;
 }
 
@@ -68,14 +66,14 @@ a {
     content: "";
     height: 3px;
     width: 0;
-    background:rgb(32, 188, 193);
+    background: rgb(32, 188, 193);
     position: absolute;
     left: 0;
     bottom: -1px;
     transition: 0.5s;
     color: white;
 }
-  
+
 .nav-bar ul li:hover::after {
     width: 100%;
 }
@@ -116,15 +114,16 @@ a {
     padding: 20px;
     display: grid;
     gap: 5px;
+    font-size: 22px;
     color: #065230;
 }
 
 .form .form-body {
     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(170, 214, 215);
     border-radius: 20px;
     height: 570px;
     overflow: hidden;
-    background-image: linear-gradient(rgba(244, 240, 217, 0.2), rgba(244, 240, 217, 0.5));
 }
 
 .form .form-body .pagination {
@@ -173,7 +172,7 @@ a {
 }
 
 .form .steps .step:nth-child(1) .choose-plans-container {
-    justify-content: center; 
+    justify-content: center;
 }
 
 .form .steps .step h4 {
@@ -244,7 +243,6 @@ a {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-    
 }
 
 .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
@@ -503,15 +501,34 @@ a {
     margin-top: 15px;
 }
 
-.credentials-form {
+.credentials-form-container .description {
     display: flex;
     flex-direction: column;
+    font-weight: 700;
+    gap: 12px;
+    margin-bottom: -10px;
+}
+
+.credentials-form-container .description p {
+    font-size: 17px !important;
+}
+
+.credentials-form {
+    background: rgb(213, 255, 227); 
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 
+        0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 
+        0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     gap: 10px;
     max-width: 350px;
-    background-color: black;
+    background-color: transparent;
     padding: 13px;
     border-radius: 10px;
     position: relative;
+    /* background-color: white; */
+    height: 300px;
 }
 
 .message-input {
@@ -715,43 +732,45 @@ a {
 }
 
 .payment-form {
-    background: #0c0f14;
-    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01),
-        0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09),
-        0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(179, 213, 214); 
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 
+        0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 
+        0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1); 
     width: 320px;
+    height: 340px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 15px;
     padding: 20px;
     position: relative;
     border-radius: 25px;
 }
+
 .payment-form .label {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    height: -moz-fit-content;
+    gap: 15px;
     height: fit-content;
 }
+
 .payment-form .label:has(input:focus) .title {
-    top: 0;
     left: 0;
     color: #d17842;
 }
+
 .payment-form .label .title {
     padding: 0 10px;
     transition: all 300ms;
     font-size: 12px;
-    color: #8b8e98;
+    color: black;
     font-weight: 600;
-    width: -moz-fit-content;
     width: fit-content;
     top: 14px;
     position: relative;
     left: 15px;
-    background: #0c0f14;
 }
+
 .payment-form .input-field {
     width: auto;
     height: 50px;
@@ -762,7 +781,7 @@ a {
     border: 1px solid #21262e;
     transition: all 0.3s;
     caret-color: #d17842;
-    color: #aeaeae;
+    color: black;
 }
 
 .payment-form .input-field:hover {
@@ -782,34 +801,6 @@ a {
 .payment-form .split label {
     width: 130px;
 }
-.payment-form .checkout-btn {
-    margin-top: 20px;
-    padding: 20px 0;
-    border-radius: 25px;
-    font-weight: 700;
-    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    border: none;
-    justify-content: center;
-    fill: #fff;
-    color: #fff;
-    border: 2px solid transparent;
-    background: #d17842;
-    transition: all 200ms;
-}
-.payment-form .checkout-btn:active {
-    scale: 0.95;
-}
-
-.payment-form .checkout-btn:hover {
-    color: #d17842;
-    border: 2px solid #d17842;
-    background: transparent;
-}
 
 .select-meals-container {
     display: flex;
@@ -817,20 +808,19 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 60px;
+    margin-top: 160px;
     gap: 30px;
 }
 
 .select-meals-container p {
     font-size: 24px !important;
-    color: #00aaee !important;
     font-weight: 900;
 }
 
 .get-started-button {
     display: inline-block;
     border-radius: 4px;
-    background-color: #3d405b;
+    background-color: rgb(237, 158, 73);
     border: none;
     color: #ffffff;
     text-align: center;
@@ -869,7 +859,7 @@ a {
 
 .submit-button {
     padding: 13px 30px;
-    background-color: rgb(251, 154, 50);
+    background-color: rgb(251, 153, 49);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -891,4 +881,14 @@ a {
     border-radius: 5px;
     cursor: pointer;
     outline: none;
+}
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Make sure it's above other elements */
+    pointer-events: none; /* Allow clicks to pass through */
 }

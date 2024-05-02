@@ -50,7 +50,6 @@
         <div class="form">
             <div class="form-header">
                 <h2>Personalize your plan</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             </div>
 
             <div class="form-body">
@@ -353,7 +352,10 @@
                             class="credentials-form-container"
                             onsubmit="handleCredentialsFormSubmit(event)"
                         >
-                            <h4>Enter Credentials</h4>
+                            <div class="description">
+                                <h4>Enter Credentials</h4>
+                                <p>Shipping Information</p>
+                            </div>
                             <div class="credentials-form">
                                 <div class="name-form-inputs">
                                     <label>
@@ -361,7 +363,7 @@
                                             class="input"
                                             type="text"
                                             placeholder=""
-                                            required=""
+                                            required
                                         />
                                         <span>First name</span>
                                     </label>
@@ -371,7 +373,7 @@
                                             class="input"
                                             type="text"
                                             placeholder=""
-                                            required=""
+                                            required
                                         />
                                         <span>Last name</span>
                                     </label>
@@ -382,7 +384,7 @@
                                         class="input"
                                         type="email"
                                         placeholder=""
-                                        required=""
+                                        required
                                     />
                                     <span>Email</span>
                                 </label>
@@ -392,7 +394,7 @@
                                         class="input"
                                         placeholder=""
                                         type="tel"
-                                        required=""
+                                        required
                                     />
                                     <span>Contact Number</span>
                                 </label>
@@ -401,7 +403,7 @@
                                         class="input"
                                         placeholder=""
                                         rows="1"
-                                        required=""
+                                        required
                                     />
                                     <span>Address</span>
                                 </label>
@@ -414,7 +416,6 @@
                                 Submit
                             </button>
                         </form>
-
                     </div>
 
                     <!-- Checkout -->
@@ -423,7 +424,10 @@
                             class="payment-form-container"
                             onsubmit="handlePaymentFormSubmit(event)"
                         >
-                            <h4>Payment Info</h4>
+                            <div class="description">
+                                <h4>Payment Credentials</h4>
+                                <p>Enter your credit/debit card information</p>
+                            </div>
                             <div>
                                 <div class="payment-form">
                                     <label for="name" class="label">
@@ -436,6 +440,7 @@
                                             name="input-name"
                                             title="Input title"
                                             placeholder="Enter your full name"
+                                            required
                                         />
                                     </label>
                                     <label for="serialCardNumber" class="label">
@@ -447,6 +452,7 @@
                                             name="input-name"
                                             title="Input title"
                                             placeholder="0000 0000 0000 0000"
+                                            required
                                         />
                                     </label>
                                     <div class="split">
@@ -461,10 +467,11 @@
                                                 name="input-name"
                                                 title="Expiry Date"
                                                 placeholder="01/23"
+                                                required
                                             />
                                         </label>
                                         <label for="cvv" class="label">
-                                            <span class="title"> CVV</span>
+                                            <span class="title">CVV</span>
                                             <input
                                                 id="cvv"
                                                 class="input-field"
@@ -472,14 +479,10 @@
                                                 name="cvv"
                                                 title="CVV"
                                                 placeholder="CVV"
+                                                required
                                             />
                                         </label>
                                     </div>
-                                    <input
-                                        class="checkout-btn"
-                                        type="button"
-                                        value="Checkout"
-                                    />
                                 </div>
                             </div>
                             <button
@@ -506,14 +509,10 @@
                     </div>
                 </div>
             </div>
-            <!-- 
-            <div class="form-footer">
-                <button class="prev" disabled>Previous</button>
-                <button class="next">Next</button>
-            </div> -->
         </div>
 
         <script src="../scripts/our-plans.js"></script>
         <script src="../scripts/checkout-plan.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     </body>
 </html>
