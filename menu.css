@@ -39,22 +39,6 @@ a:hover {
 
 }
 
-.nav,
-input[type=text] {
-    text-align: left;
-    padding-right: 50px;
-    border: none;
-    border-radius: 50px;
-
-}
-
-.searchB {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right:90px;
-
-}
 
 /* mes */
 
@@ -72,19 +56,33 @@ input[type=text] {
 }
 
 
+.searchPart{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:15%;
+    left:30%;
+
+}
 
 
+#SearchW{
+    height: 40px;
+    width: 550px;
+    border-radius: 50px;
+}
 #titleM {
     color: rgb(41, 91, 67);
     font-size: 2em;
     font-weight: 500;
-    position: fixed;
-    top: 10%;
-    left: 38%;
+ 
+    top: 25%;
+    left: 36%;
     justify-content: center;
     position: absolute;
 
 }
+
 
 #cart {
     border: transparent;
@@ -95,10 +93,11 @@ input[type=text] {
     font-size: 1.4em;
     font-weight: 300;
     font-style: oblique;
+    padding-top: 43%;
     top: 92%;
     left: 68%;
     text-align: right;
-    position: fixed;
+    position: absolute;
 
 }
 
@@ -113,9 +112,10 @@ input[type=text] {
     display: flex;
     position: absolute;
     align-items: center;
-    left: 38%;
-    top: 17%;
+    left: 36%;
+    top: 33%;
 }
+
 
 button {
     display: inline-block;
@@ -145,7 +145,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
-    padding-top: 12%;
+    padding-top: 20%;
 }
 
 .items {
@@ -381,6 +381,14 @@ td {
     height: 40px;
 }
 
+#favContent
+{
+    justify-content: center;
+    
+    font-size: 30px;
+    font-style: oblique;
+}
+
 .addBtn {
     border-color: transparent;
     display: flex;
@@ -390,6 +398,19 @@ td {
     justify-content: space-evenly;
 
 }
+
+
+
+
+.searchB {
+    left: 50%;
+    margin-left: 40px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+}
+
 
 .addBtn:hover {
     box-shadow: none;
@@ -423,6 +444,7 @@ td {
     z-index: 2;
 }
 
+
 .popWindow-fav {
     background-color: #cec69f;
     border-radius: 10px;
@@ -433,6 +455,7 @@ td {
 
 
 }
+
 
 .popWindow-cart {
     background-color: #cec69f;
@@ -459,6 +482,8 @@ h1 {
     display: flex;
     flex-wrap: wrap;
 }
+
+
 
 .closeB {
     position: absolute;

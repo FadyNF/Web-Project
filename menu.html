@@ -19,9 +19,8 @@
       <a href="" class="logoText">Fresh Bites</a>
     </div>
     <div class="nav">
-      <input type="text" id="SearchW" placeholder="Search...">
-      <button class="searchB" onclick="search()"><i class="fa-solid fa-magnifying-glass fa-lg"
-          style="color: #439362;"></i></button>
+
+
       <a href="">OUR PLANS</a>
       <a href="">ABOUT US</a>
       <a href="">OUR MENU</a>
@@ -33,21 +32,31 @@
 
 
   <section class="menu">
+    <div class="searchPart">
+      <input type="text" id="SearchW" placeholder="  Search...">
+      <button class="SearchB" onclick="searchItem()"><i class="fa-solid fa-magnifying-glass fa-lg"
+          style="color: #439362;"></i></button>
+          <div id="error-message"></div>
+    </div>
     <div class="menu-title">
+
+
       <h2 id="titleM">MENU </h2>
       <div class="buttons">
-        <button id="B1" onclick="gettingDates(0),viewItems('week1'),SelectB('B1')">WEEK 1</button>
-        <button id="B2" onclick="gettingDates(7),viewItems('week2'),SelectB('B2')">WEEK 2</button>
-        <button id="B3" onclick="gettingDates(14),viewItems('week3'),SelectB('B3')">WEEK 3</button>
-        <button id="B4" onclick="gettingDates(21),viewItems('week4'),SelectB('B4')">WEEK 4</button>
-        <button id="overlayButton" class="FavouriteB" onclick="openWindow('overlayFav')"><i
-            class="fa-regular fa-heart fa-xl" style="color: #4d8978;"></i></button>
+        <button id="B1" onclick="gettingDates(0),viewItemsByWeek('week1'),SelectB('B1'), searchItem('week1')">WEEK 1</button>
+        <button id="B2" onclick="gettingDates(7),viewItemsByWeek('week2'),SelectB('B2'), searchItem('week2')">WEEK 2</button>
+        <button id="B3" onclick="gettingDates(14),viewItemsByWeek('week3'),SelectB('B3'), searchItem('week3')">WEEK 3</button>
+        <button id="B4" onclick="gettingDates(21),viewItemsByWeek('week4'),SelectB('B4'), searchItem('week4')">WEEK 4</button>
+        <button class="FavouriteB" onclick="openWindow('overlayFav')"><i class="fa-regular fa-heart fa-xl" style="color: #4d8978;"></i></button>
 
       </div>
 
+
+      <!-- FAV OVERLAY -->
       <div class="overlayFav" id="overlayFav">
         <div class="popWindow-fav">
           <h1>Your Favourites </h1>
+          <p id="favContent">No Item To Show Yet.</p>
           <div id="favList">
           </div>
           <button class="closeB" onclick="closeWindow('overlayFav')"><i class="fa-solid fa-xmark fa-xl"
@@ -58,6 +67,7 @@
 
 
 
+      <!-- CART OVERLAY -->
       <div class="overlayCart" id="overlayCart">
         <div class="popWindow-cart">
           <h1>Your Cart</h1>
@@ -83,6 +93,7 @@
         </div>
       </div>
 
+
       <!-- ALERT MESSAGE -->
       <div class="message">
         <i class="fa-regular fa-circle-check check fa-lg" style="color: #386b55;"></i>
@@ -95,6 +106,8 @@
         genuine happiness.</p>
     </div>
 
+
+    
     <div class="items-container">
 
       <!-- ITEMS OF WEEK 1 -->
@@ -416,7 +429,7 @@
       </div>
 
 
-      
+
 
       <!-- ITEMS OF WEEK 4 -->
       <!-- ITEM 1 -->

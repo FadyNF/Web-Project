@@ -1,7 +1,7 @@
 
 window.onload = function () {
     gettingDates(0);
-    viewItems('week1');
+    viewItemsByWeek('week1');
     SelectB('B1');
 }
 
@@ -32,7 +32,7 @@ function SelectB(buttonID) {
     selected.classList.add('selectedB');
 }
 
-function viewItems(weekNumber) {
+function viewItemsByWeek(weekNumber) {
     var Allitems = document.querySelectorAll('.items');
     Allitems.forEach(Dishes => {
         Dishes.style.display = 'none';
@@ -40,7 +40,7 @@ function viewItems(weekNumber) {
 
     var itemsPerWeek = document.querySelectorAll('.' + weekNumber);
     itemsPerWeek.forEach(Dishes => {
-        Dishes.style.display = 'block';
+        Dishes.style.display = "block";
     });
 }
 
@@ -69,6 +69,12 @@ function dateFormat(date) {
 
 
 function addToFav(itemID, week) {
+    var favList = document.getElementById('favList');
+var content=document.getElementById('favContent');
+    if (favList.children.length === 0) {
+        content.textContent = "";
+    }
+
     var item = document.getElementById('item' + itemID + week);
     var copy = item.cloneNode(true);
     copy.classList.add('noAnimation');
@@ -110,9 +116,36 @@ function viewFavs() {
 }
 
 
-function search() {
 
+
+function searchItem() {
+    var searchInput = document.getElementById('SearchW').value.toLowerCase().trim();
+    var weeks=['week1','week2','week3','week4'];
+    var currWeek=null;
+
+    document.querySelectorAll('.buttons button').forEach((button,index)=>{
+       if(button.classList.contains('selectedB')){
+        currWeek=weeks[index];
+       }
+    });
+   
+
+    if(currWeek)
+    {
+        var Allitems = document.querySelectorAll('.items.'+currWeek);
+
+        Allitems.forEach(item => {
+            var itemName = item.textContent.toLowerCase().trim();
+            if (itemName.includes(searchInput) || searchInput === '') {
+                item.style.display = 'block'; 
+                item.classList.remove('animation');
+            } else {
+                item.style.display = 'none'; 
+            }
+        });
+    }
 }
+
 
 
 function addToCart(itemID, week) {
