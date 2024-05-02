@@ -203,7 +203,8 @@ h3 {
 
 .modal-content {
     background-color: #f5f0d6;
-    margin: 15% auto;
+    margin: auto;
+    margin-top:10%;
     padding: 20px;
     border-radius: 50px;
     width: 80%;

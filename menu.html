@@ -61,20 +61,20 @@
       <div class="overlayCart" id="overlayCart">
         <div class="popWindow-cart">
           <h1>Your Cart</h1>
-          
+
           <hr>
           <h3>Order Summary</h3>
           <br>
           <p id="cartContent"> <i class="fa-solid fa-cart-shopping fa-xl" style="color: #52ad79;"></i>
             Your Cart Is Empty,<br> Please Add Items.</p>
-            <div id="headerC">
-              <h3><i>Items:</i></h3>
-              <br>
-            
-             </div>
-            <div id="orderSumm">
-       
-            </div>
+          <div id="headerC">
+            <h3><i>Items:</i></h3>
+            <br>
+
+          </div>
+          <div id="orderSumm">
+
+          </div>
           <hr>
 
           <button id="CloseCart" onclick="closeWindow('overlayCart')">Finish</button>
@@ -107,7 +107,7 @@
 
 
         <span class="Features">
-          <p id="duration">Duration: 20 min</p>
+          <p id="duration">Cook Time: 20 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(1,'W1')"><i id="icon1W1" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
 
@@ -137,7 +137,7 @@
           Potluck Macaroni and cheese</h3>
 
         <span class="Features">
-          <p id="duration">Duration:30-45 min</p>
+          <p id="duration">Cook Time:30-45 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(2,'W1')"><i id="icon2W1" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
 
@@ -169,7 +169,7 @@
         </h3>
 
         <span class="Features">
-          <p id="duration">Duration: 30 min</p>
+          <p id="duration">Cook Time: 30 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(3,'W1')"><i id="icon3W1" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
 
@@ -200,11 +200,12 @@
           Swedish Meatball</h3>
 
         <span class="Features">
-          <p id="duration">Duration: 40 min</p>
+          <p id="duration">Cook Time: 40 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(4,'W1')"><i id="icon4W1" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
 
-          <button class="addBtn"><i id="plus4W1" class="fa-solid fa-plus fa-lg" style="color: #858c99;"></i></button>
+          <button class="addBtn" onclick="addToCart(4,'week1')"><i id="plus4W1" class="fa-solid fa-plus fa-lg"
+              style="color: #858c99;"></i></button>
         </span>
         <div class="rate">
           <div class="rate">
@@ -226,11 +227,12 @@
           onclick="Details('detailsModal5week1','Crockpot Spareribs ','Ribs prepared with mix of blended herbs,spices and tangy sauce that gives bursting flavors cooked with minimal effort.')">
           Crockpot Spareribs</h3>
         <span class="Features">
-          <p id="duration">Duration: 1 hour</p>
+          <p id="duration">Cook Time: 1 hour</p>
           <button class="Fbtn" onclick="changeFavouriteC(5,'W1')"><i id="icon5W1" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
 
-          <button class="addBtn"><i id="plus5W1" class="fa-solid fa-plus fa-lg" style="color: #858c99;"></i></button>
+          <button class="addBtn" onclick="addToCart(5,'week1')"><i id="plus5W1" class="fa-solid fa-plus fa-lg"
+              style="color: #858c99;"></i></button>
         </span>
 
         <div class="rate">
@@ -253,11 +255,12 @@
           Firecracker Shrimp</h3>
 
         <span class="Features">
-          <p id="duration">Duration: 20 min</p>
+          <p id="duration">Cook Time: 20 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(6,'W1')"><i id="icon6W1" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
 
-          <button class="addBtn"><i id="plus6W1" class="fa-solid fa-plus fa-lg" style="color: #858c99;"></i></button>
+          <button class="addBtn" onclick="addToCart(6,'week1')"><i id="plus6W1" class="fa-solid fa-plus fa-lg"
+              style="color: #858c99;"></i></button>
         </span>
 
         <div class="rate">
@@ -272,7 +275,34 @@
       </div>
 
 
+      <!-- ITEM 7 -->
+      <div class=" items week1" id="item7W1">
+        <img src="/Web-Project/images/Hamburger-Stroganoff.jpg" alt="Hamburger Stroganoff">
+        <h3
+          onclick="Details('detailsModal7week1','Hamburger Stroganoff',
+      'Hamburger Stroganoff is a hearty and flavorful dish that combines the rich flavors of beef, mushrooms, onions, and sour cream, typically served over egg noodles or rice. Its a variation of the classic Beef Stroganoff, but instead of using strips of beef, ground beef (hamburger) is used, making it more budget-friendly and easier to prepare.')">
+          Hamburger Stroganoff</h3>
 
+        <span class="Features">
+          <p id="duration">Cook Time:30 min</p>
+
+          <button class="Fbtn" onclick="changeFavouriteC(7,'W1')"><i id="icon7W1" class="fa-solid fa-heart fa-lg"
+              style="color: #c0c3c9;"></i></button>
+
+          <button class="addBtn" onclick="addToCart(7,'week1')"><i id="plus7W1" class="fa-solid fa-plus fa-lg"
+              style="color: #858c99;"></i></button>
+        </span>
+
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star  ">&#9733;</span>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -288,7 +318,7 @@
           Hungarian Chicken Paprikash</h3>
 
         <span class="Features">
-          <p id="duration">Duration: 45 min</p>
+          <p id="duration">Cook Time: 45 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(1,'W2')"><i id="icon1W2" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
 
@@ -307,17 +337,20 @@
       </div>
 
       <!-- ITEM 2  -->
-      <div class="items week2">
+      <div class="items week2" id="item2W2">
         <img src="/Web-Project/images/Country-Chicken-with-Gravy.jpg" alt="Chicken and Gravy">
         <h3
           onclick="Details('detailsModal2week2','Chicken and Gravy',
-'Tender pieces of chicken served with gravy, it  typically has a blend of herbs and spices on the top of it, the gravy is made of meat drippings combined with a thickening agent. ')">
+      'Tender pieces of chicken served with gravy, it  typically has a blend of herbs and spices on the top of it, the gravy is made of meat drippings combined with a thickening agent. ')">
           Chicken and Gravy</h3>
 
         <span class="Features">
-          <p id="duration">Duration: 30 min</p>
+          <p id="duration">Cook Time: 30 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(2,'W2')"><i id="icon2W2" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
+
+          <button class="addBtn" onclick="addToCart(2,'week2')"><i id="plus2W2" class="fa-solid fa-plus fa-lg"
+              style="color: #858c99;"></i></button>
         </span>
         <div class="rate">
           <div class="rate">
@@ -330,18 +363,46 @@
         </div>
       </div>
 
+      <!-- ITEM 3 -->
+      <div class="items week2" id="item3W2">
+        <img src="/Web-Project/images/Zucchini-Boats.jpg" alt="Zucchini Boats">
+        <h3
+          onclick="Details('detailsModal3week2','Zucchini Boats','Zucchini boats are a delightful culinary creation that transforms humble zucchinis into vessels of flavor and creativity. To begin, select firm and fresh zucchinis, preferably medium to large in size, as they provide ample space for filling.')">
+          Zucchini Boats</h3>
+
+        <span class="Features">
+          <p id="duration">Cook Time: 45 min</p>
+          <button class="Fbtn" onclick="changeFavouriteC(3,'W2')"><i id="icon3W2" class="fa-solid fa-heart fa-lg"
+              style="color: #c0c3c9;"></i></button>
+
+          <button class="addBtn" onclick="addToCart(3,'week2')"><i id="plus3W2" class="fa-solid fa-plus fa-lg"
+              style="color: #858c99;"></i></button>
+        </span>
+        <div class="rate">
+          <div class="rate">
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+            <span class="star selected">&#9733;</span>
+          </div>
+        </div>
+      </div>
 
       <!-- ITEMS OF WEEK 3 -->
       <!-- ITEM 1 -->
-      <div class="items week3">
+      <div class="items week3" id="item1W3">
         <img src="/Web-Project/images/Spaghetti-Chicken-Parmesan.jpg" alt="Spaghetti Chicken Parmesan">
         <h3
           onclick="Details('detailsModal1week3','Spaghetti Chicken Parmesan','Classic Italian-American dish, where breaded chicken is covered with marinara sauche with melted cheese. Served with spaghetti that is  covered with marinara sauce too.')">
           Spaghetti Chicken Parmesan</h3>
         <span class="Features">
-          <p id="duration">Duration: 20 min</p>
+          <p id="duration">Cook Time: 20 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(1,'W3')"><i id="icon1W3" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
+
+          <button class="addBtn" onclick="addToCart(1,'week3')"><i id="plus1W3" class="fa-solid fa-plus fa-lg"
+              style="color: #858c99;"></i></button>
         </span>
         <div class="rate">
           <div class="rate">
@@ -355,17 +416,22 @@
       </div>
 
 
+      
+
       <!-- ITEMS OF WEEK 4 -->
       <!-- ITEM 1 -->
-      <div class="items week4 ">
+      <div class="items week4 " id="item1W4">
         <img src="/Web-Project/images/Broccoli-Stuffed-Chicken.jpg" alt="Broccoli Stuffed Chicken">
         <h3
           onclick="Details('detailsModal1week4','Broccoli Stuffed Chicken','Chicken breasts filled with min of broccoli and cheese with the seasoning of herbs. ')">
           Broccoli Stuffed Chicken</h3>
         <span class="Features">
-          <p id="duration">Duration: 40 min</p>
+          <p id="duration">Cook Time: 40 min</p>
           <button class="Fbtn" onclick="changeFavouriteC(1,'W4')"><i id="icon1W4" class="fa-solid fa-heart fa-lg"
               style="color: #c0c3c9;"></i></button>
+
+          <button class="addBtn" onclick="addToCart(1,'week4')"><i id="plus1W1" class="fa-solid fa-plus fa-lg"
+              style="color: #858c99;"></i></button>
         </span>
         <div class="rate">
           <div class="rate">
@@ -377,7 +443,6 @@
           </div>
         </div>
       </div>
-    </div>
 
 
 
@@ -472,7 +537,7 @@
       <hr>
 
       <div>
-        <h3>Tools Needed:</h3>
+        <h3>Utensils:</h3>
 
         <ul class="List">
           <li>Large pot</li>
@@ -534,7 +599,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal2week1')">&times;</span>
       <img src="/Web-Project/images/potluck.jpg">
-      <h3 id="itemName"></h3>
+      <h3 id="itemName">Potluck Macaroni and Cheese</h3>
       <p id="itemDescription"> </p>
       <hr>
 
@@ -603,7 +668,7 @@
         <hr>
 
         <div>
-          <h3>Tools Needed:</h3>
+          <h3>Utensils:</h3>
           <ul class="List">
             <li>Large Pot</li>
             <li>Whisk</li>
@@ -658,7 +723,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal3week1')">&times;</span>
       <img src="/Web-Project/images/Beef-and-Mushrooms-with-Smashed-Potatoes.jpg">
-      <h3 id="itemName"></h3>
+      <h3 id="itemName">Beef and Mushrooms with Smashed Potatoes</h3>
       <p id="itemDescription"> </p>
       <hr>
       <div class="ingredients">
@@ -722,12 +787,12 @@
         <ul class="List">
           <li>Mushrooms</li>
           <li>Eggs</li>
-          <li>Diary products(butter)</li>
+          <li>Butter</li>
         </ul>
       </div>
       <hr>
       <div>
-        <h3>Tools Needed:</h3>
+        <h3>Utensils:</h3>
         <ul class="List">
           <li>Mixing Bowl</li>
           <li>Spatula</li>
@@ -789,7 +854,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal4week1')">&times;</span>
       <img src="/Web-Project/images/Mom-s-Swedish-Meatballs.jpg">
-      <h3 id="itemName"></h3>
+      <h3 id="itemName">Swedish Meatballs</h3>
       <p id="itemDescription"> </p>
       <hr>
 
@@ -844,7 +909,7 @@
       </div>
       <hr>
       <div class="utensils">
-        <h3>Tools Needed:</h3>
+        <h3>Utensils:</h3>
         <ul class="List">
           <li>Mixing Bowl</li>
           <li>Spatula</li>
@@ -897,7 +962,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal5week1')">&times;</span>
       <img src="/Web-Project/images/spareribs.jpg">
-      <h3 id="itemName"></h3>
+      <h3 id="itemName">Crockpot Spareribs</h3>
       <p id="itemDescription"> </p>
       <hr>
 
@@ -951,7 +1016,7 @@
 
         <hr>
         <div class="utensils">
-          <h3>Tools Needed:</h3>
+          <h3>Utensils:</h3>
           <ul class="List">
             <li>Cutting Board</li>
             <li>Knife</li>
@@ -1011,7 +1076,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal6week1')">&times;</span>
       <img src="/Web-Project/images/Firecracker-Shrimp.jpg">
-      <h3 id="itemName"></h3>
+      <h3 id="itemName">Firecracker Shrimp</h3>
       <p id="itemDescription"> </p>
       <hr>
 
@@ -1055,7 +1120,7 @@
       <hr>
 
       <div class="utensils">
-        <h3>Tools Needed:</h3>
+        <h3>Utensils:</h3>
         <ul class="List">
           <li>Bowl</li>
           <li>Whisk</li>
@@ -1099,6 +1164,140 @@
             <td>30 mg</td>
           </tr>
 
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ITEM 7 W1 MODAL -->
+  <div id="detailsModal7week1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal7week1')">&times;</span>
+      <img src="/Web-Project/images/Hamburger-Stroganoff.jpg">
+      <h3 id="itemName">Hamburger Stroganoff</h3>
+      <p id="itemDescription"> </p>
+      <hr>
+
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/ground beef.jpeg">
+          <p>Ground Beef</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/onion.jpeg">
+          <p>Onion</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/salt.jpeg">
+          <p>Salt</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/flour.jpeg">
+          <p>Flour</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/beef broth.jpeg">
+          <p>Beef Brooth</p>
+        </span>
+
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/mushroom.jpeg">
+          <p>Mushroom</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/sour cream.jpeg">
+          <p>Sour Cream</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/cooked noodles.jpeg">
+          <p>Cooked Noodles</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/parsely.jpeg">
+          <p>Parsley</p>
+        </span>
+
+
+        <span class="ing">
+          <img img id="Ingredientimg" src="/Web-Project/images/condensed mushroom soup.jpeg">
+          <p>Condensed Cream Of Mushroom</p>
+        </span>
+
+
+      </div>
+
+      <hr>
+
+      <div>
+        <h3>Allergens:</h3>
+        <ul class="List">
+          <li>Sour Cream</li>
+          <li>Mushroom</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="utensils">
+        <h3>Utensils:</h3>
+        <ul class="List">
+          <li>Spatula</li>
+          <li>Colander</li>
+          <li>Bowl</li>
+          <li>Mixing Spoons</li>
+          <li>Pot</li>
+        </ul>
+      </div>
+
+      <hr>
+      <div class="nutrition">
+        <h3>Nutrition Value:</h3>
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
+
+          <tr>
+            <td>Calories</td>
+            <td>318-400 cal</td>
+          </tr>
+
+          <tr>
+            <td>Protien</td>
+            <td>23 g</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>19 g</td>
+          </tr>
+
+          <tr>
+            <td>Carbohydrates</td>
+            <td>10 g</td>
+          </tr>
+
+          <tr>
+            <td>Cholesterol</td>
+            <td>84 mg</td>
+          </tr>
+
+          <tr>
+            <td>Sodium</td>
+            <td>561 mg</td>
+          </tr>
         </table>
       </div>
     </div>
@@ -1250,7 +1449,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal2week2')">&times;</span>
       <img src="/Web-Project/images/Country-Chicken-with-Gravy.jpg">
-      <h3 id="itemName"></h3>
+      <h3 id="itemName">Chicken with Gravy</h3>
       <p id="itemDescription"> </p>
       <hr>
 
@@ -1381,13 +1580,126 @@
   </div>
 
 
+  <!-- ITEM 3 W2 MODAL -->
+  <div id="detailsModal3week2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('detailsModal3week2')">&times;</span>
+      <img src="/Web-Project/images/Zucchini-Boats.jpg">
+      <h3 id="itemName">Zucchini Boats</h3>
+      <p id="itemDescription"> </p>
+      <hr>
+
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/zucchini.jpeg">
+          <p>Zucchini</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/ground beef.jpeg">
+          <p>Ground Beef</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/onion.jpeg">
+          <p>Onin</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/Mushrooms">
+          <p>Mushrooms</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/green pepper.jpeg">
+          <p>Green Pepper</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/white cheddar.jpeg">
+          <p>Cheddar Cheese</p>
+        </span>
+
+        <span class="ing">
+          <img id="Ingredientimg" src="/Web-Project/images/ketchup.jpeg">
+          <p>Ketchup</p>
+        </span>
+
+
+      </div>
+      <hr>
+
+      <div>
+        <h3>Allergens:</h3>
+        <ul class="List">
+          <li>Mushroom</li>
+          <li>Cheddar Cheese</li>
+        </ul>
+      </div>
+
+      <hr>
+      <div class="utensils">
+        <h3>Utensils:</h3>
+        <ul class="List">
+          <li>Bowl</li>
+          <li>Baking Sheets</li>
+          <li>Knife</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div>
+        <h3>Nutrition Values:</h3>
+        <table>
+          <tr>
+            <th>Nutrient</th>
+            <th>Value</th>
+          </tr>
+
+          <tr>
+            <td>Calories</td>
+            <td>312-320 cal</td>
+          </tr>
+
+          <tr>
+            <td>Protien</td>
+            <td>24 g</td>
+          </tr>
+
+          <tr>
+            <td>Fat</td>
+            <td>20 g</td>
+          </tr>
+
+          <tr>
+            <td>Carbohydrates</td>
+            <td>10 g</td>
+          </tr>
+
+          <tr>
+            <td>Cholesterol</td>
+            <td>81 mg</td>
+          </tr>
+
+          <tr>
+            <td>Sodium</td>
+            <td>337 mg</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <!-- WEEK 3 -->
   <!-- ITEM 1 W3 MODAL -->
   <div id="detailsModal1week3" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal1week3')">&times;</span>
       <img src="/Web-Project/images/Spaghetti-Chicken-Parmesan.jpg">
-      <h3 id="itemName"></h3>
+      <h3 id="itemName">Spaghetti Chicken Parmesan</h3>
       <p id="itemDescription"> </p>
       <hr>
 
@@ -1522,7 +1834,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal1week4')">&times;</span>
       <img src="/Web-Project/images/Broccoli-Stuffed-Chicken.jpg">
-      <h3 id="itemName"></h3>
+      <h3 id="itemName">Broccoli Stuffed Chicken</h3>
       <p id="itemDescription"> </p>
       <hr>
       <div class="ingredients">
