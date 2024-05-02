@@ -1,7 +1,7 @@
 header {
-    background-color: #020000;
+    background-color: #126e89;
     width: 100%;
-    height: 40px;
+    height: 50px;
     position: fixed;
     z-index: 999;
     display: flex;
@@ -16,11 +16,9 @@ body {
 }
 
 
-
-
 .nav,
 a {
-    color: #daa76f;
+    color: #f19f13;
     font-size: 1em;
     text-decoration: none;
     font-weight: 600;
@@ -47,14 +45,13 @@ a:hover {
     display: flex;
     width: 100%;
     min-height: 100vh;
-    background-color: #f5f0d6;
+    background-color: #f7f7f7;
     background-position: right right;
     background-attachment: fixed;
     background-size: cover;
     align-items: center;
     text-align: center;
-}
-
+  }
 
 .searchPart{
     display: flex;
@@ -71,11 +68,12 @@ a:hover {
     width: 550px;
     border-radius: 50px;
 }
+
+
 #titleM {
-    color: rgb(41, 91, 67);
+    color:#755825;
     font-size: 2em;
     font-weight: 500;
- 
     top: 25%;
     left: 36%;
     justify-content: center;
@@ -88,18 +86,6 @@ a:hover {
     border: transparent;
 }
 
-#qoute {
-    color: rgb(90, 152, 122);
-    font-size: 1.4em;
-    font-weight: 300;
-    font-style: oblique;
-    padding-top: 43%;
-    top: 92%;
-    left: 68%;
-    text-align: right;
-    position: absolute;
-
-}
 
 .icon {
     padding-right: 10px;
@@ -121,35 +107,35 @@ button {
     display: inline-block;
     background-color: transparent;
     border-radius: 50px;
-    border: 2px solid #556d3b;
+    border: 2px solid #f19f13;
     font-style: oblique;
     height: 40px;
     width: 90px;
     margin: 0 2px;
     transition: ease-out 0.3s;
     outline: none;
-    color: rgb(41, 91, 67);
+    color: #755825;
 
 }
 
 button:hover {
-    box-shadow: inset 90px 0 0 0 #cec69f;
+    box-shadow: inset 90px 0 0 0 #fabf58;
 
 }
 
 .selectedB {
-    background-color: #c9e8a8;
+    background-color: #f6e1bf;
 }
 
 .items-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
     padding-top: 20%;
+    padding-left: 15%;
 }
 
 .items {
-    background-color: transparent;
+    background-color: #a4d1df;
     border: 5px solid transparent;
     width: 15em;
     box-shadow: 0 5px 25px black;
@@ -165,14 +151,14 @@ button:hover {
 }
 
 
-.tems,
+.items,
 img {
     border-radius: 70px;
 }
 
 .items:hover {
     transform: scale(1.1);
-    background-color:  #b7b299;
+    background-color:  #d9ae64;
 }
 
 .item,
@@ -185,7 +171,7 @@ img {
 
 .items,
 h3 {
-    color: #556d3b;
+    color: #020000;
     cursor: pointer;
 }
 
@@ -197,12 +183,12 @@ h3 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
-    background-color: #f5f0d6;
+    background-color: #f7f7f7;
     margin: auto;
     margin-top:10%;
     padding: 20px;
@@ -210,6 +196,7 @@ h3 {
     width: 80%;
     max-width: 600px;
     position: relative;
+    
 
 }
 
@@ -256,7 +243,7 @@ span.ing {
 
 .ingredients,
 p {
-    color: #637c49;
+    color: #020000;
 }
 
 ul {
@@ -265,7 +252,7 @@ ul {
 
 li,
 th {
-    color: #637c49;
+    color: #020000;
 }
 
 #duration {
@@ -345,7 +332,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #dad4ba;
+    background-color: #a1c9d5;
 
 }
 
@@ -562,3 +549,51 @@ margin-top: 300px;
     
 }
 
+
+.rotate-container1{
+    width:200px;
+    height:200px;
+    position: absolute;
+    top:13%;
+}
+
+#rotatingImg1{
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    justify-content: flex-start;
+    border-radius: 50%;
+    animation: rotate 15s linear infinite;
+    
+}
+
+.rotate-container2{
+    width:200px;
+    height:200px;
+    position: absolute;
+    left: 80%;
+
+    top:100%;
+
+}
+
+
+#rotatingImg2{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    justify-content: flex-start;
+    border-radius: 50%;
+    animation: rotate 15s linear infinite;
+
+    
+}
+
+@keyframes rotate{
+    form{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

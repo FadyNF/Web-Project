@@ -41,6 +41,14 @@
     <div class="menu-title">
 
 
+      <div class="rotate-container1">
+        <img id="rotatingImg1" src="/Web-Project/images/2.jpeg">
+      </div>
+
+<div class="rotate-container2">
+  <img id="rotatingImg2" src="/Web-Project/images/Pizza.jpeg">
+</div>
+
       <h2 id="titleM">MENU </h2>
       <div class="buttons">
         <button id="B1" onclick="gettingDates(0),viewItemsByWeek('week1'),SelectB('B1'), searchItem('week1')">WEEK 1</button>
@@ -102,10 +110,6 @@
       </div>
 
 
-      <p id="qoute"><i class="fa-solid fa-utensils icon" style="color: #276351;"></i>Good food is the foundation of
-        genuine happiness.</p>
-    </div>
-
 
     
     <div class="items-container">
@@ -114,7 +118,7 @@
       <!-- ITEM 1 -->
       <div class="items week1" id="item1W1">
         <img src="/Web-Project/images/Tuna-Tomato-Salad.jpg" alt="Tomato and Tuna pasta salad">
-        <h3 class="title"
+        <h3 
           onclick="Details('detailsModal1week1','Tomato and Tuna pasta salad','Pangrattato in English translates as grated bread and is the word used for breadcrumbs. Here breadcrumbs are simply fried until crispy with chilli flakes and garlic for a huge amounts of flavour and a crunchy element to this pasta dish.')">
           Tomato and Tuna pasta salad</h3>
 
@@ -429,6 +433,7 @@
       </div>
 
 
+     
 
 
       <!-- ITEMS OF WEEK 4 -->
@@ -467,7 +472,6 @@
 
   <!-- MODALSS -->
   <!-- ITEM 1 W1 MODAL -->
-
   <div id="detailsModal1week1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('detailsModal1week1')">&times;</span>
