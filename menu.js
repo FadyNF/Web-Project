@@ -5,6 +5,11 @@ window.onload = function () {
     SelectB('B1');
 }
 
+function printWarning(elementID,hintMSG)
+{
+  document.getElementById(elementID).innerHTML=hintMSG;
+}
+
 function Details(modalID, itemName, itemDescription) {
 
     var itemModal = document.getElementById(modalID);
@@ -208,7 +213,7 @@ function showMessage() {
     msg.forEach(messg => {
         messg.style.display = "block";
     });
-    setTimeout(closeMessage, 5000);
+    setTimeout(closeMessage, 6000);
 
 }
 
@@ -218,11 +223,54 @@ function closeMessage() {
     setTimeout(closeMessage, 3000);
 }
 
+function showBox() {
+    const overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+  
+    const feedbackContent = document.getElementById("feedbackContent");
+    feedbackContent.style.display = "block";
+    feedbackContent.style.zIndex = "1000";
+  }
+  
+  function showTextArea() {
+    const feedbackForm = document.getElementById("feedback");
+    feedbackForm.style.display = "block";
+  }
+  
+  function showFeedbackForm() {
+    const feedbackForm = document.getElementById("feedback");
+    feedbackForm.style.display =
+      feedbackForm.style.display === "none" ? "block" : "none";
+  }
+  
+  function exitFeedback() {
+    const feedbackContent = document.getElementById("feedbackContent");
+    feedbackContent.style.display = "none";
+  
+    const overlay = document.getElementById("overlay");
+    overlay.style.display = "none";
+  }
+  
+  function feedbackInput(form) {
+    var review = form.review.value.trim();
+    var reviewErr = document.getElementById("reviewErr");
+  
+    if (review === "") {
+      printWarning("reviewErr", "Please enter your opinion before submitting");
+      return false;
+    } else {
+      var regEx = /^[a-zA-Z0-9\s]+$/;
+      if (!regEx.test(review)) {
+        printWarning("reviewErr", "Please enter a valid review (letters, numbers, and spaces only)");
+        return false;
+      } else {
+        printWarning("reviewErr", ""); 
+        return true;
+      }
+    }
+  }
 
-function printError(elementID,hintMSG)
-{
-  document.getElementById(elementID).innerHTML=hintMSG;
-}
+
 
 
 
