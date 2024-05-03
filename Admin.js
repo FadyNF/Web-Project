@@ -117,22 +117,26 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('cardInput').value = "";
     });
 
-    // Function to add a new card
-    function addNewCard(content) {
-        // Create card element
-        let card = document.createElement('div');
-        card.classList.add('card');
+  // Function to add a new card
+function addNewCard(content) {
+    // Create row element
+    let row = document.createElement('div');
+    row.classList.add('customer-row'); // Add class for flexbox layout
 
-        // Content
-        let cardContent = document.createElement('p');
-        cardContent.textContent = content;
-        card.appendChild(cardContent);
+    // Create card element
+    let card = document.createElement('div');
+    card.classList.add('card');
 
-        // Add margin and padding to align the card with the rest
-        card.style.marginLeft = "5px"; // Slightly move to the right
-        card.style.padding = "10px";
+    // Content
+    let cardContent = document.createElement('p');
+    cardContent.textContent = content;
+    card.appendChild(cardContent);
 
-        // Insert the new card at the end
-        document.querySelector('main').appendChild(card);
-    }
+    // Add the card to the row
+    row.appendChild(card);
+
+    // Insert the new row at the end
+    document.querySelector('main').appendChild(row);
+}
+
 });
