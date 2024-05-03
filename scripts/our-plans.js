@@ -1,10 +1,5 @@
 let currentPage = 1;
 
-function initiateConfetti() {
-    startConfetti();
-}
-
-
 function handlePlansFormSubmit(event) {
     event.preventDefault();
 
@@ -75,6 +70,6 @@ function movePage(currentStep) {
         [currentPage].classList.add("active");
 
     if (currentPage + 1 === totalSteps) {
-        initiateConfetti();
+        startConfetti();
     }
 }
