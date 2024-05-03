@@ -120,4 +120,3 @@ servingBtn.forEach((btn)=>{
     btn.classList.add("active");
   });
 });
-
