@@ -1,11 +1,18 @@
 let currentPage = 1;
 
-function handlePlansFormSubmit(event) {
-    event.preventDefault(); 
+function initiateConfetti() {
+    startConfetti();
+}
 
-    const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+
+function handlePlansFormSubmit(event) {
+    event.preventDefault();
+
+    const checkboxes = document.querySelectorAll(
+        "input[type='checkbox']:checked"
+    );
     if (checkboxes.length === 0) {
-        alert("Please choose at least one meal type.");
+        document.querySelector(".note").style.display = "block";
         return;
     }
 
@@ -15,9 +22,11 @@ function handlePlansFormSubmit(event) {
 function handleCredentialsFormSubmit(event) {
     event.preventDefault();
 
-    const inputs = document.querySelectorAll(".credentials-form-container input");
+    const inputs = document.querySelectorAll(
+        ".credentials-form-container input"
+    );
     let isFormComplete = true;
-    inputs.forEach(input => {
+    inputs.forEach((input) => {
         if (input.value.trim() === "") {
             isFormComplete = false;
             return;
@@ -36,7 +45,7 @@ function handlePaymentFormSubmit(event) {
 
     const inputs = document.querySelectorAll(".payment-form-container input");
     let isFormComplete = true;
-    inputs.forEach(input => {
+    inputs.forEach((input) => {
         if (input.value.trim() === "") {
             isFormComplete = false;
             return;
@@ -52,12 +61,20 @@ function handlePaymentFormSubmit(event) {
 function movePage(currentStep) {
     currentPage = currentStep;
 
+    const totalSteps = document.querySelectorAll(".form .steps .step").length;
+
     const stepNode = document.querySelector(".form .steps .step");
     const width = currentPage * stepNode.offsetWidth * -1 + "px";
     stepNode.parentNode.style.marginLeft = width;
 
-    document.querySelector(".form .pagination .active").classList.remove("active");
-    document.querySelectorAll(".form .pagination .number")[currentPage - 1].classList.add("active"); // Subtracting 1 from currentPage
+    document
+        .querySelector(".form .pagination .active")
+        .classList.remove("active");
+    document
+        .querySelectorAll(".form .pagination .number")
+        [currentPage].classList.add("active");
+
+    if (currentPage + 1 === totalSteps) {
+        initiateConfetti();
+    }
 }
-
-
