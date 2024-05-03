@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.nav-bar {
+    width: 100%;
+    color: rgb(90, 108, 65);
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.logo {
+    height: 55px;
+}
+
+.name {
+    margin-left: 15px;
+    font-size: 27px;
+    color: rgb(32, 188, 193);
+    font-family: Pacifico;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(32, 188, 193);
+    font-family: Roboto;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(32, 188, 193);
+    text-transform: uppercase;
+}
+
+.nav-bar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: rgb(32, 188, 193);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+    color: white;
+}
+
+.nav-bar ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header {
+    margin: 40px 0;
+    font-size: 37px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.step {
+    display: flex;
+    gap: 50px;
+    margin: 0 30px;
+    align-items: center;
+    width: 70%;
+}
+
+.step-image img {
+    height: 23rem;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.step-content h2 {
+    color: rgb(36, 36, 36);
+    font-size: 32px;
+    font-family: "Ubuntu";
+    font-weight: 500;
+}
+
+.step-content span {
+    color:rgb(36, 36, 36);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0px;
+}
+
+.step-content button {
+    background-color:rgb(90, 185, 191);
+    font-size: 17px;
+    border-radius: 4px;
+    box-shadow: none;
+    line-height: 24px;
+    padding: 12px 24px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.step-content button a {
+    text-decoration: none;
+    color:#ffffff;  
+}

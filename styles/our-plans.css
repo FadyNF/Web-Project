@@ -6,10 +6,8 @@
 }
 
 body {
-    /* height: 150%; */
     display: grid;
     place-items: center;
-    background-color: #f5f0d6;
 }
 
 .nav-bar {
