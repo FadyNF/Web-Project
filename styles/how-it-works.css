@@ -22,6 +22,9 @@ body {
         url(../images/background.jpg);
     background-size: cover;
     background-position: center;
+    z-index: 1;
+    top: 0;
+
 }
 
 .left-section {
@@ -105,6 +108,7 @@ a {
     font-size: 37px;
     font-weight: 700;
     text-align: center;
+    font-family: "Ubuntu";
 }
 
 .steps-container {
@@ -118,7 +122,7 @@ a {
 .step {
     display: flex;
     gap: 50px;
-    margin: 0 30px;
+    padding: 30px 0;
     align-items: center;
     width: 70%;
 }
@@ -157,9 +161,51 @@ a {
     border: none;
     font-weight: 500;
     cursor: pointer;
+    transition: all 0.35s;
+}
+
+.step-content button:hover {
+    background-color: rgb(45, 140, 147);
 }
 
 .step-content button a {
     text-decoration: none;
     color:#ffffff;  
+}
+
+.benefits-container {
+    font-family: "Ubuntu";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 0;
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+}
+
+.benefits-header {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 20px; 
+}
+
+.benefits-content-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 65%; 
+    margin-top: 22px;
+    margin-bottom: 22px;
+    margin-left: 30px;
+}
+
+.benefit-content {
+    width: 100%;
+}
+
+.benefit-content img,
+.benefit-content h3 {
+    margin-bottom: 15px;
 }
