@@ -362,4 +362,21 @@ aside .sidebar a span.msg_count{
   #confirmBtn:hover {
     background-color: #45a049;
   }
-  
+/* Add the following CSS */
+.card {
+    width: 80%; /* Make the card take the full width */
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Arrange elements in a row */
+    justify-content: space-between; /* Spread elements evenly */
+    align-items: center; /* Align elements vertically */
+}
+
+.card p {
+    margin: 5px;
+}

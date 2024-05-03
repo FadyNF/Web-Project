@@ -7,15 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Show the "ADD" button
         document.querySelector('.add-button').style.display = 'block';
 
-        // Show the "select" button
-        document.querySelector('.select-button').style.display = 'block';
-
-        // Show the "remove" button
-        document.querySelector('.remove-button').style.display = 'block';
-
-        // Show the "edit" button
-        document.querySelector('.edit-button').style.display = 'block';
-
         // Create header element
         let header = document.createElement('h2');
         header.textContent = 'Products';
@@ -38,52 +29,44 @@ document.addEventListener("DOMContentLoaded", function() {
             productName.textContent = products[i];
             card.appendChild(productName);
 
+            // Remove button
+            let removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.classList.add('remove-button');
+            removeButton.addEventListener('click', function() {
+                // Handle remove button click
+                removeProductCard(row);
+            });
+            card.appendChild(removeButton);
+
+            // Edit button
+            let editButton = document.createElement('button');
+            editButton.textContent = 'Edit';
+            editButton.classList.add('edit-button');
+            editButton.addEventListener('click', function() {
+                // Handle edit button click
+                editProductCard(productName);
+            });
+            card.appendChild(editButton);
+
             row.appendChild(card);
             document.querySelector('main').appendChild(row);
         }
     }
 
-    // Click event listener for the "select" button
-    document.querySelector('.select-button').addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default button behavior
+    // Function to remove product card
+    function removeProductCard(row) {
+        row.remove();
+    }
 
-        // Show checkboxes
-        document.querySelectorAll('.product-checkbox').forEach(function(checkbox) {
-            checkbox.style.display = 'block';
-        });
-    });
-
-    // Click event listener for the products link
-    document.querySelectorAll('.sidebar a')[4].addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-
-        generateProductCards(); // Generate product cards
-    });
-
-    // Click event listener for hiding the "ADD", "select", "remove", and "edit" buttons when other links are clicked
-    document.querySelectorAll('.sidebar a').forEach(function(link, index) {
-        if (index !== 4) { // Check if the link is not the "Products" link
-            link.addEventListener("click", function(event) {
-                event.preventDefault(); // Prevent the default link behavior
-
-                // Hide the "ADD" button
-                document.querySelector('.add-button').style.display = 'none';
-
-                // Hide the "select" button
-                document.querySelector('.select-button').style.display = 'none';
-
-                // Hide the "remove" button
-                document.querySelector('.remove-button').style.display = 'none';
-
-                // Hide the "edit" button
-                document.querySelector('.edit-button').style.display = 'none';
-            });
+    // Function to edit product card
+    function editProductCard(productName) {
+        let newName = prompt('Enter the new product name:', productName.textContent);
+        if (newName !== null && newName.trim() !== '') {
+            productName.textContent = newName;
         }
-    });
-});
+    }
 
-// JavaScript
-document.addEventListener("DOMContentLoaded", function() {
     // Click event listener for the "Add" button
     document.querySelector('.add-button').addEventListener("click", function(event) {
         event.preventDefault(); // Prevent the default button behavior
@@ -117,26 +100,63 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('cardInput').value = "";
     });
 
-  // Function to add a new card
-function addNewCard(content) {
-    // Create row element
-    let row = document.createElement('div');
-    row.classList.add('customer-row'); // Add class for flexbox layout
+    // Function to add a new card
+    function addNewCard(content) {
+        // Create row element
+        let row = document.createElement('div');
+        row.classList.add('customer-row'); // Add class for flexbox layout
 
-    // Create card element
-    let card = document.createElement('div');
-    card.classList.add('card');
+        let card = document.createElement('div');
+        card.classList.add('card');
 
-    // Content
-    let cardContent = document.createElement('p');
-    cardContent.textContent = content;
-    card.appendChild(cardContent);
+        // Content
+        let cardContent = document.createElement('p');
+        cardContent.textContent = content;
+        card.appendChild(cardContent);
 
-    // Add the card to the row
-    row.appendChild(card);
+        // Remove button
+        let removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.classList.add('remove-button');
+        removeButton.addEventListener('click', function() {
+            // Handle remove button click
+            removeProductCard(row);
+        });
+        card.appendChild(removeButton);
 
-    // Insert the new row at the end
-    document.querySelector('main').appendChild(row);
-}
+        // Edit button
+        let editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.classList.add('edit-button');
+        editButton.addEventListener('click', function() {
+            // Handle edit button click
+            editProductCard(cardContent);
+        });
+        card.appendChild(editButton);
 
+        // Add the card to the row
+        row.appendChild(card);
+
+        // Insert the new row at the end
+        document.querySelector('main').appendChild(row);
+    }
+
+    // Click event listener for the products link
+    document.querySelectorAll('.sidebar a')[4].addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        generateProductCards(); // Generate product cards
+    });
+
+    // Click event listener for hiding the "ADD" button when other links are clicked
+    document.querySelectorAll('.sidebar a').forEach(function(link, index) {
+        if (index !== 4) { // Check if the link is not the "Products" link
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Hide the "ADD" button
+                document.querySelector('.add-button').style.display = 'none';
+            });
+        }
+    });
 });
