@@ -222,3 +222,29 @@ document.getElementById('confirmBtn').addEventListener("click", function(event) 
         // Rest of your code...
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to generate 10 random users
+    function generateRandomUsers() {
+        let latestUsers = document.querySelector('.latest-users');
+
+        for (let i = 0; i < 10; i++) {
+            let user = document.createElement('div');
+            user.classList.add('user');
+
+            let name = faker.name.findName();
+            let email = faker.internet.email();
+            let date = faker.date.past().toLocaleDateString();
+
+            user.innerHTML = `
+                <p>Name: <span>${name}</span></p>
+                <p>Email: <span>${email}</span></p>
+                <p>Date Joined: <span>${date}</span></p>
+            `;
+
+            latestUsers.appendChild(user);
+        }
+    }
+
+    // Call the function to generate random users
+    generateRandomUsers();
+});

@@ -19,65 +19,147 @@
 <body>
     <div class="container">
         <aside>
-           <div class="top">
-            <div class="logo">
-                <h2>Admin<span class="danger">Sarah</span></h2>
+            <div class="top">
+                <div class="logo">
+                    <h2>Admin<span class="danger">Sarah</span></h2>
+                </div>
+                <div class="close">
+                    <span class="material-symbols-outlined"> close</span>
+                </div>
             </div>
-            <div class="close">
-                <span class="material-symbols-outlined"> close</span>
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>DashBoard</h3>
+                </a>
+                <a href="#" class="active" id="customer">
+                    <span class="material-symbols-outlined">person_outline</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">mail_outline</span>
+                    <h3>Messeges</h3>
+                    <span class="msg_count">14</span>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">report_gmailerrorred</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">add</span>
+                    <h3>Add Product</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
             </div>
-           </div>
-           <div class="sidebar">
-            <a href="#">
-                <span class="material-symbols-outlined">grid_view</span>
-                <h3>DashBoard</h3>
-            </a>
-            <a href="#" class="active" id="customer">
-                <span class="material-symbols-outlined">person_outline</span>
-                <h3>Users</h3>
-            </a>
-            <a href="#">
-                <span class="material-symbols-outlined">insights</span>
-                <h3>Analytics</h3>
-            </a>
-            <a href="#">
-                <span class="material-symbols-outlined">mail_outline</span>
-                <h3>Messeges</h3>
-                <span class="msg_count">14</span>
-            </a>
-            <a href="#">
-                <span class="material-symbols-outlined">receipt_long</span>
-                <h3>Products</h3>
-            </a>
-            <a href="#">
-                <span class="material-symbols-outlined">report_gmailerrorred</span>
-                <h3>Reports</h3>
-            </a>
-            <a href="#">
-                <span class="material-symbols-outlined">settings</span>
-                <h3>Settings</h3>
-            </a>
-            <a href="#">
-            <span class="material-symbols-outlined">add</span>
-            <h3>Add Product</h3>
-            </a>
-            <a href="#">
-                <span class="material-symbols-outlined">logout</span>
-                <h3>Logout</h3>
-            </a>
-           </div>
         </aside>
-        <main></main>
+        <main>
+            <div class="dashboard-section">
+                <h2>Website Overview</h2>
+                <div class="overview">
+                    <div class="stat visitors">
+                        <i class="fas fa-users"></i>
+                        <div class="count">500</div>
+                        <div class="label">Visitors</div>
+                    </div>
+                    <div class="stat admins">
+                        <i class="fas fa-user-shield"></i>
+                        <div class="count">10</div>
+                        <div class="label">Admins</div>
+                    </div>
+                    <div class="stat users">
+                        <i class="fas fa-user"></i>
+                        <div class="count">1000</div>
+                        <div class="label">Users</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-section">
+                <h2>Latest Users</h2>
+                <div class="latest-users">
+                    <div class="user">
+                        <p>Name: <span id="userName1">John Doe</span></p>
+                        <p>Email: <span id="userEmail1">john.doe@example.com</span></p>
+                        <p>Date Joined: <span id="userDate1">2024-05-01</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                    <div class="user">
+                        <p>Name: <span id="userName2">Jane Smith</span></p>
+                        <p>Email: <span id="userEmail2">jane.smith@example.com</span></p>
+                        <p>Date Joined: <span id="userDate2">2024-05-02</span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
         <!-- Add button -->
         <div class="add-button" style="display: none;">ADD</div>
         <!-- Modal -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <textarea id="cardInput" placeholder="Enter content"></textarea>
-        <button id="confirmBtn">Confirm</button>
-    </div>
-</div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <textarea id="cardInput" placeholder="Enter content"></textarea>
+                <button id="confirmBtn">Confirm</button>
+            </div>
+        </div>
 
         <!-- Remove and Edit Selected buttons -->
         <div id="selectedButtons">
