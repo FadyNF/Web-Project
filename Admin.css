@@ -244,6 +244,7 @@ aside .sidebar a span.msg_count{
     transition: background-color 0.3s, color 0.3s;
 }
 
+
 .add-button:hover {
     background-color: white;
     color: green;
@@ -327,10 +328,18 @@ aside .sidebar a span.msg_count{
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Increase the width */
     text-align: center;
-  }
-  
+    border-radius: 10px; /* Add border radius */
+}
+#cardInput {
+    width: 100%;
+    height: 200px; /* Increase the height */
+    margin-bottom: 10px;
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
   /* The Close Button */
   .close {
     color: #aaaaaa;
@@ -362,8 +371,7 @@ aside .sidebar a span.msg_count{
   #confirmBtn:hover {
     background-color: #45a049;
   }
-/* Add the following CSS */
-.card {
+  .card {
     width: 80%; /* Make the card take the full width */
     height: 50px;
     border: 1px solid #ccc;
@@ -375,8 +383,19 @@ aside .sidebar a span.msg_count{
     flex-direction: row; /* Arrange elements in a row */
     justify-content: space-between; /* Spread elements evenly */
     align-items: center; /* Align elements vertically */
+    background-color: transparent; /* Set the background color to transparent */
 }
 
 .card p {
     margin: 5px;
+}
+
+/* Add CSS rules to style selected cards */
+/* Add CSS rules to style selected cards */
+.card.selected {
+    background-color: lightblue; /* Apply light blue background only when selected */
+}
+
+.card.selected:not(.newly-added) {
+    background-color: transparent; /* Override background color for newly added cards */
 }

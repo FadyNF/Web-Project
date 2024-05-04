@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let card = document.createElement('div');
             card.classList.add('card');
+            card.classList.add('selectable'); // Add selectable class to each card
+            card.dataset.index = i; // Add index data attribute for identification
 
             // Product name
             let productName = document.createElement('p');
@@ -67,6 +69,49 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Function to add a new card
+function addNewCard(content) {
+    // Create row element
+    let row = document.createElement('div');
+    row.classList.add('customer-row'); // Add class for flexbox layout
+
+    let card = document.createElement('div');
+    card.classList.add('card');
+    card.classList.add('selectable'); // Add selectable class to each card
+    card.classList.add('newly-added'); // Add newly-added class to newly created card
+
+    // Content
+    let cardContent = document.createElement('p');
+    cardContent.textContent = content;
+    card.appendChild(cardContent);
+
+    // Remove button
+    let removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.classList.add('remove-button');
+    removeButton.addEventListener('click', function() {
+        // Handle remove button click
+        removeProductCard(row);
+    });
+    card.appendChild(removeButton);
+
+    // Edit button
+    let editButton = document.createElement('button');
+    editButton.textContent = 'Edit';
+    editButton.classList.add('edit-button');
+    editButton.addEventListener('click', function() {
+        // Handle edit button click
+        editProductCard(cardContent);
+    });
+    card.appendChild(editButton);
+
+    row.appendChild(card);
+
+    // Insert the new row at the end
+    document.querySelector('main').appendChild(row);
+}
+
+
     // Click event listener for the "Add" button
     document.querySelector('.add-button').addEventListener("click", function(event) {
         event.preventDefault(); // Prevent the default button behavior
@@ -84,68 +129,37 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Click event listener for the confirm button
-    document.getElementById('confirmBtn').addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default button behavior
+document.getElementById('confirmBtn').addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default button behavior
 
-        // Get the input value
-        let inputValue = document.getElementById('cardInput').value;
+    // Get the input value
+    let inputValue = document.getElementById('cardInput').value;
 
-        // Add the new card
-        addNewCard(inputValue);
-
-        // Hide the modal
-        document.getElementById('myModal').style.display = "none";
-
-        // Clear the input field
-        document.getElementById('cardInput').value = "";
-    });
-
-    // Function to add a new card
-    function addNewCard(content) {
-        // Create row element
-        let row = document.createElement('div');
-        row.classList.add('customer-row'); // Add class for flexbox layout
-
-        let card = document.createElement('div');
-        card.classList.add('card');
-
-        // Content
-        let cardContent = document.createElement('p');
-        cardContent.textContent = content;
-        card.appendChild(cardContent);
-
-        // Remove button
-        let removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.classList.add('remove-button');
-        removeButton.addEventListener('click', function() {
-            // Handle remove button click
-            removeProductCard(row);
-        });
-        card.appendChild(removeButton);
-
-        // Edit button
-        let editButton = document.createElement('button');
-        editButton.textContent = 'Edit';
-        editButton.classList.add('edit-button');
-        editButton.addEventListener('click', function() {
-            // Handle edit button click
-            editProductCard(cardContent);
-        });
-        card.appendChild(editButton);
-
-        // Add the card to the row
-        row.appendChild(card);
-
-        // Insert the new row at the end
-        document.querySelector('main').appendChild(row);
+    // Check if the input value is empty
+    if (inputValue.trim() === '') {
+        alert('Please enter something in the space first.');
+        return;
     }
+
+    // Add the new card
+    addNewCard(inputValue);
+
+    // Hide the modal
+    document.getElementById('myModal').style.display = "none";
+
+    // Clear the input field
+    document.getElementById('cardInput').value = "";
+});
+
 
     // Click event listener for the products link
     document.querySelectorAll('.sidebar a')[4].addEventListener("click", function(event) {
         event.preventDefault(); // Prevent the default link behavior
 
         generateProductCards(); // Generate product cards
+
+        // Show the "ADD" button
+        document.querySelector('.add-button').style.display = 'block';
     });
 
     // Click event listener for hiding the "ADD" button when other links are clicked
@@ -158,5 +172,53 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector('.add-button').style.display = 'none';
             });
         }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to toggle the selection state of a card
+        function toggleCardSelection(card) {
+            card.classList.toggle('selected');
+        }
+    
+        // Click event listener for main to handle card selection
+        document.querySelector('main').addEventListener('click', function(event) {
+            let card = event.target.closest('.card');
+            if (card && card.classList.contains('selectable')) {
+                toggleCardSelection(card);
+            }
+        });
+    
+        // Function to remove selected cards
+        function removeSelectedCards() {
+            let selectedCards = document.querySelectorAll('.card.selected');
+            selectedCards.forEach(function(selectedCard) {
+                let row = selectedCard.closest('.customer-row');
+                row.remove();
+            });
+        }
+    
+        // Function to edit selected cards
+        function editSelectedCards() {
+            let selectedCard = document.querySelector('.card.selected');
+            if (selectedCard) {
+                let cardContent = selectedCard.querySelector('p');
+                let newName = prompt('Enter the new product name:', cardContent.textContent);
+                if (newName !== null && newName.trim() !== '') {
+                    cardContent.textContent = newName;
+                }
+            }
+        }
+    
+        // Event listener for the "Remove Selected" button
+        document.getElementById('removeSelectedBtn').addEventListener('click', function() {
+            removeSelectedCards();
+        });
+    
+        // Event listener for the "Edit Selected" button
+        document.getElementById('editSelectedBtn').addEventListener('click', function() {
+            editSelectedCards();
+        });
+    
+        // Rest of your code...
     });
 });
