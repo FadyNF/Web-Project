@@ -162,15 +162,13 @@ a {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.35s;
+    text-decoration: none;
+    color:#ffffff;  
+    border: none;
 }
 
 .step-content button:hover {
     background-color: rgb(45, 140, 147);
-}
-
-.step-content button a {
-    text-decoration: none;
-    color:#ffffff;  
 }
 
 .benefits-container {
