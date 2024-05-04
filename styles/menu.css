@@ -3,7 +3,7 @@ header {
     background-color: #126e89;
     width: 100%;
     height: 90px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/Web-Project/images/background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/images/background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -107,7 +107,8 @@ a {
     width: 35px;
     height: 100px;
     cursor: pointer;
-  }
+    border-radius: 10%;
+}
   
   #overlay {
     position: fixed;
@@ -250,6 +251,8 @@ a {
     text-align: center;
   }
 
+
+  /* Search */
 .searchPart{
     display: flex;
     justify-content: center;
@@ -266,7 +269,16 @@ a {
     border-radius: 50px;
 }
 
+.searchB {
+    left: 50%;
+    margin-left: 40px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
 
+}
+
+/* Page Title */
 #titleM {
     color:#136b85;
     font-size: 2em;
@@ -279,10 +291,7 @@ a {
 }
 
 
-#cart {
-    border: transparent;
-    box-shadow: none;
-}
+
 
 
 .icon {
@@ -325,6 +334,7 @@ button:hover {
     background-color: #f6e1bf;
 }
 
+/* Items */
 .items-container {
     display: flex;
     flex-wrap: wrap;
@@ -375,9 +385,22 @@ h3 {
 }
 
 
+.duration {
+    color: #020000;
+    left: 0;
+    justify-content: left;
+    display: flex;
 
 
+}
 
+.Features {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/* Modals */
 .modal {
     display: none;
     position: fixed;
@@ -388,6 +411,7 @@ h3 {
     height: 100%;
     overflow: auto;
      background-color: rgba(0, 0, 0, 0.6);
+    
 }
 
 .modal-content {
@@ -404,6 +428,7 @@ h3 {
 }
 
 
+/* close of modals */
 .close {
     position: absolute;
     top: 10px;
@@ -420,6 +445,7 @@ h3 {
 
 
 
+/* inside modal */
 #Ingredientimg {
     width: 45px;
     height: 45px;
@@ -458,32 +484,6 @@ th {
     color: #020000;
 }
 
-.duration {
-    color: #020000;
-    left: 0;
-    justify-content: left;
-    display: flex;
-
-
-}
-
-
-.rate {
-    margin-top: 10px;
-}
-
-.star {
-    font-size: 24px;
-    color: gray;
-    display: inline-flex;
-}
-
-.star.selected {
-    color: gold;
-    border: none;
-
-}
-
 
 .List {
     display: flex;
@@ -516,6 +516,54 @@ td {
     color:#020000;
 }
 
+/* Rating */
+.rate {
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 24px;
+    color: gray;
+    display: inline-flex;
+}
+
+.star.selected {
+    color: gold;
+    border: none;
+
+}
+
+
+
+/* Favourite part */
+
+
+
+.overlayFav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.popWindow-fav {
+    background-color: #c4d2d7;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    overflow: auto;
+
+
+}
+
+
 .Fbtn {
     border-color: transparent;
     display: flex;
@@ -529,11 +577,7 @@ td {
     box-shadow: none;
 }
 
-.Features {
-    display: flex;
-    justify-content: space-evenly;
 
-}
 
 
 .FavouriteB {
@@ -552,47 +596,12 @@ td {
     font-style: oblique;
 }
 
-.addBtn {
-    border-color: transparent;
+
+#favList {
     display: flex;
-    justify-content: right;
-    margin-top: 29px;
-    cursor: pointer;
-    justify-content: space-evenly;
-
+    flex-wrap: wrap;
 }
-
-
-
-
-.searchB {
-    left: 50%;
-    margin-left: 40px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-
-}
-
-
-.addBtn:hover {
-    box-shadow: none;
-}
-
-
-
-
-.overlayFav {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
+/* cart part */
 
 .overlayCart {
     position: fixed;
@@ -608,18 +617,6 @@ td {
 }
 
 
-.popWindow-fav {
-    background-color: #c4d2d7;
-    border-radius: 10px;
-    width: 80%;
-    height: 80%;
-    position: relative;
-    overflow: auto;
-
-
-}
-
-
 .popWindow-cart {
     background-color: #c4d2d7;
     border-radius: 10px;
@@ -629,7 +626,36 @@ td {
     position: relative;
     overflow: auto;
     z-index: 1;
+    animation:backInRight;
+    animation-duration: 2s;
 }
+
+/* cart icon */
+#cart {
+    border: transparent;
+    box-shadow: none;
+}
+
+.addBtn {
+    border-color: transparent;
+    display: flex;
+    justify-content: right;
+    margin-top: 29px;
+    cursor: pointer;
+    justify-content: space-evenly;
+
+}
+
+
+
+.addBtn:hover {
+    box-shadow: none;
+}
+
+
+
+
+
 
 .popWindow,
 h1 {
@@ -639,7 +665,7 @@ h1 {
 
 .popWindow,
 h3 {
-    margin-top: 60px;
+    margin-top: 20px;
     color: #286e83;
 }
 
@@ -648,10 +674,7 @@ h3 {
     animation: none;
 }
 
-#favList {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 
 
@@ -732,7 +755,7 @@ color: #755825;
     
 }
 
-
+/* rotating plates */
 .rotate-container1{
     width:200px;
     height:200px;
