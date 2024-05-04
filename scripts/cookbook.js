@@ -66,57 +66,48 @@ function feedbackInput(form) {
   }
 }
 
-// Opening an overlay window
-function displayDescritpion(overlayID, mealName, mealExtension) {
-  var id = document.getElementById(overlayID);
-  var name = id.querySelector("#dishName");
-  var extension = id.querySelector("#extension");
-  name.textContent = mealName;
-  extension.textContent = mealExtension;
+//meal description functions
 
-  id.style.display = "block";
-  showComponents1();
-}
+const accordionContent = document.querySelectorAll(".description-content");
 
-// Show components for 2 servings by default
-function showComponents1() {
-  var components1 = document.getElementsByClassName("components1");
-  for (var i = 0; i < components1.length; i++) {
-    components1[i].style.display = "block";
-  }
+accordionContent.forEach((item, index) => {
+  let header = item.querySelector("header");
+  header.addEventListener("click", () => {
+    item.classList.toggle("open");
 
-  var components2 = document.getElementsByClassName("components2");
-  for (var i = 0; i < components2.length; i++) {
-    components2[i].style.display = "none";
-  }
-}
-
-// Show components for 4 servings
-function showComponents2() {
-  var components1 = document.getElementsByClassName("components1");
-  for (var i = 0; i < components1.length; i++) {
-    console.log(components1.length);
-    components1[i].style.display = "none";
-  }
-
-  var components2 = document.getElementsByClassName("components2");
-  for (var i = 0; i < components2.length; i++) {
-    components2[i].style.display = "block";
-  }
-}
-
-// Closing an overlay window
-function closeWindow(ID) {
-  var window = document.getElementById(ID);
-  window.style.display = "none";
-}
-//Serving buttons
-const servingBtn=document.querySelectorAll(".servings-div .servings");
-servingBtn.forEach((btn)=>{
-  btn.addEventListener("click",()=>{
-    servingBtn.forEach((otherBtn)=>{
-      otherBtn.classList.remove("active");
-    });
-    btn.classList.add("active");
+    let description = item.querySelector(".content-description"); // Updated selector
+    if (item.classList.contains("open")) {
+      description.style.height = `${description.scrollHeight}px`;
+    } else {
+      description.style.height = "0px";
+    }
+    removeOpen(index);
   });
 });
+
+function removeOpen(index1) {
+  accordionContent.forEach((item2, index2) => {
+    if (index1 != index2) {
+      item2.classList.remove("open");
+
+      let des = item2.querySelector(".content-description"); // Updated selector
+      des.style.height = "0px";
+    }
+  });
+}
+
+ function displayDescritpion(overlayID,mealName,mealSides){
+    var id=document.getElementById(overlayID);
+    var name=id.querySelector("#dishName");
+    var extension=id.querySelector("#extension");
+
+    name.textContent=mealName;
+    extension.textContent=mealSides;
+
+    id.style.display="block";
+ }
+
+ function closeWindow(ID) {
+    var window = document.getElementById(ID);
+    window.style.display = "none";
+  }

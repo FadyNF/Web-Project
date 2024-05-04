@@ -55,8 +55,6 @@
   font-size: 90%;
   max-width: 800px;
   text-align: end;
-
-
 }
 
 /* Navigation bar */
@@ -82,13 +80,12 @@
 .name {
   margin-left: 15px;
   font-size: 24px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75),
-      rgba(0, 0, 0, 0.75)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url(../images/background.jpg);
   width: 100%;
   background-size: cover;
@@ -106,7 +103,7 @@
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
@@ -162,7 +159,7 @@
 .content h1 {
   font-size: 35px;
   margin-top: 40px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
@@ -192,7 +189,6 @@
   display: none;
   z-index: 999;
 }
-
 
 /* Feedback Content */
 #feedbackContent {
@@ -314,7 +310,7 @@
 .heading {
   color: #f19f13;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-weight: bold;
   margin-top: 50px;
@@ -324,7 +320,7 @@
 .sub-heading {
   color: #000;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -335,7 +331,7 @@
   margin-bottom: 10px;
   margin-left: 13%;
   color: #f19f13;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
@@ -343,13 +339,52 @@
 .sub-sentence {
   color: #000;
   margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: bold;
   margin-left: 14%;
 }
 
-.Descprition {
+/*Meals description styling*/
+
+.overlay-container {
+  background-color: #f7f7f7;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 4cm;
+  padding: 0px 20px 20px 20px;
+  border-radius: 20px;
+  max-width: 600px;
+  overflow: auto;
+}
+
+.overlay-container h3 {
+  font-family: sans-serif;
+  color: #020000;
+  max-width: 270px;
+  font-size:x-large;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+.overlay-container #extension{
+  padding: 5px 5px 5px 0px;
+  max-width: fit-content;
+  margin-left: 20px;
+  margin-top: 0px;
+  font-weight: 500;
+}
+.overlay-container p{
+  text-align: center;
+}
+.overlay-container img {
+  max-width: 100%;
+  padding-top: 10px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.description {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -362,32 +397,93 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-.overlay-container {
-  background-color: #fff;
-  margin: 0px;
-  padding: 0px 20px 20px 20px;
-  border-radius: 20px;
-  max-width: 600px;
+.description .description-content {
+  margin: 10px 0;
+  border-radius: 50px;
+  border: none;
+  overflow: hidden;
+  transition: all 0.2s linear;
 }
-
-.overlay-container h3 {
-  font-family: sans-serif;
-  max-width: 270px;
-  padding: 5px;
+.description-content.open {
+  padding-bottom: 10px;
+  background-color: #81d0e889;
+  transition: background-color 0.5s ease-in-out;
 }
-
-.overlay-container img {
+.description-content header {
+  display: flex;
+  min-height: 5px;
+  margin-right: 0px;
+  cursor: pointer;
+  border-radius: 0px;
+  background-color:  #81d0e8;
   max-width: 100%;
-  padding-top: 10px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 20px;
+  height: 70px;
+}
+
+.description-content.open header {
+  min-height: 35px;
+  background-color: #81d0e8;
+}
+
+header .title {
+  font-size: 24px;
+  font-weight: 1000;
+  padding: 5px;
+  text-align: center;
+  max-width: 1000px;
+  margin-left: 60px;
+  margin-right: 0;
+  color: #f7f7f7;
+}
+
+.description-content .content-description {
+  height: 0;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0 15px;
+  transition: all .3s linear;
+}
+
+.content-description li {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  list-style: none;
+}
+.content-description .steps li {
+  text-align: left;
+  list-style: circle;
+}
+
+.servings {
+   opacity: 0.6; 
+  color: rgb(0, 0, 0);
+  font-size: small;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.content-description td {
+  font-weight: bold;
+  font-size: large;
+  padding: 6px 10px 5px 10px;
+  text-align: left;
+  width: 90%;
+  border-radius: 40px;
+}
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+td {
+  color: rgb(0, 0, 0);
 }
 
 /* Close button */
 .close {
+  background-color: #f7f7f7;
   color: #666;
   float: right;
   font-size: 28px;
@@ -399,65 +495,4 @@
 .close:focus {
   color: red;
   text-decoration: none;
-}
-
- /* Instruction*/
-.instruction {
-  margin-top: 20px;
-}
-
-.instruction h3 {
-  margin-bottom: 10px;
-} 
-
-.components1,
-.components2 {
-  margin-top: 20px;
-}
-
-.components1,
-.components2 h3 {
-  margin-bottom: 10px;
-}
-
-.components1,.components2 .elements {
-  margin-bottom: 5px;
-}
-
-.amount {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.amount p {
-  margin-right: 10px;
-  font-weight: bold;
-  font-size: larger;
-}
-
-.servings {
-  background-color: #81d0e8;
-  border: none;
-  color: #020000;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  margin-right: 0;
-  cursor: pointer;
-  height: 40px;
-}
-.servings-div .servings.active{
-  background-color: #f7f7f7;
-  color:#020000;
-}
-
-.servings:hover {
-  background-color: #167592;
-  color: #f7f7f7;
-}
-
-.elements p {
-  text-align: center;
 }

@@ -112,14 +112,14 @@
 .meals2,
 .meals3,
 .meals4 {
+  padding: 10px;
   margin-left: 240px;
   max-width: 1000px;
-  padding-bottom: 0px;
   background: #f4faf7;
   border-radius: 13px;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 9.5cm;
+  height: 8cm;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -165,10 +165,7 @@
   overflow-y: hidden;
   scroll-behavior: smooth;
   padding-left: 100px;
-  padding-right: 100px; 
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top:0px;
+  padding-right: 100px;
   background-color: #f4faf7;
-  height: 9cm;
+  height: 8cm;
 }
