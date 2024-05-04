@@ -1,8 +1,8 @@
 
 header {
     background-color: #126e89;
-    width: 100%;
-    height: 90px;
+    width: 208vh;
+    height: 15vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/images/background.jpg);
     background-size: cover;
     background-position: center;
@@ -241,7 +241,7 @@ a {
 .menu {
     align-items: center;
     display: flex;
-    width: 100%;
+    width: 208vh;
     min-height: 100vh;
     background-color: #f7f7f7;
     background-position: right right;
@@ -262,20 +262,35 @@ a {
 
 }
 
+.searchDiv {
+    position: relative;
+  }
+  
+
 
 #SearchW{
-    height: 40px;
+    height: 6vh;
     width: 550px;
     border-radius: 50px;
 }
 
-.searchB {
+#searchB {
     left: 50%;
     margin-left: 40px;
     border-radius: 50%;
     width: 40px;
     height: 40px;
 
+}
+
+.errorMsg {
+    color: red;
+
+    padding-top: 8%;
+    padding-right: 12%;
+
+    position: absolute;
+    
 }
 
 /* Page Title */
@@ -300,7 +315,7 @@ a {
 
 .buttons {
 
-    margin-top: 20px;
+    margin-top: 4vh;
     justify-content: center;
     display: flex;
     position: absolute;
@@ -417,7 +432,7 @@ h3 {
 .modal-content {
     background-color: #f7f7f7;
     margin: auto;
-    margin-top:10%;
+    margin-top:3%;
     padding: 20px;
     border-radius: 50px;
     width: 80%;
@@ -654,7 +669,10 @@ td {
 
 
 
-
+#removeFromCart-B{
+    display: none;
+    box-shadow: none;
+}
 
 
 .popWindow,
@@ -759,8 +777,8 @@ color: #755825;
 .rotate-container1{
     width:200px;
     height:200px;
-    position: absolute;
-    top:20%;
+ position: absolute;
+ top:20%;
 }
 
 #rotatingImg1{
@@ -816,6 +834,8 @@ overflow: hidden;
     animation: rotate 15s linear infinite;
     overflow: hidden;
 }
+
+
 
 @keyframes rotate{
     form{
