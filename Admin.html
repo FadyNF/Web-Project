@@ -152,6 +152,19 @@
         </main>
         <!-- Add button -->
         <div class="add-button" style="display: none;">ADD</div>
+        <div class="remove-button" style="display: none;">Remove</div>
+        <div class="edit-button" style="display: none;">Edit</div>
+        <!-- Admin.html -->
+<!-- Modal -->
+<div id="myModalEdit" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <input type="text" id="editInput" placeholder="Enter new product name" style="width: 80%; height: 40px; padding: 10px; margin-bottom: 20px;">
+        <button id="confirmEditBtn" style="padding: 10px 20px;">Confirm</button>
+    </div>
+</div>
+
+
         <!-- Modal -->
         <div id="myModal" class="modal">
             <div class="modal-content">
@@ -159,15 +172,25 @@
                 <textarea id="cardInput" placeholder="Enter content"></textarea>
                 <button id="confirmBtn">Confirm</button>
             </div>
+            <!-- Inside the loop that generates product cards -->
+            <div class="card">
+                <div class="checkbox">
+                    <input type="checkbox">
+                </div>
+                <p>Card Content</p>
+                <div class="location">
+                    <button class="remove-button">Remove</button>
+                    <button class="edit-button">Edit</button>
+                </div>
+            </div>
+            
+            
+
         </div>
 
-        <!-- Remove and Edit Selected buttons -->
-        <div id="selectedButtons">
-            <button id="removeSelectedBtn">Remove Selected</button>
-            <button id="editSelectedBtn">Edit Selected</button>
-        </div>
-    </div>
+        
     <!-- External JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/faker/5.5.3/faker.min.js"></script>
     <script src="Admin.js"></script>
 </body>
 </html>

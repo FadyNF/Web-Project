@@ -1,19 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to generate product cards
     function generateProductCards() {
-        // Clear the main content
         document.querySelector('main').innerHTML = '';
-
-        // Show the "ADD" button
         document.querySelector('.add-button').style.display = 'block';
-
-        // Create header element
         let header = document.createElement('h2');
         header.textContent = 'Products';
-        header.classList.add('customer-header'); // Add a class for styling
+        header.classList.add('customer-header'); 
         document.querySelector('main').appendChild(header);
 
-        // Products
         let products = ['Cheese Toast', 'Lentil Soup', 'Mac N Cheese', 'Chicken Burger', 'Chicken Ranch Pizza'];
 
         // Generate product cards
@@ -47,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
             editButton.classList.add('edit-button');
             editButton.addEventListener('click', function() {
                 // Handle edit button click
-                editProductCard(productName);
+                editProductCard(productName, card);
             });
             card.appendChild(editButton);
 
@@ -62,55 +55,90 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to edit product card
-    function editProductCard(productName) {
-        let newName = prompt('Enter the new product name:', productName.textContent);
-        if (newName !== null && newName.trim() !== '') {
-            productName.textContent = newName;
-        }
+    function editProductCard(productName, card) {
+        // Open the modal for editing
+        document.getElementById('myModalEdit').style.display = "block";
+
+        // Populate the input field with the current product name
+        document.getElementById('editInput').value = productName.textContent;
+
+        // Click event listener for the confirm button inside edit modal
+        document.getElementById('confirmEditBtn').addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default button behavior
+            
+            // Get the new product name from the input field
+            let newName = document.getElementById('editInput').value.trim();
+            
+            // Check if the new name is not empty and not null
+            if (newName !== null && newName !== '') {
+                // Update the product name in the product card
+                productName.textContent = newName;
+            }
+
+            // Close the edit modal
+            closeModalEdit();
+        });
     }
 
+    // Function to close the edit modal
+    function closeModalEdit() {
+        document.getElementById('myModalEdit').style.display = "none";
+    }
+
+    // Click event listener for the close button in the edit modal
+    document.querySelector('#myModalEdit .close').addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default button behavior
+        closeModalEdit(); // Close the edit modal
+    });
+
+    // Click event listener for the confirm button in the edit modal
+    document.getElementById('confirmEditBtn').addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default button behavior
+        // Implement the functionality to update the product name
+        closeModalEdit(); // Close the edit modal after confirming
+    });
+
     // Function to add a new card
-function addNewCard(content) {
-    // Create row element
-    let row = document.createElement('div');
-    row.classList.add('customer-row'); // Add class for flexbox layout
+    function addNewCard(content) {
+        // Create row element
+        let row = document.createElement('div');
+        row.classList.add('customer-row'); // Add class for flexbox layout
 
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.classList.add('selectable'); // Add selectable class to each card
-    card.classList.add('newly-added'); // Add newly-added class to newly created card
+        let card = document.createElement('div');
+        card.classList.add('card');
+        card.classList.add('selectable'); // Add selectable class to each card
+        card.classList.add('newly-added'); // Add newly-added class to newly created card
 
-    // Content
-    let cardContent = document.createElement('p');
-    cardContent.textContent = content;
-    card.appendChild(cardContent);
+        // Content
+        let cardContent = document.createElement('p');
+        cardContent.textContent = content;
+        card.appendChild(cardContent);
 
-    // Remove button
-    let removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove';
-    removeButton.classList.add('remove-button');
-    removeButton.addEventListener('click', function() {
-        // Handle remove button click
-        removeProductCard(row);
-    });
-    card.appendChild(removeButton);
+        // Remove button
+        let removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.classList.add('remove-button');
+        removeButton.addEventListener('click', function() {
+            // Handle remove button click
+            removeProductCard(row);
+        });
+        card.appendChild(removeButton);
 
-    // Edit button
-    let editButton = document.createElement('button');
-    editButton.textContent = 'Edit';
-    editButton.classList.add('edit-button');
-    editButton.addEventListener('click', function() {
-        // Handle edit button click
-        editProductCard(cardContent);
-    });
-    card.appendChild(editButton);
+        // Edit button
+        let editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.classList.add('edit-button');
+        editButton.addEventListener('click', function() {
+            // Handle edit button click
+            editProductCard(cardContent, card);
+        });
+        card.appendChild(editButton);
 
-    row.appendChild(card);
+        row.appendChild(card);
 
-    // Insert the new row at the end
-    document.querySelector('main').appendChild(row);
-}
-
+        // Insert the new row at the end
+        document.querySelector('main').appendChild(row);
+    }
 
     // Click event listener for the "Add" button
     document.querySelector('.add-button').addEventListener("click", function(event) {
@@ -120,37 +148,38 @@ function addNewCard(content) {
         document.getElementById('myModal').style.display = "block";
     });
 
-    // Click event listener for the close button in the modal
-    document.querySelector('.close').addEventListener("click", function(event) {
+    // Click event listener for the confirm button
+    document.getElementById('confirmBtn').addEventListener("click", function(event) {
         event.preventDefault(); // Prevent the default button behavior
 
+        // Get the input value
+        let inputValue = document.getElementById('cardInput').value;
+
+        // Check if the input value is empty
+        if (inputValue.trim() === '') {
+            alert('Please enter something in the space first.');
+            return;
+        }
+
+        // Add the new card
+        addNewCard(inputValue);
+
         // Hide the modal
-        document.getElementById('myModal').style.display = "none";
+        closeModal();
+
+        // Clear the input field
+        document.getElementById('cardInput').value = "";
+    });
+    // Click event listener for the close button in the add modal
+    document.querySelector('#myModal .close').addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default button behavior
+        closeModal(); // Close the add modal
     });
 
-    // Click event listener for the confirm button
-document.getElementById('confirmBtn').addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default button behavior
-
-    // Get the input value
-    let inputValue = document.getElementById('cardInput').value;
-
-    // Check if the input value is empty
-    if (inputValue.trim() === '') {
-        alert('Please enter something in the space first.');
-        return;
+    // Function to close the add modal
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
     }
-
-    // Add the new card
-    addNewCard(inputValue);
-
-    // Hide the modal
-    document.getElementById('myModal').style.display = "none";
-
-    // Clear the input field
-    document.getElementById('cardInput').value = "";
-});
-
 
     // Click event listener for the products link
     document.querySelectorAll('.sidebar a')[4].addEventListener("click", function(event) {
@@ -247,4 +276,61 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Call the function to generate random users
     generateRandomUsers();
+});
+// Click event listener for the close button in the modal
+document.querySelector('.close').addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default button behavior
+
+    // Hide the modal
+    document.getElementById('myModal').style.display = "none";
+});
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+}
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to edit product card
+    function editProductCard(productName, cardContent) {
+        // Open the modal for editing
+        document.getElementById('myModalEdit').style.display = "block";
+    
+        // Populate the input field with the current product name
+        document.getElementById('editInput').value = productName.textContent;
+    
+        // Click event listener for the confirm button inside edit modal
+        document.getElementById('confirmEditBtn').addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default button behavior
+            
+            // Get the new product name from the input field
+            let newName = document.getElementById('editInput').value.trim();
+            
+            // Check if the new name is not empty and not null
+            if (newName !== null && newName !== '') {
+                // Update the product name in the product card
+                cardContent.textContent = newName;
+            }
+    
+            // Close the edit modal
+            closeModalEdit();
+        });
+    }
+    
+    // Function to close the edit modal
+    function closeModalEdit() {
+        document.getElementById('myModalEdit').style.display = "none";
+    }
+
+    // Click event listener for the close button in the edit modal
+    document.querySelector('#myModalEdit .close').addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default button behavior
+        closeModalEdit(); // Close the edit modal
+    });
+
+    // Click event listener for the confirm button in the edit modal
+    document.getElementById('confirmEditBtn').addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default button behavior
+        // Implement the functionality to update the product name
+        closeModalEdit(); // Close the edit modal after confirming
+    });
 });

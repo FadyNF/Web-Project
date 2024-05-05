@@ -249,64 +249,7 @@ aside .sidebar a span.msg_count{
     background-color: white;
     color: green;
 }
-.select-button {
-    position: fixed;
-    top: 5rem; /* Position at the top */
-    right: 5rem; /* Position at the right */
-    background-color: rgb(236, 206, 100);
-    color: white;
-    font-size: 1.2rem; /* Increase font size */
-    padding: 1rem 2rem; /* Increase padding */
-    border: none;
-    border-radius: 10px; /* Increase border radius */
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.select-button:hover {
-    background-color: white;
-    color: rgb(236, 206, 100);
-}
-
-.remove-button {
-    position: fixed;
-    top: 15rem; /* Position at the top */
-    right: 5rem; /* Position at the right */
-    background-color: red;
-    color: white;
-    font-size: 1.2rem; /* Increase font size */
-    padding: 1rem 2rem; /* Increase padding */
-    border: none;
-    border-radius: 10px; /* Increase border radius */
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.remove-button:hover {
-    background-color: white;
-    color: red;
-}
-.edit-button {
-    position: fixed;
-    top: 20rem; /* Position at the top */
-    right: 5rem; /* Position at the right */
-    background-color: rgb(26, 0, 128);
-    color: white;
-    font-size: 1.2rem; /* Increase font size */
-    padding: 1rem 2rem; /* Increase padding */
-    border: none;
-    border-radius: 10px; /* Increase border radius */
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.edit-button:hover {
-    background-color: white;
-    color:rgb(26, 0, 128);
-}
+ 
 /* CSS */
 /* The Modal (background) */
 .modal {
@@ -485,4 +428,84 @@ aside .sidebar a span.msg_count{
     font-size: 0.8rem;
     text-transform: uppercase;
     margin-top: 0.5rem;
+}
+/* Add this style for the checkbox */
+.checkbox {
+    margin-right: 8px; /* Adjust as needed */
+}
+
+/* Add this style to position the checkbox */
+.card {
+    position: relative;
+}
+
+.card .checkbox {
+    position: absolute;
+    top: 50%;
+    left: -20px; /* Adjust as needed */
+    transform: translateY(-50%);
+}
+
+
+/* Style the remove and edit buttons for each card */
+.card .remove-button,
+.card .edit-button {
+    background-color: transparent;
+    color: #040404;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 0.5rem; /* Adjust as needed */
+}
+
+.card .remove-button:hover,
+.card .edit-button:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+/* Updated CSS for the modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjusted width */
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#editInput {
+    width: 80%;
+    height: 40px; /* Increased height */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#confirmEditBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#confirmEditBtn:hover {
+    background-color: #45a049;
 }
