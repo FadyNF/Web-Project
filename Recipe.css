@@ -22,17 +22,21 @@ body {
 
 .nav-bar {
     position: fixed;
-    width: 85%;
+    width: 100%;
     margin: auto;
-    margin-left: 70px;
+    height: 10%;
     color: rgb(90, 108, 65);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
-    padding: 40px 0;
+    padding: 40px 20px;
+    transition: background-color 0.3s ease;
 }
-
+.nav-bar.scrolled {
+    z-index: 9999999;
+    background-color: #fbb1623a; /* Change background color to a darker shade */
+}
 .left-section {
     display: flex;
     align-items: center;
@@ -91,7 +95,7 @@ a {
     margin-top: 10px;
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #fbb162d3;
     min-width: 120px;
     z-index: 1000;
     list-style: none;
@@ -286,7 +290,7 @@ button:hover {
     position: absolute; /* Change to absolute */
     top: 85em;
     left: 0;
-    background-color: rgba(255, 192, 96, 0.5);
+    background-color: rgba(255, 191, 96, 0.329);
     width: 100%;
     height: 70%;
    
@@ -397,7 +401,7 @@ button:hover {
      position: absolute; /* Change to absolute */
     top: 155em;
     left: 0;
-    background-color: rgba(255, 192, 96, 0.5);
+    background-color: rgba(255, 191, 96, 0.315);
     width: 100%;
     height: 60%;
 }
