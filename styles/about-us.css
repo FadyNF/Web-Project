@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    color: rgb(90, 108, 65);
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), */
+        /* url(../images/background.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    background-color: white;
+    z-index: 1;
+    top: 0;
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.logo {
+    height: 55px;
+}
+
+.name {
+    margin-left: 15px;
+    font-size: 27px;
+    color: rgb(32, 188, 193);
+    font-family: Pacifico;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(32, 188, 193);
+    font-family: Roboto;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(32, 188, 193);
+    text-transform: uppercase;
+}
+
+.nav-bar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: rgb(32, 188, 193);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+    color: white;
+}
+
+.nav-bar ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.about-us-header img {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.our-values-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.our-values-header h2 {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+
+.our-values-top {
+    display: flex;
+    margin-top: 30px;
+    gap: 150px;
+}
+
+.our-values-bottom{
+    display: flex;
+    margin-top: 50px;
+    gap: 300px;
+}
+
+.our-values-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 17rem;
+}
+
+.our-values-content img {
+    height: 9rem;
+}
+
+.our-values-content p{
+    text-align: center;
+}
+
+.our-difference-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% + 20px);
+    margin: 40px 0;
+    background-color: rgb(248, 248, 248);
+    gap: 70px;
+}
+
+.our-difference-content {
+    width: 38%;
+    gap: 20px;
+    margin-left: 240px;
+}
+
+.our-difference-content h2 {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 40px;
+    margin: 30px 0;
+}
+
+.our-difference-content p {
+    margin-bottom: 30px;
+    line-height: 25px;
+}
+
+.our-difference-container button {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    background-color: rgb(90, 185, 191);
+    border: none;
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.our-difference-container button:hover {
+    background-color: rgb(74, 216, 226);
+}
+
+.our-difference-image {
+    width: 50%;
+}
+
+.our-difference-image img {
+    margin-top: 30px;
+    width: 33rem;
+}
+
+.get-a-taste-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(218, 248, 162);
+}
+
+.get-a-taste-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+
+.get-a-taste-content h1 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.get-a-taste-content button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    width: 60%;
+    height: 50px;
+    background-color: rgb(109, 203, 210);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.get-a-taste-content button:hover {
+    background-color: rgb(74, 216, 226);    
+}
+
+.get-a-taste-image img {
+    height: 28rem;
+}

@@ -108,7 +108,7 @@ a {
     font-size: 37px;
     font-weight: 700;
     text-align: center;
-    font-family: "Ubuntu";
+    font-family: "Ubuntu Sans";
 }
 
 .steps-container {
@@ -140,7 +140,7 @@ a {
 .step-content h2 {
     color: rgb(36, 36, 36);
     font-size: 32px;
-    font-family: "Ubuntu";
+    font-family: "Ubuntu Sans";
     font-weight: 500;
 }
 
@@ -172,7 +172,7 @@ a {
 }
 
 .benefits-container {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu Sans";
     display: flex;
     flex-direction: column;
     align-items: center;
