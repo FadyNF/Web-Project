@@ -837,6 +837,28 @@ overflow: hidden;
 
 
 
+.rotate-container4{
+    width:400px;
+    height:500px;
+    position: absolute;
+    left: 73.5%;
+overflow: hidden;
+    top:257%;
+
+}
+
+
+#rotatingImg4{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    justify-content: flex-start;
+    border-radius: 50%;
+    animation: rotate 15s linear infinite;
+    overflow: hidden;
+}
+
+
 @keyframes rotate{
     form{
         transform: rotate(0deg);

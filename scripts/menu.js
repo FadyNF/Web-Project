@@ -255,7 +255,7 @@ function viewCart() {
 }
 
 
-// after adding to cart
+// after adding to cart message
 function showMessage() {
     var msg = document.querySelectorAll('.message');
     msg.forEach(messg => {
