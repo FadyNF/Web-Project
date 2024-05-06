@@ -18,3 +18,74 @@
 .heart-button:hover .fa-heart {
   color: red;
 }
+
+/*Meals Styles in the favorites*/
+#favorite-container {
+  margin-top: 50px;
+  border: none;
+  border-radius: 5px;
+  max-width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: x-large;
+}
+
+#favorite-container .menu-item {
+  background-color: #81d0e8cc;
+  padding: 20px;
+  border-radius: 100px 100px 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 10px;
+  max-width: 300px;
+  transition: background-color 0.3s ease;
+  list-style: none;
+}
+#favorite-container .menu-item h4 {
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+#favorite-container .menu-item h4:hover {
+  cursor: pointer;
+}
+
+#favorite-container .menu-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+#favorite-container .menu-item:hover img {
+  transform: scale(1.1);
+}
+
+#favorite-container .menu-item:hover {
+  background-color: #f19f13;
+  color: #f4faf7;
+}
+
+#favorite-container .heart-button {
+  display: none;
+}
+
+#favorite-container button {
+  border-radius: 20px;
+  margin-left: 35px;
+  padding: 10px;
+  margin-top: 0;
+  background-color: #f19f13;
+  border: none;
+}
+#favorite-container button {
+  cursor: pointer;
+  background-color: red;
+  color: #f7f7f7;
+  border: none;
+  transition: all 0.2s ease;
+}

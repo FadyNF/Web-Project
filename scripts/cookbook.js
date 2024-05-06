@@ -60,7 +60,7 @@ function feedbackInput(form) {
       printWarning("reviewErr", "Please enter a valid review (letters, numbers, and spaces only)");
       return false;
     } else {
-      printWarning("reviewErr", ""); 
+      printWarning("reviewErr", "");
       return true;
     }
   }
@@ -96,18 +96,31 @@ function removeOpen(index1) {
   });
 }
 
- function displayDescritpion(overlayID,mealName,mealSides){
-    var id=document.getElementById(overlayID);
-    var name=id.querySelector("#dishName");
-    var extension=id.querySelector("#extension");
+function displayDescritpion(overlayID, mealName, mealSides) {
+  var id = document.getElementById(overlayID);
+  var name = id.querySelector("#dishName");
+  var extension = id.querySelector("#extension");
 
-    name.textContent=mealName;
-    extension.textContent=mealSides;
+  name.textContent = mealName;
+  extension.textContent = mealSides;
 
-    id.style.display="block";
- }
+  id.style.display = "block";
+}
 
- function closeWindow(ID) {
-    var window = document.getElementById(ID);
-    window.style.display = "none";
-  }
+function closeWindow(ID) {
+  var window = document.getElementById(ID);
+  window.style.display = "none";
+}
+
+
+// Function to add meal to favorites
+function addToFavorites(event, dishId) {
+  var dishElement = document.getElementById(dishId);
+  var clonedCard = dishElement.cloneNode(true);
+  var clonedCardHTML = clonedCard.outerHTML;
+  var favoriteMeals = JSON.parse(localStorage.getItem('favoriteMeals')) || [];
+  favoriteMeals.push(clonedCardHTML);
+  localStorage.setItem('favoriteMeals', JSON.stringify(favoriteMeals));
+  alert('Meal has been added to favorites!');
+  event.target.classList.add('favorited');
+}
