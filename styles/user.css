@@ -1,0 +1,19 @@
+
+.acc-header{
+    color: rgb(44, 87, 148);
+    margin-left: 45%;
+}
+
+.user-img{
+    width: 200px;
+    height: 200px;
+    padding-bottom: 30px;
+}
+
+.row{
+    padding-bottom: 30px;
+}
+
+#account-content{
+    display: none;
+}
