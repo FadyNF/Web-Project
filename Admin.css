@@ -80,12 +80,7 @@ h5{
 small{
     font-size: 0.75rem;
 }
-.profile-photo{
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 50%;
-    overflow: hidden;
-}
+
 .text-muted{
     color: var(--clr-info-dark);
 }
@@ -127,6 +122,9 @@ aside .top div.close{
     display: none;
 }
 
+
+/**************/
+
 aside .sidebar{
     background-color: var(--clr-white);
     display: flex;
@@ -162,6 +160,15 @@ aside .sidebar a:last-child{
     bottom: 1rem;
     width: 100%;
 }
+aside .sidebar.active {
+    /* Align to the bottom */
+    z-index: 1000; /* Set a higher z-index to ensure it's on top of other content */
+   /* Set a fixed width */
+    /* Allow scrolling if needed */
+    /* Add a shadow for better visibility */
+}
+
+/* Adjusted position for the container when the sidebar is active */
 
 aside .sidebar a.active{
     background: var(--clr-light);
@@ -170,6 +177,7 @@ aside .sidebar a.active{
     border-left: 5px solid var(--clr-primary);
 }
 
+/* Adjusted position for the main content when the sidebar is active */
 
 aside .sidebar a.active::before{
     content: '';
@@ -195,17 +203,17 @@ aside .sidebar a span.msg_count{
 }
 .card {
     margin-left: -160px;
-    width: 80%; 
+    width: 80%; /* Make the card take the full width */
     height: 5W 0px;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Arrange elements in a row */
+    justify-content: space-between; /* Spread elements evenly */
+    align-items: center; /* Align elements vertically */
 }
 
 .card p {
@@ -213,7 +221,7 @@ aside .sidebar a span.msg_count{
 }
 
 .location {
-    margin-left: auto; 
+    margin-left: auto; /* Align location to the right */
 }
 
 .customer-header {
@@ -226,6 +234,140 @@ aside .sidebar a span.msg_count{
     justify-content: center;
     margin-top: 20px;
 }
+
+
+.right h2 {
+  margin-left: -4.3em;
+    margin-top: 2em;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style for the form labels */
+.right label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Style for the input fields */
+.right input[type="text"],
+.right input[type="email"],
+.right select {
+    width: 19em;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Style for the submit button */
+.right button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style for the form */
+#add-customer-form {
+    
+    margin-top: 2em;
+    
+    margin-left: -8em; /* Adjust the left margin */
+}
+
+.delete-button {
+    padding: 2px;
+    background-color: red;
+border-radius: 4px;
+    color: white;
+    margin-left: 10px;
+}
+button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#delete {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f44336; /* Red */
+}
+
+/* Style the Cancel button */
+#cancel {
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 1em;
+    background-color: #FFC107; /* Orange */
+}
+
+/* Style the Save Changes button */
+#save-changes {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #2196F3; /* Blue */
+}
+
+
+.chart-header {
+   margin-top: 1em;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the chart canvas */
+#revenueChart {
+    width: 80%; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    margin: 0 auto;
+    display: block;
+}
+
+.additional-cards-container {
+    margin-top: 10px;
+    display: flex; /* Display cards in a row */
+    margin-left: 3em; /* Adjust the left margin */
+}
+
+.additional-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 50px; /* Adjust the right margin between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 12em; /* Adjust the width of each card */
+    /* Display cards in a row */
+    /* Align cards to the top */
+    /* Include padding and border in the width */
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7380ec; /* Adjust the color as needed */
+}
+
+
 .add-button {
     position: fixed;
     top: 10rem; 
@@ -248,6 +390,7 @@ aside .sidebar a span.msg_count{
 }
  
 .modal {
+    z-index: 99999999;
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -256,11 +399,12 @@ aside .sidebar a span.msg_count{
     width: 100%; 
     height: 100%; 
     overflow: auto;
-    background-color: rgb(0,0,0); 
+    background-color: transparent; 
     -color: rgba(0,0,0,0.4); 
   }
   
 .modal-content {
+    z-index: 999999999;
     background-color: #fefefe;
     margin: 15% auto; 
     padding: 20px;
@@ -308,7 +452,7 @@ aside .sidebar a span.msg_count{
   #confirmBtn:hover {
     background-color: #45a049;
   }
-  .card {
+  .card1 {
     width: 80%; 
     height: 50px;
     border: 1px solid #ccc;
@@ -323,16 +467,16 @@ aside .sidebar a span.msg_count{
     background-color: transparent; 
 }
 
-.card p {
+.card1 p {
     margin: 5px;
 }
 
 
-.card.selected {
+.card1.selected {
     background-color: lightblue; 
 }
 
-.card.selected:not(.newly-added) {
+.card1.selected:not(.newly-added) {
     background-color: transparent; 
 }
 .dashboard-section {
