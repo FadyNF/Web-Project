@@ -53,19 +53,19 @@ body {
 }
 .discover-button {
   display: inline-block;
-  padding: 30px 32px; /* Increase padding for bigger button */
-  background-color: #006400; /* Deep green color */
+  padding: 30px 32px; 
+  background-color: #006400; 
   color: #fff;
   text-decoration: none;
-  border-radius: 10px; /* Increase border-radius for rounded corners */
-  font-size: 24px; /* Increase font size for bigger text */
+  border-radius: 10px;
+  font-size: 24px; 
   transition: background-color 0.3s ease;
-  margin-top: 20px; /* Adjust margin-top to lower the position */
+  margin-top: 20px; 
 
 }
 
 .discover-button:hover {
-  background-color: #09c909; /* Darker green color on hover */
+  background-color: #09c909; 
 }
 
 
@@ -78,8 +78,8 @@ body {
   font-size: 48px;
   margin-bottom: 20px;
   font-weight: bold;
-    color: #fff; /* Text color */
-    text-shadow: 4px 4px 0 #333; /* Shadow to create the illusion of depth */
+    color: #fff; 
+    text-shadow: 4px 4px 0 #333; 
     padding: 20px;
     border-radius: 10px;
  
@@ -88,8 +88,8 @@ body {
 .hero-subtitle {
   font-size: 24px;
   font-weight: bold;
-  color: #fff; /* Text color */
-  text-shadow: 4px 4px 0 #333; /* Shadow to create the illusion of depth */
+  color: #fff; 
+  text-shadow: 4px 4px 0 #333; 
   padding: 20px;
   border-radius: 10px;
 }
@@ -140,8 +140,8 @@ background-color: #FFFDD0;
   font-size: 80px;
   margin-bottom: 20px;
   font-weight: bold;
-    color: #fff; /* Text color */
-    text-shadow: 4px 4px 0 #333; /* Shadow to create the illusion of depth */
+    color: #fff; 
+    text-shadow: 4px 4px 0 #333; 
     padding: 20px;
     border-radius: 10px;
 }
@@ -170,8 +170,8 @@ background-color: #FFFDD0;
   font-size: 55px;
   margin-bottom: 20px;
   font-weight: bold;
-    color: #fff; /* Text color */
-    text-shadow: 4px 4px 0 #333; /* Shadow to create the illusion of depth */
+    color: #fff; 
+    text-shadow: 4px 4px 0 #333; 
     padding: 20px;
     border-radius: 10px;}
 
@@ -305,15 +305,10 @@ section {
   position: relative;
 }
 
-
-/* Your existing CSS */
-
-/* Add transitions for smooth scrolling */
 section {
   transition: transform 0.5s ease-in-out;
 }
 
-/* Add animations */
 @keyframes slideInUp {
   from {
     transform: translateY(50px);
@@ -332,7 +327,6 @@ section {
 .container {
   animation: slideInUp 1s ease-in-out;
 }
-/* arrows.css */
 
 .arrow {
   position: absolute;
@@ -345,14 +339,14 @@ section {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
-  background-color: #0ab039; /* vibrant color */
-  color: #fff; /* text color */
-  border: 2px solid transparent; /* transparent border */
+  background-color: #0ab039; 
+  color: #fff; 
+  border: 2px solid transparent; 
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .arrow:hover {
-  background-color: #93cba4; /* darker vibrant color on hover */
+  background-color: #93cba4; 
 }
 
 .arrow.left-arrow {
@@ -371,21 +365,21 @@ section {
   transform: translate(-50%, -50%);
   width: 12px;
   height: 12px;
-  border-top: 2px solid #fff; /* arrowhead color */
-  border-right: 2px solid #fff; /* arrowhead color */
+  border-top: 2px solid #fff; 
+  border-right: 2px solid #fff; 
   transition: border-color 0.3s ease;
 }
 
 .arrow.left-arrow:before {
-  transform: translate(-50%, -50%) rotate(-135deg); /* rotate left arrow */
+  transform: translate(-50%, -50%) rotate(-135deg);
 }
 
 .arrow.right-arrow:before {
-  transform: translate(-50%, -50%) rotate(45deg); /* rotate right arrow */
+  transform: translate(-50%, -50%) rotate(45deg); 
 }
 
 .arrow:hover:before {
-  border-color: #1d3601; /* darker vibrant color for arrowhead on hover */
+  border-color: #1d3601; 
 }
 
 
@@ -395,25 +389,25 @@ section {
 }
 
 #food-waste .section-title {
-  flex: 1; /* Allow the title to take remaining space */
+  flex: 1; 
 }
 
 .percentage {
-  font-size: 48px; /* Increase font size */
+  font-size: 48px;
   font-weight: bold;
   color: #4CAF50;
 }
 
 .description {
-  font-size: 24px; /* Increase font size */
+  font-size: 24px; 
   color: #333;
   text-align: right;
-  margin-top: 20px; /* Increase margin top */
+  margin-top: 20px; 
 }
 .zero-food-waste {
   background-color: #FFFDD0;
   padding: 100px 0;
-  min-height: 100vh; /* Ensure the section extends to the full height of the viewport */
+  min-height: 100vh; 
   position: relative;
 }
 
@@ -424,11 +418,11 @@ section {
 }
 
 .content {
-  text-align: right; /* Align content to the right */
+  text-align: right; 
 }
 
 .food-title {
-  font-size: 140px;
+  font-size: 100px;
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
@@ -437,64 +431,64 @@ section {
   margin: 100px;
 }
 .food-desc {
-  font-size: 80px;
+  font-size: 40px;
   color: #333;
   margin-bottom: 50px;
 }
 
-/* Adjust the positioning of the title and description */
 #food-waste .container {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-end; 
 }
 
 .content {
-  text-align: left; /* Align content to the left */
-  flex: 1; /* Allow content to take remaining space */
-  margin-right: 100px; /* Add margin to separate from the circular statistics ring */
+  text-align: left; 
+  flex: 1; 
+  margin-right: 100px; 
 }
 
 
-/* Adjust the position and size of the statistics rings */
 .statistics-ring {
   position: absolute;
-  width: 800px; /* Increase width */
-  height: 800px; /* Increase height */
+  width: 800px; 
+  height: 800px; 
   border-radius: 50%;
   background: conic-gradient(#4CAF50 0% 40%, #FFF 40% 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 70%; /* Move down slightly */
-  left: 20%; /* Move to the right slightly */
-  transform: translate(-50%, -50%); /* Center the ring */
+  top: 70%;
+  left: 20%; 
+  transform: translate(-50%, -50%);
 }
 
 .second-ring {
-  top: 70%; /* Move down slightly */
-  left: 45%; /* Move to the right slightly */
+  top: 70%;
+  left: 45%;
+  background: conic-gradient(#FF5252 0% 10%, #FFF 10% 100%); 
 }
 
 .third-ring {
-  top: 70%; /* Move down slightly */
-  left: 70%; /* Move to the right slightly */
+  top: 70%; 
+  left: 70%; 
+  background: conic-gradient(#4f3ac3 0% 15%, #FFF 15% 100%);
+
 }
 
-/* Adjust the styles for the percentage and description inside each ring */
 .statistics-ring .percentage,
 .statistics-ring .description {
-  color: #2b2f2b; /* Adjust color */
-  text-align: center; /* Align center */
+  color: #2b2f2b; 
+  text-align: center; 
 }
 
 .second-ring .percentage,
 .third-ring .percentage {
-  font-size: 50px; /* Adjust font size */
+  font-size: 50px; 
 }
 
 .second-ring .description,
 .third-ring .description {
-  font-size: 30px; /* Adjust font size */
+  font-size: 30px; 
 }
