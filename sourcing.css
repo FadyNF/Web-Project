@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFDD0; /* Use the same color palette as the sustainability page */
+    color: #333;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: "Brush Script MT", cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b4513;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #006400;
+}
+
+.sourcing-hero {
+    background-color: #75e752; /* Use a vibrant color */
+    padding: 100px 0;
+    text-align: center;
+    color: #fff; /* Text color */
+}
+
+.section-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.section-desc {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sourcing-content {
+    padding: 50px 0;
+}
+
+.content {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.content-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content-desc {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    text-align: center;
+}
