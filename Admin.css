@@ -638,4 +638,119 @@ button {
 #confirmEditBtn:hover {
     background-color: #45a049;
 }
+.profile-circle {
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-size: cover;
+    justify-content: center;
+    margin-left: 50%;
+}
+
+.profile-header {
+    margin-top: 1em;
+    color: #333; /* Example color */
+    font-size: 24px; /* Example font size */
+    /* Add any other styles you want for the header */
+}
+
+
+.input-container {
+    display: flex; /* Use flexbox to arrange items in a row */
+    flex-direction: column; /* Arrange items vertically */
+}
+
+.input-container label {
+    margin-left: 20%;
+    margin-bottom: 5px; /* Add bottom margin for spacing between labels */
+}
+
+.input-container input {
+    width: 30%;/* Allow input fields to grow and take up available space */
+    margin-bottom: 10px; /* Add bottom margin for spacing between inputs */
+}
+
+.profile-input {
+    margin-left: 20%;
+    margin-right: 20px; /* Add right margin for spacing between inputs */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#emailInput {
+    /* Add your specific styling for the email input here */
+    margin-left: 70%;/* For example, changing the background color */
+  width: 40%;
+}
+
+
+
+
+label[for="emailInput"] {
+    margin-left: 70%;
+    margin-top: -10.1em;
+    /* Add your specific styling for the label of the email input here */
+     /* For example, changing the color of the label */
+}
+
+label[for="contactNumberInput"] {
+    margin-left: 70%;
+    margin-top: -5.1em;
+    /* Add your specific styling for the label of the email input here */
+     /* For example, changing the color of the label */
+}
+#contactNumberInput {
+    margin-left: 70%;/* For example, changing the background color */
+  width: 40%;
+    /* Add your custom styles here */
+}
+
+/* Style for address input */
+#addressInput {
+    width: 90%;
+    /* Add your custom styles here */
+}
+
+/* Style for city input */
+#cityInput {
+
+    /* Add your custom styles here */
+}
+
+/* Style for state input */
+#stateInput {
+    margin-left: 70%;/* For example, changing the background color */
+    width: 40%;
+    /* Add your custom styles here */
+}
+label[for="stateInput"] {
+    margin-left: 70%;
+    margin-top: -5em;
+    /* Add your specific styling for the label of the email input here */
+     /* For example, changing the color of the label */
+}
+/* Style for postal code input */
+#postalCodeInput {
+    /* Add your custom styles here */
+}
+
+/* Style for country input */
+#countryInput {
+    margin-left: 70%;/* For example, changing the background color */
+    width: 40%;
+    /* Add your custom styles here */
+}
+label[for="countryInput"] {
+    margin-left: 70%;
+    margin-top: -5.3em;
+    /* Add your specific styling for the label of the email input here */
+     /* For example, changing the color of the label */
+}
+/* Style for password input */
+#passwordInput {
+    width: 90%;
+    /* Add your custom styles here */
+}
+
 

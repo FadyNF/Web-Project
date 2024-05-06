@@ -605,3 +605,152 @@ const dashboardLink = document.getElementById('dashboard');
                 window.location.reload(); // Reload the page to return to the initial view
             });
         });
+
+
+
+
+
+
+      const profileLink = document.getElementById('profileLink');
+
+// Get the main section element
+const mainSection = document.querySelector('main');
+
+// Add event listener to the profile link
+profileLink.addEventListener('click', () => {
+    function hideAddCustomerForm() {
+        document.querySelector('.right').innerHTML = ''; // Clear the contents of the .right section
+    }
+
+    // Clear the main section content
+    mainSection.innerHTML = '';
+
+    // Create a header element for "My Profile"
+    const profileHeader = document.createElement('h2');
+    profileHeader.textContent = 'My Profile';
+    // Add a class to the header for styling
+    profileHeader.classList.add('profile-header');
+
+    // Append the header to the main section
+    mainSection.appendChild(profileHeader);
+
+    // Create a div element for the profile circle
+    const circleDiv = document.createElement('div');
+    circleDiv.classList.add('profile-circle');
+    // Set background image for the circle
+    circleDiv.style.backgroundImage = 'url(avatar.png)';
+
+    // Append the circle div to the main section
+    mainSection.appendChild(circleDiv);
+
+    // Get the user's first name, last name, and email (replace these with your actual methods of getting the data)
+    const firstName = "John"; // Example first name
+    const lastName = "Doe"; // Example last name
+    const email = "john.doe@example.com"; // Example email
+    const contactNumber = "1234567890"; // Example contact number
+    const address = "123 Main St"; // Example address
+    const city = "Example City"; // Example city
+    const state = "Example State"; // Example state
+    const postalCode = "12345"; // Example postal code
+    const country = "Example Country"; // Example country
+    const password = ""; // Example password (empty for security reasons)
+
+    // Create input elements for first name, last name, email, contact number, address, city, state, postal code, country, and password
+    const firstNameInput = createInputWithLabel("First Name", "firstNameInput", firstName);
+    const lastNameInput = createInputWithLabel("Last Name", "lastNameInput", lastName);
+    const emailInput = createInputWithLabel("Email", "emailInput", email, "email");
+    const contactNumberInput = createInputWithLabel("Contact Number", "contactNumberInput", contactNumber, "tel");
+    const addressInput = createInputWithLabel("Address", "addressInput", address);
+    const cityInput = createInputWithLabel("City", "cityInput", city);
+    const stateInput = createInputWithLabel("State", "stateInput", state);
+    const postalCodeInput = createInputWithLabel("Postal Code", "postalCodeInput", postalCode);
+    const countryInput = createInputWithLabel("Country", "countryInput", country);
+    const passwordInput = createInputWithLabel("Password", "passwordInput", "yomna123", "password");
+
+    // Create container div for labels and inputs
+    const inputContainer = document.createElement('div');
+    inputContainer.classList.add('input-container');
+
+    // Append the input elements and labels to the input container
+    inputContainer.appendChild(firstNameInput);
+    inputContainer.appendChild(lastNameInput);
+    inputContainer.appendChild(emailInput);
+    inputContainer.appendChild(contactNumberInput);
+    inputContainer.appendChild(addressInput);
+    inputContainer.appendChild(cityInput);
+    inputContainer.appendChild(stateInput);
+    inputContainer.appendChild(postalCodeInput);
+    inputContainer.appendChild(countryInput);
+    inputContainer.appendChild(passwordInput);
+
+    // Append the input container to the main section
+    mainSection.appendChild(inputContainer);
+
+    hideAddCustomerForm();
+});
+
+// Function to create an input field with label and prefill value
+function createInputWithLabel(labelText, inputId, prefillValue, inputType = "text") {
+    // Create label element
+    const label = document.createElement('label');
+    label.setAttribute('for', inputId);
+    label.textContent = labelText;
+
+    // Create input element
+    const input = document.createElement('input');
+    input.setAttribute('type', inputType);
+    input.setAttribute('id', inputId);
+    input.classList.add('profile-input');
+    input.setAttribute('placeholder', labelText);
+
+    // Set value attribute for non-password inputs
+    if (inputType !== "password") {
+        input.value = prefillValue;
+    }
+
+    // Create container div for label, input, and the toggle button/icon
+    const container = document.createElement('div');
+container.classList.add('input-container');
+
+// Append the label and input to the container
+container.appendChild(label);
+container.appendChild(input);
+
+// For password inputs, include a toggle button/icon
+if (inputType === "password") {
+    // Create a button to toggle password visibility
+    const toggleButton = document.createElement('button');
+    toggleButton.innerHTML = '<i class="fas fa-eye"></i>'; // You may adjust the icon here
+
+    // Style the button to remove any padding and margins
+    toggleButton.style.padding = '0';
+    toggleButton.style.margin = '0';
+    toggleButton.style.border = 'none'; // Remove border if any
+    toggleButton.style.background = 'none'; // Make background transparent
+
+    // Style the icon to change its color to black
+    const icon = toggleButton.querySelector('i');
+    icon.style.color = 'black'; // Set the color to black
+    icon.style.position = 'absolute';
+   
+    icon.style.top = '42em';
+    icon.style.right = '13em'; // Adjust the distance from the right edge
+
+    // Set initial value and toggle functionality
+    input.setAttribute('value', prefillValue);
+    toggleButton.addEventListener('click', function() {
+        if (input.getAttribute('type') === 'password') {
+            input.setAttribute('type', 'text');
+            icon.className = 'fas fa-eye-slash'; // Change to eye-slash icon when showing password
+        } else {
+            input.setAttribute('type', 'password');
+            icon.className = 'fas fa-eye'; // Change back to eye icon when hiding password
+        }
+    });
+
+    // Append the toggle button to the container
+    container.appendChild(toggleButton);
+}
+
+return container;
+}
