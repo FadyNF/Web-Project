@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Select the discover button
   const discoverButton = document.querySelector(".discover-button");
 
-  // Add event listener for button click
   discoverButton.addEventListener("click", function() {
-    // Navigate to the new page
     window.location.href = "sourcing.html";
   });
 
