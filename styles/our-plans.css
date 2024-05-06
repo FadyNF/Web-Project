@@ -1,0 +1,876 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.nav-bar {
+    width: 100%;
+    color: rgb(90, 108, 65);
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.logo {
+    height: 55px;
+}
+
+.name {
+    margin-left: 15px;
+    font-size: 27px;
+    color: rgb(32, 188, 193);
+    font-family: Pacifico;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(32, 188, 193);
+    font-family: Roboto;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(32, 188, 193);
+    text-transform: uppercase;
+}
+
+.nav-bar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: rgb(32, 188, 193);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+    color: white;
+}
+
+.nav-bar ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.form {
+    width: 98%;
+    height: auto;
+    max-height: 750px;
+    max-width: 850px;
+    margin-bottom: 50px;
+}
+
+.form .form-header {
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    gap: 5px;
+    font-size: 22px;
+    color: #065230;
+}
+
+.form .form-body {
+    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(170, 214, 215);
+    border-radius: 20px;
+    height: 570px;
+    overflow: hidden;
+}
+
+.form .form-body .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+.form .form-body .pagination .number {
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 50%;
+    background-color: #fb9931;
+    color: white;
+    font-size: 15px;
+    position: relative;
+}
+
+.form .form-body .pagination .bar {
+    width: 50px;
+    height: 4px;
+    background-color: #fb9931;
+    border-radius: 5px;
+}
+
+.form .form-body .pagination .active ~ div {
+    background-color: #ddd;
+    color: #065230;
+}
+
+.form .steps {
+    width: 400%;
+    display: flex;
+    transition: all 300ms ease-in-out;
+}
+
+.form .steps .step {
+    width: 98vw;
+    max-width: auto;
+    padding: 5px 15px 15px;
+    overflow: hidden;
+}
+
+.form .steps .step:nth-child(1) .choose-plans-container {
+    justify-content: center;
+}
+
+.form .steps .step h4 {
+    margin-bottom: 5px;
+}
+
+.form .steps .step p {
+    color: #065230;
+    max-width: 90%;
+    font-size: 15px;
+}
+
+.form .steps .step .choose-plans-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.select-preference,
+.checkout-preview {
+    width: calc(50% - 7.5px);
+    margin: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.select-preference {
+    width: 50%;
+    margin-right: -5px;
+    padding: 0 10px;
+    border-right: 1px dotted black;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #065230;
+    font-size: 20px;
+}
+
+.description p {
+    font-weight: 500;
+}
+
+.checkboxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 2px;
+    justify-content: center;
+}
+
+.checkbox-wrapper-16 {
+    margin: 4px;
+}
+
+.checkbox-wrapper-16 .checkbox-input {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
+    border-color: #065230;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #065230;
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #065230;
+    border-color: #065230;
+    color: #fff;
+    content: "✓";
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
+    color: #065230;
+}
+
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
+    border-color: #065230;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #6d9e88;
+}
+
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    min-height: 6rem;
+    border-radius: 0.5rem;
+    border: 2px solid #b5bfd9;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:before {
+    content: "";
+    font-size: 12px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #b5bfd9;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover {
+    border-color: #065230;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-icon {
+    transition: 0.375s ease;
+    color: #494949;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-wrapper-16 .checkbox-icon img {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 4px;
+}
+
+.checkbox-wrapper-16 .checkbox-label {
+    color: #707070;
+    transition: 0.375s ease;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.note {
+    display: none;
+}
+
+.note p {
+    color: red !important;
+}
+
+.checkout-preview {
+    padding-left: 20px;
+    margin-left: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #065230;
+    font-weight: 600;
+}
+
+.checkout-input {
+    --radius: 8px;
+    --border: 4px;
+    --height: 40px;
+    --speed: 0.45s;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.number-of-people-input,
+.number-of-meals-input {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.tabs {
+    height: var(--height);
+    display: grid;
+    grid-auto-flow: column;
+    background: rgb(251, 154, 50);
+    border-radius: var(--radius);
+    grid-auto-columns: 1fr;
+    position: relative;
+    border: var(--border) solid rgb(251, 154, 50);
+}
+
+.tabs > .input,
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.tabs:has(:checked:nth-of-type(1)) {
+    --active: 0;
+}
+
+.tabs:has(:checked:nth-of-type(2)) {
+    --active: 1;
+}
+
+.tabs:has(:checked:nth-of-type(3)) {
+    --active: 2;
+}
+.tabs:has(:checked:nth-of-type(4)) {
+    --active: 3;
+}
+
+.tabs :checked + .label {
+    --highlight: 1;
+}
+
+.tabs:has(.input:nth-of-type(2)) {
+    --count: 2;
+}
+.tabs:has(.input:nth-of-type(3)) {
+    --count: 3;
+}
+.tabs:has(.input:nth-of-type(4)) {
+    --count: 4;
+}
+
+.tabs .label {
+    padding: 0 clamp(10px, 10px + 10px, 20px);
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    display: grid;
+    border-radius: calc(var(--radius) - var(--border));
+    place-items: center;
+    transition: background-color, color;
+    transition-duration: 0.25s;
+    z-index: 100;
+}
+
+.input:not(:checked) + .label:hover {
+    --highlight: 0.35;
+    background: rgb(217, 212, 188);
+}
+
+.tabs::after {
+    pointer-events: none;
+    content: "";
+    width: calc(100% / var(--count));
+    height: 100%;
+    background: rgb(245, 240, 214);
+    position: absolute;
+    border-radius: calc(var(--radius) - var(--border));
+    translate: calc(var(--active, 0) * 100%) 0;
+    transition: translate, outline-color;
+    transition-duration: var(--speed);
+    transition-timing-function: var(--ease, ease);
+    outline: 2px solid transparent;
+}
+
+.checkout-details {
+    min-height: 50%;
+    width: 350px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #065230;
+    font-size: large;
+    font-weight: 500;
+}
+
+.meal-checkout-types {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.meal-checkout-types .meal-type {
+    font-weight: bold;
+}
+
+.checkout-pricing {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-pricing,
+.price-per-serving,
+.final-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.final-price {
+    margin-top: 15px;
+}
+
+.credentials-form-container .description {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    gap: 12px;
+    margin-bottom: -10px;
+}
+
+.credentials-form-container .description p {
+    font-size: 17px !important;
+}
+
+.credentials-form {
+    background: rgb(213, 255, 227); 
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 
+        0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 
+        0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 350px;
+    background-color: transparent;
+    padding: 13px;
+    border-radius: 10px;
+    position: relative;
+    /* background-color: white; */
+    height: 300px;
+}
+
+.message-input {
+    color: #355891;
+    font-size: 14px;
+}
+
+.name-form-inputs {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.credentials-form label {
+    position: relative;
+}
+
+.credentials-form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #355891;
+    border-radius: 5px;
+}
+
+.credentials-form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: #355891;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.credentials-form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+.credentials-form label .input:focus + span,
+.credentials-form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.credentials-form label .input:valid + span {
+    color: green;
+}
+
+.input01 {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #355891;
+    border-radius: 5px;
+}
+
+.credentials-form label .input01 + span {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    color: #355891;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.credentials-form label .input01:placeholder-shown + span {
+    top: 40px;
+    font-size: 0.9em;
+}
+
+.credentials-form label .input01:focus + span,
+.credentials-form label .input01:valid + span {
+    top: 50px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.credentials-form label .input01:valid + span {
+    color: green;
+}
+
+.credentials-button {
+    background-color: white;
+    border: 2px solid #355891;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #355891;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 390;
+    letter-spacing: 2px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 8px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+}
+
+.credentials-button .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #355891;
+    transform: translateX(30%);
+}
+
+.credentials-button:hover {
+    color: #355891;
+    background: #5f82a9;
+}
+.credentials-button:hover .text {
+    color: white;
+}
+
+.form .steps .step .choose-plans-container .col label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.form .steps .step .choose-plans-container .col input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bbb;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.form .steps .step .choose-plans-container .col .checkbox input {
+    display: none;
+}
+
+.form .steps .step .choose-plans-container .col .checkbox label {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #bbb;
+    border-radius: 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.form
+    .steps
+    .step
+    .choose-plans-container
+    .col
+    .checkbox
+    input:checked
+    + label {
+    background: #00aaee;
+    color: white;
+}
+
+.form .steps .step .confirmation {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    gap: 15px;
+}
+
+.form .steps .step .confirmation button {
+    background-color: #00aaee;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.credentials-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.payment-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.payment-form {
+    background: rgb(179, 213, 214); 
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 
+        0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 
+        0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1); 
+    width: 320px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    position: relative;
+    border-radius: 25px;
+}
+
+.payment-form .label {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: fit-content;
+}
+
+.payment-form .label:has(input:focus) .title {
+    left: 0;
+    color: #d17842;
+}
+
+.payment-form .label .title {
+    padding: 0 10px;
+    transition: all 300ms;
+    font-size: 12px;
+    color: black;
+    font-weight: 600;
+    width: fit-content;
+    top: 14px;
+    position: relative;
+    left: 15px;
+}
+
+.payment-form .input-field {
+    width: auto;
+    height: 50px;
+    text-indent: 15px;
+    border-radius: 15px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #21262e;
+    transition: all 0.3s;
+    caret-color: #d17842;
+    color: black;
+}
+
+.payment-form .input-field:hover {
+    border-color: rgba(209, 121, 66, 0.5);
+}
+
+.payment-form .input-field:focus {
+    border-color: #d17842;
+}
+.payment-form .split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+.payment-form .split label {
+    width: 130px;
+}
+
+.select-meals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 160px;
+    gap: 30px;
+}
+
+.select-meals-container p {
+    font-size: 24px !important;
+    font-weight: 900;
+}
+
+.get-started-button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(237, 158, 73);
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.get-started-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.get-started-button span:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.get-started-button:hover span {
+    padding-right: 15px;
+}
+
+.get-started-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.submit-button {
+    padding: 13px 30px;
+    background-color: rgb(251, 153, 49);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; 
+}
+
+#confetti-canvas {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Our Plans | Fresh Bites</title>
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti. browser.js"></script>
+
+        <link rel="stylesheet" href="../styles/our-plans.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="nav-bar">
+            <div class="left-section">
+                <img src="../images/logo1.png" alt="Your Logo" class="logo" />
+                <span class="name">Fresh Bites</span>
+            </div>
+            <ul class="">
+                <li class="dropdown">
+                    <a href="#"> About Us </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">How it Works</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Our Plans</a></li>
+
+                <li class="dropdown">
+                    <a href="#"> Our Menu </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Our Menu</a></li>
+                        <li><a href="#">Cook Book</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Sustainability</a></li>
+            </ul>
+        </div>
+
+        <div class="form">
+            <div class="form-header">
+                <h2>Personalize your plan</h2>
+            </div>
+
+            <div class="form-body">
+                <div class="pagination">
+                    <div class="number active">1</div>
+                    <div class="bar"></div>
+
+                    <div class="number">2</div>
+                    <div class="bar"></div>
+
+                    <div class="number">3</div>
+                    <div class="bar"></div>
+
+                    <div class="number">4</div>
+                </div>
+
+                <div class="steps">
+                    <!-- Choose Type of plan -->
+                    <div class="step">
+                        <form
+                            class="choose-plans-container"
+                            onsubmit="handlePlansFormSubmit(event)"
+                        >
+                            <div class="select-preference">
+                                <div class="description">
+                                    <h4>1. Choose your preference</h4>
+                                    <p>
+                                        Your preferences help us show you the
+                                        most relevant recipes first. You'll
+                                        still have access to all recipes each
+                                        week!
+                                    </p>
+                                </div>
+                                <div class="checkboxes">
+                                    <div class="checkbox-wrapper-16">
+                                        <label class="checkbox-wrapper">
+                                            <input
+                                                class="checkbox-input"
+                                                type="checkbox"
+                                                name="meal-type"
+                                                value="0"
+                                            />
+                                            <span class="checkbox-tile">
+                                                <span class="checkbox-icon">
+                                                    <img
+                                                        src="../images/icons/our-plans-icons/meat&veggies.png"
+                                                        alt=""
+                                                    />
+                                                    <span
+                                                        class="checkbox-label"
+                                                    >
+                                                        Meat & Veggies
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper-16">
+                                        <label class="checkbox-wrapper">
+                                            <input
+                                                class="checkbox-input"
+                                                type="checkbox"
+                                                name="meal-type"
+                                                value="1"
+                                            />
+                                            <span class="checkbox-tile">
+                                                <span class="checkbox-icon">
+                                                    <img
+                                                        src="../images/icons/our-plans-icons/veggies.png"
+                                                        alt=""
+                                                    />
+                                                    <span
+                                                        class="checkbox-label"
+                                                    >
+                                                        Veggies
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper-16">
+                                        <label class="checkbox-wrapper">
+                                            <input
+                                                class="checkbox-input"
+                                                type="checkbox"
+                                                name="meal-type"
+                                                value="2"
+                                            />
+                                            <span class="checkbox-tile">
+                                                <span class="checkbox-icon">
+                                                    <img
+                                                        src="../images/icons/our-plans-icons/family.png"
+                                                        alt=""
+                                                    />
+                                                    <span class="checkbox-label"
+                                                        >Family & Friends</span
+                                                    >
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper-16">
+                                        <label class="checkbox-wrapper">
+                                            <input
+                                                class="checkbox-input"
+                                                type="checkbox"
+                                                name="meal-type"
+                                                value="3"
+                                            />
+                                            <span class="checkbox-tile">
+                                                <span class="checkbox-icon">
+                                                    <img
+                                                        src="../images/icons/our-plans-icons/fit.png"
+                                                        alt=""
+                                                    />
+                                                    <span class="checkbox-label"
+                                                        >Fit & Wholesome</span
+                                                    >
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper-16">
+                                        <label class="checkbox-wrapper">
+                                            <input
+                                                class="checkbox-input"
+                                                type="checkbox"
+                                                name="meal-type"
+                                                value="4"
+                                            />
+                                            <span class="checkbox-tile">
+                                                <span class="checkbox-icon">
+                                                    <img
+                                                        src="../images/icons/our-plans-icons/clock.png"
+                                                        alt=""
+                                                    />
+                                                    <span class="checkbox-label"
+                                                        >Under 20-minutes</span
+                                                    >
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-wrapper-16">
+                                        <label class="checkbox-wrapper">
+                                            <input
+                                                class="checkbox-input"
+                                                type="checkbox"
+                                                name="meal-type"
+                                                value="5"
+                                            />
+                                            <span class="checkbox-tile">
+                                                <span class="checkbox-icon">
+                                                    <img
+                                                        src="../images/icons/our-plans-icons/fish.png"
+                                                        alt=""
+                                                    />
+                                                    <span class="checkbox-label"
+                                                        >Pescatarian</span
+                                                    >
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="note">
+                                    <p>Please choose 1 or more meal types.</p>
+                                </div>
+                            </div>
+
+                            <div class="checkout-preview">
+                                <div class="description">
+                                    <h4>2. Customize your plan Size</h4>
+                                </div>
+
+                                <div class="checkout-input">
+                                    <div class="number-of-people-input">
+                                        <span class="input-description"
+                                            >Number of People</span
+                                        >
+                                        <div class="tabs">
+                                            <input
+                                                value="2"
+                                                name="people-radio"
+                                                id="people-radio-2"
+                                                type="radio"
+                                                class="input"
+                                            />
+                                            <label
+                                                for="people-radio-2"
+                                                class="label"
+                                                >2</label
+                                            >
+                                            <input
+                                                value="4"
+                                                name="people-radio"
+                                                id="people-radio-4"
+                                                type="radio"
+                                                class="input"
+                                            />
+                                            <label
+                                                for="people-radio-4"
+                                                class="label"
+                                                >4</label
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <div class="number-of-meals-input">
+                                        <span class="input-description"
+                                            >Number of Meals</span
+                                        >
+                                        <div class="tabs">
+                                            <input
+                                                checked=""
+                                                value="1"
+                                                name="meals-radio"
+                                                id="meals-radio-1"
+                                                type="radio"
+                                                class="input"
+                                            />
+                                            <label
+                                                for="meals-radio-1"
+                                                class="label"
+                                                >1</label
+                                            >
+                                            <input
+                                                value="2"
+                                                name="meals-radio"
+                                                id="meals-radio-2"
+                                                type="radio"
+                                                class="input"
+                                            />
+                                            <label
+                                                for="meals-radio-2"
+                                                class="label"
+                                                >2</label
+                                            >
+                                            <input
+                                                value="3"
+                                                name="meals-radio"
+                                                id="meals-radio-3"
+                                                type="radio"
+                                                class="input"
+                                            />
+                                            <label
+                                                for="meals-radio-3"
+                                                class="label"
+                                                >3</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="checkout-details">
+                                    <div class="meal-checkout-types">
+                                        <span class="meal-type">
+                                            Choose Meal Type
+                                        </span>
+
+                                        <span class="meal-count">
+                                            1 meals for 2 people
+                                        </span>
+
+                                        <span class="meal-total-servings">
+                                            2 total servings
+                                        </span>
+                                    </div>
+
+                                    <div class="checkout-pricing">
+                                        <div class="box-pricing">
+                                            <span>Box Price</span>
+                                            <span>$0</span>
+                                        </div>
+                                        <div class="price-per-serving">
+                                            <span>Price per Serving</span>
+                                            <span>$0</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="final-price">
+                                        <span> Box Total </span>
+                                        <span> $0 </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                type="submit"
+                                class="submit-button"
+                                id="first-submit"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Add User's Credentials -->
+                    <div class="step">
+                        <form
+                            class="credentials-form-container"
+                            onsubmit="handleCredentialsFormSubmit(event)"
+                        >
+                            <div class="description">
+                                <h4>Enter Credentials</h4>
+                                <p>Shipping Information</p>
+                            </div>
+                            <div class="credentials-form">
+                                <div class="name-form-inputs">
+                                    <label>
+                                        <input
+                                            class="input"
+                                            type="text"
+                                            placeholder=""
+                                            required
+                                        />
+                                        <span>First name</span>
+                                    </label>
+
+                                    <label>
+                                        <input
+                                            class="input"
+                                            type="text"
+                                            placeholder=""
+                                            required
+                                        />
+                                        <span>Last name</span>
+                                    </label>
+                                </div>
+
+                                <label>
+                                    <input
+                                        class="input"
+                                        type="email"
+                                        placeholder=""
+                                        required
+                                    />
+                                    <span>Email</span>
+                                </label>
+
+                                <label>
+                                    <input
+                                        class="input"
+                                        placeholder=""
+                                        type="tel"
+                                        required
+                                    />
+                                    <span>Contact Number</span>
+                                </label>
+                                <label>
+                                    <input
+                                        class="input"
+                                        placeholder=""
+                                        rows="1"
+                                        required
+                                    />
+                                    <span>Address</span>
+                                </label>
+                            </div>
+                            <button
+                                type="submit"
+                                class="submit-button"
+                                id="second-submit"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Checkout -->
+                    <div class="step">
+                        <form
+                            class="payment-form-container"
+                            onsubmit="handlePaymentFormSubmit(event)"
+                        >
+                            <div class="description">
+                                <h4>Payment Credentials</h4>
+                                <p>Enter your credit/debit card information</p>
+                            </div>
+                            <div>
+                                <div class="payment-form">
+                                    <label for="name" class="label">
+                                        <span class="title"
+                                            >Card holder full name</span
+                                        >
+                                        <input
+                                            class="input-field"
+                                            type="text"
+                                            name="input-name"
+                                            title="Input title"
+                                            placeholder="Enter your full name"
+                                            required
+                                        />
+                                    </label>
+                                    <label for="serialCardNumber" class="label">
+                                        <span class="title">Card Number</span>
+                                        <input
+                                            id="serialCardNumber"
+                                            class="input-field"
+                                            type="number"
+                                            name="input-name"
+                                            title="Input title"
+                                            placeholder="0000 0000 0000 0000"
+                                            required
+                                        />
+                                    </label>
+                                    <div class="split">
+                                        <label for="ExDate" class="label">
+                                            <span class="title"
+                                                >Expiry Date</span
+                                            >
+                                            <input
+                                                id="ExDate"
+                                                class="input-field"
+                                                type="text"
+                                                name="input-name"
+                                                title="Expiry Date"
+                                                placeholder="01/23"
+                                                required
+                                            />
+                                        </label>
+                                        <label for="cvv" class="label">
+                                            <span class="title">CVV</span>
+                                            <input
+                                                id="cvv"
+                                                class="input-field"
+                                                type="number"
+                                                name="cvv"
+                                                title="CVV"
+                                                placeholder="CVV"
+                                                required
+                                            />
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                type="submit"
+                                class="submit-button"
+                                id="third-submit"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Select Meals -->
+                    <div class="step">
+                        <div class="select-meals-container">
+                            <p>
+                                Start choosing meals from <br />
+                                Our Weekly Meals Recommendations!
+                            </p>
+                            <button class="get-started-button">
+                                <span>Get Started</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../scripts/our-plans.js"></script>
+        <script src="../scripts/checkout-plan.js"></script>
+        <script src="../scripts/confetti.js"></script>
+    </body>
+</html>
