@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/cookbook.css" />
     <link rel="stylesheet" href="/styles/body.css" />
     <link rel="stylesheet" href="/styles/slider.css" />
+    <link rel="stylesheet" href="/styles/favoriteMeals.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -175,7 +176,7 @@
           <i id="left-meals" class="fa-solid fa-angle-left"></i>
         </div>
         <ul class="meals-bar">
-          <li class="menu-item">
+          <li class="menu-item" id="dish1">
             <img src="/images/dish1.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal1','Delicious Steak and Potatoes','and Creamed Kale with Peppercorn Sauce')"
@@ -183,62 +184,110 @@
               Delicious Steak<br />
               and Potatoes
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish1')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish2">
             <img src="/images/dish2.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal2','Heart Steak and Potatoes','with Balsamic-Cranberry Pan Sauce')"
             >
               Hearty Steak <br />and Potatoes
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish2')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish3">
             <img src="/images/dish3.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal3','Mozzarella-Crusted Chicken','with Blistered Tomatoes and Potato Wedges')"
             >
               Mozzarella-Crusted <br />Chicken
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish3')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish4">
             <img src="/images/dish4.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal4','Chicken Orzo Dinner','with Cheesy Roasted Zucchini and Tomato')"
             >
               Chicken Orzo<br />Dinner
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish4')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish5">
             <img src="/images/dish5.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal5','Rapid Stir-Fried Beef','and Broccoli')"
             >
               Rapid Stir-<br />fry Beef
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish5')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish6">
             <img src="/images/dish6.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal6','Ginger Beef Stir-Fry','with Snappy Asparagus')"
             >
               Ginger Beef <br />Stir-fry
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish6')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish7">
             <img src="/images/dish7.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal7','Butter-Basted Sirloin Steak','with Parsnip Wedges and Creamed Spinach')"
             >
               Butter-Basted<br />Sirloin Steak
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish7')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish8">
             <img src="/images/dish8.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal8','New York Strip Steak','with Truffled Mashed Potatoes and Green Beans Almandine')"
             >
               New york<br />Strip steak
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish8')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
         </ul>
         <div class="icon">
@@ -1621,7 +1670,7 @@
         <div class="icon">
           <i id="left-meals" class="fa-solid fa-angle-left"></i>
         </div>
-        <ul class="meals-bar">
+        <ul class="meals-bar" id="dihs9">
           <li class="menu-item">
             <img src="/images/dish9.jpg" />
             <h4
@@ -1629,62 +1678,110 @@
             >
               Teriyaki Chicken<br />Tenders
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish9')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish10">
             <img src="/images/dish10.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal10','Crispy Cheddar Frico Cheeseburgers','with Caramelized Onion Jam and Roasted Broccoli')"
             >
               Crispy Cheddar<br />Frico Cheeseburgers
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish10')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish11">
             <img src="/images/dish11.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal11','Pork Carnitas Tacos','with Pickled Onion and Monterey Jack Cheese')"
             >
               Pork Carnitas<br />Tacos
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish11')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish12">
             <img src="/images/dish12.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal12','Baked Chicken Parmesan','with DIY Marinara, Fresh Mozzarella, and Rigatoni')"
             >
               Baked Chicken<br />Parmesan
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish12')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish13">
             <img src="/images/dish13.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal13','One-Pan Orzo Italiano','with Chicken Sausage, Tomatoes, and Spinach')"
             >
               One-pan<br />Orzo Italiano
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish13')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish14">
             <img src="/images/dish14.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal14','Quick Beef Ragù Spaghetti','with Zucchini and Italian Seasonings')"
             >
               Quick Beef<br />Ragù Spaghetti
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish15')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish15">
             <img src="/images/dish15.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal15','rushed Peppercorn Steak','with Creamed Kale and Potato Wedges')"
             >
               Crushed Peppercorn<br />Steak
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish15')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish16">
             <img src="/images/dish16.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal16','Meatloaf Balsamico','with Sweet Potato Mash and Green Beans')"
             >
               Meatloaf<br />Baslamico
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish16')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
         </ul>
         <div class="icon">
@@ -3111,7 +3208,7 @@
         <div class="icon">
           <i id="left-meals" class="fa-solid fa-angle-left"></i>
         </div>
-        <ul class="meals-bar">
+        <ul class="meals-bar" id="dish17">
           <li class="menu-item">
             <img src="/images/dish17.jpg" />
             <h4
@@ -3119,62 +3216,110 @@
             >
               Sirloin & Sherry<br />Shallot Sauce
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish17')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish18">
             <img src="/images/dish18.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal18','Butter-Basted Chicken Breasts','with Candied-Bacon Brussels Sprouts & Mashed Potatoes')"
             >
               Butter-basted<br />Chicken Breasts
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish18')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish19">
             <img src="/images/dish19.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal19','Bavette Steak & Sherry Shallot Sauce','with Crème Fraîche Mashed Potatoes & Roasted Green Beans')"
             >
               Bavette Steak &<br />Sherry Shallot sauce
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish19')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish20">
             <img src="/images/dish20.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal20','Cherry Balsamic Sirloin','with Herby Fingerling Potatoes & Roasted Brussels Sprouts')"
             >
               Cherry Balsamic <br />Sirloin
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish20')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish21">
             <img src="/images/dish21.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal21','Pecan-Crusted Trout','with Apple-Studded Salad & Thyme-Roasted Potatoes')"
             >
               Pecan-Crusted<br />trout
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish21')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish22">
             <img src="/images/dish22.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal22','Crispy Cheddar Chicken','with Loaded Bacon Mashed Potatoes & Broccoli')"
             >
               Crispy Cheddar<br />Chicken
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish22')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish23">
             <img src="/images/dish23.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal23','Creamy Shrimp & Bacon Spaghetti','with Smoky Charred Corn & Chives')"
             >
               Creamy Shrimp &<br />Bacon Spaghetti
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish23')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish24">
             <img src="/images/dish24.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal24','Crispy Chicken & Bacon Alfredo','with Spinach, Parmesan & Chives')"
             >
               Crispy Chicken & <br />Bacon Alfredo
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish24')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
         </ul>
         <div class="icon">
@@ -3724,7 +3869,6 @@
           </div>
         </div>
       </div>
-
       <div id="overlayMeal20" class="description">
         <div class="overlay-container">
           <span class="close" onclick="closeWindow('overlayMeal20')"
@@ -4660,63 +4804,105 @@
           <i id="left-meals" class="fa-solid fa-angle-left"></i>
         </div>
         <ul class="meals-bar">
-          <li class="menu-item">
+          <li class="menu-item" id="dish25">
             <img src="/images/dish25.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal25','Baja Fish Tacos','with Slaw, Chipotle Mayo & Pickled Veggies')"
             >
               Baja Fish<br />Tacos
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish25')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish26">
             <img src="/images/dish26.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal26','Lemon-Herb Salmon','An elegant fish that’s super-delish')"
             >
               lemon-Herb<br />Salmon
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish26')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish27">
             <img src="/images/dish27.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal27','Blackened Tilapia Tacos','with Pineapple Salsa and Red Cabbage Slaw')"
             >
               Blackened Tilapia<br />Tacos
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish27')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish28">
             <img src="/images/dish28.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal28','Tilapia with Scallion Sriracha Pesto','over Ginger Rice with Green Beans')"
             >
               Tilapia with Scallion<br />Sriracha Pesto
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish28')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish29">
             <img src="/images/dish29.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal29','Barramundi with Pineapple Salsa','with Scallion Rice and Roasted Green Beans')"
             >
               Barramundi with<br />Pineapple Salsa
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish29')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish30">
             <img src="/images/dish30.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal30','Tex-Mex Tilapia','with Cilantro Lime Couscous and Green Beans')"
             >
               Tex-mex<br />Tilapia
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish30')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish31">
             <img src="/images/dish31.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal31','Blackened Barramundi and Pineapple Salsa','with Scallion Rice and Roasted Green Beans')"
             >
               Blackened Barramundi<br />& Pineapple Salsa
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish31')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
-          <li class="menu-item">
+          <li class="menu-item" id="dish32">
             <img src="/images/dish32.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal32','Fried Tilapia Sandwiches','with Spicy Sauce and Cabbage Cucumber Slaw')"
@@ -4724,6 +4910,12 @@
               Fried Tilapia<br />
               Sandwiches
             </h4>
+            <button
+              class="heart-button"
+              onclick="addToFavorites(event,'dish32')"
+            >
+              <i class="fa-solid fa-heart"></i>
+            </button>
           </li>
         </ul>
         <div class="icon">

@@ -1,0 +1,20 @@
+/*Favorite button*/
+.heart-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: medium;
+  padding: 0;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+.fa-heart {
+  color: #f7f7f7;
+}
+
+.fa-heart.favorited {
+  color: red;
+}
+.heart-button:hover .fa-heart {
+  color: red;
+}
