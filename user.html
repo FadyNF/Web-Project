@@ -17,45 +17,90 @@
         <button class="nav-buttons">Favourite Meals</button>
         <button class="nav-buttons">History</button>
     </div>
+
+
+     <!-- ALERT MESSAGE -->
+     <div class="message">
+        <i class="fa-regular fa-circle-check check fa-lg" style="color: #214f3b;"></i>
+        <span class="text">Edited Successfully</span>
   
+      </div>
 
-
+      <!-- ACCOUNT INFO -->
     <div class="acc-info-div">
 
         <div id="account-content">
             <h2 class="acc-header">Account Information</h2>
             <img class="user-img" src="/images/user-icon.png">
 
-            <form>
-                <div class="row">
-                    <label>First Name</label>
-                    <span>
-                        <input type="text" name="Fname" value="Alaa">
-                        <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                    </span>
-                </div>
+            <!-- First Name Field -->
+            <div class="row">
+                <label>First Name</label>
 
-                <div class="row">
-                    <label>Last Name</label>
-                    <input type="text" name="Lname" value="Waleed">
-                </div>
+                <input type="text" name="Fname" value="Alaa">
+                <i onclick="showtextField('editF1')" class="fa-solid fa-pen-to-square fa-lg"></i>
+                <span id="editF1">
+                    <input type="text" name="editFname">
+                    <button onclick="validation('editFname','Fname','editF1')">Save</button>
+                </span>
+                <div class="error" id="editFname-err"></div>
+            </div>
 
-                <div class="row">
-                    <label>Email</label>
-                    <input type="text" name="Email" value="aw@gmail.com">
-                </div>
+            <!-- Second Name Field -->
+            <div class="row">
+                <label>Last Name</label>
+                <input type="text" name="Lname" value="Waleed">
+                <i onclick="showtextField('editF2')" class="fa-solid fa-pen-to-square fa-lg"></i>
+                <span id="editF2">
+
+                    <input type="text" name="editLname">
+                    <button onclick="validation('editLname','Lname','editF2')">Save</button>
+                </span>
+                <div class="error" id="editLname-err"></div>
+            </div>
 
 
-                <div class="row">
-                    <label>Contact Number</label>
-                    <input type="text" name="number" value="01098652544">
-                </div>
+            <!-- Third Email Field -->
+            <div class="row">
+                <label>Email</label>
+                <input type="text" name="Email" value="aw@gmail.com">
+                <i onclick="showtextField('editF3')" class="fa-solid fa-pen-to-square fa-lg"></i>
+                <span id="editF3">
 
-                <div class="row">
-                    <label>Address</label>
-                    <input type="text" name="address" value="vyvcyvyvdcbj">
-                </div>
-            </form>
+                    <input type="text" name="editEmail">
+                    <button onclick="validation('editEmail','Email','editF3')">Save</button>
+                </span>
+               <div class="error" id="editEmail-err"></div>
+            </div>
+
+
+            <!-- Fourth Number Field -->
+            <div class="row">
+                <label>Contact Number</label>
+                <input type="text" name="number" value="01098652544">
+                <i onclick="showtextField('editF4')" class="fa-solid fa-pen-to-square fa-lg"></i>
+                <span id="editF4">
+
+                    <input type="text" name="editNumber">
+                    <button onclick="validation('editNumber','number','editF4')">Save</button>
+                </span>
+               <div class="error" id="editNumber-err"></div>
+            </div>
+
+
+            <!-- Fifth Name Field -->
+            <div class="row">
+                <label>Address</label>
+                <input type="text" name="address" value="vyvcyvyvdcbj">
+                <i onclick="showtextField('editF5')" class="fa-solid fa-pen-to-square fa-lg"></i>
+                <span id="editF5">
+
+                    <input type="text" name="editAddress">
+                    <button onclick="validation('editAddress','address','editF5')">Save</button>
+                </span>
+                <div class="error" id="editAddress-err"></div>
+            </div>
+
         </div>
     </div>
 
