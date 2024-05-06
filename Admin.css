@@ -195,17 +195,17 @@ aside .sidebar a span.msg_count{
 }
 .card {
     margin-left: -160px;
-    width: 80%; /* Make the card take the full width */
+    width: 80%; 
     height: 5W 0px;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox */
-    flex-direction: row; /* Arrange elements in a row */
-    justify-content: space-between; /* Spread elements evenly */
-    align-items: center; /* Align elements vertically */
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .card p {
@@ -213,7 +213,7 @@ aside .sidebar a span.msg_count{
 }
 
 .location {
-    margin-left: auto; /* Align location to the right */
+    margin-left: auto; 
 }
 
 .customer-header {
@@ -228,14 +228,14 @@ aside .sidebar a span.msg_count{
 }
 .add-button {
     position: fixed;
-    top: 10rem; /* Position at the top */
-    right: 5rem; /* Position at the right */
+    top: 10rem; 
+    right: 5rem; 
     background-color: green;
     color: white;
-    font-size: 1.2rem; /* Increase font size */
-    padding: 1rem 2rem; /* Increase padding */
+    font-size: 1.2rem; 
+    padding: 1rem 2rem; 
     border: none;
-    border-radius: 10px; /* Increase border radius */
+    border-radius: 10px; 
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, color 0.3s;
@@ -247,40 +247,37 @@ aside .sidebar a span.msg_count{
     color: green;
 }
  
-/* CSS */
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    -color: rgba(0,0,0,0.4); 
   }
   
-  /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 60%; /* Increase the width */
+    width: 60%; 
     text-align: center;
-    border-radius: 10px; /* Add border radius */
+    border-radius: 10px; 
 }
 #cardInput {
     width: 100%;
-    height: 200px; /* Increase the height */
+    height: 200px; 
     margin-bottom: 10px;
-    padding: 10px; /* Add padding */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Add border radius */
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
 }
-  /* The Close Button */
+  
   .close {
     color: #aaaaaa;
     float: right;
@@ -312,32 +309,31 @@ aside .sidebar a span.msg_count{
     background-color: #45a049;
   }
   .card {
-    width: 80%; /* Make the card take the full width */
+    width: 80%; 
     height: 50px;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox */
-    flex-direction: row; /* Arrange elements in a row */
-    justify-content: space-between; /* Spread elements evenly */
-    align-items: center; /* Align elements vertically */
-    background-color: transparent; /* Set the background color to transparent */
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+    background-color: transparent; 
 }
 
 .card p {
     margin: 5px;
 }
 
-/* Add CSS rules to style selected cards */
-/* Add CSS rules to style selected cards */
+
 .card.selected {
-    background-color: lightblue; /* Apply light blue background only when selected */
+    background-color: lightblue; 
 }
 
 .card.selected:not(.newly-added) {
-    background-color: transparent; /* Override background color for newly added cards */
+    background-color: transparent; 
 }
 .dashboard-section {
     background-color: var(--clr-white);
@@ -346,9 +342,6 @@ aside .sidebar a span.msg_count{
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
 }
-/* Your existing CSS */
-
-/* Additional styles for interactivity and design enhancements */
 
 .dashboard-section {
     background-color: var(--clr-white);
@@ -364,7 +357,7 @@ aside .sidebar a span.msg_count{
 }
 
 .latest-users-section {
-    overflow: hidden; /* Hide overflow */
+    overflow: hidden; 
 }
 
 .latest-users .user {
@@ -381,10 +374,9 @@ aside .sidebar a span.msg_count{
 }
 
 .latest-users .user:hover {
-    transform: scale(1.02); /* Scale up on hover */
+    transform: scale(1.02); 
 }
 
-/* Additional styles for the Website Overview */
 .dashboard-section .overview {
     display: flex;
     justify-content: space-around;
@@ -396,20 +388,20 @@ aside .sidebar a span.msg_count{
     color: #fff;
     padding: 1rem;
     border-radius: 8px;
-    flex: 1; /* Adjusted */
-    margin: 0 0.5rem; /* Adjusted */
+    flex: 1; 
+    margin: 0 0.5rem; 
 }
 
 .dashboard-section .visitors {
-    background-color: #7380ec; /* Visitors color */
+    background-color: #7380ec; 
 }
 
 .dashboard-section .admins {
-    background-color: #ff7782; /* Admins color */
+    background-color: #ff7782;
 }
 
 .dashboard-section .users {
-    background-color: #41f1b6; /* Users color */
+    background-color: #41f1b6; 
 }
 
 .dashboard-section .stat i {
@@ -426,12 +418,10 @@ aside .sidebar a span.msg_count{
     text-transform: uppercase;
     margin-top: 0.5rem;
 }
-/* Add this style for the checkbox */
 .checkbox {
-    margin-right: 8px; /* Adjust as needed */
+    margin-right: 8px; 
 }
 
-/* Add this style to position the checkbox */
 .card {
     position: relative;
 }
@@ -439,12 +429,11 @@ aside .sidebar a span.msg_count{
 .card .checkbox {
     position: absolute;
     top: 50%;
-    left: -20px; /* Adjust as needed */
+    left: -20px; 
     transform: translateY(-50%);
 }
 
 
-/* Style the remove and edit buttons for each card */
 .card .remove-button,
 .card .edit-button {
     background-color: transparent;
@@ -454,7 +443,7 @@ aside .sidebar a span.msg_count{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    margin-right: 0.5rem; /* Adjust as needed */
+    margin-right: 0.5rem; 
 }
 
 .card .remove-button:hover,
@@ -462,13 +451,12 @@ aside .sidebar a span.msg_count{
     background-color: rgba(255, 0, 0, 0.7);
 }
 
-/* Updated CSS for the modal */
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Adjusted width */
+    width: 80%; 
     text-align: center;
     border-radius: 10px;
 }
@@ -489,7 +477,7 @@ aside .sidebar a span.msg_count{
 
 #editInput {
     width: 80%;
-    height: 40px; /* Increased height */
+    height: 40px; 
     padding: 10px;
     margin-bottom: 20px;
 }
