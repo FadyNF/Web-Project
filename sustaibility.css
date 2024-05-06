@@ -145,20 +145,7 @@ background-color: #FFFDD0;
     padding: 20px;
     border-radius: 10px;
 }
-.statistics {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
 
-.statistic {
-  width: 300px;
-  padding: 20px;
-  margin: 0 20px;
-  border-radius: 10px;
-  color: white;
-}
 
 .percentage {
   font-size: 72px;
@@ -400,19 +387,7 @@ section {
 .arrow:hover:before {
   border-color: #1d3601; /* darker vibrant color for arrowhead on hover */
 }
-.statistics-ring {
-  position: relative;
-  width: 800px; /* Increase width */
-  height: 800px; /* Increase height */
-  border-radius: 50%;
-  background: conic-gradient(#4CAF50 0% 40%, #6af583 40% 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 100px; /* Adjust margin-right to move it slightly to the right */
 
-}
 
 #food-waste .container {
   display: flex;
@@ -432,15 +407,94 @@ section {
 .description {
   font-size: 24px; /* Increase font size */
   color: #333;
-  text-align: center;
+  text-align: right;
   margin-top: 20px; /* Increase margin top */
 }
-.zero-food-space {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 24px;
+.zero-food-waste {
+  background-color: #FFFDD0;
+  padding: 100px 0;
+  min-height: 100vh; /* Ensure the section extends to the full height of the viewport */
+  position: relative;
+}
+
+.zero-food-waste .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.content {
+  text-align: right; /* Align content to the right */
+}
+
+.food-title {
+  font-size: 140px;
   font-weight: bold;
-  color: #313f31;
+  color: #333;
+  margin-bottom: 20px;
+}
+.zero-food-waste-content{
+  margin: 100px;
+}
+.food-desc {
+  font-size: 80px;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+/* Adjust the positioning of the title and description */
+#food-waste .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.content {
+  text-align: left; /* Align content to the left */
+  flex: 1; /* Allow content to take remaining space */
+  margin-right: 100px; /* Add margin to separate from the circular statistics ring */
+}
+
+
+/* Adjust the position and size of the statistics rings */
+.statistics-ring {
+  position: absolute;
+  width: 800px; /* Increase width */
+  height: 800px; /* Increase height */
+  border-radius: 50%;
+  background: conic-gradient(#4CAF50 0% 40%, #FFF 40% 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 70%; /* Move down slightly */
+  left: 20%; /* Move to the right slightly */
+  transform: translate(-50%, -50%); /* Center the ring */
+}
+
+.second-ring {
+  top: 70%; /* Move down slightly */
+  left: 45%; /* Move to the right slightly */
+}
+
+.third-ring {
+  top: 70%; /* Move down slightly */
+  left: 70%; /* Move to the right slightly */
+}
+
+/* Adjust the styles for the percentage and description inside each ring */
+.statistics-ring .percentage,
+.statistics-ring .description {
+  color: #2b2f2b; /* Adjust color */
+  text-align: center; /* Align center */
+}
+
+.second-ring .percentage,
+.third-ring .percentage {
+  font-size: 50px; /* Adjust font size */
+}
+
+.second-ring .description,
+.third-ring .description {
+  font-size: 30px; /* Adjust font size */
 }
