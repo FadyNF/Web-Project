@@ -127,9 +127,6 @@ aside .top div.close{
     display: none;
 }
 
-
-/**************/
-
 aside .sidebar{
     background-color: var(--clr-white);
     display: flex;
