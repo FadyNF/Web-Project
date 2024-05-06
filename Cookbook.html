@@ -71,6 +71,7 @@
       </div>
     </div>
     <div id="background">
+      <div id="notification" class="notification">Added to Favorites</div>
       <form name="searchForm" onsubmit="return checkInput(this)" method="post">
         <div id="search-div">
           <input type="text" name="search" id="search-bar" />
@@ -131,21 +132,21 @@
         <button class="exit" onclick="exitFeedback()">x</button>
         <h2>Rate our Website</h2>
         <div class="button-row">
-          <button class="choice" onclick="showTextArea('Hate')">
+          <button class="choice" onclick="showTextArea(event)">
             <span></span>Hate
           </button>
-          <button class="choice" onclick="showTextArea('Dislike')">
+          <button class="choice" onclick="showTextArea(event)">
             <span></span>Dislike
           </button>
-          <button class="choice" onclick="showTextArea('Neutral')">
+          <button class="choice" onclick="showTextArea(event)">
             <span></span>Neutral
           </button>
         </div>
         <div class="button-row">
-          <button class="choice" onclick="showTextArea('Like')">
+          <button class="choice" onclick="showTextArea(event)">
             <span></span>Like
           </button>
-          <button class="choice" onclick="showTextArea('Love')">
+          <button class="choice" onclick="showTextArea(event)">
             <span></span>Love
           </button>
         </div>
@@ -1668,8 +1669,8 @@
         <div class="icon">
           <i id="left-meals" class="fa-solid fa-angle-left"></i>
         </div>
-        <ul class="meals-bar" id="dihs9">
-          <li class="menu-item">
+        <ul class="meals-bar" >
+          <li class="menu-item" id="dish9">
             <img src="/images/dish9.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal9','Teriyaki Chicken Tenders','with Jasmine Rice and Green Beans')"
@@ -3206,8 +3207,8 @@
         <div class="icon">
           <i id="left-meals" class="fa-solid fa-angle-left"></i>
         </div>
-        <ul class="meals-bar" id="dish17">
-          <li class="menu-item">
+        <ul class="meals-bar" >
+          <li class="menu-item" id="dish17">
             <img src="/images/dish17.jpg" />
             <h4
               onclick="displayDescritpion('overlayMeal17','Sirloin & Sherry Shallot Sauce','with Garlic Parmesan Potato Clusters & Mixed Greens')"

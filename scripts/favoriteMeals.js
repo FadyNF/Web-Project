@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var removeButton = document.createElement("button");
       removeButton.textContent = "Remove from Favorites";
+      removeButton.classList.add('remove-button');
       removeButton.onclick = function () {
         removeFromFavorites(index);
       };
@@ -16,8 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
       favoriteContainer.appendChild(div);
     });
   } else {
-    favoriteContainer.textContent = "There are no meals added to favorites.";
-  }
+    favoriteContainer.innerHTML = `
+    <div class="empty-container">
+    <p>There are no meals added to favorites.</p>
+    <button class="redirect-button"><a href="cookbook.html">Go To The Cookbook >></a></button>
+    </div>
+  `;
+ }
 });
 
 // Function to remove meal from favorites

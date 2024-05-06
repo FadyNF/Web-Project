@@ -28,9 +28,14 @@ function showBox() {
   feedbackContent.style.zIndex = "1000";
 }
 
-function showTextArea() {
+function showTextArea(event) {
   const feedbackForm = document.getElementById("feedback");
   feedbackForm.style.display = "block";
+  const buttons = document.querySelectorAll(".choice");
+  buttons.forEach(button => {
+    button.classList.remove("selected");
+  });
+  event.target.classList.add("selected");
 }
 
 function showFeedbackForm() {
@@ -57,7 +62,10 @@ function feedbackInput(form) {
   } else {
     var regEx = /^[a-zA-Z0-9\s]+$/;
     if (!regEx.test(review)) {
-      printWarning("reviewErr", "Please enter a valid review (letters, numbers, and spaces only)");
+      printWarning(
+        "reviewErr",
+        "Please enter a valid review (letters, numbers, and spaces only)"
+      );
       return false;
     } else {
       printWarning("reviewErr", "");
@@ -112,15 +120,23 @@ function closeWindow(ID) {
   window.style.display = "none";
 }
 
+// Add to favorites function and notification
+function showNotification() {
+  var notification = document.getElementById("notification");
+  notification.classList.add("show");
+  setTimeout(function () {
+    notification.classList.remove("show");
+  }, 2000);
+}
 
-// Function to add meal to favorites
+
 function addToFavorites(event, dishId) {
   var dishElement = document.getElementById(dishId);
   var clonedCard = dishElement.cloneNode(true);
   var clonedCardHTML = clonedCard.outerHTML;
-  var favoriteMeals = JSON.parse(localStorage.getItem('favoriteMeals')) || [];
+  var favoriteMeals = JSON.parse(localStorage.getItem("favoriteMeals")) || [];
   favoriteMeals.push(clonedCardHTML);
-  localStorage.setItem('favoriteMeals', JSON.stringify(favoriteMeals));
-  alert('Meal has been added to favorites!');
-  event.target.classList.add('favorited');
+  localStorage.setItem("favoriteMeals", JSON.stringify(favoriteMeals));
+  showNotification();
+  event.target.classList.add("favorited");
 }

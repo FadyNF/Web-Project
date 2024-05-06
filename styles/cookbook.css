@@ -205,7 +205,9 @@
   max-width: 90%;
   text-align: center;
 }
-
+#feedbackContent h2{
+  font-family: "Poppins", sans-serif;
+}
 #textArea {
   height: 80px;
   width: 100%;
@@ -221,7 +223,9 @@
   display: none;
   margin-top: 20px;
 }
-
+#feedback h4{
+font-family: "poppins",sans-serif;
+}
 /* Exit Button */
 .exit {
   position: absolute;
@@ -251,7 +255,8 @@
 
 .choice {
   position: relative;
-  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
   font-weight: 500;
   color: #000000;
   text-decoration: none;
@@ -285,6 +290,12 @@
 .choice:hover span {
   transform: scale(1.1);
   opacity: 1;
+}
+
+.choice.selected {
+  background-color: #f1a013a9;
+  border-color: #f19f13;
+  color: #ffffff;
 }
 
 #submit-btn {

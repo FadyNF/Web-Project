@@ -44,13 +44,17 @@
   max-width: 300px;
   transition: background-color 0.3s ease;
   list-style: none;
+  align-items: center;
+  justify-content: center;
 }
 #favorite-container .menu-item h4 {
   margin-bottom: 2px;
   margin-top: 2px;
+  font-size: medium;
 }
 #favorite-container .menu-item h4:hover {
   cursor: pointer;
+  color: #f7f7f7;
 }
 
 #favorite-container .menu-item img {
@@ -73,19 +77,70 @@
 #favorite-container .heart-button {
   display: none;
 }
-
-#favorite-container button {
+#favorite-container div {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+#favorite-container .remove-button {
   border-radius: 20px;
-  margin-left: 35px;
   padding: 10px;
-  margin-top: 0;
   background-color: #f19f13;
   border: none;
+  margin: 0px 10px 0px 10px;
 }
-#favorite-container button:hoversmall {
+#favorite-container .remove-button:hover {
   cursor: pointer;
   background-color: red;
-  color: #f7f7f7;
-  border: none;
   transition: all 0.2s ease;
+  color: #f7f7f7;
 }
+
+#favorite-container .empty-container {
+  align-items: center;
+}
+#favorite-container .empty-container p {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.redirect-button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+}
+.redirect-button a {
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  padding: 10px 20px;
+  background-color: #f19f13;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.redirect-button a:hover {
+  cursor: pointer;
+  background-color: #81d0e8;
+}
+
+
+/*Notification styling*/
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  
+  .notification.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
