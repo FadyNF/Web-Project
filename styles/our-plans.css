@@ -11,17 +11,23 @@ body {
 }
 
 .nav-bar {
+    position: fixed;
     width: 100%;
     color: rgb(90, 108, 65);
     display: flex;
     top: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    padding: 10px 0;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
         url(../images/background.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background-color: white;
+    z-index: 1;
+    top: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .left-section {
@@ -105,7 +111,7 @@ a {
     height: auto;
     max-height: 750px;
     max-width: 850px;
-    margin-bottom: 50px;
+    margin: 80px 0;
 }
 
 .form .form-header {
@@ -341,6 +347,7 @@ a {
 
 .note {
     display: none;
+    margin: 0;
 }
 
 .note p {
