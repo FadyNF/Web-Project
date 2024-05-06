@@ -82,7 +82,7 @@
   background-color: #f19f13;
   border: none;
 }
-#favorite-container button {
+#favorite-container button:hoversmall {
   cursor: pointer;
   background-color: red;
   color: #f7f7f7;
