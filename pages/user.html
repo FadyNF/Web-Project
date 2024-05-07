@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/user.css">
+    <script src="/scripts/user.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="buttons">
+        <button class="nav-buttons" onclick="showAccount()">Account Information</button>
+        <button class="nav-buttons">Favourite Meals</button>
+        <button class="nav-buttons" onclick="showHistory()">History</button>
+    </div>
+
+
+    <!-- ALERT MESSAGE -->
+    <div class="message">
+        <i class="fa-regular fa-circle-check check fa-lg" style="color: #214f3b;"></i>
+        <span class="text">Edited Successfully</span>
+
+    </div>
+
+    <!-- ACCOUNT INFO -->
+
+    <div id="account-content">
+        <h2 class="acc-header">Account Information</h2>
+
+        <!-- First Name Field -->
+        <div class="row">
+            <label>First Name</label>
+
+            <input type="text" name="Fname" value="Alaa">
+            <i onclick="showtextField('editF1')" class="fa-solid fa-pen-to-square fa-lg"></i>
+            <span id="editF1">
+                <input type="text" name="editFname">
+                <button onclick="validation('editFname','Fname','editF1')">Save</button>
+            </span>
+            <div class="error" id="editFname-err"></div>
+        </div>
+
+        <!-- Second Name Field -->
+        <div class="row">
+            <label>Last Name</label>
+            <input type="text" name="Lname" value="Waleed">
+            <i onclick="showtextField('editF2')" class="fa-solid fa-pen-to-square fa-lg"></i>
+            <span id="editF2">
+
+                <input type="text" name="editLname">
+                <button onclick="validation('editLname','Lname','editF2')">Save</button>
+            </span>
+            <div class="error" id="editLname-err"></div>
+        </div>
+
+
+        <!-- Third Email Field -->
+        <div class="row">
+            <label>Email</label>
+            <input type="text" name="Email" value="aw@gmail.com">
+            <i onclick="showtextField('editF3')" class="fa-solid fa-pen-to-square fa-lg"></i>
+            <span id="editF3">
+
+                <input type="text" name="editEmail">
+                <button onclick="validation('editEmail','Email','editF3')">Save</button>
+            </span>
+            <div class="error" id="editEmail-err"></div>
+        </div>
+
+
+        <!-- Fourth Number Field -->
+        <div class="row">
+            <label>Contact Number</label>
+            <input type="text" name="number" value="01098652544">
+            <i onclick="showtextField('editF4')" class="fa-solid fa-pen-to-square fa-lg"></i>
+            <span id="editF4">
+
+                <input type="text" name="editNumber">
+                <button onclick="validation('editNumber','number','editF4')">Save</button>
+            </span>
+            <div class="error" id="editNumber-err"></div>
+        </div>
+
+
+        <!-- Fifth Name Field -->
+        <div class="row">
+            <label>Address</label>
+            <input type="text" name="address" value="vyvcyvyvdcbj">
+            <i onclick="showtextField('editF5')" class="fa-solid fa-pen-to-square fa-lg"></i>
+            <span id="editF5">
+
+                <input type="text" name="editAddress">
+                <button onclick="validation('editAddress','address','editF5')">Save</button>
+            </span>
+            <div class="error" id="editAddress-err"></div>
+        </div>
+
+    </div>
+
+
+
+
+    <div id="history-content">
+
+        <h2 id="history-head">Your History</h2>
+        <table>
+
+            <tr>
+                <th></th>
+                <th>Meal</th>
+                <th>Date</th>
+                <th>Re-Ordering</th>
+                <th>Reviewing</th>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/Tuna-Tomato-Salad.jpg"></td>
+                <td>Tuna & Tomato Pasta Salad</td>
+                <td>Thursday, 25-4-2024</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/sweet and chili chicken.jpeg"></td>
+                <td>Sweet & Chili Chicken</td>
+                <td>Thursday, 4-4-2024</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/Cheeseburger-Pizza.jpg"></td>
+                <td>Cheese Burger Pizza</td>
+                <td>Monday, 25-3-2024</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/Beef and Mushroom.jpeg"></td>
+                <td>Beef & Mushroom</td>
+                <td> Friday, 15-3-2024</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/Creamy-Lemon-Chicken.jpg">
+                <br> <img id="mealImg" src="/images/Tender-Salsa-Beef.jpg"></td>
+                <td>Creamy Lemon Chicken<br><br>
+                    Tender Salsa Beef
+                </td>
+                <td>Friday, 5-3-2024</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/Turkey-Scallopini.jpg"></td>
+                <td>Turkey Scallopini</td>
+                <td>Thursday, 15-2-2024</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+
+            <tr>
+                <td><img id="mealImg" src="/images/fajita Bowl.jpg"></td>
+                <td>Fajita Bowl</td>
+                <td>Monday, 22-1-2024</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/Steak-and-Shrimp-Kabobs.jpg"> </td>
+                <td>Steak & Shrimp Kabobs</td>
+                <td>Friday, 5-1-2024</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/salmon with spinach.jpg"></td>
+                <td>Salmon With Spinach</td>
+                <td>Sunday, 31-12-2023</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/rigatoni with sausage.jpg"></td>
+                <td>Rigatoni With Sausage</td>
+                <td>Thursday, 14-12-2023</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/Zucchini-Boats.jpg"></td>
+                <td>Zucchini Boats</td>
+                <td>Friday, 10-11-2023</td>
+                <td><button>Re-order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+
+            <tr>
+                <td><img id="mealImg" src="/images/Quick-Apricot-Chicken.jpg">
+                <br><img id="mealImg" src="/images/cheeseburger Pasta.jpg"></td>
+
+                <td>Apricot Chicken<br><br>
+                Cheeseburger Pasta</td>
+
+                <td>Thursday, 26-10-2023</td>
+                <td><button>Re-Order</button></td>
+                <td><button>Review</button></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

@@ -77,54 +77,20 @@ function dateFormat(date) {
 }
 
 
-// Favourites
-function addToFav(itemID, week) {
-    var favList = document.getElementById('favList');
-    var content = document.getElementById('favContent');
-    if (favList.children.length === 0) {
-        content.textContent = "";
-    }
-
-    var item = document.getElementById('item' + itemID + week);
-    var copy = item.cloneNode(true);
-    copy.classList.add('noAnimation');
-    var favouritesList = document.getElementById('favList');
-    favouritesList.appendChild(copy);
-}
-
-
-function removeFav(itemID, week) {
-    var removed = document.getElementById('item' + itemID + week);
-    var favouritesList = document.getElementById('favList');
-    favouritesList.removeChild(removed);
-
-    var heart = document.getElementById('icon' + itemID + week);
-    if (heart.style.color == "red") { heart.style.color = "grey"; }
-}
-
+// favourite
 function changeFavouriteC(itemID, week) {
     var heart = document.getElementById('icon' + itemID + week);
     if (heart.style.color == "red") {
         heart.style.color = "grey";
-        removeFav(itemID, week);
+   
 
     }
     else {
         heart.style.color = "red";
-        addToFav(itemID, week);
+
 
     }
 }
-
-function viewFavs() {
-
-
-    var selectedItem = document.querySelectorAll('.noAnimation');
-    selectedItem.forEach(items => {
-        items.style.display = "block";
-    });
-}
-
 
 
 // Search

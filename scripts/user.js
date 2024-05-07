@@ -3,6 +3,18 @@
 function showAccount() {
     var div = document.getElementById('account-content');
     div.style.display = "block";
+
+    var historydiv = document.getElementById('history-content');
+historydiv.style.display="none";
+}
+
+
+function showHistory() {
+    var div = document.getElementById('history-content');
+    div.style.display = "block";
+
+    var accountdiv = document.getElementById('account-content');
+    accountdiv.style.display = "none";
 }
 
 // showing edit text fields

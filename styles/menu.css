@@ -1,4 +1,3 @@
-
 header {
     background-color: #126e89;
     width: 208vh;
@@ -553,32 +552,6 @@ td {
 /* Favourite part */
 
 
-
-.overlayFav {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.popWindow-fav {
-    background-color: #c4d2d7;
-    border-radius: 10px;
-    width: 80%;
-    height: 80%;
-    position: relative;
-    overflow: auto;
-
-
-}
-
-
 .Fbtn {
     border-color: transparent;
     display: flex;
@@ -595,27 +568,6 @@ td {
 
 
 
-.FavouriteB {
-    left: 50%;
-    margin-left: 100px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-
-#favContent
-{
-    justify-content: center;
-    
-    font-size: 30px;
-    font-style: oblique;
-}
-
-
-#favList {
-    display: flex;
-    flex-wrap: wrap;
-}
 /* cart part */
 
 .overlayCart {
@@ -719,6 +671,7 @@ h3 {
 }
 
 
+/* after adding to cart */
 .message {
     position: fixed;
     top: 89%;
@@ -772,6 +725,7 @@ color: #755825;
     box-shadow: inset 90px 0 0 0 #e6be79;
     
 }
+
 
 /* rotating plates */
 .rotate-container1{
