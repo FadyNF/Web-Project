@@ -6,8 +6,11 @@ function handlePlansFormSubmit(event) {
     const checkboxes = document.querySelectorAll(
         "input[type='checkbox']:checked"
     );
+
+    const note = document.querySelector(".note");
     if (checkboxes.length === 0) {
-        document.querySelector(".note").style.display = "block";
+        note.style.display = "block"
+        note.style.marginBottom = "-15px";
         return;
     }
 
@@ -27,11 +30,7 @@ function handleCredentialsFormSubmit(event) {
             return;
         }
     });
-    if (!isFormComplete) {
-        alert("Please fill in all fields.");
-        return;
-    }
-
+    
     movePage(2);
 }
 
@@ -46,10 +45,7 @@ function handlePaymentFormSubmit(event) {
             return;
         }
     });
-    if (!isFormComplete) {
-        alert("Please fill in all fields.");
-        return;
-    }
+    
     movePage(3);
 }
 
