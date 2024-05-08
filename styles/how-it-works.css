@@ -8,16 +8,18 @@
 body {
     display: grid;
     place-items: center;
+    background-color: rgb(247, 247, 247);
 }
 
 .nav-bar {
+    position: fixed;
     width: 100%;
     color: rgb(90, 108, 65);
     display: flex;
     top: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 0;
+    padding: 10px 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
         url(../images/background.jpg);
     background-size: cover;
@@ -40,7 +42,7 @@ body {
 .name {
     margin-left: 15px;
     font-size: 27px;
-    color: rgb(32, 188, 193);
+    color: rgb(247, 247, 247);
     font-family: Pacifico;
 }
 
@@ -59,18 +61,19 @@ a {
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: rgb(32, 188, 193);
+    font-weight: 500;
+    color: rgb(247, 247, 247);
     text-transform: uppercase;
 }
 
 .nav-bar ul li::after {
     content: "";
-    height: 3px;
+    height: 2px;
     width: 0;
-    background: rgb(32, 188, 193);
+    background: rgb(229, 163, 61);
     position: absolute;
     left: 0;
-    bottom: -1px;
+    bottom: 1px;
     transition: 0.5s;
     color: white;
 }
@@ -87,7 +90,7 @@ a {
     margin-top: 5px;
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: rgb(147, 206, 229);
     min-width: 120px;
     z-index: 1000;
     list-style: none;
@@ -138,21 +141,21 @@ a {
 }
 
 .step-content h2 {
-    color: rgb(36, 36, 36);
+    color: rgb(2, 0, 0);
     font-size: 32px;
     font-family: "Ubuntu Sans";
     font-weight: 500;
 }
 
 .step-content span {
-    color:rgb(36, 36, 36);
+    color:rgb(2, 0, 0);
     font-size: 16px;
     font-weight: 400;
     margin: 15px 0px;
 }
 
 .step-content button {
-    background-color:rgb(90, 185, 191);
+    background-color:rgb(111, 193, 226);
     font-size: 17px;
     border-radius: 4px;
     box-shadow: none;
@@ -168,7 +171,7 @@ a {
 }
 
 .step-content button:hover {
-    background-color: rgb(45, 140, 147);
+    background-color: rgb(55, 115, 143);
 }
 
 .benefits-container {
