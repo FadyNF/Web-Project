@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin Panel</title>
+        <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+        <link rel="stylesheet" href="../styles/Admin.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <h2>C<span class="danger">BAAR</span></h2>
+                    </div>
+
+                    <div class="close">
+                        <span class="material-symbols-outlined"> close</span>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <a href="#" class="active" id="dashboard">
+                        <span class="material-symbols-outlined"
+                            ><i class="fas fa-chart-line"></i
+                        ></span>
+                        <h3>DashBoard</h3>
+                    </a>
+
+                    <a href="#" id="customer">
+                        <span class="material-symbols-outlined"
+                            ><i class="fas fa-users"></i
+                        ></span>
+                        <h3>Users</h3>
+                    </a>
+
+                    <a href="#" id="analytics">
+                        <span class="material-symbols-outlined"
+                            ><i class="fas fa-chart-bar"></i
+                        ></span>
+                        <h3>Analytics</h3>
+                    </a>
+
+                    <a href="#">
+                        <span class="material-symbols-outlined"
+                            ><i class="fas fa-envelope"></i
+                        ></span>
+                        <h3>Messages</h3>
+                    </a>
+
+                    <a href="#">
+                        <span class="material-symbols-outlined"
+                            ><i class="fas fa-shopping-bag"></i
+                        ></span>
+                        <h3>Products</h3>
+                    </a>
+
+                    <a href="#" id="profileLink">
+                        <span class="material-symbols-outlined"
+                            ><i class="fas fa-user-circle"></i
+                        ></span>
+                        <h3>Profile</h3>
+                    </a>
+
+                    <a href="#">
+                        <span class="material-symbols-outlined"
+                            ><i class="fas fa-sign-out-alt"></i
+                        ></span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </aside>
+
+            <div class="divider" style="display: none"></div>
+
+            <main>
+                <div class="dashboard-section">
+                    <h2>Website Overview</h2>
+                    <div class="overview">
+                        <div class="stat visitors">
+                            <i class="fas fa-users"></i>
+                            <div class="count">500</div>
+                            <div class="label">Visitors</div>
+                        </div>
+                        <div class="stat admins">
+                            <i class="fas fa-user-shield"></i>
+                            <div class="count">10</div>
+                            <div class="label">Admins</div>
+                        </div>
+                        <div class="stat users">
+                            <i class="fas fa-user"></i>
+                            <div class="count">1000</div>
+                            <div class="label">Users</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-section">
+                    <h2>Latest Users</h2>
+                    <div class="latest-users">
+                        <div class="user">
+                            <p>Name: <span id="userName1">John Doe</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail1"
+                                    >john.doe@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate1">2024-05-01</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>Name: <span id="userName2">Jane Smith</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >jane.smith@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-02</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>Name: <span id="userName2">sarah wael</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >sarah.wael@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-03</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>Name: <span id="userName2">youmna hany</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >youmna.hany@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-04</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>
+                                Name: <span id="userName2">omneya osama</span>
+                            </p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >omneya.osama@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-05</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>Name: <span id="userName2">alaa waleed</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >alaa.waleed@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-06</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>Name: <span id="userName2">fady nabil</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >fady.nabil@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-07</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>Name: <span id="userName2">emma Smith</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >emma.smith@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-08</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>
+                                Name: <span id="userName2">larry watson</span>
+                            </p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >larry.watson@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-09</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>Name: <span id="userName2">james ben</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >james.ben@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-10</span>
+                            </p>
+                        </div>
+                        <div class="user">
+                            <p>Name: <span id="userName2">clara Smith</span></p>
+                            <p>
+                                Email:
+                                <span id="userEmail2"
+                                    >clara.smith@example.com</span
+                                >
+                            </p>
+                            <p>
+                                Date Joined:
+                                <span id="userDate2">2024-05-11</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="add-button" style="display: none">ADD</div>
+            <div class="remove-button" style="display: none">Remove</div>
+            <div class="edit-button" style="display: none">Edit</div>
+            <!-- Admin.html -->
+            <!-- Modal -->
+            <div id="myModalEdit" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <input
+                        type="text"
+                        id="editInput"
+                        placeholder="Enter new product name"
+                        style="
+                            width: 80%;
+                            height: 40px;
+                            padding: 10px;
+                            margin-bottom: 20px;
+                        "
+                    />
+                    <button id="confirmEditBtn" style="padding: 10px 20px">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <textarea
+                        id="cardInput"
+                        placeholder="Enter content"
+                    ></textarea>
+                    <button id="confirmBtn">Confirm</button>
+                </div>
+                <div class="card">
+                    <div class="checkbox">
+                        <input type="checkbox" />
+                    </div>
+                    <p>Card Content</p>
+                    <div class="location">
+                        <button class="remove-button">Remove</button>
+                        <button class="edit-button">Edit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right"></div>
+        </div>
+    </body>
+
+    <script src="../scripts/Admin.js"></script>
+</html>
