@@ -507,3 +507,155 @@ td {
   color: red;
   text-decoration: none;
 }
+
+/*Cookbook's responsive styling*/
+@media screen and (max-width: 400px) {
+  #search-div {
+    padding: 10px;
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #search-bar {
+    padding: 8px;
+    margin-right: 0;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  #search-btn {
+    padding: 8px 20px;
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .error {
+    font-size: 80%;
+    text-align: center;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  #feedbackIcon {
+    top: 250px;
+  }
+
+  #feedbackContent {
+    padding: 60px 30px;
+    width: 250px;
+  }
+
+  #textArea {
+    height: 60px;
+  }
+
+  .exit {
+    height: 25px;
+    width: 25px;
+    font-size: 14px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .button-row {
+    margin-bottom: 5px;
+  }
+
+  .choice {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin: 8px;
+  }
+
+  #submit-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .heading {
+    font-size: 20px; 
+    margin-top: 30px; 
+    margin-bottom: 15px;
+  }
+
+  .sub-heading {
+    font-size: 14px; 
+    margin-bottom: 15px; 
+  }
+
+  .sentence {
+    margin-top: 20px; 
+    margin-left: 5%; 
+    font-size: 14px; 
+  }
+
+  .sub-sentence {
+    margin-bottom: 5px; 
+    margin-left: 5%;
+    font-size: 12px;
+  }
+
+  .overlay-container {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 40px;
+    margin-bottom: 2cm;
+    padding: 0px 10px 10px 10px;
+    border-radius: 15px;
+    max-width: 100%;
+  }
+
+  .overlay-container h3 {
+    font-size: large;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .overlay-container #extension {
+    margin-left: 10px;
+    margin-top: 0px;
+    font-size: small;
+  }
+
+  .overlay-container p {
+    text-align: center;
+    font-size: small;
+  }
+
+  .overlay-container img {
+    padding-top: 5px;
+    border-radius: 15px;
+  }
+
+  .description {
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .description-content {
+    margin: 5px 0;
+  }
+
+  header .title {
+    font-size: 18px;
+    margin-left: 50px;
+  }
+
+  .servings {
+    font-size: x-small;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+
+  .content-description td {
+    font-size: medium;
+    padding: 6px 8px;
+  }
+}
