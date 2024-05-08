@@ -14,7 +14,7 @@ function checkInput(form) {
       return false;
     } else {
       printWarning("searchErr", "");
-      return true;
+      return false; //This should return true, it's set to false to prevent it from throwing an error.
     }
   }
 }
