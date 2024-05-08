@@ -1,4 +1,9 @@
 
+/*black:    #020000
+blue:      #81d0e8
+darker blue:      #167592
+white:     #f7f7f7
+orange:    #f19f13*/
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@
 }
 
 body {
-    background-color: rgb(244, 240, 217);
+    background-color: white;
     font-family: Roboto;
     display: flex;
     justify-content: center;
@@ -15,7 +20,7 @@ body {
 .banner {
     width: 100%;
     height: 100vh;
-    background-color: #f5f0d6;
+    
     background-size: cover;
     background-position: center;
 }
@@ -25,7 +30,7 @@ body {
     width: 100%;
     margin: auto;
     height: 10%;
-    color: rgb(90, 108, 65);
+    color: #167592;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +40,8 @@ body {
 }
 
 .nav-bar.scrolled {
-    background-color: #fbb1623a; /* Change background color to a darker shade */
+    backdrop-filter: blur(5px);
+    background-color: #f1a0137a; /* Change background color to a darker shade */
 }
 
 .left-section {
@@ -55,7 +61,7 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(90, 108, 65);
+    color:  #167592;
     font-family: Roboto;
 }
 
@@ -68,7 +74,7 @@ a {
 
 .banner ul li a {
     text-decoration: none;
-    color: rgb(90, 108, 65);
+    color:  #167592;
     text-transform: uppercase;
 }
 
@@ -76,7 +82,7 @@ a {
     content: "";
     height: 3px;
     width: 0;
-    background: rgb(90, 108, 65);
+    background: #81d0e8;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -91,16 +97,6 @@ a {
     position: relative;
 }
 
-.dropdown-content {
-    margin-top: 10px;
-    display: none;
-    position: absolute;
-    background-color: #fbb162d3;
-    min-width: 120px;
-    z-index: 1000;
-    list-style: none;
-    padding: 0;
-}
 
 .dropdown-content li {
     padding: 10px;
@@ -110,25 +106,6 @@ a {
     display: block;
 }
 
-.content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-}
-
-.content h1 {
-    font-size: 35px;
-    margin-top: 80px;
-}
-
-.content p {
-    margin: 20px auto;
-    font-weight: 300;
-    line-height: 25px;
-}
 
 /* Responsive Adjustments */
 
@@ -159,7 +136,7 @@ a {
     margin-top: 10px;
     display: none;
     position: absolute;
-    background-color: #fbb162d3;
+    background-color: #81d0e8;
     min-width: 120px;
     z-index: 1000;
     list-style: none;
