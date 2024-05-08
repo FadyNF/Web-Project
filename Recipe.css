@@ -116,7 +116,7 @@ a {
     content: "";
     height: 3px;
     width: 0;
-    background: rgb(90, 108, 65);
+    background:  #167592;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -210,12 +210,13 @@ a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 10px;
     font-size: 18px;
+    color: #167592;
 }
 
 .dish-container p {
     margin-top: 5px;
     font-size: 14px;
-    color: #666;
+    color: #f19f13;
 }
 
 .dishes {
@@ -238,10 +239,11 @@ a {
 .header h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.4em; /* Adjust font size as needed */
+    color: #167592;
 }
 
 .header p {
-    color: #808080;
+    color: black;
 }
 
 .left-content {
@@ -259,19 +261,21 @@ a {
 }
 
 .header-left h2 {
-    color: rgb(50, 94, 37);
+    color: #f19f13;
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 10px; /* Add margin bottom to the header */
 }
 
 .header-left p {
+    color: #2083a1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px; /* Adjust font size as needed */
     line-height: 1.5; /* Adjust line height as needed */
 }
 
 .header-left h3 {
+    color: #167592;
     font-size: 30px;
 }
 
@@ -284,15 +288,15 @@ a {
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #fbb262;
+    border: 2px solid #f19f13;
     background: transparent;
-    color: #fbb262;
+    color: #f19f13;
     position: relative;
     cursor: pointer;
 }
 
 .cover {
-    background: #fbb262;
+    background: #f19f13;
     height: 100%;
     width: 0%;
     border-radius: 25px;
@@ -318,7 +322,7 @@ button:hover {
     position: absolute; /* Change to absolute */
     top: 85em;
     left: 0;
-    background-color: rgba(255, 191, 96, 0.329);
+    background-color: #f1a013;
     width: 100%;
     height: 70%;
 }
@@ -330,6 +334,7 @@ button:hover {
 }
 
 .theheader h1 {
+    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     opacity: 100%;
     font-size: 36px; /* Adjust font size */
@@ -351,7 +356,7 @@ button:hover {
 }
 
 .Outline h2 {
-    color: rgb(50, 94, 37);
+    color: black;
     font-weight: 500;
     margin-top: 10px; /* Add space between image and title */
     font-size: 19px; /* Adjust font size */
@@ -360,7 +365,7 @@ button:hover {
 .Outline p {
     font-size: 15px; /* Adjust font size */
     line-height: 1.4;
-    color: rgb(71, 117, 57); /* Add line height for readability */
+    color: white; /* Add line height for readability */
 }
 
 .oval-background {
@@ -397,24 +402,26 @@ button:hover {
 }
 
 .content-left h1 {
-    color: rgb(50, 94, 37);
+    color: #167592;
     font-family: "Playfair Display", serif;
     font-size: 50px;
     margin-bottom: 30px;
 }
 
 .content-left p {
-    color: rgb(94, 136, 81);
+    color: #f19f13;
     margin-bottom: 20px;
 }
 
 .content-left ul {
+    margin-left: 1em;
     padding: 0;
 }
 
 .content-left ul li {
+    
     margin-bottom: 5px;
-    color: rgb(94, 136, 81);
+    color: #f19f13;
 }
 
 .backgroundsection2 {
@@ -422,7 +429,7 @@ button:hover {
     position: absolute; /* Change to absolute */
     top: 155em;
     left: 0;
-    background-color: rgba(255, 191, 96, 0.315);
+    background-color: #f19f13;
     width: 100%;
     height: 60%;
 }
@@ -436,15 +443,15 @@ button:hover {
     margin: 30px 8px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #fbb262;
+    border: 2px solid #f19f13;
     background: transparent;
-    color: #fbb262;
+    color: #f19f13;
     position: relative;
     cursor: pointer;
 }
 
 .cover1 {
-    background: #fbb262;
+    background: #f19f13;
     height: 100%;
     width: 0%;
     border-radius: 25px;
@@ -494,7 +501,7 @@ button:hover {
     left: 10em; /* Adjust the distance from the right side */
     transform: translateY(-50%);
     text-align: right;
-    color: rgb(50, 94, 37);
+    color: black;
 }
 
 .icons {
@@ -513,14 +520,14 @@ button:hover {
 }
 
 .icon i {
-    color: rgb(50, 94, 37);
+    color: black;
     font-size: 24px;
     margin-right: 10px;
 }
 
 .icon p {
     font-size: 16px;
-    color: rgb(116, 167, 101);
+    color: black;
     margin: 0;
 }
 
@@ -540,13 +547,13 @@ button:hover {
 }
 
 .icon1 i {
-    color: rgb(50, 94, 37);
+    color: black;
     font-size: 24px;
     margin-right: 10px;
 }
 
 .icon1 p {
-    color: rgb(116, 167, 101);
+    color: black;
     font-size: 16px;
     margin: 0;
 }
