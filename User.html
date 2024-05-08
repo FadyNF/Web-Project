@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -12,131 +12,135 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
     <link
-    href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-    rel="stylesheet"
-  />
-  
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <title>User Profile</title>
     <link rel="stylesheet" href="/styles/User.css" />
     <script src="/scripts/User.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="user-container">
-        <div class="img-div">
-          <img src="/images/user-icon.png" alt="profile photo">
-        </div>
-        <!--USER INFORMATION-->
-        <div class="user-info">
-          <h2 class="topOfdiv">Personal Information:</h2>
-  
-          <div class="info-container">
-            <a class="edit-btn" href="#" class="btn btn-info btn-lg">
-              <span class="glyphicon glyphicon-edit"></span>  Edit
-            </a>
-            <span>
-              <h3 class="information">First Name:</h3>
-              <h4 class="inputs">Omneya</h4></span
-            >
-            <span>
-              <h3 class="information">Last Name:</h3>
-              <h4 class="inputs">Osama</h4></span
-            >
-            <span>
-              <h3 class="information">Email address:</h3>
-              <h4 class="inputs">omneya@gmail.com</h4></span
-            >
-            <span>
-              <h3 class="information">Phone number:</h3>
-              <h4 class="inputs">01152778815</h4></span
-            >
-  
-          </div>
-        </div>
-        <!--ADDRESS INFORMATION-->
-        <div class="address-info">
-          <h2 class="topOfdiv">Address Information:</h2>
-  
-          <div class="info-container">
-            <span>
-              <h3 class="information">Country:</h3>
-              <h4 class="inputs">Egypt</h4></span
-            ><span>
-              <h3 class="information">City/State:</h3>
-              <h4 class="inputs">Cairo</h4></span
-            >
-            <a class="edit-btn" href="#" class="btn btn-info btn-lg">
-              <span class="glyphicon glyphicon-edit"></span> Edit
-            </a>
-          </div>
-        </div>
-        <!--CARD INFORMATION-->
-        <div class="card-info">
-          <h2 class="topOfdiv">Card Information:</h2>
-  
-          <div class="info-container">
-            <span>
-              <h3 class="information">Card number:</h3>
-              <h4 class="inputs">xxxx xxxx xxxx xx13</h4></span
-            >
-            <a class="edit-btn" href="#" class="btn btn-info btn-lg">
-              <span class="glyphicon glyphicon-edit"></span> Edit
-            </a>
-          </div>
+      <div class="img-div">
+        <img src="/images/user-icon.png" alt="profile photo" />
+      </div>
+
+      <!-- USER INFORMATION -->
+      <div class="user-info">
+        <h2 class="topOfdiv">Personal Information:</h2>
+        <div class="info-container">
+          <a class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+          <table>
+            <tr>
+              <td><h3 class="information">First Name:</h3></td>
+              <td><h4 class="inputs">Omneya</h4></td>
+            </tr>
+            <tr>
+              <td><h3 class="information">Last Name:</h3></td>
+              <td><h4 class="inputs">Osama</h4></td>
+            </tr>
+            <tr>
+              <td><h3 class="information">Email address:</h3></td>
+              <td><h4 class="inputs">omneya@gmail.com</h4></td>
+            </tr>
+            <tr>
+              <td><h3 class="information">Phone number:</h3></td>
+              <td><h4 class="inputs">01152778815</h4></td>
+            </tr>
+          </table>
         </div>
       </div>
-  
-      <!--SIDEBAR HTML-->
-  
-      <nav>
+
+      <!-- ADDRESS INFORMATION -->
+      <div class="address-info">
+        <h2 class="topOfdiv">Address Information:</h2>
+        <div class="info-container">
+          <table>
+            <tr>
+              <td><h3 class="information">Country:</h3></td>
+              <td><h4 class="inputs">Egypt</h4></td>
+            </tr>
+            <tr>
+              <td><h3 class="information">City/State:</h3></td>
+              <td><h4 class="inputs">Cairo</h4></td>
+            </tr>
+          </table>
+          <a class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD INFORMATION -->
+      <div class="card-info">
+        <h2 class="topOfdiv">Card Information:</h2>
+        <div class="info-container">
+          <table>
+            <tr>
+              <td><h3 class="information">Card number:</h3></td>
+              <td><h4 class="inputs">xxxx xxxx xxxx xx13</h4></td>
+            </tr>
+          </table>
+          <a class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--SIDEBAR HTML-->
+
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+      </div>
+      <div class="sidebar">
         <div class="logo">
           <i class="bx bx-menu menu-icon"></i>
         </div>
-        <div class="sidebar">
-          <div class="logo">
-            <i class="bx bx-menu menu-icon"></i>
-          </div>
-  
-          <div class="sidebar-content">
-            <ul class="lists">
-              <li class="list">
-                <a href="User.html" class="sidebar-link">
-                  <i class="bx bx-user-circle icon"></i>
-                  <span class="link">My Profile</span>
-                </a>
-              </li>
-              <li class="list">
-                <a href="#" class="sidebar-link">
-                  <i class="bx bx-heart icon"></i>
-                  <span class="link">Favorite Meals</span>
-                </a>
-              </li>
-              <li class="list">
-                <a href="#" class="sidebar-link">
-                  <i class="bx bx-history icon"></i>
-                  <span class="link">Past Orders</span>
-                </a>
-              </li>
-              <li class="list">
-                <a href="#" class="sidebar-link">
-                  <i class="bx bx-trash icon"></i>
-                  <span class="link">Delete Account</span>
-                </a>
-              </li>
-            </ul>
-  
-            <div class="bottom-cotent">
-              <li class="list">
-                <a href="#" class="sidebar-link">
-                  <i class="bx bx-log-out icon"></i>
-                  <span class="link">Logout</span>
-                </a>
-              </li>
-            </div>
+
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="User.html" class="sidebar-link">
+                <i class="bx bx-user-circle icon"></i>
+                <span class="link">My Profile</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="favoriteMeals.html" class="sidebar-link">
+                <i class="bx bx-heart icon"></i>
+                <span class="link">Favorite Meals</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="sidebar-link">
+                <i class="bx bx-history icon"></i>
+                <span class="link">Past Orders</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="sidebar-link">
+                <i class="bx bx-trash icon"></i>
+                <span class="link">Delete Account</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="bottom-cotent">
+            <li class="list">
+              <a href="#" class="sidebar-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Logout</span>
+              </a>
+            </li>
           </div>
         </div>
-      </nav>
-  
-      <section class="overlay"></section>
-  
-</body>
+      </div>
+    </nav>
+    <section class="overlay"></section>
+  </body>
 </html>

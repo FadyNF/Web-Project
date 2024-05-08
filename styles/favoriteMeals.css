@@ -53,7 +53,7 @@
   font-size: medium;
 }
 #favorite-container .menu-item h4:hover {
-  cursor: pointer;
+  cursor: auto;
   color: #f7f7f7;
 }
 
