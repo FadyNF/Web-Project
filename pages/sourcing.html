@@ -1,99 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourcing Page</title>
-    <link rel="stylesheet" href="sourcing.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-    <!-- Navigation Header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">FreshBites</h1>
-            <nav>
-                <ul>
-                    <li><a href="#sourcing">Sourcing</a></li>
-                    <li><a href="#philosophy">Our Philosophy</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#sustainability">Sustainability</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sourcing Page</title>
+        <link rel="stylesheet" href="../styles/sourcing.css" />
+        <!-- Font Awesome for icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Navigation Header -->
+        <header class="header">
+            <div class="container">
+                <h1 class="logo">FreshBites</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#sourcing">Sourcing</a></li>
+                        <li><a href="#philosophy">Our Philosophy</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#sustainability">Sustainability</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Sourcing Section -->
-    <section id="sourcing" class="sourcing">
-        <div class="container">
-            <h2 class="section-title">Sourcing</h2>
-            <p class="sourcing-text">at FreshBites</p>
-        </div>
-    </section>
+        <!-- Sourcing Section -->
+        <section id="sourcing" class="sourcing">
+            <div class="container">
+                <h2 class="section-title">Sourcing</h2>
+                <p class="sourcing-text">at FreshBites</p>
+            </div>
+        </section>
 
-    <!-- Our Philosophy Section -->
-<section id="philosophy" class="philosophy">
-  <div class="container">
-      <div class="philosophy-content">
-          <div class="philosophy-text">
-              <h2 class="section-title">Our Philosophy</h2>
-              <p>
-                  The culinary and sourcing teams at FreshBites use a rigorous process to choose responsible ingredient suppliers with similar values. Thanks in part to their support, our meals produce a 31% lower life-cycle carbon footprint than those of the same size from a supermarket.
-              </p>
-          </div>
-          <div class="philosophy-icon">
-              <img src="sprout.png" alt="Sprout Icon">
-          </div>
-      </div>
-  </div>
-</section>
+        <!-- Our Philosophy Section -->
+        <section id="philosophy" class="philosophy">
+            <div class="container">
+                <div class="philosophy-content">
+                    <div class="philosophy-text">
+                        <h2 class="section-title">Our Philosophy</h2>
+                        <p>
+                            The culinary and sourcing teams at FreshBites use a
+                            rigorous process to choose responsible ingredient
+                            suppliers with similar values. Thanks in part to
+                            their support, our meals produce a 31% lower
+                            life-cycle carbon footprint than those of the same
+                            size from a supermarket.
+                        </p>
+                    </div>
+                    <div class="philosophy-icon">
+                        <img src="../images/icons/sourcing/sprout.png" alt="Sprout Icon" />
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2 class="section-title">Products</h2>
+                <div class="product-buttons">
+                    <button class="product-button active" data-target="fish">
+                        Fish
+                    </button>
+                    <button class="product-button" data-target="citrus">
+                        Citrus
+                    </button>
+                    <button class="product-button" data-target="colavita">
+                        Colavita
+                    </button>
+                    <button class="product-button" data-target="pratt">
+                        Pratt
+                    </button>
+                </div>
+                <div class="product-content">
+                    <div id="fish" class="product-info active">
+                        <h3>Fair and fresh from the ocean</h3>
+                        <p>
+                            The Better Fish® offers the world’s first Fair
+                            Trade-certified ocean-farmed white fish. This
+                            supplier’s focus on quality and flavor has made
+                            barramundi the fastest-growing fish species in the
+                            country. Thanks to climate-resilient practices that
+                            minimize food waste and environmental impact, they
+                            earned the U.S. Secretary of State’s 2021 Award for
+                            Corporate Excellence in Climate Innovation.
+                        </p>
+                    </div>
+                    <div id="citrus" class="product-info">
+                        <h3>Produce straight from the source</h3>
+                        <p>
+                            Wonderful Citrus is on a mission to provide the
+                            safest, freshest-quality citrus for today and
+                            tomorrow. This company diverts its surplus material
+                            to create other products like juice and pulp—40,000
+                            tons!—for human consumption. Going even further,
+                            Wonderful Citrus aims to divert 100% of its waste
+                            from landfills in California, Texas, and New Jersey
+                            by 2024.
+                        </p>
+                    </div>
+                    <div id="colavita" class="product-info">
+                        <h3>Oil and vinegar powered by the sun</h3>
+                        <p>
+                            Colavita’s bottles aren’t the only thing about them
+                            that’s green! This Italian goods company—known for
+                            its olive oil and vinegar—participates in the Net
+                            Carbon Zero program for all imports with their
+                            partner Kuehne+Nagel, the largest worldwide freight
+                            forwarder. Additionally, Colavita uses solar power
+                            for all its U.S. and Italy facilities.
+                        </p>
+                    </div>
+                    <div id="pratt" class="product-info">
+                        <h3>Sustainability’s part of the package</h3>
+                        <p>
+                            Pratt is the world's largest, privately-held 100%
+                            recycled paper and America's 5th largest corrugated
+                            packaging company. Dedicated to sustainability and
+                            environmental innovation, Pratt works with
+                            communities and businesses to recover old corrugated
+                            containers and mixed paper products, diverting them
+                            from landfills and repurposing them into
+                            high-quality packaging solutions.
+                        </p>
+                    </div>
+                    <!-- Add content for other products here -->
+                </div>
+            </div>
+        </section>
 
-    <!-- Products Section -->
-<section id="products" class="products">
-  <div class="container">
-    <h2 class="section-title">Products</h2>
-    <div class="product-buttons">
-      <button class="product-button active" data-target="fish">Fish</button>
-      <button class="product-button" data-target="citrus">Citrus</button>
-      <button class="product-button" data-target="colavita">Colavita</button>
-      <button class="product-button" data-target="pratt">Pratt</button>
-    </div>
-    <div class="product-content">
-      <div id="fish" class="product-info active">
-        <h3>Fair and fresh from the ocean</h3>
-        <p>The Better Fish® offers the world’s first Fair Trade-certified ocean-farmed white fish. This supplier’s focus on quality and flavor has made barramundi the fastest-growing fish species in the country. Thanks to climate-resilient practices that minimize food waste and environmental impact, they earned the U.S. Secretary of State’s 2021 Award for Corporate Excellence in Climate Innovation.</p>
-      </div>
-      <div id="citrus" class="product-info">
-        <h3>Produce straight from the source</h3>
-        <p>Wonderful Citrus is on a mission to provide the safest, freshest-quality citrus for today and tomorrow. This company diverts its surplus material to create other products like juice and pulp—40,000 tons!—for human consumption. Going even further, Wonderful Citrus aims to divert 100% of its waste from landfills in California, Texas, and New Jersey by 2024.</p>
-      </div>
-      <div id="colavita" class="product-info">
-        <h3>Oil and vinegar powered by the sun</h3>
-        <p>Colavita’s bottles aren’t the only thing about them that’s green! This Italian goods company—known for its olive oil and vinegar—participates in the Net Carbon Zero program for all imports with their partner Kuehne+Nagel, the largest worldwide freight forwarder. Additionally, Colavita uses solar power for all its U.S. and Italy facilities.</p>
-      </div>
-      <div id="pratt" class="product-info">
-        <h3>Sustainability’s part of the package        </h3>
-        <p>Pratt is the world's largest, privately-held 100% recycled paper and America's 5th largest corrugated packaging company. Dedicated to sustainability and environmental innovation, Pratt works with communities and businesses to recover old corrugated containers and mixed paper products, diverting them from landfills and repurposing them into high-quality packaging solutions.</p>
-      </div>
-      <!-- Add content for other products here -->
-    </div>
-  </div>
-</section>
-
-    
-
-
-
-    <!-- Sustainability Section -->
-<section id="sustainability" class="sustainability">
-  <div class="container">
-      <a href="sustaibility.html" class="sustainability-link">Sustainability at FreshBites</a>
-  </div>
-</section>
-<script src="sourcing.js"></script>
-
-
-</body>
+        <!-- Sustainability Section -->
+        <section id="sustainability" class="sustainability">
+            <div class="container">
+                <a href="sustaibility.html" class="sustainability-link"
+                    >Sustainability at FreshBites</a
+                >
+            </div>
+        </section>
+        <script src="../scripts/sourcing.js"></script>
+    </body>
 </html>
