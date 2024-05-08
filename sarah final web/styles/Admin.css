@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ribeye+Marrow&family=Tapestry&family=Whisper&display=swap');
+
+ 
+
+:root{
+    --clr-primary:#7380ec;
+    --clr-danger:#ff7782;
+    --clr-success:#41f1b6;
+    --clr-white:#fff;
+    --clr-info-dark:#7d8da1;
+    --clr-info-light:#dce1eb;
+    --clr-dark:#363949;
+    --clr-warnig:#ff4edc;
+    --clr-light:rgba(132,139,200,0.18);
+    --clr-primary-variant:#111e88;
+    --clr-dark-variant:#677483;
+    --clr-color-background:#f6f6f9;
+
+    --clr-border-radius:2rem;
+    --border-radius-1:0.4rem;
+    --border-radius-2:0.8rem;
+    --border-radius-3:1.2rem;
+
+    --card-padding:1.8rem;
+    --padding-1:1.2rem;
+    --box-shadow:0 2rem 3rem var(--clr-light);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background: var(--clr-color-background);
+}
+
+.container
+{
+    display: grid;
+    width: 96%;
+    gap:1.8rem;
+    grid-template-columns: 14rem auto 14rem;
+    margin:0 auto ;
+}
+
+a{
+    color: var(--clr-dark);
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size:0.8;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+}
+
+.text-muted{
+    color: var(--clr-info-dark);
+}
+p{
+    color: var(--clr-dark-variant);
+}
+b{
+    color: var(--clr-dark);
+}
+.primary{
+    color: var(--clr-primary);
+}
+.success{
+    color: var(--clr-success);
+}
+.danger{
+    color:var(--clr-danger) ;
+}
+.warning{
+    color: var(--clr-warnig);
+}
+
+aside{
+    height: 100vh;
+}
+aside .top{
+    background-color: var(--clr-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.4rem;
+}
+aside .logo{
+    display: flex;
+    gap:1rem;
+}
+
+aside .top div.close{
+    display: none;
+}
+
+
+/**************/
+
+aside .sidebar{
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    position: relative;
+    top: 1rem;
+}
+
+
+aside h3{
+    font-weight: 400;
+}
+
+aside .sidebar a{
+    display: flex;
+    color: var(--clr-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+    transition: all .1s ease-in;
+
+}
+
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition:all .1s ease-in;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+aside .sidebar.active {
+    /* Align to the bottom */
+    z-index: 1000; /* Set a higher z-index to ensure it's on top of other content */
+   /* Set a fixed width */
+    /* Allow scrolling if needed */
+    /* Add a shadow for better visibility */
+}
+
+/* Adjusted position for the container when the sidebar is active */
+
+aside .sidebar a.active{
+    background: var(--clr-light);
+    color: var(--clr-primary);
+    margin-left: 0;
+    border-left: 5px solid var(--clr-primary);
+}
+
+/* Adjusted position for the main content when the sidebar is active */
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: var(--clr-primary);
+}
+aside .sidebar a:hover{
+    color: var(--clr-primary);
+
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+    transition: .4s ease;
+}
+
+aside .sidebar a span.msg_count{
+    background: var(--clr-danger);
+    color: var(--clr-white);
+    padding: 2px 5px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+.card {
+    margin-left: -160px;
+    width: 80%; /* Make the card take the full width */
+    height: 5W 0px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Arrange elements in a row */
+    justify-content: space-between; /* Spread elements evenly */
+    align-items: center; /* Align elements vertically */
+}
+
+.card p {
+    margin: 5px;
+}
+
+.location {
+    margin-left: auto; /* Align location to the right */
+}
+
+.customer-header {
+    font-size: 30px;
+    margin-top: 1em; 
+}
+
+.customer-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.right h2 {
+  margin-left: -4.3em;
+    margin-top: 2em;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style for the form labels */
+.right label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Style for the input fields */
+.right input[type="text"],
+.right input[type="email"],
+.right select {
+    width: 19em;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Style for the submit button */
+.right button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style for the form */
+#add-customer-form {
+    
+    margin-top: 2em;
+    
+    margin-left: -8em; /* Adjust the left margin */
+}
+
+.delete-button {
+    padding: 2px;
+    background-color: red;
+border-radius: 4px;
+    color: white;
+    margin-left: 10px;
+}
+button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#delete {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f44336; /* Red */
+}
+
+/* Style the Cancel button */
+#cancel {
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 1em;
+    background-color: #FFC107; /* Orange */
+}
+
+/* Style the Save Changes button */
+#save-changes {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #2196F3; /* Blue */
+}
+
+
+.chart-header {
+   margin-top: 1em;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the chart canvas */
+#revenueChart {
+    width: 80%; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    margin: 0 auto;
+    display: block;
+}
+
+.additional-cards-container {
+    margin-top: 10px;
+    display: flex; /* Display cards in a row */
+    margin-left: 3em; /* Adjust the left margin */
+}
+
+.additional-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 50px; /* Adjust the right margin between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 12em; /* Adjust the width of each card */
+    /* Display cards in a row */
+    /* Align cards to the top */
+    /* Include padding and border in the width */
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7380ec; /* Adjust the color as needed */
+}
+
+
+.add-button {
+    position: fixed;
+    top: 10rem; 
+    right: 5rem; 
+    background-color: green;
+    color: white;
+    font-size: 1.2rem; 
+    padding: 1rem 2rem; 
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.add-button:hover {
+    background-color: white;
+    color: green;
+}
+ 
+.modal {
+    z-index: 99999999;
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: transparent; 
+    -color: rgba(0,0,0,0.4); 
+  }
+  
+.modal-content {
+    z-index: 999999999;
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+    text-align: center;
+    border-radius: 10px; 
+}
+#cardInput {
+    width: 100%;
+    height: 200px; 
+    margin-bottom: 10px;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #cardInput {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #confirmBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #confirmBtn:hover {
+    background-color: #45a049;
+  }
+  .card1 {
+    width: 80%; 
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+    background-color: transparent; 
+}
+
+.card1 p {
+    margin: 5px;
+}
+
+
+.card1.selected {
+    background-color: lightblue; 
+}
+
+.card1.selected:not(.newly-added) {
+    background-color: transparent; 
+}
+.dashboard-section {
+    background-color: var(--clr-white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+}
+
+.dashboard-section {
+    background-color: var(--clr-white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-section:hover {
+    transform: translateY(-5px);
+}
+
+.latest-users-section {
+    overflow: hidden; 
+}
+
+.latest-users .user {
+    border-bottom: 1px solid var(--clr-info-dark);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.latest-users .user:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.latest-users .user:hover {
+    transform: scale(1.02); 
+}
+
+.dashboard-section .overview {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.dashboard-section .stat {
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    flex: 1; 
+    margin: 0 0.5rem; 
+}
+
+.dashboard-section .visitors {
+    background-color: #7380ec; 
+}
+
+.dashboard-section .admins {
+    background-color: #ff7782;
+}
+
+.dashboard-section .users {
+    background-color: #41f1b6; 
+}
+
+.dashboard-section .stat i {
+    font-size: 2rem;
+}
+
+.dashboard-section .stat .count {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.dashboard-section .stat .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+.checkbox {
+    margin-right: 8px; 
+}
+
+.card {
+    position: relative;
+}
+
+.card .checkbox {
+    position: absolute;
+    top: 50%;
+    left: -20px; 
+    transform: translateY(-50%);
+}
+
+
+.card .remove-button,
+.card .edit-button {
+    background-color: transparent;
+    color: #040404;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 0.5rem; 
+}
+
+.card .remove-button:hover,
+.card .edit-button:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#editInput {
+    width: 80%;
+    height: 40px; 
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#confirmEditBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#confirmEditBtn:hover {
+    background-color: #45a049;
+}
+.profile-circle {
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-size: cover;
+    justify-content: center;
+    margin-left: 50%;
+}
+
+.profile-header {
+    margin-top: 1em;
+    color: #333; /* Example color */
+    font-size: 24px; /* Example font size */
+    /* Add any other styles you want for the header */
+}
+
+
+.input-container {
+    display: flex; /* Use flexbox to arrange items in a row */
+    flex-direction: column; /* Arrange items vertically */
+}
+
+.input-container label {
+    margin-left: 20%;
+    margin-bottom: 5px; /* Add bottom margin for spacing between labels */
+}
+
+.input-container input {
+    width: 30%;/* Allow input fields to grow and take up available space */
+    margin-bottom: 10px; /* Add bottom margin for spacing between inputs */
+}
+
+.profile-input {
+    margin-left: 20%;
+    margin-right: 20px; /* Add right margin for spacing between inputs */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#emailInput {
+    /* Add your specific styling for the email input here */
+    margin-left: 70%;/* For example, changing the background color */
+  width: 40%;
+}
+
+
+
+
+label[for="emailInput"] {
+    margin-left: 70%;
+    margin-top: -10.1em;
+    /* Add your specific styling for the label of the email input here */
+     /* For example, changing the color of the label */
+}
+
+label[for="contactNumberInput"] {
+    margin-left: 70%;
+    margin-top: -5.1em;
+    /* Add your specific styling for the label of the email input here */
+     /* For example, changing the color of the label */
+}
+#contactNumberInput {
+    margin-left: 70%;/* For example, changing the background color */
+  width: 40%;
+    /* Add your custom styles here */
+}
+
+/* Style for address input */
+#addressInput {
+    width: 90%;
+    /* Add your custom styles here */
+}
+/* Style for state input */
+#stateInput {
+    margin-left: 70%;/* For example, changing the background color */
+    width: 40%;
+    /* Add your custom styles here */
+}
+label[for="stateInput"] {
+    margin-left: 70%;
+    margin-top: -5em;
+    /* Add your specific styling for the label of the email input here */
+     /* For example, changing the color of the label */
+}
+
+
+/* Style for country input */
+#countryInput {
+    margin-left: 70%;/* For example, changing the background color */
+    width: 40%;
+    /* Add your custom styles here */
+}
+label[for="countryInput"] {
+    margin-left: 70%;
+    margin-top: -5.3em;
+    /* Add your specific styling for the label of the email input here */
+     /* For example, changing the color of the label */
+}
+/* Style for password input */
+#passwordInput {
+    width: 90%;
+    /* Add your custom styles here */
+}
+

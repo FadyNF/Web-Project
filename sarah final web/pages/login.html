@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="login__title">Login</h1>
+        <form action="#" class="login__form" id="loginForm">
+            <div class="login__input-group">
+                <input type="email" id="input-email" required>
+                <label for="input-email" class="login__label">Email</label>
+            </div>
+            <div class="login__input-group">
+                <input type="password" id="input-password" required>
+                <label for="input-password" class="login__label">Password</label>
+            </div>
+            <div class="login__check">
+                <input type="checkbox" id="input-check">
+                <label for="input-check" class="login__check-label">Remember me</label>
+            </div>
+            <button type="submit" class="login__button">Login</button>
+        </form>
+        <p class="login__social">- Login With Social Media Account -</p>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="login__signup">Don't have an account? <span class="signup-link">Sign Up</span></p>
+        <div class="dark-mode-toggle">
+            <input type="checkbox" id="darkModeToggle">
+            <label for="darkModeToggle" class="toggle-label"></label>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
