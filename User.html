@@ -30,30 +30,68 @@
       <div class="user-info">
         <h2 class="topOfdiv">Personal Information:</h2>
         <div class="info-container">
-          <a class="edit-btn" href="#">
-            <span class="glyphicon glyphicon-edit"></span> Edit
-          </a>
           <table>
             <tr>
               <td><h3 class="information">First Name:</h3></td>
-              <td><h4 class="inputs">Omneya</h4></td>
+              <td><h4 class="inputs" id="fname"></h4></td>
             </tr>
             <tr>
               <td><h3 class="information">Last Name:</h3></td>
-              <td><h4 class="inputs">Osama</h4></td>
+              <td><h4 class="inputs" id="lname"></h4></td>
             </tr>
             <tr>
               <td><h3 class="information">Email address:</h3></td>
-              <td><h4 class="inputs">omneya@gmail.com</h4></td>
+              <td><h4 class="inputs" id="email"></h4></td>
             </tr>
             <tr>
               <td><h3 class="information">Phone number:</h3></td>
-              <td><h4 class="inputs">01152778815</h4></td>
+              <td><h4 class="inputs" id="phone"></h4></td>
             </tr>
           </table>
+          <a id="infoEdit" class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
         </div>
       </div>
-
+      <!-- User Edit Content -->
+      <div id="userEditOverlay" class="editOverlay">
+        <div class="overlay-content">
+          <h2>Edit User Personal information:</h2>
+          <label for="editFirstName">Enter First Name:</label>
+          <input type="text" id="editFirstName" /><br />
+          <label for="editLastName">Enter Last Name:</label>
+          <input type="text" id="editLastName" /><br />
+          <label for="editEmail">Enter Email address:</label>
+          <input type="text" id="editEmail" /><br />
+          <label for="editPhone">Enter Phone number:</label>
+          <input type="text" id="editPhone" /><br />
+          <button onclick="saveUserInfo()">Save Changes</button>
+        </div>
+      </div>
+      <!--PASSWORD INFROMATION-->
+      <div class="password-info">
+        <h2 class="topOfdiv">Password Information:</h2>
+        <div class="info-container">
+          <table>
+            <tr>
+              <td><h3 class="information">Password:</h3></td>
+              <td><h4 class="inputs" id="password"></h4></td>
+            </tr>
+          </table>
+          <a id="passwordEdit" class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+        </div>
+      </div>
+      <!--password edit content-->
+      <div id="passwordEditOverlay" class="editOverlay">
+        <div class="overlay-content">
+          <h2>Change Password:</h2>
+          <label for="editPassword">Enter new password:</label>
+          <input type="text" id="editPassword" />
+          <button onclick="savePassword()">Save Changes</button>
+        </div>
+      </div>
       <!-- ADDRESS INFORMATION -->
       <div class="address-info">
         <h2 class="topOfdiv">Address Information:</h2>
@@ -61,16 +99,28 @@
           <table>
             <tr>
               <td><h3 class="information">Country:</h3></td>
-              <td><h4 class="inputs">Egypt</h4></td>
+              <td><h4 class="inputs" id="country"></h4></td>
             </tr>
             <tr>
               <td><h3 class="information">City/State:</h3></td>
-              <td><h4 class="inputs">Cairo</h4></td>
+              <td><h4 class="inputs" id="city"></h4></td>
             </tr>
           </table>
-          <a class="edit-btn" href="#">
+          <a id="addressEdit" class="edit-btn" href="#">
             <span class="glyphicon glyphicon-edit"></span> Edit
           </a>
+        </div>
+      </div>
+
+      <!-- Address Edit Content -->
+      <div id="addressEditOverlay" class="editOverlay">
+        <div class="overlay-content">
+          <h2>Edit Address Information:</h2>
+          <label for="editCountry">Country:</label>
+          <input type="text" id="editCountry" /><br />
+          <label for="editCity">City/State:</label>
+          <input type="text" id="editCity" /><br />
+          <button onclick="saveAddressInfo()">Save Changes</button>
         </div>
       </div>
 
@@ -81,16 +131,25 @@
           <table>
             <tr>
               <td><h3 class="information">Card number:</h3></td>
-              <td><h4 class="inputs">xxxx xxxx xxxx xx13</h4></td>
+              <td><h4 class="inputs" id="card"></h4></td>
             </tr>
           </table>
-          <a class="edit-btn" href="#">
+          <a id="cardEdit" class="edit-btn" href="#">
             <span class="glyphicon glyphicon-edit"></span> Edit
           </a>
         </div>
       </div>
-    </div>
 
+      <!-- Card Edit Content -->
+      <div id="cardEditOverlay" class="editOverlay">
+        <div class="overlay-content">
+          <h2>Edit Card Information:</h2>
+          <label for="editCardNum">Card Number:</label>
+          <input type="text" id="editCardNum" />
+          <button onclick="saveCardInfo()">Save Changes</button>
+        </div>
+      </div>
+    </div>
     <!--SIDEBAR HTML-->
 
     <nav>

@@ -22,7 +22,8 @@ body {
 
 .user-info,
 .address-info,
-.card-info {
+.card-info,
+.password-info {
   background-color: #f7f7f7;
   padding: 20px;
   margin: 20px 0;
@@ -160,23 +161,88 @@ nav.open ~ .overlay {
   left: 260px;
   pointer-events: auto;
 }
+/*************************************************/
+.editOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
 
-/*Making the user page responsive to a phone display*/
-@media screen and (max-width: 480px) {
-  .user-container {
-    margin: 20px 0;
-  }
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-  .user-info,
-  .address-info,
-  .card-info {
-    width: 90%;
-  }
+#userEditOverlay .overlay-content {
+  width: 600px;
+}
 
-  .edit-btn {
-    top: 5px;
-    right: 5px;
-    padding: 3px 6px;
-    font-size: 12px;
-  }
+#addressEditOverlay .overlay-content {
+  width: 300px;
+}
+
+#cardEditOverlay .overlay-content {
+  width: 350px;
+}
+
+.editOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-content label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.overlay-content input[type="text"] {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.overlay-content button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.overlay-content button:hover {
+  background-color: #0056b3;
+}
+
+.overlay-content button:focus {
+  outline: none;
 }
