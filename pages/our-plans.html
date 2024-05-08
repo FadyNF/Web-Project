@@ -73,7 +73,6 @@
                     <div class="step">
                         <form
                             class="choose-plans-container"
-                            onsubmit="handlePlansFormSubmit(event)"
                         >
                             <div class="select-preference">
                                 <div class="description">
@@ -352,7 +351,7 @@
                     <div class="step">
                         <form
                             class="credentials-form-container"
-                            onsubmit="handleCredentialsFormSubmit(event)"
+                            
                         >
                             <div class="description">
                                 <h4>Enter Credentials</h4>
@@ -424,7 +423,6 @@
                     <div class="step">
                         <form
                             class="payment-form-container"
-                            onsubmit="handlePaymentFormSubmit(event)"
                         >
                             <div class="description">
                                 <h4>Payment Credentials</h4>
@@ -445,6 +443,7 @@
                                             required
                                         />
                                     </label>
+
                                     <label for="serialCardNumber" class="label">
                                         <span class="title">Card Number</span>
                                         <input
@@ -457,6 +456,7 @@
                                             required
                                         />
                                     </label>
+                                    
                                     <div class="split">
                                         <label for="ExDate" class="label">
                                             <span class="title"
@@ -471,7 +471,11 @@
                                                 placeholder="01/23"
                                                 required
                                             />
+                                            <div class="note">
+                                                <p>Please enter a valid date</p>
+                                            </div>
                                         </label>
+
                                         <label for="cvv" class="label">
                                             <span class="title">CVV</span>
                                             <input
@@ -483,6 +487,9 @@
                                                 placeholder="CVV"
                                                 required
                                             />
+                                            <div class="note">
+                                                <p>Please enter a 3-digit CVV number.</p>
+                                            </div>
                                         </label>
                                     </div>
                                 </div>
@@ -595,7 +602,6 @@
         </div>
 
         <script src="../scripts/our-plans.js"></script>
-        <script src="../scripts/checkout-plan.js"></script>
         <script src="../scripts/confetti.js"></script>
     </body>
 </html>

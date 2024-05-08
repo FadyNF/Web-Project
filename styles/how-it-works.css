@@ -11,13 +11,14 @@ body {
 }
 
 .nav-bar {
+    position: fixed;
     width: 100%;
     color: rgb(90, 108, 65);
     display: flex;
     top: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 0;
+    padding: 10px 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
         url(../images/background.jpg);
     background-size: cover;
