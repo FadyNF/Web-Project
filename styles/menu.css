@@ -1,6 +1,6 @@
 header {
     background-color: #126e89;
-    width: 208vh;
+    width: 100%;
     height: 15vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/images/background.jpg);
     background-size: cover;
@@ -821,3 +821,41 @@ overflow: hidden;
         transform: rotate(360deg);
     }
 }
+
+@media only screen and (max-width: 400px) {
+
+header{
+    width: 360%;
+}
+.items-container{
+    width: 90%;
+}
+  #titleM{
+    width: 100%;
+    padding-left: 90%;
+  }
+
+  .buttons{
+    width: 100%;
+    padding-left: 90%;
+  }
+
+  .searchPart{
+    width: 100%;
+    padding-left: 90%;
+  }
+
+  .rotate-container2,
+  .rotate-container4{
+    margin-left: 185%;
+    overflow: hidden;
+  }
+
+  .rotate-container3{
+    left: -50%;
+  }
+  
+}
+
+
+
