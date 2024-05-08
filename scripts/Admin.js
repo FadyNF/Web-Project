@@ -638,7 +638,7 @@ profileLink.addEventListener('click', () => {
     const circleDiv = document.createElement('div');
     circleDiv.classList.add('profile-circle');
     // Set background image for the circle
-    circleDiv.style.backgroundImage = 'url(avatar.png)';
+    circleDiv.style.backgroundImage = 'url(../images/admin-images/avatar.png)';
 
     // Append the circle div to the main section
     mainSection.appendChild(circleDiv);
