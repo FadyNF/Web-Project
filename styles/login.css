@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(background.jpg); /* Relative path to the image */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 500px; /* Adjust width as needed */
+    height: 600px; /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login__title {
+    font-size: 50px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* Increase margin bottom for spacing */
+}
+
+.login__form {
+    display: flex;
+    font-size: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px; /* Increase margin bottom for spacing */
+}
+
+.login__input-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.login__input-group input {
+    width: 400px; /* Adjust input width to fit the larger container */
+    padding: 30px;
+    font-size: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login__input-group input:focus {
+    border-color: #007bff;
+}
+
+.login__input-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    transition: top 0.3s ease, color 0.3s ease;
+}
+
+.login__input-group input:focus + label,
+.login__input-group input:valid + label {
+    top: -10px;
+    font-size: 30x;
+    color: #007bff;
+}
+
+.login__check {
+    margin-bottom: 13px;
+}
+
+.login__check-label {
+    color: #333;
+}
+
+.login__button {
+    width: 200px; /* Adjust button width to fit the larger container */
+    margin-top: 20px; /* Increase margin top for spacing */    padding: 10px;
+    border: none;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login__button:hover {
+    background-color: #0056b3;
+}
+.dark-mode .login__button:hover {
+    background-color: #0056b3;
+}
+/* Existing styles */
+/* ... */
+
+.login__social {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 0; /* Remove margin bottom */
+    margin-top: -90px; /* Increase margin top */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Decrease margin bottom */
+}
+
+.social-icon {
+    font-size: 20px;
+    color: #333;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change to your desired hover color */
+}
+.dark-mode .social-icon:hover {
+    color: #007bff; /* Change to your desired hover color */
+}
+/* Existing styles */
+/* ... */
+
+.login__signup {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px; /* Increase margin top */
+}
+
+.signup-link {
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    color: #007bff; /* Change to your desired hover color */
+}
+
+.dark-mode .signup-link:hover {
+    color: #007bff; /* Change to your desired hover color */
+}
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-label {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-label:before {
+    content: "\1F319"; /* Moon icon */
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#darkModeToggle:checked + .toggle-label {
+    background-color: #333; /* Dark mode background color */
+}
+
+#darkModeToggle:checked + .toggle-label:before {
+    transform: translateX(20px);
+}
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1e1e1e; /* Dark mode background color */
+    color: #ffffff; /* Dark mode text color */
+
+}
+
+.container.dark-mode {
+    background-color: rgba(30, 30, 30, 0.8); /* Dark mode container background color */
+
+}
+/* Dark mode text color for specific elements */
+.dark-mode .login__title {
+    color: #ffffff; /* Dark mode text color for login title */
+}
+
+.dark-mode .login__label {
+    color: #cccccc; /* Dark mode text color for labels */
+}
+
+.dark-mode .login__check-label {
+    color: #cccccc; /* Dark mode text color for checkbox label */
+}
+
+.dark-mode .login__button {
+    background-color: #007bff; /* Dark mode background color for button */
+    color: #ffffff; /* Dark mode text color for button */
+}
+
+.dark-mode .login__social,
+.dark-mode .signup-link {
+    color: #cccccc; /* Dark mode text color for social links and signup link */
+}
+
+.dark-mode .social-icon {
+    color: #cccccc; /* Dark mode text color for social icons */
+}
+.dark-mode .login__signup{
+    color: #cccccc; /* Dark mode text color for social icons */
+}
+
