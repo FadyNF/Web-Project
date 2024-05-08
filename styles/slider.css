@@ -173,3 +173,43 @@
   background-color: #f4faf7;
   height: 8cm;
 }
+
+/*Slider's responsive styling*/
+@media screen and (max-width:400px) {
+  .cuisines,
+  .dishes {
+    margin-left: 15px;
+    max-width: 90%;
+  }
+
+  .tabs-bar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .title {
+    margin: 5px 10px;
+    font-size: 26px;
+  }
+
+  .meals1,
+  .meals2,
+  .meals3,
+  .meals4 {
+    margin-left: 10px;
+    max-width: 90%;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .menu-item {
+    padding: 15px;
+  }
+
+  .meals-bar {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;
+  }
+  
+}
