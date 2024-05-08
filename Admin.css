@@ -132,7 +132,7 @@ aside .top div.close{
 /**************/
 
 aside .sidebar{
-    background-color: #167592;
+    background-image: linear-gradient(to bottom, #167592, #78d1d1);
     display: flex;
     flex-direction: column;
     height: 85vh;
@@ -213,6 +213,7 @@ aside .sidebar a span.msg_count{
     height: 5W 0px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    background-color: white;
     padding: 10px;
     margin-bottom: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
