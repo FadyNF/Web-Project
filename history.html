@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/history.css" />
+    <link rel="stylesheet" href="/styles/User.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="/scripts/User.js" defer></script>
+  </head>
+  <body>
+    <div id="history-content">
+      <h1 id="history-head">Your History</h1>
+      <table>
+        <tr>
+          <th>Meal Image</th>
+          <th>Meal Name</th>
+          <th>Date</th>
+          <th>Re-Ordering</th>
+          <th>Reviewing</th>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish1.jpg" /></td>
+          <td>Tuna & Tomato Pasta Salad</td>
+          <td>Thursday, 25-4-2024</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish6.jpg" /></td>
+          <td>Sweet & Chili Chicken</td>
+          <td>Thursday, 4-4-2024</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish2.jpg" /></td>
+          <td>Cheeseburger Pizza</td>
+          <td>Monday, 25-3-2024</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish7.jpg" /></td>
+          <td>Beef & Mushroom</td>
+          <td>Friday, 15-3-2024</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img id="mealImg" src="/images/History/orderedDish5.jpg" /> <br />
+            <img id="mealImg" src="/images/History/orderedDish12.jpg" />
+          </td>
+          <td>
+            Creamy Lemon Chicken<br /><br />
+            Zucchini Boats
+          </td>
+          <td>Friday, 5-3-2024</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish8.jpg" /></td>
+          <td>Turkey Scallopini</td>
+          <td>Thursday, 15-2-2024</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish3.jpg" /></td>
+          <td>Fajita Bowl</td>
+          <td>Monday, 22-1-2024</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish5.jpg" /></td>
+          <td>Steak & Shrimp Kabobs</td>
+          <td>Friday, 5-1-2024</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish10.jpg" /></td>
+          <td>Salmon With Spinach</td>
+          <td>Sunday, 31-12-2023</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish11.jpg" /></td>
+          <td>Rigatoni With Sausage</td>
+          <td>Thursday, 14-12-2023</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td><img id="mealImg" src="/images/History/orderedDish12.jpg" /></td>
+          <td>Zucchini Boats</td>
+          <td>Friday, 10-11-2023</td>
+          <td><button class="reOrder">Re-order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+
+        <tr>
+          <td>
+            <img id="mealImg" src="/images/History/orderedDish13.jpg" />
+            <br /><img id="mealImg" src="/images/History/orderedDish4.jpg" />
+          </td>
+
+          <td>
+            Apricot Chicken<br /><br />
+            Cheeseburger Pasta
+          </td>
+
+          <td>Thursday, 26-10-2023</td>
+          <td><button class="reOrder">Re-Order</button></td>
+          <td><button class="review">Review</button></td>
+        </tr>
+      </table>
+    </div>
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+        </div>
+
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="User.html" class="sidebar-link">
+                <i class="bx bx-user-circle icon"></i>
+                <span class="link">My Profile</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="favoriteMeals.html" class="sidebar-link">
+                <i class="bx bx-heart icon"></i>
+                <span class="link">Favorite Meals</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="history.html" class="sidebar-link">
+                <i class="bx bx-history icon"></i>
+                <span class="link">Past Orders</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="sidebar-link">
+                <i class="bx bx-trash icon"></i>
+                <span class="link">Delete Account</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="bottom-cotent">
+            <li class="list">
+              <a href="#" class="sidebar-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Logout</span>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="overlay"></section>
+  </body>
+</html>
