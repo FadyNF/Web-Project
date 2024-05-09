@@ -62,12 +62,44 @@ function editUserInfo() {
 
   document.getElementById("userEditOverlay").style.display = "block";
 }
-
 function saveUserInfo() {
   var editedFirstName = document.getElementById("editFirstName").value;
   var editedLastName = document.getElementById("editLastName").value;
   var editedEmail = document.getElementById("editEmail").value;
   var editedPhone = document.getElementById("editPhone").value;
+
+  // Clear previous error messages
+  document.getElementById("firstNameError").innerText = "";
+  document.getElementById("lastNameError").innerText = "";
+  document.getElementById("emailError").innerText = "";
+  document.getElementById("phoneError").innerText = "";
+
+  var emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/;
+  var phoneRegex = /^\d+$/;
+
+  if (editedFirstName.trim() === "") {
+    document.getElementById("firstNameError").innerText =
+      "Please enter your First Name.";
+    return;
+  }
+
+  if (editedLastName.trim() === "") {
+    document.getElementById("lastNameError").innerText =
+      "Please enter your Last Name.";
+    return;
+  }
+
+  if (!emailRegex.test(editedEmail)) {
+    document.getElementById("emailError").innerText =
+      "Please enter a valid email address.";
+    return;
+  }
+
+  if (!phoneRegex.test(editedPhone)) {
+    document.getElementById("phoneError").innerText =
+      "Please enter a valid phone number.";
+    return;
+  }
 
   document.getElementById("fname").innerText = editedFirstName;
   document.getElementById("lname").innerText = editedLastName;
@@ -76,6 +108,7 @@ function saveUserInfo() {
 
   document.getElementById("userEditOverlay").style.display = "none";
 }
+/********************************************************************/
 
 function editAddressInfo() {
   var country = document.getElementById("country").innerText;
@@ -86,17 +119,31 @@ function editAddressInfo() {
 
   document.getElementById("addressEditOverlay").style.display = "block";
 }
-
 function saveAddressInfo() {
   var editedCountry = document.getElementById("editCountry").value;
   var editedCity = document.getElementById("editCity").value;
+
+  document.getElementById("countryError").innerText = "";
+  document.getElementById("cityError").innerText = "";
+
+  if (editedCountry.trim() === "") {
+    document.getElementById("countryError").innerText =
+      "Please enter the country.";
+    return;
+  }
+
+  if (editedCity.trim() === "") {
+    document.getElementById("cityError").innerText =
+      "Please enter the city/state.";
+    return;
+  }
 
   document.getElementById("country").innerText = editedCountry;
   document.getElementById("city").innerText = editedCity;
 
   document.getElementById("addressEditOverlay").style.display = "none";
 }
-
+/********************************************************************/
 function editPasswordInfo() {
   var password = document.getElementById("password");
   document.getElementById("editPassword").value = password;
@@ -107,13 +154,24 @@ function savePassword() {
   document.getElementById("password").innerText = newPassword;
   document.getElementById("passwordEditOverlay").style.display = "none";
 }
+/********************************************************************/
 function editCardInfo() {
   var password = document.getElementById("card");
   document.getElementById("editCardNum").value = password;
   document.getElementById("cardEditOverlay").style.display = "block";
 }
 function saveCardInfo() {
-  var newPassword = document.getElementById("editCardNum").value;
+  var editedCardNum = document.getElementById("editCardNum").value;
+
+  document.getElementById("cardError").innerText = "";
+
+  var cardRegex = /^\d{16}$/;
+  if (!cardRegex.test(editedCardNum)) {
+    document.getElementById("cardError").innerText =
+      "Please enter a valid 16-digit card number.";
+    return;
+  }
+
   document.getElementById("card").innerText = newPassword;
   document.getElementById("cardEditOverlay").style.display = "none";
 }
@@ -140,7 +198,7 @@ function deleteAccount() {
 }
 /******************************************************************************/
 const logoutLink = document.querySelector("#logoutLink");
-logoutLink.addEventListener("click", function(event) {
+logoutLink.addEventListener("click", function (event) {
   event.preventDefault();
-    // window.location.href = ".html";  //This should redirects to the login/signup page after logging out.
+  // window.location.href = ".html";  //This should redirects to the login/signup page after logging out.
 });

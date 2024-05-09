@@ -6,6 +6,10 @@ body {
   background: #e3f2fd;
 }
 
+.error{
+  color: red;
+  transition: all .2s ease-in;
+}
 .user-container {
   display: flex;
   flex-direction: column;
