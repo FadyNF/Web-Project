@@ -10,42 +10,99 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navigation header styles */
-.header {
-    background-color: #f3f3f3;
-    padding: 20px 0;
-}
-
-.header .container {
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    color: rgb(90, 108, 65);
     display: flex;
+    top: 0;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), */
+        /* url(../images/background.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    background-color: white;
+    z-index: 1;
+    top: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
 }
 
 .logo {
-    font-size: 24px;
-    color: #8b4513;
+    height: 55px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
+.name {
+    margin-left: 15px;
+    font-size: 27px;
+    color: rgb(32, 188, 193);
+    font-family: Pacifico;
 }
 
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
+a {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
+    color: rgb(32, 188, 193);
+    font-family: Roboto;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(32, 188, 193);
+    text-transform: uppercase;
+}
+
+.nav-bar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: rgb(32, 188, 193);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+    color: white;
+}
+
+.nav-bar ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Section styles */
@@ -66,6 +123,7 @@ nav ul li a {
     color: white;
     text-align: center;
     padding: 100px 0;
+    margin-top: 70px;
 }
 
 .sourcing-text {
