@@ -559,7 +559,9 @@ td {
     height: 60px;
   }
 
-
+  .nav-bar ul {
+    display: none;
+  }
 
   .exit {
     height: 25px;
