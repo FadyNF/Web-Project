@@ -246,7 +246,6 @@ nav.open ~ .overlay {
 .overlay-content button:focus {
   outline: none;
 }
-
 #warning-popup {
   display: none;
   position: fixed;

@@ -98,7 +98,7 @@ function deleteAccount() {
 
   confirmDeleteBtn.addEventListener("click", () => {
     overlay.style.display = "none";
-    // window.location.href = ".html";  //This should redirects to the login/signup page or homepage after account deletion.
+    window.location.href = "../pages/login.html";
   });
 }
 
