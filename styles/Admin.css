@@ -1,13 +1,18 @@
+/*black:    #020000
+blue:      #81d0e8
+darker blue:      #167592
+white:     #f7f7f7
+orange:    #f19f13*/
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ribeye+Marrow&family=Tapestry&family=Whisper&display=swap');
 
  
 
 :root{
-    --clr-primary:#7380ec;
+    --clr-primary:white;
     --clr-danger:#ff7782;
     --clr-success:#41f1b6;
     --clr-white:#fff;
-    --clr-info-dark:#7d8da1;
+    --clr-info-dark:white;
     --clr-info-light:#dce1eb;
     --clr-dark:#363949;
     --clr-warnig:#ff4edc;
@@ -15,12 +20,10 @@
     --clr-primary-variant:#111e88;
     --clr-dark-variant:#677483;
     --clr-color-background:#f6f6f9;
-
     --clr-border-radius:2rem;
     --border-radius-1:0.4rem;
     --border-radius-2:0.8rem;
     --border-radius-3:1.2rem;
-
     --card-padding:1.8rem;
     --padding-1:1.2rem;
     --box-shadow:0 2rem 3rem var(--clr-light);
@@ -64,6 +67,9 @@ h1{
     font-weight: 800;
     font-size: 1.8rem;
 }
+.logo h2{
+    color: #f19f13;
+}
 h2{
     font-size: 1.4rem;
 }
@@ -97,7 +103,7 @@ b{
     color: var(--clr-success);
 }
 .danger{
-    color:var(--clr-danger) ;
+    color:white ;
 }
 .warning{
     color: var(--clr-warnig);
@@ -107,7 +113,7 @@ aside{
     height: 100vh;
 }
 aside .top{
-    background-color: var(--clr-white);
+    background-color: #167592;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -126,7 +132,7 @@ aside .top div.close{
 /**************/
 
 aside .sidebar{
-    background-color: var(--clr-white);
+    background-image: linear-gradient(to bottom, #167592, #78d1d1);
     display: flex;
     flex-direction: column;
     height: 85vh;
@@ -207,6 +213,7 @@ aside .sidebar a span.msg_count{
     height: 5W 0px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    background-color: white;
     padding: 10px;
     margin-bottom: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -505,7 +512,7 @@ button {
 }
 
 .latest-users .user {
-    border-bottom: 1px solid var(--clr-info-dark);
+    border-bottom: 1px solid #f19f13;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
@@ -537,15 +544,15 @@ button {
 }
 
 .dashboard-section .visitors {
-    background-color: #7380ec; 
+    background-color: #f19f13; 
 }
 
 .dashboard-section .admins {
-    background-color: #ff7782;
+    background-color: #167592;
 }
 
 .dashboard-section .users {
-    background-color: #41f1b6; 
+    background-color: #81d0e8; 
 }
 
 .dashboard-section .stat i {
@@ -711,6 +718,10 @@ label[for="contactNumberInput"] {
     width: 90%;
     /* Add your custom styles here */
 }
+
+/* Style for city input */
+
+
 /* Style for state input */
 #stateInput {
     margin-left: 70%;/* For example, changing the background color */
@@ -723,7 +734,10 @@ label[for="stateInput"] {
     /* Add your specific styling for the label of the email input here */
      /* For example, changing the color of the label */
 }
-
+/* Style for postal code input */
+#postalCodeInput {
+    /* Add your custom styles here */
+}
 
 /* Style for country input */
 #countryInput {
@@ -742,4 +756,5 @@ label[for="countryInput"] {
     width: 90%;
     /* Add your custom styles here */
 }
+
 
