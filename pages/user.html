@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +19,7 @@
 
     <title>User Profile</title>
     <link rel="stylesheet" href="/styles/User.css" />
-    <script src="/scripts/User.js" defer></script>
+    <script src="../scripts/User.js" defer></script>
   </head>
   <body>
     <div class="user-container">
@@ -54,20 +55,26 @@
         </div>
       </div>
       <!-- User Edit Content -->
-      <div id="userEditOverlay" class="editOverlay">
-        <div class="overlay-content">
-          <h2>Edit User Personal information:</h2>
-          <label for="editFirstName">Enter First Name:</label>
-          <input type="text" id="editFirstName" /><br />
-          <label for="editLastName">Enter Last Name:</label>
-          <input type="text" id="editLastName" /><br />
-          <label for="editEmail">Enter Email address:</label>
-          <input type="text" id="editEmail" /><br />
-          <label for="editPhone">Enter Phone number:</label>
-          <input type="text" id="editPhone" /><br />
-          <button onclick="saveUserInfo()">Save Changes</button>
-        </div>
-      </div>
+  <!-- User Edit Content -->
+<div id="userEditOverlay" class="editOverlay">
+  <div class="overlay-content">
+    <h2>Edit User Personal information:</h2>
+    <label for="editFirstName">Enter First Name:</label>
+    <input type="text" id="editFirstName" /><br />
+    <span class="error" id="firstNameError" class="error-message"></span><br />
+    <label for="editLastName">Enter Last Name:</label>
+    <input type="text" id="editLastName" /><br />
+    <span class="error" id="lastNameError" class="error-message"></span><br />
+    <label for="editEmail">Enter Email address:</label>
+    <input type="text" id="editEmail" /><br />
+    <span class="error" id="emailError" class="error-message"></span><br />
+    <label for="editPhone">Enter Phone number:</label>
+    <input type="text" id="editPhone" /><br />
+    <span class="error" id="phoneError" class="error-message"></span><br />
+    <button onclick="saveUserInfo()">Save Changes</button>
+  </div>
+</div>
+
       <!--PASSWORD INFROMATION-->
       <div class="password-info">
         <h2 class="topOfdiv">Password Information:</h2>
@@ -118,12 +125,13 @@
           <h2>Edit Address Information:</h2>
           <label for="editCountry">Country:</label>
           <input type="text" id="editCountry" /><br />
+          <span class="error" id="countryError" class="error-message"></span><br />
           <label for="editCity">City/State:</label>
           <input type="text" id="editCity" /><br />
+          <span class="error" id="cityError" class="error-message"></span><br />
           <button onclick="saveAddressInfo()">Save Changes</button>
         </div>
       </div>
-
       <!-- CARD INFORMATION -->
       <div class="card-info">
         <h2 class="topOfdiv">Card Information:</h2>
@@ -146,10 +154,10 @@
           <h2>Edit Card Information:</h2>
           <label for="editCardNum">Card Number:</label>
           <input type="text" id="editCardNum" />
+          <span class="error" id="cardError" class="error-message"></span><br />
           <button onclick="saveCardInfo()">Save Changes</button>
         </div>
       </div>
-    </div>
     <!--SIDEBAR HTML-->
 
     <nav>
@@ -182,16 +190,16 @@
               </a>
             </li>
             <li class="list">
-              <a href="#" class="sidebar-link">
+              <a href="#" id="deleteAcc" class="sidebar-link">
                 <i class="bx bx-trash icon"></i>
                 <span class="link">Delete Account</span>
               </a>
             </li>
           </ul>
 
-          <div class="bottom-cotent">
+          <div class="bottom-content">
             <li class="list">
-              <a href="#" class="sidebar-link">
+              <a href="#" id="logoutLink" class="sidebar-link">
                 <i class="bx bx-log-out icon"></i>
                 <span class="link">Logout</span>
               </a>

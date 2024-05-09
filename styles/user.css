@@ -1,3 +1,4 @@
+
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 
 body {
@@ -6,6 +7,10 @@ body {
   background: #e3f2fd;
 }
 
+.error {
+  color: red;
+  transition: all 0.2s ease-in;
+}
 .user-container {
   display: flex;
   flex-direction: column;
@@ -183,40 +188,6 @@ nav.open ~ .overlay {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
-#userEditOverlay .overlay-content {
-  width: 600px;
-}
-
-#addressEditOverlay .overlay-content {
-  width: 300px;
-}
-
-#cardEditOverlay .overlay-content {
-  width: 350px;
-}
-
-.editOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-}
-
-.overlay-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .overlay-content label {
   display: block;
   margin-bottom: 5px;
@@ -246,6 +217,7 @@ nav.open ~ .overlay {
 .overlay-content button:focus {
   outline: none;
 }
+/*Popup styling*/
 #warning-popup {
   display: none;
   position: fixed;
@@ -264,11 +236,6 @@ nav.open ~ .overlay {
   padding: 30px;
   border-radius: 30px;
   text-align: center;
-}
-
-.warning-box i {
-  font-size: 24px; /* Adjust the font size as needed */
-  color: #ff9800; /* Adjust the color as needed */
 }
 #popupTitle {
   font-size: 24px;
@@ -313,4 +280,47 @@ nav.open ~ .overlay {
 #cancellingReq {
   background-color: red;
   color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+  .user-info,
+  .address-info,
+  .card-info,
+  .password-info {
+    width: 90%;
+  }
+
+  .edit-btn {
+    font-size: 12px;
+  }
+  .editOverlay .overlay-content {
+    width: 90%;
+  }
+  .warning-box {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  #popupTitle {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 130px;
+    border-radius: 15px;
+    border: 3px solid red;
+    margin-bottom: 10px;
+  }
+
+  #message {
+    font-size: 16px;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  .confirmingReq,
+  #cancellingReq {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
