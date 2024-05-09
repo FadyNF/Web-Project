@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Cuisine and Dishes Tabs */
+.cuisines,
+.dishes {
+  margin-left: 240px;
+  max-width: 1000px;
+  background: #f4faf7;
+  border-radius: 13px;
+  overflow-x: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styling */
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.icon:first-child {
+  height: 100%;
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #f4f5fa 80%, transparent);
+}
+
+.icon:last-child {
+  height: 100%;
+  right: 0;
+  justify-content: flex-end;
+  height: 100%;
+  background: linear-gradient(-90deg, #f4f5fa 80%, transparent);
+}
+
+.icon:first-child:hover {
+  background: linear-gradient(90deg, #e8f4fa 80%, transparent);
+}
+
+.icon:last-child:hover {
+  background: linear-gradient(-90deg, #e8f4fa 80%, transparent);
+}
+
+.icon i {
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  background: #f4faf7;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.icon i:hover {
+  background: #e8f4fa;
+}
+
+/* Tabs Bar Styling */
+.tabs-bar {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-left: 100px;
+  padding-right: 100px;
+  height: 60px;
+}
+
+.tabs-bar .tab {
+  cursor: pointer;
+  color: #020000;
+  font-size: 1.18rem;
+  white-space: nowrap;
+  background: #81d0e8;
+  padding: 13px 20px;
+  border-radius: 30px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.tabs-bar .tab:hover {
+  background-color: #167592;
+  color: #f7f7f7;
+}
+
+.tabs-bar .tab.active {
+  color: #f7f7f7;
+  background:#f19f13;
+  border-color:transparent;
+}
+
+/* Title Styling */
+.title {
+  color: #71a1d1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 20px 20px;
+  margin: 5px 230px;
+}
+
+/* Meals Styling */
+.meals1,
+.meals2,
+.meals3,
+.meals4 {
+  padding: 10px;
+  margin-left: 240px;
+  max-width: 1000px;
+  background: #f4faf7;
+  border-radius: 13px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 8cm;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item {
+  background-color: #81d0e8cc;
+  padding: 20px 20px 10px 20px;
+  border-radius: 100px 100px 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #66a3b6;
+}
+.menu-item h4{
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+.menu-item h4:hover
+{
+  cursor: pointer;
+}
+.menu-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+}
+
+.menu-item:hover{
+  background-color: #f19f13;
+  color: #f4faf7;
+}
+.meals-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #f4faf7;
+  height: 8cm;
+}
+
+/*Slider's responsive styling*/
+@media screen and (max-width:400px) {
+  .cuisines,
+  .dishes {
+    margin-left: 15px;
+    max-width: 90%;
+  }
+
+  .tabs-bar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .title {
+    margin: 5px 10px;
+    font-size: 26px;
+  }
+
+  .meals1,
+  .meals2,
+  .meals3,
+  .meals4 {
+    margin-left: 10px;
+    max-width: 90%;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .menu-item {
+    padding: 15px;
+  }
+
+  .meals-bar {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;
+  }
+  
+}

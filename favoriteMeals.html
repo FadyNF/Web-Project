@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/cookbook.css" />
+    <link rel="stylesheet" href="/styles/body.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="/scripts/cookbook.js" defer></script>
+    <title>FreshBites</title>
+    <script src="/scripts/favoriteMeals.js" defer></script>
+    <link rel="stylesheet" href="/styles/favoriteMeals.css" />
+  </head>
+  <body>
+    <div id="background">
+      <div class="banner">
+        <div class="nav-bar">
+          <div class="left-section">
+            <img src="images/logo1.png" alt="Your Logo" class="logo" />
+            <span class="name">Fresh Bites</span>
+          </div>
+          <ul>
+            <li class="dropdown">
+              <a href="#"> About Us </a>
+              <ul class="dropdown-content">
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">How it Works</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Our Plans</a></li>
+
+            <li class="dropdown">
+              <a href="#"> Our Menu </a>
+              <ul class="dropdown-content">
+                <li><a href="#">Our Menu</a></li>
+                <li><a href="Cookbook.html">Cook Book</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="favoriteMeals.html">Favorite Meals</a></li>
+          </ul>
+        </div>
+      </div>
+      <form name="searchForm" onsubmit="return checkInput(this)" method="post">
+        <div id="search-div">
+          <input type="text" name="search" id="search-bar" />
+          <button type="submit" id="search-btn">Search</button>
+        </div>
+        <div class="error" id="searchErr"></div>
+      </form>
+      <div id="overlay"></div>
+      <div id="feedbackIcon" onclick="showBox()">
+        <img src="/images/Feedback.jpg" width="35" height="100" />
+      </div>
+      <div id="feedbackContent">
+        <button class="exit" onclick="exitFeedback()">x</button>
+        <h2>Rate our Website</h2>
+        <div class="button-row">
+          <button class="choice" onclick="showTextArea('Hate')">
+            <span></span>Hate
+          </button>
+          <button class="choice" onclick="showTextArea('Dislike')">
+            <span></span>Dislike
+          </button>
+          <button class="choice" onclick="showTextArea('Neutral')">
+            <span></span>Neutral
+          </button>
+        </div>
+        <div class="button-row">
+          <button class="choice" onclick="showTextArea('Like')">
+            <span></span>Like
+          </button>
+          <button class="choice" onclick="showTextArea('Love')">
+            <span></span>Love
+          </button>
+        </div>
+        <form name="feedbackForm" onsubmit="return feedbackInput(this)">
+          <div id="feedback">
+            <h4>Please share any suggestions for enhancements</h4>
+            <textarea
+              id="textArea"
+              name="review"
+              placeholder="Enter your message here..."
+            ></textarea>
+            <div id="reviewErr" class="error"></div>
+            <button id="submit-btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div id="favorite-container"></div>
+    </div>
+  </body>
+</html>
