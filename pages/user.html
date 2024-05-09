@@ -1,228 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles/user.css">
-    <script src="/scripts/user.js"></script>
-    <title>Document</title>
-</head>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/styles/User.css" />
+    <script src="/scripts/User.js" defer></script>
+  </head>
+  <body>
+    <div class="user-container">
+      <div class="img-div">
+        <img src="/images/user-icon.png" alt="profile photo" />
+      </div>
 
-<body>
+      <!-- USER INFORMATION -->
+      <div class="user-info">
+        <h2 class="topOfdiv">Personal Information:</h2>
+        <div class="info-container">
+          <table>
+            <tr>
+              <td><h3 class="information">First Name:</h3></td>
+              <td><h4 class="inputs" id="fname"></h4></td>
+            </tr>
+            <tr>
+              <td><h3 class="information">Last Name:</h3></td>
+              <td><h4 class="inputs" id="lname"></h4></td>
+            </tr>
+            <tr>
+              <td><h3 class="information">Email address:</h3></td>
+              <td><h4 class="inputs" id="email"></h4></td>
+            </tr>
+            <tr>
+              <td><h3 class="information">Phone number:</h3></td>
+              <td><h4 class="inputs" id="phone"></h4></td>
+            </tr>
+          </table>
+          <a id="infoEdit" class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+        </div>
+      </div>
+      <!-- User Edit Content -->
+      <div id="userEditOverlay" class="editOverlay">
+        <div class="overlay-content">
+          <h2>Edit User Personal information:</h2>
+          <label for="editFirstName">Enter First Name:</label>
+          <input type="text" id="editFirstName" /><br />
+          <label for="editLastName">Enter Last Name:</label>
+          <input type="text" id="editLastName" /><br />
+          <label for="editEmail">Enter Email address:</label>
+          <input type="text" id="editEmail" /><br />
+          <label for="editPhone">Enter Phone number:</label>
+          <input type="text" id="editPhone" /><br />
+          <button onclick="saveUserInfo()">Save Changes</button>
+        </div>
+      </div>
+      <!--PASSWORD INFROMATION-->
+      <div class="password-info">
+        <h2 class="topOfdiv">Password Information:</h2>
+        <div class="info-container">
+          <table>
+            <tr>
+              <td><h3 class="information">Password:</h3></td>
+              <td><h4 class="inputs" id="password"></h4></td>
+            </tr>
+          </table>
+          <a id="passwordEdit" class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+        </div>
+      </div>
+      <!--password edit content-->
+      <div id="passwordEditOverlay" class="editOverlay">
+        <div class="overlay-content">
+          <h2>Change Password:</h2>
+          <label for="editPassword">Enter new password:</label>
+          <input type="text" id="editPassword" />
+          <button onclick="savePassword()">Save Changes</button>
+        </div>
+      </div>
+      <!-- ADDRESS INFORMATION -->
+      <div class="address-info">
+        <h2 class="topOfdiv">Address Information:</h2>
+        <div class="info-container">
+          <table>
+            <tr>
+              <td><h3 class="information">Country:</h3></td>
+              <td><h4 class="inputs" id="country"></h4></td>
+            </tr>
+            <tr>
+              <td><h3 class="information">City/State:</h3></td>
+              <td><h4 class="inputs" id="city"></h4></td>
+            </tr>
+          </table>
+          <a id="addressEdit" class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+        </div>
+      </div>
 
-    <div class="buttons">
-        <button class="nav-buttons" onclick="showAccount()">Account Information</button>
-        <button class="nav-buttons">Favourite Meals</button>
-        <button class="nav-buttons" onclick="showHistory()">History</button>
+      <!-- Address Edit Content -->
+      <div id="addressEditOverlay" class="editOverlay">
+        <div class="overlay-content">
+          <h2>Edit Address Information:</h2>
+          <label for="editCountry">Country:</label>
+          <input type="text" id="editCountry" /><br />
+          <label for="editCity">City/State:</label>
+          <input type="text" id="editCity" /><br />
+          <button onclick="saveAddressInfo()">Save Changes</button>
+        </div>
+      </div>
+
+      <!-- CARD INFORMATION -->
+      <div class="card-info">
+        <h2 class="topOfdiv">Card Information:</h2>
+        <div class="info-container">
+          <table>
+            <tr>
+              <td><h3 class="information">Card number:</h3></td>
+              <td><h4 class="inputs" id="card"></h4></td>
+            </tr>
+          </table>
+          <a id="cardEdit" class="edit-btn" href="#">
+            <span class="glyphicon glyphicon-edit"></span> Edit
+          </a>
+        </div>
+      </div>
+
+      <!-- Card Edit Content -->
+      <div id="cardEditOverlay" class="editOverlay">
+        <div class="overlay-content">
+          <h2>Edit Card Information:</h2>
+          <label for="editCardNum">Card Number:</label>
+          <input type="text" id="editCardNum" />
+          <button onclick="saveCardInfo()">Save Changes</button>
+        </div>
+      </div>
     </div>
+    <!--SIDEBAR HTML-->
 
-
-    <!-- ALERT MESSAGE -->
-    <div class="message">
-        <i class="fa-regular fa-circle-check check fa-lg" style="color: #214f3b;"></i>
-        <span class="text">Edited Successfully</span>
-
-    </div>
-
-    <!-- ACCOUNT INFO -->
-
-    <div id="account-content">
-        <h2 class="acc-header">Account Information</h2>
-
-        <!-- First Name Field -->
-        <div class="row">
-            <label>First Name</label>
-
-            <input type="text" name="Fname" value="Alaa">
-            <i onclick="showtextField('editF1')" class="fa-solid fa-pen-to-square fa-lg"></i>
-            <span id="editF1">
-                <input type="text" name="editFname">
-                <button onclick="validation('editFname','Fname','editF1')">Save</button>
-            </span>
-            <div class="error" id="editFname-err"></div>
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
         </div>
 
-        <!-- Second Name Field -->
-        <div class="row">
-            <label>Last Name</label>
-            <input type="text" name="Lname" value="Waleed">
-            <i onclick="showtextField('editF2')" class="fa-solid fa-pen-to-square fa-lg"></i>
-            <span id="editF2">
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="User.html" class="sidebar-link">
+                <i class="bx bx-user-circle icon"></i>
+                <span class="link">My Profile</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="favoriteMeals.html" class="sidebar-link">
+                <i class="bx bx-heart icon"></i>
+                <span class="link">Favorite Meals</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="history.html" class="sidebar-link">
+                <i class="bx bx-history icon"></i>
+                <span class="link">Past Orders</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="sidebar-link">
+                <i class="bx bx-trash icon"></i>
+                <span class="link">Delete Account</span>
+              </a>
+            </li>
+          </ul>
 
-                <input type="text" name="editLname">
-                <button onclick="validation('editLname','Lname','editF2')">Save</button>
-            </span>
-            <div class="error" id="editLname-err"></div>
+          <div class="bottom-cotent">
+            <li class="list">
+              <a href="#" class="sidebar-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Logout</span>
+              </a>
+            </li>
+          </div>
         </div>
-
-
-        <!-- Third Email Field -->
-        <div class="row">
-            <label>Email</label>
-            <input type="text" name="Email" value="aw@gmail.com">
-            <i onclick="showtextField('editF3')" class="fa-solid fa-pen-to-square fa-lg"></i>
-            <span id="editF3">
-
-                <input type="text" name="editEmail">
-                <button onclick="validation('editEmail','Email','editF3')">Save</button>
-            </span>
-            <div class="error" id="editEmail-err"></div>
-        </div>
-
-
-        <!-- Fourth Number Field -->
-        <div class="row">
-            <label>Contact Number</label>
-            <input type="text" name="number" value="01098652544">
-            <i onclick="showtextField('editF4')" class="fa-solid fa-pen-to-square fa-lg"></i>
-            <span id="editF4">
-
-                <input type="text" name="editNumber">
-                <button onclick="validation('editNumber','number','editF4')">Save</button>
-            </span>
-            <div class="error" id="editNumber-err"></div>
-        </div>
-
-
-        <!-- Fifth Name Field -->
-        <div class="row">
-            <label>Address</label>
-            <input type="text" name="address" value="vyvcyvyvdcbj">
-            <i onclick="showtextField('editF5')" class="fa-solid fa-pen-to-square fa-lg"></i>
-            <span id="editF5">
-
-                <input type="text" name="editAddress">
-                <button onclick="validation('editAddress','address','editF5')">Save</button>
-            </span>
-            <div class="error" id="editAddress-err"></div>
-        </div>
-
-    </div>
-
-
-
-
-    <div id="history-content">
-
-        <h2 id="history-head">Your History</h2>
-        <table>
-
-            <tr>
-                <th></th>
-                <th>Meal</th>
-                <th>Date</th>
-                <th>Re-Ordering</th>
-                <th>Reviewing</th>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/Tuna-Tomato-Salad.jpg"></td>
-                <td>Tuna & Tomato Pasta Salad</td>
-                <td>Thursday, 25-4-2024</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/sweet and chili chicken.jpeg"></td>
-                <td>Sweet & Chili Chicken</td>
-                <td>Thursday, 4-4-2024</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/Cheeseburger-Pizza.jpg"></td>
-                <td>Cheese Burger Pizza</td>
-                <td>Monday, 25-3-2024</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/Beef and Mushroom.jpeg"></td>
-                <td>Beef & Mushroom</td>
-                <td> Friday, 15-3-2024</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/Creamy-Lemon-Chicken.jpg">
-                <br> <img id="mealImg" src="/images/Tender-Salsa-Beef.jpg"></td>
-                <td>Creamy Lemon Chicken<br><br>
-                    Tender Salsa Beef
-                </td>
-                <td>Friday, 5-3-2024</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/Turkey-Scallopini.jpg"></td>
-                <td>Turkey Scallopini</td>
-                <td>Thursday, 15-2-2024</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-
-            <tr>
-                <td><img id="mealImg" src="/images/fajita Bowl.jpg"></td>
-                <td>Fajita Bowl</td>
-                <td>Monday, 22-1-2024</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/Steak-and-Shrimp-Kabobs.jpg"> </td>
-                <td>Steak & Shrimp Kabobs</td>
-                <td>Friday, 5-1-2024</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/salmon with spinach.jpg"></td>
-                <td>Salmon With Spinach</td>
-                <td>Sunday, 31-12-2023</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/rigatoni with sausage.jpg"></td>
-                <td>Rigatoni With Sausage</td>
-                <td>Thursday, 14-12-2023</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/Zucchini-Boats.jpg"></td>
-                <td>Zucchini Boats</td>
-                <td>Friday, 10-11-2023</td>
-                <td><button>Re-order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-
-            <tr>
-                <td><img id="mealImg" src="/images/Quick-Apricot-Chicken.jpg">
-                <br><img id="mealImg" src="/images/cheeseburger Pasta.jpg"></td>
-
-                <td>Apricot Chicken<br><br>
-                Cheeseburger Pasta</td>
-
-                <td>Thursday, 26-10-2023</td>
-                <td><button>Re-Order</button></td>
-                <td><button>Review</button></td>
-            </tr>
-        </table>
-    </div>
-
-</body>
-
+      </div>
+    </nav>
+    <section class="overlay"></section>
+  </body>
 </html>

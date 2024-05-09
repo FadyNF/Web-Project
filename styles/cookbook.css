@@ -1,5 +1,6 @@
 /* Background */
 #background {
+  margin-top: 70px;
   background-color: #f7f7f7;
   height: 100vh;
 }
@@ -59,18 +60,29 @@
 
 /* Navigation bar */
 .nav-bar {
-  width: 85%;
-  margin: auto;
-  color: #fff;
+  position: fixed;
+  width: 100%;
+  color: rgb(90, 108, 65);
   display: flex;
+  top: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px 10px;
+  left: 0;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), */
+      /* url(../images/background.jpg); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .left-section {
   display: flex;
   align-items: center;
+  margin-left: 30px;
 }
 
 .logo {
@@ -79,48 +91,44 @@
 
 .name {
   margin-left: 15px;
-  font-size: 24px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-size: 27px;
+  color: rgb(32, 188, 193);
+  font-family: Pacifico;
 }
 
-.banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(../images/background.jpg);
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+a {
+  text-decoration: none;
+  color: rgb(32, 188, 193);
+  font-family: Roboto;
 }
 
-.banner ul li {
+.nav-bar ul li {
   list-style: none;
   display: inline-block;
   margin: 0 20px;
   position: relative;
 }
 
-.banner ul li a {
+.nav-bar ul li a {
   text-decoration: none;
-  color: #fff;
+  color: rgb(32, 188, 193);
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
 }
 
-.banner ul li::after {
+.nav-bar ul li::after {
   content: "";
   height: 3px;
   width: 0;
-  background: #f19f13;
+  background: rgb(32, 188, 193);
   position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transition: width 0.3s ease, left 0.3s ease;
+  left: 0;
+  bottom: -1px;
+  transition: 0.5s;
+  color: white;
 }
 
-.banner ul li:hover::after {
+.nav-bar ul li:hover::after {
   width: 100%;
-  left: 0;
 }
 
 .dropdown {
@@ -128,17 +136,15 @@
 }
 
 .dropdown-content {
-  margin-top: 10px;
+  margin-top: 5px;
   display: none;
   position: absolute;
-  background-color: #81d0e8e3;
+  background-color: #333;
   min-width: 120px;
   z-index: 1000;
   list-style: none;
   padding: 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .dropdown-content li {
@@ -552,6 +558,8 @@ td {
   #textArea {
     height: 60px;
   }
+
+
 
   .exit {
     height: 25px;
