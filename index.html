@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Fresh Bites</title>
-        <link rel="icon" href="images/logo1.png" type="image/x-icon">
+        <link rel="icon" href="images/logo1.png" type="image/x-icon" />
         <link rel="stylesheet" href="styles/index.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,19 +30,21 @@
         <div class="banner">
             <div class="nav-bar">
                 <div class="left-section">
-                    <img
-                        src="images/logo1.png"
-                        alt="Your Logo"
-                        class="logo"
-                    />
-                    <span class="name" onclick = "window.location.href = '#'">Fresh Bites</span>
+                    <img src="images/logo1.png" alt="Your Logo" class="logo" />
+                    <span class="name" onclick="window.location.href = '#'"
+                        >Fresh Bites</span
+                    >
                 </div>
                 <ul>
                     <li class="dropdown">
                         <a href="pages/about-us.html"> About Us </a>
                         <ul class="dropdown-content">
                             <li><a href="pages/about-us.html">About Us</a></li>
-                            <li><a href="pages/how-it-works.html">How it Works</a></li>
+                            <li>
+                                <a href="pages/how-it-works.html"
+                                    >How it Works</a
+                                >
+                            </li>
                         </ul>
                     </li>
 
@@ -56,7 +58,14 @@
                         </ul>
                     </li>
 
-                    <li><a href="pages/sustaibility.html">Sustainability</a></li>
+                    <li class="dropdown">
+                        <a href="pages/sustaibility.html">Sustainability</a>
+                        <ul class="dropdown-content">
+                            <li><a href="pages/sustaibility.html">Sustainability</a></li>
+                            <li><a href="pages/sourcing.html">Sourcing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/User.html">User Profile</a></li>
                 </ul>
             </div>
         </div>
@@ -74,12 +83,20 @@
                 </p>
             </div>
             <div class="button-container">
-                <button class="signup-btn" type="button" onclick="window.location.href = 'pages/signup.html'">
+                <button
+                    class="signup-btn"
+                    type="button"
+                    onclick="window.location.href = 'pages/signup.html'"
+                >
                     <span class="cover"></span>
                     SIGN UP
                 </button>
 
-                <button class="login-btn" type="button" onclick="window.location.href = 'pages/login.html'">
+                <button
+                    class="login-btn"
+                    type="button"
+                    onclick="window.location.href = 'pages/login.html'"
+                >
                     <span class="cover"></span>
                     LOG IN
                 </button>
@@ -180,7 +197,10 @@
             </div>
             <div class="images">
                 <div class="Outline">
-                    <img src="images/index-images/Outline 1.webp" alt="Image 1" />
+                    <img
+                        src="images/index-images/Outline 1.webp"
+                        alt="Image 1"
+                    />
                     <h2>No skimpin’ on the chicken!</h2>
                     <p>Lorem ipsum dolor sit amet, <br />consec</p>
                 </div>
@@ -198,7 +218,10 @@
                     <p>Lorem ipsum <br />consectetur smod tempor</p>
                 </div>
                 <div class="Outline">
-                    <img src="images/index-images/freshfood.webp" alt="Image 3" />
+                    <img
+                        src="images/index-images/freshfood.webp"
+                        alt="Image 3"
+                    />
                     <h2>Fresh Food</h2>
                     <p>Lorem ipsum dolor sit amet, <br />consectetur</p>
                 </div>
@@ -231,7 +254,11 @@
                 <li>List item 2</li>
                 <li>List item 3</li>
             </ul>
-            <button class="Menu" type="button" onclick = "window.location.href = 'menu.html'">
+            <button
+                class="Menu"
+                type="button"
+                onclick="window.location.href = 'pages/menu.html'"
+            >
                 <span class="cover1"></span>
                 View Menu
             </button>
@@ -280,7 +307,11 @@
                 </div>
             </div>
 
-            <img src="images/index-images/Fruits.png" class="fruits" width="290px" />
+            <img
+                src="images/index-images/Fruits.png"
+                class="fruits"
+                width="290px"
+            />
         </div>
 
         <script src="scripts/index.js"></script>
