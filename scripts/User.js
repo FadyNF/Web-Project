@@ -12,7 +12,6 @@ overlay.addEventListener("click", () => {
   navBar.classList.remove("open");
 });
 
-
 const infoEditBtn = document.getElementById("infoEdit");
 const addressEditBtn = document.getElementById("addressEdit");
 const cardEditBtn = document.getElementById("cardEdit");
@@ -22,7 +21,6 @@ const userEditOverlay = document.getElementById("userEditOverlay");
 const addressEditOverlay = document.getElementById("addressEditOverlay");
 const cardEditOverlay = document.getElementById("cardEditOverlay");
 const passwordEditOverlay = document.getElementById("passwordEditOverlay");
-
 
 infoEditBtn.addEventListener("click", function () {
   userEditOverlay.style.display = "block";
@@ -52,7 +50,6 @@ document.addEventListener("click", function (event) {
 
 /********************************************************************/
 function editUserInfo() {
-
   var firstName = document.getElementById("fname").innerText;
   var lastName = document.getElementById("lname").innerText;
   var email = document.getElementById("email").innerText;
@@ -67,7 +64,6 @@ function editUserInfo() {
 }
 
 function saveUserInfo() {
-
   var editedFirstName = document.getElementById("editFirstName").value;
   var editedLastName = document.getElementById("editLastName").value;
   var editedEmail = document.getElementById("editEmail").value;
@@ -120,4 +116,25 @@ function saveCardInfo() {
   var newPassword = document.getElementById("editCardNum").value;
   document.getElementById("card").innerText = newPassword;
   document.getElementById("cardEditOverlay").style.display = "none";
+}
+/******************************************************************************/
+const deleteAccountLink = document.querySelector("#deleteAcc");
+deleteAccountLink.addEventListener("click", deleteAccount);
+function deleteAccount() {
+  const overlay = document.querySelector("#warning-popup");
+  const closeBtn = document.querySelector("#cancellingReq");
+  const confirmDeleteBtn = document.querySelector("#confirmBtn");
+
+  overlay.style.display = "flex";
+
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay || event.target === closeBtn) {
+      overlay.style.display = "none";
+    }
+  });
+
+  confirmDeleteBtn.addEventListener("click", () => {
+    overlay.style.display = "none";
+    // window.location.href = ".html";  //This should redirects to the login/signup page or homepage after account deletion.
+  });
 }

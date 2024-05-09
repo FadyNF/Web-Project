@@ -182,7 +182,7 @@
               </a>
             </li>
             <li class="list">
-              <a href="#" class="sidebar-link">
+              <a href="#" id="deleteAcc" class="sidebar-link">
                 <i class="bx bx-trash icon"></i>
                 <span class="link">Delete Account</span>
               </a>
@@ -201,5 +201,17 @@
       </div>
     </nav>
     <section class="overlay"></section>
+
+    <!--Popup upon deleting the account-->
+    <section id="warning-popup" style="display: none">
+      <div class="warning-box" id="warning">
+        <h2 id="popupTitle">Warning!</h2>
+        <h3 id="message">Are you sure you want to delete your account?</h3>
+        <div class="buttons">
+          <button class="confirmingReq" id="confirmBtn">Yes, I'm sure</button>
+          <button id="cancellingReq">Cancel</button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
