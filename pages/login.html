@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -23,7 +24,9 @@
             <div class="login__check">
                 <input type="checkbox" id="input-check">
                 <label for="input-check" class="login__check-label">Remember me</label>
+                <a href="#" class="forgot-password-link">Forgot Password?</a> <!-- New line -->
             </div>
+            
             <button type="submit" class="login__button">Login</button>
         </form>
         <p class="login__social">- Login With Social Media Account -</p>
@@ -36,6 +39,29 @@
         <div class="dark-mode-toggle">
             <input type="checkbox" id="darkModeToggle">
             <label for="darkModeToggle" class="toggle-label"></label>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Choose your favorite color:</p>
+            <div class="login__input-group">
+                <label for="favorite-color-dropdown" id="favorite-color-question"></label>
+                <select id="favorite-color-dropdown">
+                    <option value="" disabled selected></option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                    <option value="orange">Orange</option>
+                    <option value="pink">Pink</option>
+                    <option value="grey">Grey</option>
+                </select>
+            </div>
+            <button id="confirmButton">Confirm</button>
         </div>
     </div>
     <script src="../scripts/login.js"></script>

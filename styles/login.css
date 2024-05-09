@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(../images/login-signup-images/background.jpg); /* Relative path to the image */
+    background-image: url(../images/background.jpg); /* Relative path to the image */
     background-size: cover;
     background-position: center;
 }
@@ -235,3 +235,80 @@ body.dark-mode {
     color: #cccccc; /* Dark mode text color for social icons */
 }
 
+.forgot-password-link {
+    font-size: 20px; /* Set font size */
+    color: #333;
+    text-decoration: none; /* Remove underline */
+    margin-left: 10px; /* Adjust margin for spacing */
+    transition: color 0.3s ease; /* Add transition effect */
+}
+
+.forgot-password-link:hover {
+    color: #f19f13; /* Change color on hover */
+}
+/* New CSS for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Cream-colored background with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe; /* White background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* 80% width */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Style for the dropdown box */
+#favorite-color-dropdown {
+    width: 100%; /* Make the dropdown box wider */
+    padding: 17px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Style for the confirm button */
+#confirmButton {
+    width: 100%; /* Make the button full width */
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #007bff; /* Same color as login button */
+    color: #fff; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#confirmButton:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
