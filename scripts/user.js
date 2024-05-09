@@ -81,6 +81,27 @@ function saveUserInfo() {
   document.getElementById("userEditOverlay").style.display = "none";
 }
 
+const deleteAccountLink = document.querySelector("#deleteAcc");
+deleteAccountLink.addEventListener("click", deleteAccount);
+function deleteAccount() {
+  const overlay = document.querySelector("#warning-popup");
+  const closeBtn = document.querySelector("#cancellingReq");
+  const confirmDeleteBtn = document.querySelector("#confirmBtn");
+
+  overlay.style.display = "flex";
+
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay || event.target === closeBtn) {
+      overlay.style.display = "none";
+    }
+  });
+
+  confirmDeleteBtn.addEventListener("click", () => {
+    overlay.style.display = "none";
+    // window.location.href = ".html";  //This should redirects to the login/signup page or homepage after account deletion.
+  });
+}
+
 function editAddressInfo() {
   var country = document.getElementById("country").innerText;
   var city = document.getElementById("city").innerText;

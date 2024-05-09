@@ -735,6 +735,7 @@ if (inputType === "password") {
    
     icon.style.top = '42em';
     icon.style.right = '13em'; // Adjust the distance from the right edge
+    icon.style.marginLeft = '12px'
 
     // Set initial value and toggle functionality
     input.setAttribute('value', prefillValue);
