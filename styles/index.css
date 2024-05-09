@@ -3,16 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    background-color: rgb(244, 240, 217);
+    background-color: white;
     font-family: Roboto;
     display: flex;
     justify-content: center;
 }
+
 .banner {
     width: 100%;
     height: 100vh;
-    background-color: #f5f0d6;
     background-size: cover;
     background-position: center;
 }
@@ -22,18 +23,20 @@ body {
     width: 100%;
     margin: auto;
     height: 10%;
-    color: rgb(90, 108, 65);
+    color: #167592;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
-    padding: 40px 20px;
+    padding: 20px;
     transition: background-color 0.3s ease;
 }
+
 .nav-bar.scrolled {
-    z-index: 9999999;
-    background-color: #fbb1623a; /* Change background color to a darker shade */
+    backdrop-filter: blur(5px);
+    background-color: #81d0e888; /* Change background color to a darker shade */
 }
+
 .left-section {
     display: flex;
     align-items: center;
@@ -51,7 +54,7 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(90, 108, 65);
+    color: #167592;
     font-family: Roboto;
 }
 
@@ -64,7 +67,7 @@ a {
 
 .banner ul li a {
     text-decoration: none;
-    color: rgb(90, 108, 65);
+    color: #167592;
     text-transform: uppercase;
 }
 
@@ -72,7 +75,36 @@ a {
     content: "";
     height: 3px;
     width: 0;
-    background: rgb(90, 108, 65);
+    background: #81d0e8;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.banner ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Adjustments */
+
+.banner ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #167592;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -91,7 +123,7 @@ a {
     margin-top: 10px;
     display: none;
     position: absolute;
-    background-color: #fbb162d3;
+    background-color: #81d0e8;
     min-width: 120px;
     z-index: 1000;
     list-style: none;
@@ -106,34 +138,19 @@ a {
     display: block;
 }
 
-.content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-}
-
-.content h1 {
-    font-size: 35px;
-    margin-top: 80px;
-}
-
-.content p {
-    margin: 20px auto;
-    font-weight: 300;
-    line-height: 25px;
-}
 /* Add this CSS to Recipe.css */
+/* Continue from the previous CSS */
+
 .dish {
     margin-top: 6em;
 }
+
 #ket {
     position: absolute;
     right: 21em;
     top: 20em;
 }
+
 .spoonandtomato {
     position: absolute;
 }
@@ -161,11 +178,13 @@ a {
     top: 48em;
     right: 0;
 }
+
 #green {
     position: absolute;
     left: 0;
     top: 75em;
 }
+
 .row {
     top: 62em;
     position: absolute;
@@ -177,21 +196,24 @@ a {
     font-family: Georgia, "Times New Roman", Times, serif;
     margin-top: 10px;
     font-size: 18px;
+    color: #167592;
 }
 
 .dish-container p {
     margin-top: 5px;
     font-size: 14px;
-    color: #666;
+    color: #f19f13;
 }
 
 .dishes {
     width: 200px; /* Set the desired width */
     margin: 0 50px; /* Add some margin between the images */
 }
+
 .dish-container {
     text-align: center;
 }
+
 .header {
     position: absolute;
     text-align: center;
@@ -203,10 +225,13 @@ a {
 .header h1 {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 2.4em; /* Adjust font size as needed */
+    color: #167592;
 }
+
 .header p {
-    color: #808080;
+    color: black;
 }
+
 .left-content {
     position: absolute;
     float: left;
@@ -222,21 +247,26 @@ a {
 }
 
 .header-left h2 {
-    color: rgb(50, 94, 37);
-
+    color: #f19f13;
     font-size: 50px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: Pacifico;
+    font-weight: 200;
+    line-height: 60px;
     margin-bottom: 10px; /* Add margin bottom to the header */
 }
 
 .header-left p {
+    color: #2083a1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px; /* Adjust font size as needed */
     line-height: 1.5; /* Adjust line height as needed */
 }
+
 .header-left h3 {
+    color: #167592;
     font-size: 30px;
 }
+
 .login-btn,
 .signup-btn {
     z-index: 9999;
@@ -246,15 +276,15 @@ a {
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #fbb262;
+    border: 2px solid #f19f13;
     background: transparent;
-    color: #fbb262;
+    color: #f19f13;
     position: relative;
     cursor: pointer;
 }
 
 .cover {
-    background: #fbb262;
+    background: #f19f13;
     height: 100%;
     width: 0%;
     border-radius: 25px;
@@ -264,6 +294,7 @@ a {
     z-index: -1;
     transition: 0.5s;
 }
+
 .signup-btn:hover .cover,
 .login-btn:hover .cover {
     width: 100%;
@@ -274,15 +305,14 @@ button:hover {
     color: white;
     border: none;
 }
+
 .background-section {
     position: absolute; /* Change to absolute */
     top: 85em;
     left: 0;
-    background-color: rgba(255, 191, 96, 0.329);
+    background-color: #81d0e8;
     width: 100%;
     height: 70%;
-
-    /* Ensure it's positioned beneath other elements */
 }
 
 .theheader {
@@ -292,6 +322,7 @@ button:hover {
 }
 
 .theheader h1 {
+    color: black;
     font-family: Georgia, "Times New Roman", Times, serif;
     opacity: 100%;
     font-size: 36px; /* Adjust font size */
@@ -313,7 +344,7 @@ button:hover {
 }
 
 .Outline h2 {
-    color: rgb(50, 94, 37);
+    color: black;
     font-weight: 500;
     margin-top: 10px; /* Add space between image and title */
     font-size: 19px; /* Adjust font size */
@@ -322,7 +353,7 @@ button:hover {
 .Outline p {
     font-size: 15px; /* Adjust font size */
     line-height: 1.4;
-    color: rgb(71, 117, 57); /* Add line height for readability */
+    color: rgb(49, 49, 49); /* Add line height for readability */
 }
 
 .oval-background {
@@ -355,39 +386,41 @@ button:hover {
     top: 137em;
     transform: translateY(-50%);
     padding: 20px;
-    /* Adjust background color and opacity as needed */
     border-radius: 10px;
 }
 
 .content-left h1 {
-    color: rgb(50, 94, 37);
+    color: #167592;
     font-family: "Playfair Display", serif;
     font-size: 50px;
     margin-bottom: 30px;
 }
 
 .content-left p {
-    color: rgb(94, 136, 81);
+    color: #f19f13;
     margin-bottom: 20px;
 }
 
 .content-left ul {
+    margin-left: 1em;
     padding: 0;
 }
 
 .content-left ul li {
     margin-bottom: 5px;
-    color: rgb(94, 136, 81);
+    color: #f19f13;
 }
+
 .backgroundsection2 {
     overflow: hidden;
     position: absolute; /* Change to absolute */
     top: 155em;
     left: 0;
-    background-color: rgba(255, 191, 96, 0.315);
+    background-color: #81d0e8;
     width: 100%;
     height: 60%;
 }
+
 .Menu {
     left: -2em;
     z-index: 9999;
@@ -397,14 +430,15 @@ button:hover {
     margin: 30px 8px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #fbb262;
+    border: 2px solid #f19f13;
     background: transparent;
-    color: #fbb262;
+    color: #f19f13;
     position: relative;
     cursor: pointer;
 }
+
 .cover1 {
-    background: #fbb262;
+    background: #f19f13;
     height: 100%;
     width: 0%;
     border-radius: 25px;
@@ -414,19 +448,20 @@ button:hover {
     z-index: -1;
     transition: 0.5s;
 }
+
 .Menu:hover .cover1 {
     width: 100%;
     color: white;
 }
+
 .fruits {
-    opacity: 0; /* Initially hide the image */
-    position: relative; /* Set image position to relative */
-    /* Initial position outside the section */
-    transition: opacity 0.9s ease, left 0.9s ease; /* Add transition effect */
+    opacity: 0;
+    position: relative;
+    transition: opacity 0.9s ease, left 0.9s ease;
 }
 
 .animate-in {
-    animation: slideIn 2s forwards; /* Apply animation when class is added */
+    animation: slideIn 2s forwards;
 }
 
 @keyframes slideIn {
@@ -439,6 +474,7 @@ button:hover {
         transform: translateX(0);
     }
 }
+
 .right-side {
     z-index: 999;
     position: absolute;
@@ -452,13 +488,12 @@ button:hover {
     left: 10em; /* Adjust the distance from the right side */
     transform: translateY(-50%);
     text-align: right;
-    color: rgb(50, 94, 37);
+    color: black;
 }
 
 .icons {
     display: flex;
     flex-direction: column;
-
     position: absolute;
     top: 65%;
     left: 45%;
@@ -472,21 +507,20 @@ button:hover {
 }
 
 .icon i {
-    color: rgb(50, 94, 37);
+    color: black;
     font-size: 24px;
     margin-right: 10px;
 }
 
 .icon p {
     font-size: 16px;
-    color: rgb(116, 167, 101);
+    color: black;
     margin: 0;
 }
 
 .icons1 {
     display: flex;
     flex-direction: column;
-
     position: absolute;
     top: 65%;
     left: 75%;
@@ -500,13 +534,158 @@ button:hover {
 }
 
 .icon1 i {
-    color: rgb(50, 94, 37);
+    color: black;
     font-size: 24px;
     margin-right: 10px;
 }
 
 .icon1 p {
-    color: rgb(116, 167, 101);
+    color: black;
     font-size: 16px;
     margin: 0;
+}
+
+/* Responsive Adjustments */
+
+/* Adjustments for extra small screens */
+@media only screen and (max-width: 400px) {
+    /* Adjustments for screens up to 400px max-width */
+
+    .nav-bar {
+        position: absolute;
+        flex-direction: row; /* Change flex direction to stack items vertically */
+        height: auto; /* Allow the height to adjust automatically based on content */
+        align-items: flex-start; /* Align items to the start (left) of the container */
+        padding: 20px;
+        margin-left: 6em;
+        justify-content: center;
+    }
+
+    .left-section {
+        margin-bottom: 10px; /* Add space below the left section */
+    }
+
+    .name {
+        margin-right: 13em; /* Remove left margin for the name */
+        margin-top: 0; /* Remove top margin for the name */
+        font-size: 18px; /* Adjust font size as needed */
+    }
+
+    .banner ul li {
+        display: block; /* Display list items as block to stack vertically */
+        margin: 10px 0; /* Adjust margin as needed */
+    }
+
+    .banner ul li::after {
+        display: none; /* Hide the hover underline effect on list items */
+    }
+    .dish {
+        position: absolute;
+        margin-top: 15em;
+
+        height: 300px;
+        width: 300px;
+    }
+
+    #ket {
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        top: 10em;
+        left: 24em;
+    }
+
+    .spoonandtomato {
+    }
+
+    #spoon {
+        top: 8em;
+        left: 10px;
+        width: 150px;
+    }
+
+    #tomato {
+        width: 150px;
+        left: 19em;
+        top: 8em;
+        margin-left: 10em;
+    }
+    .header-left h2 {
+        left: 1em;
+        color: rgb(50, 94, 37);
+        font-size: 25px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-bottom: 10px; /* Add margin bottom to the header */
+    }
+
+    .header-left p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10px; /* Adjust font size as needed */
+        line-height: 1.5; /* Adjust line height as needed */
+    }
+
+    .header-left h3 {
+        font-size: 15px;
+    }
+    .left-content {
+        position: absolute;
+        float: left;
+        left: 3em;
+        top: 17.5em;
+        width: calc(50% - 10px); /* Adjust width as needed */
+        margin-right: 20px; /* Adjust margin as needed */
+    }
+    .login-btn,
+    .signup-btn {
+        z-index: 9999;
+        width: 100px;
+        padding: 10px 0;
+        text-align: center;
+        margin: 10px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+
+        border: 2px solid #fbb262;
+        background: transparent;
+        color: #fbb262;
+        display: inline-block; /* Change display to inline-block */
+        /* Set width to 50% of the container minus margin */
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .cover {
+        background: #fbb262;
+        height: 100%;
+        width: 0%;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+
+    .signup-btn:hover .cover,
+    .login-btn:hover .cover {
+        width: 100%;
+        color: white;
+    }
+
+    button:hover {
+        color: white;
+        border: none;
+    }
+
+    #pepper {
+        top: 50em;
+        left: 0;
+        width: 150px;
+    }
+
+    #shrimp {
+        top: 52em;
+        right: 0;
+        width: 150px;
+    }
 }
