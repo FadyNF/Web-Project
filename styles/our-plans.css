@@ -125,7 +125,7 @@ a {
 
 .form .form-body {
     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
-    background-color: rgb(170, 214, 215);
+    background-color: #81d0e8;
     border-radius: 20px;
     height: 570px;
     overflow: hidden;
@@ -240,9 +240,9 @@ a {
 }
 
 .checkbox-wrapper-16 .checkbox-input {
-    clip: rect(0 0 0 0);
+    /* clip: rect(0 0 0 0);
     -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
+    clip-path: inset(100%); */
     height: 1px;
     overflow: hidden;
     position: absolute;
@@ -745,7 +745,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .payment-form {
-    background: rgb(179, 213, 214); 
+    background: #81d0e8; 
     box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 
         0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 
         0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1); 

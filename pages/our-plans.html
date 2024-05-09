@@ -38,14 +38,14 @@
                 <li><a href="#">Our Plans</a></li>
 
                 <li class="dropdown">
-                    <a href="#"> Our Menu </a>
+                    <a href="menu.html"> Our Menu </a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Our Menu</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
                         <li><a href="#">Cook Book</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#">Sustainability</a></li>
+                <li><a href="sustaibility.html">Sustainability</a></li>
             </ul>
         </div>
 
@@ -71,9 +71,7 @@
                 <div class="steps">
                     <!-- Choose Type of plan -->
                     <div class="step">
-                        <form
-                            class="choose-plans-container"
-                        >
+                        <form class="choose-plans-container">
                             <div class="select-preference">
                                 <div class="description">
                                     <h4>1. Choose your preference</h4>
@@ -349,10 +347,7 @@
 
                     <!-- Add User's Credentials -->
                     <div class="step">
-                        <form
-                            class="credentials-form-container"
-                            
-                        >
+                        <form class="credentials-form-container">
                             <div class="description">
                                 <h4>Enter Credentials</h4>
                                 <p>Shipping Information</p>
@@ -421,9 +416,7 @@
 
                     <!-- Checkout -->
                     <div class="step">
-                        <form
-                            class="payment-form-container"
-                        >
+                        <form class="payment-form-container">
                             <div class="description">
                                 <h4>Payment Credentials</h4>
                                 <p>Enter your credit/debit card information</p>
@@ -456,7 +449,7 @@
                                             required
                                         />
                                     </label>
-                                    
+
                                     <div class="split">
                                         <label for="ExDate" class="label">
                                             <span class="title"
@@ -488,7 +481,10 @@
                                                 required
                                             />
                                             <div class="note">
-                                                <p>Please enter a 3-digit CVV number.</p>
+                                                <p>
+                                                    Please enter a 3-digit CVV
+                                                    number.
+                                                </p>
                                             </div>
                                         </label>
                                     </div>
@@ -511,7 +507,10 @@
                                 Start choosing meals from <br />
                                 Our Weekly Meals Recommendations!
                             </p>
-                            <button class="get-started-button">
+                            <button
+                                onclick="window.location.href = 'menu.html'"
+                                class="get-started-button"
+                            >
                                 <span>Get Started</span>
                             </button>
                         </div>

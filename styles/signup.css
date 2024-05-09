@@ -1,19 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 20px;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(background.jpg); 
+    background-image: url(../images/background.jpg); 
     background-size: cover;
     background-position: center;
 }
 
 .container {
-    width: 600px; /* Adjust width as needed */
-    height: 600px; /* Adjust height as needed */
+    width: 400px; /* Adjust width as needed */
+    height: 510px; /* Adjust height as needed */
     background-color: rgba(255, 255, 255, 0.8); /* Add opacity to the background */
     padding: 40px;
     border-radius: 10px;
@@ -21,10 +21,12 @@ body {
 }
 
 .login__title {
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     color: #333;
-    margin-bottom: 20px; /* Increase margin bottom for spacing */
+    margin-bottom: 10px; /* Increase margin bottom for spacing */
+    margin-top: 0; /* Decrease margin top to move it up */
+
 }
 
 .login__form {
@@ -32,12 +34,15 @@ body {
     font-size: 30px;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px; /* Increase margin bottom for spacing */
+    margin-bottom: 20px; /* Increase margin bottom for spacing */
 }
 
 .login__input-group {
     position: relative;
-    margin: 2px 0;
+    margin: 10px 0;
+}
+.login__input-group:nth-child(4) {
+    margin-bottom: 0px; /* Decrease the margin bottom */
 }
 
 .login__input-group input {
@@ -48,6 +53,8 @@ body {
     border-radius: 20px;
     outline: none;
     transition: border-color 0.3s ease;
+    margin-bottom: 0px; /* Decrease margin bottom */
+  margin-top: 0px;
 }
 
 .login__input-group input:focus {
@@ -58,7 +65,7 @@ body {
     position: absolute;
     font-size: 20px; /* Decrease font size */
     left: 10px;
-    top: 50%;
+    top: 30px;
     transform: translateY(-50%);
     color: #999;
     pointer-events: none;
@@ -78,18 +85,20 @@ body {
 
 .login__check-label {
     color: #333;
+    font-size: 14px; /* Decrease the font size */
 }
 
 .login__button {
-    width: 160px;
-    padding: 15px;
+    width: 120px;
+    padding: 10px;
     border: none;
-    font-size: 20px;
-    border-radius: 20px;
+    font-size: 16px;
+    border-radius: 15px;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Decrease margin bottom */
 }
 
 .login__button:hover {
@@ -98,14 +107,21 @@ body {
 .dark-mode .login__button:hover {
     background-color: #0056b3;
 }
+.login__social,
+.login__signup {
+    text-align: center;
+    font-size: 10px; /* Decrease the font size */
+    color: #333;
+    margin-bottom: 20px; /* Increase margin bottom for spacing */
+    margin-top: -30px; /* Decrease margin top to move it up */
+}
 
 
 .login__social {
     text-align: center;
     font-size: 16px;
     color: #333;
-    margin-bottom: 0; /* Remove margin bottom */
-    margin-top: -90px; /* Increase margin top */
+    margin-bottom: 10; /* Remove margin bottom */
 }
 
 .social-icons {
@@ -132,7 +148,7 @@ body {
     text-align: center;
     font-size: 16px;
     color: #333;
-    margin-top: 10px; /* Increase margin top */
+    margin-top: -10px; /* Increase margin top */
 }
 
 .signup-link {
@@ -315,9 +331,6 @@ body.dark-mode {
     margin-top: 10px; /* Adjust margin-top */
 }
 
-.login__input-group label {
-    font-size: 20px; /* Keep font size consistent */
-}
 
 .login__input-group select:focus {
     border-color: #007bff;

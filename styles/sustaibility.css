@@ -39,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('crops.jpg');
+  background-image: url('../images/sustainability/crops.jpg');
   background-size: cover;
   background-position: center;
 }

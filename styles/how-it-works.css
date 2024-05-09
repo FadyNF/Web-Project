@@ -20,13 +20,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url(../images/background.jpg);
-    background-size: cover;
-    background-position: center;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), */
+        /* url(../images/background.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    background-color: white;
     z-index: 1;
     top: 0;
-
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .left-section {
@@ -42,7 +43,7 @@ body {
 .name {
     margin-left: 15px;
     font-size: 27px;
-    color: rgb(247, 247, 247);
+    color: rgb(32, 188, 193);
     font-family: Pacifico;
 }
 
@@ -61,19 +62,18 @@ a {
 
 .nav-bar ul li a {
     text-decoration: none;
-    font-weight: 500;
-    color: rgb(247, 247, 247);
+    color: rgb(32, 188, 193);
     text-transform: uppercase;
 }
 
 .nav-bar ul li::after {
     content: "";
-    height: 2px;
+    height: 3px;
     width: 0;
-    background: rgb(229, 163, 61);
+    background: rgb(32, 188, 193);
     position: absolute;
     left: 0;
-    bottom: 1px;
+    bottom: -1px;
     transition: 0.5s;
     color: white;
 }
@@ -90,7 +90,7 @@ a {
     margin-top: 5px;
     display: none;
     position: absolute;
-    background-color: rgb(147, 206, 229);
+    background-color: #333;
     min-width: 120px;
     z-index: 1000;
     list-style: none;
@@ -106,8 +106,9 @@ a {
     display: block;
 }
 
+
 .header {
-    margin: 40px 0;
+    margin: 110px 0 20px 0;
     font-size: 37px;
     font-weight: 700;
     text-align: center;
@@ -171,7 +172,7 @@ a {
 }
 
 .step-content button:hover {
-    background-color: rgb(55, 115, 143);
+    background-color: #167592;
 }
 
 .benefits-container {
