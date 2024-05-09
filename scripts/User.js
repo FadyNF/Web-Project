@@ -138,3 +138,9 @@ function deleteAccount() {
     // window.location.href = ".html";  //This should redirects to the login/signup page or homepage after account deletion.
   });
 }
+/******************************************************************************/
+const logoutLink = document.querySelector("#logoutLink");
+logoutLink.addEventListener("click", function(event) {
+  event.preventDefault();
+    // window.location.href = ".html";  //This should redirects to the login/signup page after logging out.
+});
