@@ -219,4 +219,64 @@ td {
   border-color: #f19f13;
   color: #ffffff;
 }
+@media screen and (max-width: 400px) {
+  #history-head {
+    margin-left: 30%;
+    margin-top: 10px;
+  }
 
+  table {
+    margin-left: 0px;
+    width: 80%;
+  }
+
+  tr td,
+  tr th {
+    font-size: small  ;
+    padding: 8px;
+  }
+
+  .reOrder,
+  .review {
+    padding: 8px;
+    font-size: small;
+    margin-left: 2px;
+  }
+
+  .confirmation-content {
+    padding: 15px;
+ 
+  }
+
+  .confirmation-content h2 {
+    font-size: 20px;
+    margin-bottom: 11px;
+  }
+
+  .confirmation-content p {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .confirmation-buttons button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 0 50px;
+  }
+
+  #reviewOverlayContent {
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+  }
+  #reviewOverlayContent h2{
+    font-size: 1.5rem;
+  }
+
+  .choice {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin: 5px;
+  }
+}
