@@ -1,4 +1,3 @@
-
 const navBar = document.querySelector("nav"),
   sidebar = document.querySelectorAll(".menu-icon"),
   overlay = document.querySelector(".overlay");
@@ -13,6 +12,7 @@ overlay.addEventListener("click", () => {
   navBar.classList.remove("open");
 });
 
+
 const infoEditBtn = document.getElementById("infoEdit");
 const addressEditBtn = document.getElementById("addressEdit");
 const cardEditBtn = document.getElementById("cardEdit");
@@ -22,6 +22,7 @@ const userEditOverlay = document.getElementById("userEditOverlay");
 const addressEditOverlay = document.getElementById("addressEditOverlay");
 const cardEditOverlay = document.getElementById("cardEditOverlay");
 const passwordEditOverlay = document.getElementById("passwordEditOverlay");
+
 
 infoEditBtn.addEventListener("click", function () {
   userEditOverlay.style.display = "block";
@@ -51,6 +52,7 @@ document.addEventListener("click", function (event) {
 
 /********************************************************************/
 function editUserInfo() {
+
   var firstName = document.getElementById("fname").innerText;
   var lastName = document.getElementById("lname").innerText;
   var email = document.getElementById("email").innerText;
@@ -63,7 +65,9 @@ function editUserInfo() {
 
   document.getElementById("userEditOverlay").style.display = "block";
 }
+
 function saveUserInfo() {
+  
   var editedFirstName = document.getElementById("editFirstName").value;
   var editedLastName = document.getElementById("editLastName").value;
   var editedEmail = document.getElementById("editEmail").value;
