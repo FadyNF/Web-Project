@@ -757,4 +757,41 @@ label[for="countryInput"] {
     /* Add your custom styles here */
 }
 
+.cards-container {
+    padding: 20px;
+}
 
+.cards3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.card4 {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.card4 img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 8px;
+}
+
+.card4 p {
+    margin: 10px 0 0;
+}
+.card4 .stars {
+    margin-top: 10px;
+}
+
+.card4 .stars i {
+    color: gold; /* Color of the stars */
+}
