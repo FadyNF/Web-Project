@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Bites</title>
+    <link rel="icon" href="logo1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="User.css" />
+    <script src="User.js" defer></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="nav-bar">
+            <div class="left-section">
+                <img src="logo1.png" alt="Your Logo" class="logo" />
+                <span class="name" onclick="window.location.href = '#'">Fresh Bites</span>
+            </div>
+            <ul>
+                <li class="dropdown">
+                    <a href="pages/about-us.html"> About Us </a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/about-us.html">About Us</a></li>
+                        <li><a href="pages/how-it-works.html">How it Works</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/our-plans.html">Our Plans</a></li>
+                <li class="dropdown">
+                    <a href="pages/menu.html"> Our Menu </a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/menu.html">Our Menu</a></li>
+                        <li><a href="pages/Cookbook.html">Cook Book</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages/sustaibility.html">Sustainability</a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/sustaibility.html">Sustainability</a></li>
+                        <li><a href="pages/sourcing.html">Sourcing</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown user-dropdown"> <!-- Added user-dropdown class -->
+                    <a href="pages/User.html"><i class="fas fa-user-circle"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/user.html">Account Info</a></li>
+                        <li><a href="pages/favoriteMeals.html">Favorite Meals</a></li>
+                        <li><a href="pages/history.html">Orders History</a></li>
+                        <li><a href="#" id="logoutButton" onclick="logout()">Logout</a></li>
+                    </ul>
+                </li>
+            </ul> <!-- Closed ul tag -->
+        </div> <!-- Closed div with class nav-bar -->
+    </div> <!-- Closed div with class banner -->
+
+    <div class="header1">
+        <h1><b>Account Info:</b></h1>
+    </div>
+    
+    <div class="card-container">
+        <div class="buttons-container">
+            <button class="transparent-button" onclick="UserAccount()"><i class="fas fa-user-circle"></i> Account Info</button>
+            <button class="transparent-button" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>       
+            <button class="transparent-button"><i class="fas fa-trash-alt"></i> Delete Account</button>
+
+        </div>
+        <div class="card">
+            <h2>Personal Info:</h2>
+            <div class="personal-info">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <p><strong>Phone Number:</strong> +1 234 567 890</p>
+                <p><strong>Address:</strong> 123 Main St, City, Country</p>
+            </div>
+            <div class="cardd-container">
+                <div class="buttonss-container">
+                    <button class="transparentt-button"> Edit</button>
+                </div>
+        </div>
+        <div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Personal Info</h2>
+        <form id="editForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"></textarea>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>
+
+        </div>
+        <div class="cardd">
+            <h2>Password:</h2>
+            <div class="password-info">
+                <p><strong>Password:</strong> <span id="passwordDisplay">••••••••••••</span></p>
+            </div>
+            <div class="buttonsss-container">
+                <button class="transparenttt-button" onclick="openPasswordModal()"> Edit</button>
+            </div>
+        </div>
+
+        <!-- Modal for editing password -->
+        <div id="editPasswordModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closePasswordModal()">&times;</span>
+                <h2>Edit Password</h2>
+                <form id="editPasswordForm">
+                    <label for="currentPassword">Current Password:</label>
+                    <input type="password" id="currentPassword" name="currentPassword" required>
+
+                    <label for="newPassword">New Password:</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+
+                    <label for="confirmPassword">Confirm New Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                    <button type="submit" onclick="savePassword()">Save</button>
+                </form>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Subscription Info:</h2>
+            <div class="subscription-info">
+                <p><strong>Subscription Status:</strong> <span id="subscriptionStatus">Active</span></p>
+                <p><strong>Next Delivery Date:</strong> 25/06/2024</p>
+                <p><strong>Subscription Expire Date:</strong> 31/10/2024</p>
+            </div>
+            <div class="cardddd-container">
+                <div class="buttonssss-container">
+                    <button class="transparentttt-button" onclick="openSubscriptionModal()"> Edit</button>
+                </div>
+            </div>
+        </div>
+
+       <!-- Add this after the Subscription Info Card -->
+<div id="editSubscriptionModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSubscriptionModal()">&times;</span>
+        <h2>Edit Subscription Status</h2>
+        <form id="editSubscriptionForm">
+            <p><strong>Current Status:</strong> <span id="currentSubscriptionStatus">Active</span></p>
+            <label for="subscriptionStatus">Change Status to:</label>
+            <select id="subscriptionStatus" name="subscriptionStatus" class="subscription-status-dropdown">
+                <option value="paused">Paused</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+            <button type="button" onclick="showWarningModal()">Save</button>
+        </form>        
+    </div>
+</div>
+
+<!-- Warning Modal -->
+<div id="warningModal" class="modal">
+    <div class="modal-content">
+        <h2>Warning</h2>
+        <p>Are you sure you want to change your subscription status?</p>
+        <button type="button"  id="ConfirmSub" onclick="confirmChangeStatus()">Confirm</button>
+        <button type="button" id="CancelSub" onclick="closeWarningModal()">Cancel</button>
+    </div>
+</div>
+        <div class="cardPayment">
+            <h2>Payment Details:</h2>
+            <div class="containerr">
+                <div class="cardVisa">
+                    <div class="header">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="logo" width="140" height="43" viewBox="0 0 175.7 53.9">
+                            <style>
+                                .visa {
+                                    fill: #fff;
+                                }
+                            </style>
+                            <path class="visa"
+                                d="M61.9 53.1l8.9-52.2h14.2l-8.9 52.2zm65.8-50.9c-2.8-1.1-7.2-2.2-12.7-2.2-14.1 0-24 7.1-24 17.2-.1 7.5 7.1 11.7 12.5 14.2 5.5 2.6 7.4 4.2 7.4 6.5 0 3.5-4.4 5.1-8.5 5.1-5.7 0-8.7-.8-13.4-2.7l-2-.9-2 11.7c3.3 1.5 9.5 2.7 15.9 2.8 15 0 24.7-7 24.8-17.8.1-5.9-3.7-10.5-11.9-14.2-5-2.4-8-4-8-6.5 0-2.2 2.6-4.5 8.1-4.5 4.7-.1 8 .9 10.6 2l1.3.6 1.9-11.3M164.2 1h-11c-3.4 0-6 .9-7.5 4.3l-21.1 47.8h14.9s2.4-6.4 3-7.8h18.2c.4 1.8 1.7 7.8 1.7 7.8h13.2l-11.4-52.1m-17.5 33.6c1.2-3 5.7-14.6 5.7-14.6-.1.1 1.2-3 1.9-5l1 4.5s2.7 12.5 3.3 15.1h-11.9zm-96.7-33.7l-14 35.6-1.5-7.2c-2.5-8.3-10.6-17.4-19.6-21.9l12.7 45.7h15.1l22.4-52.2h-15.1" />
+                            <path fill="#F7A600"
+                                d="M23.1.9h-22.9l-.2 1.1c17.9 4.3 29.7 14.8 34.6 27.3l-5-24c-.9-3.3-3.4-4.3-6.5-4.4" />
+                        </svg>
+        
+                    </div>
+        
+                    <div class="content">
+                        <div class="row">
+                            <label>Card Number</label>
+                            <input type="text" class="card-number" placeholder="1234 1234 1234 1234">
+                        </div>
+        
+                        <div class="row card-expire">
+                            <div class="row card-expire-month">
+                                <label>Month</label>
+                                <input type="text" placeholder="April">
+                            </div>
+                            <div class="row card-expire-year">
+                                <label>Year</label>
+                                <input type="text" placeholder="2022">
+                            </div>
+                        </div>
+        
+                        <div class="row card-cvv">
+                            <label>CVV</label>
+                            <input type="text" placeholder="248">
+                        </div>
+        
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="carddddd-container">
+                <div class="buttonsssss-container">
+                    <button class="transparenttttt-button"> save</button>
+                </div>
+        </div>
+        </div>
+<!-- Warning Modal -->
+<div id="deleteWarningModal" class="modal">
+    <div class="modal-content">
+        <h2>Warning</h2>
+        <p>Are you sure you want to delete your account?</p>
+        <button type="button" id="confirmDelete">Yes</button>
+        <button type="button" id="cancelDelete"  onclick="closeDeleteWarningModal()">Cancel</button>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div id="deleteSuccessModal" class="modal">
+    <div class="modal-content">
+        <h2>Success</h2>
+        <p>Account deleted successfully.</p>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

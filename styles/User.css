@@ -1,0 +1,744 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 238, 238);
+    font-family: Roboto;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+
+}
+
+.fas.fa-user-circle {
+    font-size: 2.5rem; /* Adjust the font-size to your desired size */
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    height: 10%;
+    color: #167592;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar.scrolled {
+    backdrop-filter: blur(5px);
+    background-color: #81d0e888; /* Change background color to a darker shade */
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 55px;
+}
+
+.name {
+    margin-left: 15px;
+    font-size: 27px;
+    font-family: Pacifico;
+}
+
+a {
+    text-decoration: none;
+    color: #167592;
+    font-family: Roboto;
+}
+
+.banner ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+
+.banner ul li a {
+    text-decoration: none;
+    color: #167592;
+    text-transform: uppercase;
+}
+
+.banner ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #81d0e8;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.banner ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+.dropdown-user-dropdown li{
+    padding: 10px;
+
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropdown-user-dropdown{
+    display: block;
+
+}
+
+/* Responsive Adjustments */
+
+.banner ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #167592;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.banner ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #81d0e8;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    
+}
+.dropdown-user-dropdown{
+    display: none;
+    position: absolute;
+    background-color: #81d0e8;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    left: -100%; /* Position dropdown to the left of the parent li */
+    top: 100%; /* Align dropdown below the parent li */
+}
+
+
+
+/* Adjust only for user icon dropdown */
+.dropdown.user-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #81d0e8;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    left: -100%; /* Position dropdown to the left of the parent li */
+    top: 100%; /* Align dropdown below the parent li */
+}
+
+.dropdown.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Account info header */
+.header1 {
+    position: absolute;
+    top: 15%; /* Adjust to center vertically or position as needed */
+    left: 500px; /* Adjust to position from the left side */
+    transform: translateY(-50%); /* Center vertically */
+    text-align: left;
+}
+
+.header1 h1 {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #000000; /* Adjust color as needed */
+    margin: 0; /* Remove default margin */
+}
+/* Card container */
+.card-container {
+    position: absolute;
+    top: 20%; /* Adjust this value to move the cards under the header */
+    left: 500px; /* 200px space from the left edge */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 200px); /* Adjust as needed for layout */
+}
+
+/* Card styles */
+.card {
+    background-color: #ffffff;
+    width: 700PX; /* Full width */
+    height: 300px; /* Adjust card height */
+    margin: 10px 0; /* Space between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 0; /* Sharp edges */
+    border: 1px solid #ccc; /* Grey border */
+
+}
+.card h2 {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #167592; /* Adjust color as needed */
+    margin-bottom: 10px; /* Space below header */
+}
+.cardd {
+    background-color: #ffffff;
+    width: 700PX; /* Full width */
+    height: 200px; /* Adjust card height */
+    margin: 10px 0; /* Space between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 0; /* Sharp edges */
+    border: 1px solid #ccc; /* Grey border */
+
+}
+.cardd h2{
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #167592; /* Adjust color as needed */
+    margin-bottom: 10px; /* Space below header */
+}
+.cardPayment{
+    background-color: #ffffff;
+    width: 700PX; /* Full width */
+    height: 400px; /* Adjust card height */
+    margin: 10px 0; /* Space between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 0; /* Sharp edges */
+    border: 1px solid #ccc; /* Grey border */
+}
+.cardPayment h2{
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #167592; /* Adjust color as needed */
+    margin-bottom: 10px; /* Space below header */
+}
+/* Transparent buttons */
+.buttons-container {
+    position: absolute;
+    top: 1%; /* Adjust top position as needed */
+    left: -250px; /* Adjust left position */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.transparent-button {
+    background-color: transparent;
+    border: none;
+    color: #167592;
+    font-family: Roboto;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px; /* Adjust margin between buttons */
+    /* width: 120px; Remove fixed width */
+    height: 40px; /* Adjust height */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+.transparent-button:hover {
+    text-decoration: underline;
+}
+/* personal info Transparent edit button*/
+.buttonss-container {
+    position: absolute;
+    top: 3%; /* Adjust top position as needed */
+    left: 580px; /* Adjust left position */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.transparentt-button {
+    background-color: transparent;
+    border: none;
+    color: #f19f13;
+    font-family: Roboto;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5cap; /* Adjust margin between buttons */
+    width: 120px; /* Adjust width */
+    height: 40px; /* Adjust height */
+}
+
+.transparentt-button:hover {
+    text-decoration: underline;
+}
+
+/* password info Transparent edit button*/
+.buttonsss-container {
+    position: absolute;
+    top: 28%; /* Adjust top position as needed */
+    left: 580px; /* Adjust left position */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.transparenttt-button {
+    background-color: transparent;
+    border: none;
+    color: #f19f13;
+    font-family: Roboto;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5cap; /* Adjust margin between buttons */
+    width: 120px; /* Adjust width */
+    height: 40px; /* Adjust height */
+}
+
+.transparenttt-button:hover {
+    text-decoration: underline;
+}
+/* subscription info Transparent edit button*/
+.buttonssss-container {
+    position: absolute;
+    top: 45%; /* Adjust top position as needed */
+    left: 580px; /* Adjust left position */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.transparentttt-button {
+    background-color: transparent;
+    border: none;
+    color: #f19f13;
+    font-family: Roboto;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5cap; /* Adjust margin between buttons */
+    width: 120px; /* Adjust width */
+    height: 40px; /* Adjust height */
+}
+
+.transparentttt-button:hover {
+    text-decoration: underline;
+}
+/* payment info Transparent edit button*/
+.buttonsssss-container {
+    position: absolute;
+    top: 70%; /* Adjust top position as needed */
+    left: 580px; /* Adjust left position */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.transparenttttt-button {
+    background-color: transparent;
+    border: none;
+    color: #f19f13;
+    font-family: Roboto;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5cap; /* Adjust margin between buttons */
+    width: 120px; /* Adjust width */
+    height: 40px; /* Adjust height */
+}
+
+.transparenttttt-button:hover {
+    text-decoration: underline;
+}
+/*Personal Info content */
+.personal-info {
+    font-size: 16px; /* Font size for personal info details */
+    margin-top: 20px; /* Space above personal info */
+}
+
+.personal-info p {
+    margin-bottom: 30px; /* Space between each personal info item */
+}
+/* Password content*/
+.password-info {
+    font-size: 16px; /* Font size for personal info details */
+    margin-top: 50px; /* Space above personal info */
+}
+
+.password-info p {
+    margin-bottom: 30px; /* Space between each personal info item */
+}
+/*Subscription info content */
+.subscription-info {
+    font-size: 16px; /* Font size for personal info details */
+    margin-top: 50px; /* Space above personal info */
+}
+
+.subscription-info p {
+    margin-bottom: 30px; /* Space between each personal info item */
+}
+/*Payment Details content */
+.containerr{
+    margin: 0 auto;
+    max-width: 34rem;
+    width: 90%;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font: inherit;
+    width: auto;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+label{
+    display: block;
+}
+
+.cardVisa{
+    background-color: #171a1c;
+    border-radius: 14px;
+    color: #bebebe;
+    padding: 32px;
+}
+
+.header{
+    margin-bottom: 7rem;
+}
+
+.title{
+    color: #fff;
+    float: left;
+    font-size: 1.5rem;
+}
+
+.logo{
+    float: right;
+}
+
+.row{
+    margin-bottom: 1.5rem;
+}
+
+.content{
+    margin-bottom: 5rem;
+}
+
+.content input{
+    outline: none;
+}
+
+.card-number{
+    font-size: 32px;
+}
+
+.card-expire{
+    float: left;
+}
+
+.card-expire input{
+    font-size: 0.9rem;
+}
+
+.card-expire-month{
+    width: 22%;
+}
+
+.card-expire-month, .card-expire-year{
+    float: left;
+}
+
+.card-cvv{
+    float: right;
+}
+
+.card-cvv input{
+    width: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+/*Personal info edit modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content form label {
+    margin-top: 10px;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.modal-content form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-content form button:hover {
+    background-color: #45a049;
+}
+/*Password modal edit */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* delete account */
+/* Existing CSS code */
+
+/* Modal styles */
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+/* Styling for delete warning modal */
+#deleteWarningModal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.delete-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px; /* Rounded corners */
+    position: relative;
+}
+
+/* Style confirm button */
+#confirmDelete, #cancelDelete {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover effect for buttons */
+#confirmDelete:hover, #cancelDelete:hover {
+    opacity: 0.8;
+}
+/* Common styles for modal buttons */
+.modal-content button {
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styles for confirm and cancel buttons */
+#confirmDelete, #cancelDelete, #ConfirmSub, #CancelSub {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+}
+
+/* Hover effect for buttons */
+#confirmDelete:hover, #cancelDelete:hover, #ConfirmSub:hover, #CancelSub:hover {
+    opacity: 0.8;
+}
+/* Dropdown Styling */
+.subscription-status-dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    appearance: none; /* Remove default arrow in Firefox */
+    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    background-color: white;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23222"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+/* Hover and Focus States */
+.subscription-status-dropdown:hover,
+.subscription-status-dropdown:focus {
+    border-color: #aaa;
+}
+
+/* Disabled State */
+.subscription-status-dropdown:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* Options Styling */
+.subscription-status-dropdown option {
+    padding: 10px;
+}
