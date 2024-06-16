@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Bites</title>
+    <link rel="stylesheet" href="sustainability.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <div class="nav-bar">
+    <div class="left-section">
+        <img src="logo1.png" alt="Your Logo" class="logo" />
+        <span class="name" onclick="window.location.href = '#'">Fresh Bites</span>
+    </div>
+    <ul>
+        <li class="dropdown">
+            <a href="pages/about-us.html"> About Us </a>
+            <ul class="dropdown-content">
+                <li><a href="pages/about-us.html">About Us</a></li>
+                <li><a href="pages/how-it-works.html">How it Works</a></li>
+            </ul>
+        </li>
+        <li><a href="pages/our-plans.html">Our Plans</a></li>
+        <li class="dropdown">
+            <a href="pages/menu.html"> Our Menu </a>
+            <ul class="dropdown-content">
+                <li><a href="pages/menu.html">Our Menu</a></li>
+                <li><a href="pages/Cookbook.html">Cook Book</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="pages/sustaibility.html">Sustainability</a>
+            <ul class="dropdown-content">
+                <li><a href="pages/sustaibility.html">Sustainability</a></li>
+                <li><a href="pages/sourcing.html">Sourcing</a></li>
+            </ul>
+        </li>
+        <li class="dropdown user-dropdown">
+            <a href="pages/User.html"><i class="fas fa-user-circle"></i></a>
+            <ul class="dropdown-contentt">
+                <li><a href="pages/user.html">Account Info</a></li>
+                <li><a href="pages/favoriteMeals.html">Favorite Meals</a></li>
+                <li><a href="pages/history.html">Orders History</a></li>
+                <li><a href="#" id="logoutButton" onclick="logout()">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h2 class="hero-title">Sustainability</h2>
+      <p class="hero-subtitle">Together, let's create a greener world.</p>
+    </div>
+    <div class="hero-icon">
+      <img src="harvest_2921855 (1).png" alt="Farm Icon" />
+    </div>
+  </section>
+
+  <section id="new-section" class="new-section">
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <!-- First Slide -->
+                <div class="slide" data-index="0">
+                    <div class="recycling-container">
+                        <h3 class="recycling-title">Recycling and Packaging</h3>
+                        <img src="recycle.png" class="image" alt="Recycle" />
+                        <div class="recycling-content">
+                            <p class="recycling-desc"><b>How to recycle ice packs</b>
+                              <br> Follow the directions provided on your ice pack. Otherwise, cut open the pack, empty the gel into the trash, then rinse and recycle or discard the plastic film via in-store drop-off.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Slide -->
+                <div class="slide" data-index="1">
+                    <div class="recycling-container">
+                        <h3 class="recycling-title">Recycling and Packaging</h3>
+                        <img src="plastic.png" class="image large" alt="Plastic Recycling" />
+                        <div class="recycling-content">
+                            <p class="recycling-desc"><b>How to recycle plastic</b>
+                              <br> If your plastic packaging has the numbers 2 or 4 on it, it’s recyclable. If not, you can discard it in your regular trash bin.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Slide -->
+                <div class="slide" data-index="2">
+                    <div class="recycling-container">
+                        <h3 class="recycling-title">Recycling and Packaging</h3>
+                        <img src="paper.png" class="image large" alt="Paper Recycling" />
+                        <div class="recycling-content">
+                            <p class="recycling-desc"><b>How to recycle insulation</b>
+                              <br> Depending on the season, your box may include different insulators to keep ingredients fresh. Our corrugated liners, honeycombed paperboard, and ClimaCell plant-based insulation foam are all fully recyclable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <div class="navigation-arrows">
+                <div class="arrow left-arrow"></div>
+                <!-- Navigation Dots -->
+                <div class="navigation-dots">
+                    <div class="dot" data-slide="0">
+                        <img src="recycle.png" alt="Recycle" class="mini-image" />
+                    </div>
+                    <div class="dot" data-slide="1">
+                        <img src="plastic.png" alt="Plastic Recycling" class="mini-image" />
+                    </div>
+                    <div class="dot" data-slide="2">
+                        <img src="paper.png" alt="Paper Recycling" class="mini-image" />
+                    </div>
+                </div>
+                <div class="arrow right-arrow"></div>
+            </div>
+        </div>
+  </section>
+
+  <section class="mission-section">
+    <div class="mission-content">
+      <h2 class="mission-title">Our Mission</h2>
+      <p class="mission-desc">At FreshBites, we're committed to pioneering sustainable solutions for a better tomorrow.</p>
+    </div>
+    <img src="planet-earth.png" alt="Planet Earth Icon" class="mission-icon">
+  </section>
+
+  <section id="sourcing" class="sourcing">
+    <video autoplay muted loop id="video-background">
+      <source src="vegetables.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="container">
+      <h2 class="section-title">Responsible Sourcing</h2>
+      <p class="section-desc">Discover how we ethically source materials and promote fair trade practices.</p>
+      <a href="#" class="discover-button">Discover</a>
+    </div>
+  </section>
+
+  <section id="packaging-innovations" class="packaging-innovations">
+    <div class="container">
+      <h2 class="packaging-title">Packaging Innovations</h2>
+      <div class="cards">
+        <div class="card" data-animate="backInLeft">
+          <img src="delivery-box.png" alt="Delivery Box" class="card-icon" />
+          <h3 class="card-title">Insulation Reductions</h3>
+          <p class="card-desc">Last winter, we eliminated a significant amount of the insulation liners from our boxes. As a result, in the first 2 weeks of January 2022 alone, we shipped over 2 million liner-less boxes—a weight reduction of 48,750 pounds per week!</p>
+        </div>
+        <div class="card" data-animate="backInLeft">
+          <img src="innovation.png" alt="Innovation" class="card-icon" />
+          <h3 class="card-title">Box Fit 2021</h3>
+          <p class="card-desc">Our Box Fit system determines each order's most efficient ice levels and box sizes. During winter, the number of small boxes we shipped increased from around 12% to 50%. Now delivery vehicles can carry more boxes, meaning fewer carbon emissions.</p>
+        </div>
+        <div class="card" data-animate="backInLeft">
+          <img src="paper-bag.png" alt="Paper Bag" class="card-icon" />
+          <h3 class="card-title">Protein Pouches</h3>
+          <p class="card-desc">We replaced traditional liners with paper “protein pouches” to ship ice and proteins to destinations with temperatures from 36° to 54°F. This innovation allowed us to increase the available space in our boxes, enabling us to use less packaging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="zero-food-waste" class="zero-food-waste">
+    <div class="zero-food-waste-content">
+        <h2 class="food-title">Zero Food Waste</h2>
+        <p class="food-desc">
+            Food waste is a growing issue with significant environmental impacts. As much as 40% of all food in Egypt goes uneaten, contributing to substantial greenhouse gas emissions. Reducing food waste is crucial to reversing climate change.
+        </p>
+    </div>
+    <div class="content">
+        <div class="statistics-ring" data-percentage="40">
+            <div class="inner-ring">
+                <div class="percentage">40%</div>
+                <div class="description">Food in Egypt goes uneaten.</div>
+            </div>
+        </div>
+        <div class="statistics-ring second-ring" data-percentage="1.3">
+            <div class="inner-ring">
+                <div class="percentage">1.3B Tons</div>
+                <div class="description">Food produced is lost annually.</div>
+            </div>
+        </div>
+        <div class="statistics-ring third-ring" data-percentage="10">
+            <div class="inner-ring">
+                <div class="percentage">8-10%</div>
+                <div class="description">Contribution to greenhouse gases.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <script src="sustainability.js"></script>
+</body>
+</html>

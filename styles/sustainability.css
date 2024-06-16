@@ -1,0 +1,1091 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  color: #333;
+  font-size: 16px; 
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+section{
+  margin: 0;
+  padding: 0;
+}
+
+.fas.fa-user-circle {
+  font-size: 2.5rem; /* Adjust the font-size to your desired size */
+}
+
+.banner {
+  width: 100px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+/*Navbar styling */
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  height: 10%;
+  color: #167592;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  top: 0px;
+  background-color: white;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 55px;
+}
+
+.name {
+  margin-left: 15px;
+  font-size: 27px;
+  font-family: Pacifico;
+}
+
+a {
+  text-decoration: none;
+  color: #167592;
+  font-family: Roboto;
+}
+
+.nav-bar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #167592;
+  text-transform: uppercase;
+}
+
+.nav-bar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #167592;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  transition: 0.5s;
+  color: white;
+}
+
+.nav-bar ul li:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 120px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+.dropdown-content li {
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-contentt {
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 120px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+.dropdown-contentt li {
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-contentt {
+  display: block;
+}
+
+/* Responsive Adjustments */
+
+.banner ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #167592;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.banner ul li:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  background-color: #81d0e8;
+  min-width: 120px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  
+}
+.dropdown-user-dropdown{
+  display: none;
+  position: absolute;
+  background-color: #81d0e8;
+  min-width: 120px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  left: -200%; /* Position dropdown to the left of the parent li */
+  top: 100%; /* Align dropdown below the parent li */
+}
+
+
+
+/* Adjust only for user icon dropdown */
+.dropdown.user-dropdown .dropdown-contentt {
+  display: none;
+  position: absolute;
+  background-color: #81d0e8;
+  min-width: 120px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  left: -200%; /* Position dropdown to the left of the parent li */
+  top: 100%; /* Align dropdown below the parent li */
+}
+
+.dropdown.user-dropdown:hover .dropdown-contentt {
+  display: block;
+}
+.dropdown-contentt li {
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-contentt {
+  display: block;
+}
+/* */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  height: 10%;
+  color: #167592;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  top: 0; /* Ensure it stays at the top */
+}
+
+.nav-bar.scrolled {
+  backdrop-filter: blur(5px);
+  background-color: #81d0e888; /* Change background color to a darker shade */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 55px;
+}
+
+.name {
+  margin-left: 15px;
+  font-size: 27px;
+  font-family: Pacifico;
+}
+
+a {
+  text-decoration: none;
+  color: #167592;
+  font-family: Roboto;
+}
+
+.banner ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.banner ul li a {
+  text-decoration: none;
+  color: #167592;
+  text-transform: uppercase;
+}
+
+.banner ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #81d0e8;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.banner ul li:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  background-color: #81d0e8;
+  min-width: 120px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-content li {
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.logo {
+  font-family: "Brush Script MT", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #8b4513; 
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #8bbcca;
+  background-size: cover;
+  background-position: center;
+}
+/* Additional styling to ensure no space above hero section */
+.hero, .banner, .nav-bar {
+  margin: 0;
+  padding: 0;
+}
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.discover-button {
+  display: inline-block;
+  padding: 10px 20px; 
+  background-color:  #f19f13; 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px; 
+  transition: background-color 0.3s ease;
+  margin-top: 20px; 
+}
+
+.discover-button:hover {
+  background-color: #09c909; 
+}
+
+.hero-content {
+  color: #75e752;
+}
+
+.hero-title {
+  font-size: 55px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffffff; 
+  text-shadow: 4px 4px 0 #333; 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-subtitle {
+  font-size: 35px;
+  font-weight: bold;
+  color: #fdfffd; 
+  text-shadow: 2px 2px 0 #333; 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.mission-section {
+  background-color: #81d0e8;
+  color: white;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mission-content {
+  text-align: left;
+  margin-right: 40px;
+}
+
+.mission-title {
+  font-size: 36px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 20px;
+}
+
+.mission-desc {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mission-icon {
+  max-width: 100px;
+  height: auto;
+}
+
+.sourcing {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.sourcing .container {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.sourcing .section-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff; 
+  text-shadow: 4px 4px 0 #333; 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sourcing .section-desc {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff; 
+  text-shadow: 4px 4px 0 #333; 
+  padding: 20px;
+  border-radius: 10px;
+}
+/* Packaging Innovations */
+.packaging-innovations {
+  padding: 50px 0;
+  background-image: url('light blue.jpg');
+  text-align: center;
+}
+
+.packaging-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  background-color: #f19f13;
+}
+.card-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 16px;
+}
+.zero-food-waste {
+    background-color: #e6e6e6; /* Urgent red color */
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.zero-food-waste .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.statistics-ring {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #db1200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.statistics-ring .inner-ring {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.statistics-ring .percentage {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.statistics-ring .description {
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.zero-food-waste-content {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.food-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(37, 36, 36);
+}
+
+.food-desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #151414;
+}
+
+/* Animation */
+.statistics-ring::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(
+        #ff6f61 0%,
+        #ff6f61 calc(var(--percentage) * 1%),
+        #ddd calc(var(--percentage) * 1%),
+        #ddd 100%
+    );
+    z-index: 1;
+}
+
+
+.new-section {
+  background-color: rgb(243, 241, 241);
+  padding: 50px 20px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide[data-index="1"],
+.slide[data-index="2"] {
+  margin-top: 60px; /* Add margin to move the content down */
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px; /* Add margin to move the content down */
+}
+
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.arrow {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.left-arrow::before, .right-arrow::before {
+  content: '';
+  display: inline-block;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+}
+
+.left-arrow::before {
+  transform: rotate(135deg);
+}
+
+.right-arrow::before {
+  transform: rotate(-45deg);
+}
+
+.navigation-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.dot .mini-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.recycling-title {
+  font-size: 40px;
+  font-style: italic;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.recycling-desc {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.image {
+  max-width: 200px; /* Decrease the size of the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  animation: bounce 1s infinite alternate; /* Apply bounce animation */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px); /* Adjust the bounce height */
+  }
+}
+
+.recycling-content {
+  flex: 1;
+  text-align: left; /* Align description to the left */
+  margin-left: 20px; /* Add some space between image and description */
+
+}
+
+/* Adjusted CSS for the layout of the second and third sections */
+.recycling-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Add some space between slides */
+
+}
+
+.recycling-title {
+  flex: 1;
+  text-align: right; /* Align header to the right */
+  margin-right: 20px; /* Add some space between header and image */
+}
+
+.image {
+  max-width: 200px; /* Decrease the size of the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  animation: bounce 0.5s infinite alternate; /* Apply bounce animation */
+}
+
+/* Increase the size of the second and third images */
+.image.large {
+  max-width: 250px; /* Adjust the size as needed */
+}
+
+.recycling-desc {
+  flex: 1;
+  text-align: left; /* Align description to the left */
+  margin-left: 20px; /* Add some space between image and description */
+}
+
+
+/* Ensure the rest of the styles remain unchanged */
+
+
+@media only screen and (max-width: 400px) {
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  color: #333;
+  font-size: 20px; /* Adjust font size for smaller screens */
+}
+
+/* Container Styles */
+.container {
+  max-width: 100%; /* Adjust max-width for responsiveness */
+  margin: 0 auto;
+  padding: 10px; /* Adjust padding for smaller screens */
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px; /* Adjust padding for smaller screens */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Logo Styles */
+.logo {
+  font-family: "Brush Script MT", cursive;
+  font-size: 16px; /* Adjust font size for smaller screens */
+  font-weight: bold;
+  color: #8b4513;
+}
+
+/* Hero Styles */
+.hero {
+  height: 50vh; /* Adjust height for smaller screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Video Background Styles */
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers entire container */
+  z-index: -1;
+}
+
+/* Discover Button Styles */
+.discover-button {
+  display: inline-block;
+  padding: 15px 20px; /* Adjust padding for smaller screens */
+  background-color: #f19f13;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px; /* Adjust border radius for smaller screens */
+  font-size: 16px; /* Adjust font size for smaller screens */
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Adjust margin for smaller screens */
+}
+
+/* Hover Effect for Discover Button */
+.discover-button:hover {
+  background-color: #09c909;
+}
+
+/* Hero Content Styles */
+.hero-content {
+  color: #75e752;
+}
+
+.hero-title {
+  font-size: 32px; /* Adjust font size for smaller screens */
+  margin-bottom: 10px; /* Adjust margin for smaller screens */
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0 #333; /* Adjust text shadow for smaller screens */
+  padding: 10px; /* Adjust padding for smaller screens */
+  border-radius: 5px; /* Adjust border radius for smaller screens */
+}
+
+.hero-subtitle {
+  font-size: 20px; /* Adjust font size for smaller screens */
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0 #333; /* Adjust text shadow for smaller screens */
+  padding: 10px; /* Adjust padding for smaller screens */
+  border-radius: 5px; /* Adjust border radius for smaller screens */
+  margin-bottom: 10px; /* Adjust margin for smaller screens */
+}
+
+/* Mission, Sourcing, Food Waste Sections */
+.mission,
+.sourcing,
+.food-waste {
+  padding: 50px 0; /* Adjust padding for smaller screens */
+  text-align: center;
+}
+
+/* Sourcing Section */
+.sourcing {
+  height: auto; /* Remove fixed height for smaller screens */
+}
+
+/* Mission Section Background Color */
+.mission {
+  background-color: beige;
+}
+
+/* Food Waste Section Background Color */
+.food-waste {
+  background-color: #f19f13;
+  padding: 200px 0; /* Adjust padding for smaller screens */
+}
+
+/* Section Title Styles */
+.section-title {
+  font-size: 40px; /* Adjust font size for smaller screens */
+  margin-bottom: 10px; /* Adjust margin for smaller screens */
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0 #333; /* Adjust text shadow for smaller screens */
+  padding: 10px; /* Adjust padding for smaller screens */
+  border-radius: 5px; /* Adjust border radius for smaller screens */
+}
+
+/* Percentage Styles */
+.percentage {
+  font-size: 20px; /* Adjust font size for smaller screens */
+}
+
+/* Description Styles */
+.description {
+  font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+/* Green Gradient Background */
+.green-gradient {
+  background: linear-gradient(to bottom, #4CAF50, #81C784);
+}
+
+/* Red Gradient Background */
+.red-gradient {
+  background: linear-gradient(to bottom, #FF5252, #FF8A80);
+}
+
+/* Section Description Styles */
+.section-desc {
+  font-size: 30px; /* Adjust font size for smaller screens */
+  margin-bottom: 10px; /* Adjust margin for smaller screens */
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0 #333; /* Adjust text shadow for smaller screens */
+  padding: 10px; /* Adjust padding for smaller screens */
+  border-radius: 5px; /* Adjust border radius for smaller screens */
+}
+
+/* Navigation Arrows Styles */
+.navigation-arrows {
+  position: relative;
+}
+
+/* Arrow Styles */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px; /* Adjust font size for smaller screens */
+  width: 30px; /* Adjust width for smaller screens */
+  height: 30px; /* Adjust height for smaller screens */
+  line-height: 30px; /* Adjust line height for smaller screens */
+  text-align: center;
+  border-radius: 50%;
+  background-color: #0ab039;
+  color: #fff;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover Effect for Arrows */
+.arrow:hover {
+  background-color: #93cba4;
+}
+
+/* Left Arrow Styles */
+.arrow.left-arrow {
+  left: 10px; /* Adjust left position for smaller screens */
+}
+
+/* Right Arrow Styles */
+.arrow.right-arrow {
+  right: 10px; /* Adjust right position for smaller screens */
+}
+
+/* Arrow Icon Styles */
+.arrow:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px; /* Adjust width for smaller screens */
+  height: 8px; /* Adjust height for smaller screens */
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Left Arrow Icon Styles */
+.arrow.left-arrow:before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+/* Right Arrow Icon Styles */
+.arrow.right-arrow:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Hover Effect for Arrow Icons */
+.arrow:hover:before {
+  border-color: #1d3601;
+}
+
+/* Zero Food Waste Section Styles */
+.zero-food-waste {
+  background-color: #f7f7f7;
+  padding: 100px 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Zero Food Waste Container Styles */
+.zero-food-waste .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Adjust padding for smaller screens */
+}
+
+/* Content Styles */
+.content {
+  text-align: justify; /* Adjust text alignment for smaller screens */
+}
+
+/* Food Title Styles */
+.food-title {
+  font-size: 24px; /* Adjust font size for smaller screens */
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px; /* Adjust margin for smaller screens */
+}
+
+/* Zero Food Waste Content Styles */
+.zero-food-waste-content {
+  margin: 10px;
+}
+
+/* Food Description Styles */
+.food-desc {
+  font-size: 18px; /* Adjust font size for smaller screens */
+  color: #333;
+  margin-bottom: 20px; /* Adjust margin for smaller screens */
+}
+
+/* Statistics Ring Styles */
+.statistics-ring {
+  position: absolute;
+  width: 200px; /* Adjust width for smaller screens */
+  height: 200px; /* Adjust height for smaller screens */
+  border-radius: 50%;
+  background: conic-gradient(#4CAF50 0% 40%, #FFF 40% 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%; /* Adjust top position for smaller screens */
+  left: 50%; /* Adjust left position for smaller screens */
+  transform: translate(-50%, -50%);
+}
+
+/* Second Ring Styles */
+.second-ring {
+  top: 50%; /* Adjust top position for smaller screens */
+  left: 65%; /* Adjust left position for smaller screens */
+  background: conic-gradient(#FF5252 0% 10%, #FFF 10% 100%);
+}
+
+/* Third Ring Styles */
+.third-ring {
+  top: 50%; /* Adjust top position for smaller screens */
+  left: 80%; /* Adjust left position for smaller screens */
+  background: conic-gradient(#4f3ac3 0% 15%, #FFF 15% 100%);
+}
+
+/* Percentage and Description Styles */
+.statistics-ring .percentage,
+.statistics-ring .description,
+.second-ring .percentage,
+.third-ring .percentage,
+.second-ring .description,
+.third-ring .description {
+  color: #2b2f2b;
+  text-align: center;
+  font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+/* Adjust width and height of statistics ring */
+@media (max-width: 400px) {
+  .statistics-ring {
+    width: 150px; /* Adjust width for smaller screens */
+    height: 150px; /* Adjust height for smaller screens */
+  }
+}
+
+}
+
+/* Define specific colors for each statistics ring based on their classes */
+.statistics-ring.first-ring::before {
+  background: conic-gradient(
+      #ff6f61 0%,
+      #ff6f61 calc(var(--percentage) * 1%),
+      #ddd calc(var(--percentage) * 1%),
+      #ddd 100%
+  );
+}
+
+.statistics-ring.second-ring::before {
+  background: conic-gradient(
+      #f19f13 0%,
+      #f19f13 calc(var(--percentage) * 1%),
+      #ddd calc(var(--percentage) * 1%),
+      #ddd 100%
+  );
+}
+
+.statistics-ring.third-ring::before {
+  background: conic-gradient(
+      #09c909 0%,
+      #09c909 calc(var(--percentage) * 1%),
+      #ddd calc(var(--percentage) * 1%),
+      #ddd 100%
+  );
+}
