@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="LoginSignup.css">
+    <title>Login/Signup Page</title>
+    <link rel="icon" href="logo1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet"/>
+    
+</head>
+
+<body>
+
+        <div class="nav-bar">
+            <div class="left-section">
+                <img src="logo1.png" alt="Your Logo" class="logo" />
+                <span class="name" onclick="window.location.href = '#'">Fresh Bites</span>
+            </div>
+            <ul>
+                <li class="dropdown">
+                    <a href="pages/about-us.html"> About Us </a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/about-us.html">About Us</a></li>
+                        <li><a href="pages/how-it-works.html">How it Works</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/our-plans.html">Our Plans</a></li>
+                <li class="dropdown">
+                    <a href="pages/menu.html"> Our Menu </a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/menu.html">Our Menu</a></li>
+                        <li><a href="pages/Cookbook.html">Cook Book</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages/sustaibility.html">Sustainability</a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/sustaibility.html">Sustainability</a></li>
+                        <li><a href="pages/sourcing.html">Sourcing</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown user-dropdown"> <!-- Added user-dropdown class -->
+                    <a href="pages/User.html"><i class="fas fa-user-circle"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/user.html">Account Info</a></li>
+                        <li><a href="pages/favoriteMeals.html">Favorite Meals</a></li>
+                        <li><a href="pages/history.html">Orders History</a></li>
+                        <li><a href="#" id="logoutButton" onclick="logout()">Logout</a></li>
+                    </ul>
+                </li>
+            </ul> <!-- Closed ul tag -->
+        </div> <!-- Closed div with class nav-bar -->
+
+
+
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="sign-up-form">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" id="signup-username" placeholder="Name">
+                <input type="email" id="signup-email" placeholder="Email">
+                <input type="password" id="signup-password" placeholder="Password">
+                <input type="password" id="signup-confirm-password" placeholder="Confirm Password">
+                <select id="favorite-color">
+                    <option value="" disabled selected>Select your favorite color</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Grey">Grey</option>
+                    <option value="Red">Red</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Violet">Violet</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Yellow">Yellow</option>
+                </select>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="sign-in-form">
+                <h1>Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <span>or use your email and password</span>
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <a href="#" id="forgot-password">Forget Your Password?</a>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of the site features</p>
+                    <button class="hidden" id="login">Login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Don't have an account?</h1>
+                    <p>Register to use all of FreshBites features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Modal for displaying warnings -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p id="modal-message"></p>
+    </div>
+</div>
+
+<!-- Modal for forgot password -->
+<div id="forgot-password-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p>Enter the color you chose while signing up</p>
+        <select id="chosen-color">
+            <option value="" disabled selected>Select your favorite color</option>
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+            <option value="Brown">Brown</option>
+            <option value="Grey">Grey</option>
+            <option value="Red">Red</option>
+            <option value="Pink">Pink</option>
+            <option value="Violet">Violet</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Orange">Orange</option>
+            <option value="Yellow">Yellow</option>
+        </select>
+        <button id="confirm-color">Confirm</button>
+    </div>
+</div>
+
+    <script src="LoginSignup.js"></script>
+</body>
+
+</html>
