@@ -1,0 +1,424 @@
+section{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .fas.fa-user-circle {
+    font-size: 2.5rem; /* Adjust the font-size to your desired size */
+  }
+  
+  .banner {
+    width: 100px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  /*Navbar styling */
+  .nav-bar {
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    height: 10%;
+    color: #167592;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    top: 0px;
+    background-color: white;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 55px;
+  }
+  
+  .name {
+    margin-left: 15px;
+    font-size: 27px;
+    font-family: Pacifico;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #167592;
+    font-family: Roboto;
+  }
+  
+  .nav-bar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .nav-bar ul li a {
+    text-decoration: none;
+    color: #167592;
+    text-transform: uppercase;
+  }
+  
+  .nav-bar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #167592;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+    color: white;
+  }
+  
+  .nav-bar ul li:hover::after {
+    width: 100%;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    color: white;
+  }
+  
+  .dropdown-content li {
+    padding: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-contentt {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    color: white;
+  }
+  
+  .dropdown-contentt li {
+    padding: 10px;
+  }
+  
+  .dropdown:hover .dropdown-contentt {
+    display: block;
+  }
+  
+  /* Responsive Adjustments */
+  
+  .banner ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #167592;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .banner ul li:hover::after {
+    width: 100%;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #81d0e8;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    
+  }
+  .dropdown-user-dropdown{
+    display: none;
+    position: absolute;
+    background-color: #81d0e8;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    left: -200%; /* Position dropdown to the left of the parent li */
+    top: 100%; /* Align dropdown below the parent li */
+  }
+  
+  
+  
+  /* Adjust only for user icon dropdown */
+  .dropdown.user-dropdown .dropdown-contentt {
+    display: none;
+    position: absolute;
+    background-color: #81d0e8;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    left: -200%; /* Position dropdown to the left of the parent li */
+    top: 100%; /* Align dropdown below the parent li */
+  }
+  
+  .dropdown.user-dropdown:hover .dropdown-contentt {
+    display: block;
+  }
+  .dropdown-contentt li {
+    padding: 10px;
+  }
+  
+  .dropdown:hover .dropdown-contentt {
+    display: block;
+  }
+  /* */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .nav-bar {
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    height: 10%;
+    color: #167592;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    top: 0; /* Ensure it stays at the top */
+  }
+  
+  .nav-bar.scrolled {
+    backdrop-filter: blur(5px);
+    background-color: #81d0e888; /* Change background color to a darker shade */
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 55px;
+  }
+  
+  .name {
+    margin-left: 15px;
+    font-size: 27px;
+    font-family: Pacifico;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #167592;
+    font-family: Roboto;
+  }
+  
+  .banner ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .banner ul li a {
+    text-decoration: none;
+    color: #167592;
+    text-transform: uppercase;
+  }
+  
+  .banner ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #81d0e8;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .banner ul li:hover::after {
+    width: 100%;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #81d0e8;
+    min-width: 120px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dropdown-content li {
+    padding: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .logo {
+    font-family: "Brush Script MT", cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b4513; 
+  }
+  .user-dropdown i {
+    position: relative;
+    margin: 20px;
+    left: -30px; /* Adjust this value to move the icon left by the desired number of pixels */
+}
+.main-content {
+    padding: 20px;
+}
+.main-content h1 {
+    margin-left:0.4em ;
+    font-size: 2em;
+    color: #333;
+}
+.meal-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+.meal-item:hover {
+    background-color: orange;
+}
+.meal-item img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+.meal-details {
+    flex-grow: 1;
+}
+.meal-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.meal-details p {
+    margin: 5px 0;
+    color: #666;
+}
+.meal-details .info {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+.meal-details .info span {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.meal-details .info i {
+    margin-right: 5px;
+}
+.delete-button {
+    background-color: #ff5f5f;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+.modal-header {
+    margin-bottom: 20px;
+}
+.modal-footer {
+    display: flex;
+    justify-content: space-around;
+}
+.modal-footer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.modal-footer .confirm {
+    background-color: #28a745;
+    color: #fff;
+}
+.modal-footer .cancel {
+    background-color: #dc3545;
+    color: #fff;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet"
+        />
+    <link rel="stylesheet" href="FavouriteMeals.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Fresh Bites</title>
+
+    </head>
+
+
+    <body>
+        <h1>Favourite Meals</h1>
+        <div class="nav-bar">
+            <div class="left-section">
+                <img src="c:\Users\Dr.Hany\Desktop\logo1.png" alt="Your Logo" class="logo" />
+                <span class="name" onclick="window.location.href = '#'">Fresh Bites</span>
+            </div>
+            <ul>
+                <li class="dropdown">
+                    <a href="pages/about-us.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/about-us.html">About Us</a></li>
+                        <li><a href="pages/how-it-works.html">How it Works</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/our-plans.html">Our Plans</a></li>
+                <li class="dropdown">
+                    <a href="pages/menu.html">Our Menu</a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/menu.html">Our Menu</a></li>
+                        <li><a href="pages/Cookbook.html">Cook Book</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages/sustaibility.html">Sustainability</a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/sustaibility.html">Sustainability</a></li>
+                        <li><a href="pages/sourcing.html">Sourcing</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="pages/User.html"><i class="fas fa-user-circle"></i></a>
+                    <ul class="dropdown-contentt">
+                        <li><a href="pages/user.html">Account Info</a></li>
+                        <li><a href="pages/favoriteMeals.html">Favorite Meals</a></li>
+                        <li><a href="pages/history.html">Orders History</a></li>
+                        <li><a href="#" id="logoutButton" onclick="logout()">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="main-content">
+            <h1>My Favourites</h1>
+
+            <div class="meal-item">
+                <img src="c:\Users\Dr.Hany\Desktop\0853dfccad9c8295325099abf7e880b8.jpg" alt="Creamy Pasta With Egg & Spinach">
+                <div class="meal-details">
+                    <h3>Creamy Pasta With Egg & Spinach</h3>
+                    <p>Cooking Healthy For Radiant Health</p>
+                    <div class="info">
+                        <span><i class="fas fa-users"></i>For 2 People</span>
+                        <span><i class="fas fa-fire"></i>794 Calories</span>
+                    </div>
+                </div>
+                <button class="delete-button"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="meal-item">
+                <img src="c:\Users\Dr.Hany\Desktop\southern-corn-salad-3.jpg" alt="Steamed Corn Salad">
+                <div class="meal-details">
+                    <h3>Steamed Corn Salad</h3>
+                    <p>Cooking Healthy For Radiant Health</p>
+                    <div class="info">
+                        <span><i class="fas fa-users"></i>For 2 People</span>
+                        <span><i class="fas fa-fire"></i>794 Calories</span>
+                    </div>
+                </div>
+                <button class="delete-button"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="meal-item">
+                <img src="c:\Users\Dr.Hany\Desktop\Spicy-Peanut-Rice-Poached-Egg-sq-1024x1024.jpg" alt="Peanut Rice With Egg & Cheese">
+                <div class="meal-details">
+                    <h3>Peanut Rice With Egg & Cheese</h3>
+                    <p>Cooking Healthy For Radiant Health</p>
+                    <div class="info">
+                        <span><i class="fas fa-users"></i>For 2 People</span>
+                        <span><i class="fas fa-fire"></i>794 Calories</span>
+                    </div>
+                </div>
+                <button class="delete-button"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="meal-item">
+                <img src="c:\Users\Dr.Hany\Desktop\pepper-rice-clos.png" alt="Chinese Pepper Rice">
+                <div class="meal-details">
+                    <h3>Chinese Pepper Rice</h3>
+                    <p>Cooking Healthy For Radiant Health</p>
+                    <div class="info">
+                        <span><i class="fas fa-users"></i>For 2 People</span>
+                        <span><i class="fas fa-fire"></i>794 Calories</span>
+                    </div>
+                </div>
+                <button class="delete-button"><i class="fas fa-trash"></i></button>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Confirm Deletion</h2>
+                </div>
+                <p>Are you sure you want to delete this meal?</p>
+                <div class="modal-footer">
+                    <button class="confirm">Yes</button>
+                    <button class="cancel">No</button>
+                </div>
+            </div>
+        </div>
+    <script src="FavouriteMeals.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
